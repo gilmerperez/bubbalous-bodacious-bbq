@@ -1,0 +1,157 @@
+/* Oswald */
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap");
+
+/* Inter */
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+/* Light mode */
+html[data-theme="light"] {
+  --header-bg-color: hsl(0, 0%, 0%);
+  --bg-color: hsl(0, 0%, 0%);
+  --text-primary: hsl(0, 0%, 0%);
+  --text-secondary: hsl(0, 0%, 0%);
+  --primary: hsl(0, 0%, 0%);
+  --primary-dark: hsl(0, 0%, 0%);
+  --footer-bg-color: hsl(0, 0%, 0%);
+}
+
+/* Dark mode */
+html[data-theme="dark"] {
+  --header-bg-color: hsl(0, 0%, 0%);
+  --bg-color: hsl(0, 0%, 0%);
+  --text-primary: hsl(0, 0%, 0%);
+  --text-secondary: hsl(0, 0%, 0%);
+  --primary: hsl(0, 0%, 0%);
+  --primary-dark: hsl(0, 0%, 0%);
+  --footer-bg-color: hsl(0, 0%, 0%);
+}
+
+/* Highlighted text */
+::selection {
+  color: var(--text-primary);
+  background: var(--primary);
+}
+
+/* Buttons - Ensures buttons appear clickable */
+button {
+  cursor: pointer; /* Shows pointer on hover to indicate clickability */
+}
+
+/* Lists - Removes default bullet styles */
+ul,
+ol {
+  list-style: none; /* Removes default bullet points from unordered and ordered lists */
+}
+
+/* Links - Resetting default styles and hover behavior */
+a {
+  color: inherit; /* Makes link color match surrounding text */
+  text-decoration: none; /* Removes underline */
+}
+
+/* Form elements - Normalize font and remove default borders */
+input,
+select,
+button,
+textarea {
+  border: none; /* Removes default borders */
+  font: inherit; /* Inherits font from parent */
+  outline: none; /* Removes blue outline */
+}
+
+/* Media - Ensures media doesn’t overflow and stays responsive */
+svg,
+img,
+video,
+canvas,
+picture {
+  height: auto; /* Maintains correct aspect ratio */
+  display: block; /* Removes inline spacing below images */
+  max-width: 100%; /* Keeps media from overflowing their containers */
+}
+
+/* Universal reset - Applies to all elements and pseudo-elements */
+*,
+*::before,
+*::after {
+  margin: 0; /* Remove default spacing */
+  padding: 0; /* Remove default spacing */
+  box-sizing: border-box; /* Includes padding & border in width and height */
+}
+
+/* Root element - Affects the entire page's scroll behavior and base size */
+html {
+  height: 100%; /* Needed for percentage-based child heights */
+  font-size: 16px; /* Base size 1rem = 16px */
+  box-sizing: border-box; /* Includes padding & border in width and height */
+  scroll-behavior: smooth; /* Enables smooth scroll when using anchor links */
+  -webkit-text-size-adjust: 100%; /* Prevents font size changes on iOS */
+  text-rendering: optimizeLegibility; /* Improves legibility of text */
+}
+
+/* Body - Base font family, and layout behavior */
+body {
+  display: flex; /* Enables flexbox layout */
+  min-height: 100vh; /* Ensures body fills at least full screen */
+  overflow-x: hidden; /* Prevents horizontal scroll */
+  flex-direction: column; /* Stacks header, main, and footer vertically */
+  color: var(--text-primary); /* Sets a default text color */
+  background-color: var(--bg-color); /* Sets a default background color */
+  -moz-osx-font-smoothing: grayscale; /* Better font rendering on macOS Firefox */
+  -webkit-font-smoothing: antialiased; /* Better font rendering on WebKit browsers */
+  font-family: "Inter", Arial, sans-serif; /* Modern system font stack */
+}
+
+/* Header - Shared structural styling */
+header {
+  width: 100%; /* Ensures full-width layout across viewport */
+  padding: 1.5rem 2rem; /* Provides consistent spacing inside header */
+  background-color: var(--header-bg-color); /* Applies theme background color from CSS variables */
+}
+
+/* Main - Base layout for page content */
+main {
+  width: 100%; /* Ensures content stretches to full container width */
+  padding: 2rem; /* Adds breathing room around main content */
+  background-color: var(---bg-color); /* Matches the background of header/footer for visual cohesion */
+}
+
+/* Footer - Shared structural styling */
+footer {
+  width: 100%; /* Ensures full-width layout across viewport */
+  padding: 2rem; /* Provides consistent spacing inside footer */
+  background-color: var(--footer-bg-color); /* Applies theme background color from CSS variables */
+}
+
+.headerContainer {
+  width: 100%;
+  display: flex;
+  margin: 0 auto;
+  max-width: 1200px;
+  text-align: center;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.mainContainer {
+  width: 100%;
+  display: flex;
+  margin: 0 auto;
+  max-width: 1200px;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.footerContainer {
+  width: 100%;
+  display: flex;
+  margin: 0 auto;
+  max-width: 1200px;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
