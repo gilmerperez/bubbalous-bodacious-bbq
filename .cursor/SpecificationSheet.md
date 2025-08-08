@@ -448,3 +448,8 @@ src/
 ---
 
 This specification provides a comprehensive roadmap for developing a modern, user-friendly website that accurately represents Bubbalou's Bodacious BBQ's authentic Southern BBQ experience while providing all necessary information for customers to visit and order.
+
+## References
+
+- https://bubbalous.com/
+- https://kirkman.bubbalous.com/
