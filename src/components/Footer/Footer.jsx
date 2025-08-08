@@ -11,7 +11,7 @@ function Footer() {
             {/* Logo & Copyright */}
             <section className={styles.logoColumn}>
               <NavLink to="/">
-                <img src="/favicon2.jpg" alt="Bubbalous Bodacious BBQ Logo" className={styles.logoImage} />
+                <img src="/favicon.jpg" alt="Bubbalous Bodacious BBQ Logo" className={styles.logoImage} />
               </NavLink>
               <p className={styles.copyright}>
                 &copy; {new Date().getFullYear()} Bubbalous Bodacious BBQ. <br /> All rights reserved.
