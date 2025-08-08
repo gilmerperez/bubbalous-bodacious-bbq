@@ -33,23 +33,28 @@
 ## Website Security
 
 #### Rate Limiting and Abuse Protection
+
 - Add CAPTCHAs on critical forms to block bots.
 - Implement IP or user-based rate limiting on all API endpoints.
 
 #### Environment and Secrets
+
 - Never expose secrets or config data in client-side code.
 - Keep all sensitive environment variables server-side and include .env files in .gitignore.
 
 #### Data Handling
+
 - Use HTTPS to encrypt data in transit.
 - Validate and sanitize inputs to prevent attacks.
 - Hash passwords securely (e.g., bcrypt) before storing.
 
 #### Authentication and Authorization
+
 - Use trusted auth providers (e.g., Clerk, Auth0) instead of building your own.
 - Protect API endpoints and user routes with proper authentication and access control.
 
 #### Testing and Monitoring
+
 - Write tests for critical features like auth and payments.
 - Avoid logging sensitive data or debug info in production.
 - Use monitoring tools to track errors and suspicious activity.
