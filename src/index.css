@@ -8,11 +8,11 @@
 html[data-theme="light"] {
   --header-bg-color: hsl(0, 0%, 100%);
   --bg-color: hsl(0, 0%, 95%);
-  --text-primary: hsl(0, 0%, 5%);
+  --text-primary: hsl(0, 0%, 0%);
   --text-secondary: hsl(0, 0%, 20%);
   --primary: hsl(3, 76%, 50%);
   --primary-dark: hsl(3, 76%, 40%);
-  --footer-bg-color: hsl(0, 0%, 2.5%);
+  --footer-bg-color: hsl(0, 0%, 100%);
 }
 
 /* Dark mode */
@@ -121,37 +121,4 @@ footer {
   width: 100%; /* Ensures full-width layout across viewport */
   padding: 2rem; /* Provides consistent spacing inside footer */
   background-color: var(--footer-bg-color); /* Applies theme background color from CSS variables */
-}
-
-.headerContainer {
-  width: 100%;
-  display: flex;
-  margin: 0 auto;
-  max-width: 1200px;
-  text-align: center;
-  align-items: center;
-  flex-direction: row;
-  justify-content: space-between;
-}
-
-.mainContainer {
-  width: 100%;
-  display: flex;
-  margin: 0 auto;
-  max-width: 1200px;
-  text-align: center;
-  align-items: center;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.footerContainer {
-  width: 100%;
-  display: flex;
-  margin: 0 auto;
-  max-width: 1200px;
-  text-align: center;
-  align-items: center;
-  flex-direction: column;
-  justify-content: center;
 }

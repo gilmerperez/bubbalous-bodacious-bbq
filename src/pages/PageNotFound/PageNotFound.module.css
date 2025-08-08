@@ -1,10 +1,10 @@
-.headerContainer {
+.pageNotFoundContainer {
   width: 100%;
   display: flex;
   margin: 0 auto;
   max-width: 1200px;
   text-align: center;
   align-items: center;
-  flex-direction: row;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: center;
 }
