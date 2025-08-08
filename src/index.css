@@ -6,24 +6,24 @@
 
 /* Light mode */
 html[data-theme="light"] {
-  --header-bg-color: hsl(0, 0%, 0%);
-  --bg-color: hsl(0, 0%, 0%);
-  --text-primary: hsl(0, 0%, 0%);
-  --text-secondary: hsl(0, 0%, 0%);
-  --primary: hsl(0, 0%, 0%);
-  --primary-dark: hsl(0, 0%, 0%);
-  --footer-bg-color: hsl(0, 0%, 0%);
+  --header-bg-color: hsl(0, 0%, 100%);
+  --bg-color: hsl(0, 0%, 95%);
+  --text-primary: hsl(0, 0%, 5%);
+  --text-secondary: hsl(0, 0%, 20%);
+  --primary: hsl(3, 76%, 50%);
+  --primary-dark: hsl(3, 76%, 40%);
+  --footer-bg-color: hsl(0, 0%, 2.5%);
 }
 
 /* Dark mode */
 html[data-theme="dark"] {
-  --header-bg-color: hsl(0, 0%, 0%);
-  --bg-color: hsl(0, 0%, 0%);
-  --text-primary: hsl(0, 0%, 0%);
-  --text-secondary: hsl(0, 0%, 0%);
-  --primary: hsl(0, 0%, 0%);
-  --primary-dark: hsl(0, 0%, 0%);
-  --footer-bg-color: hsl(0, 0%, 0%);
+  --header-bg-color: hsl(0, 0%, 2.5%);
+  --bg-color: hsl(0, 0%, 5%);
+  --text-primary: hsl(0, 0%, 100%);
+  --text-secondary: hsl(0, 0%, 80%);
+  --primary: hsl(3, 76%, 50%);
+  --primary-dark: hsl(3, 76%, 40%);
+  --footer-bg-color: hsl(0, 0%, 2.5%);
 }
 
 /* Highlighted text */
