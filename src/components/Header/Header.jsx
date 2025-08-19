@@ -4,8 +4,9 @@ import { NavLink } from "react-router-dom";
 import { useState, useEffect } from "react";
 
 function Header() {
-  // Theme Switch
+  // Theme switch
   const [theme, setTheme] = useState("dark");
+
   // Mobile sidebar toggle
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -39,7 +40,6 @@ function Header() {
     const handleChange = (e) => {
       setTheme(e.matches ? "dark" : "light");
     };
-
     mediaQuery.addEventListener("change", handleChange);
     return () => mediaQuery.removeEventListener("change", handleChange);
   }, []);
@@ -49,106 +49,84 @@ function Header() {
       <header>
         <section className={styles.headerContainer}>
           {/* Logo */}
-          <NavLink to="/" className={styles.moonstarLogo}>
-            <span className={styles.moonstar}>MOONSTAR</span>
-            <span className={styles.esthetics}>ESTHETICS</span>
+          <NavLink to="/" className={styles.logoContainer}>
+            <img src="/favicon.jpg" alt="Bubbalous Bodacious BBQ Logo" />
           </NavLink>
 
-          {/* Site Navigation */}
+          {/* Site navigation */}
           <section className={styles.navContainer}>
             <nav className={styles.navItems}>
               <NavLink to="/" className={navLinkClass}>
-                Home
+                HOME
               </NavLink>
-              <NavLink to="/services" className={navLinkClass}>
-                Services
+              <NavLink to="/menu" className={navLinkClass}>
+                MENU
               </NavLink>
-              <NavLink to="/reviews" className={navLinkClass}>
-                Reviews
+              <NavLink to="/order-online" className={navLinkClass}>
+                ORDER ONLINE
               </NavLink>
-              <NavLink to="/information" className={navLinkClass}>
-                Information
+              <NavLink to="/party-packs" className={navLinkClass}>
+                PARTY PACKS
               </NavLink>
             </nav>
 
-            {/* Seperate Site Navigation and Functional Buttons */}
+            {/* Seperator */}
             <span className={styles.seperator}>|</span>
 
-            {/* Functional Buttons */}
-            <section className={styles.functionalButtons}>
-              {/* Theme Button */}
-              <button className={styles.themeButton} onClick={toggleTheme}>
-                <i className={`fa-solid ${theme === "dark" ? "fa-moon" : "fa-sun"} fa-sm`}></i>
-                <p>{theme === "dark" ? "Dark" : "Light"}</p>
-              </button>
-              {/* Book Now Button */}
-              <button className={styles.bookNowButton}>
-                <a href="https://moonstaresthetics.setmore.com/" target="_blank" rel="noopener noreferrer">
-                  Book Now
-                </a>
-              </button>
-            </section>
+            {/* Theme button */}
+            <button className={styles.themeButton} onClick={toggleTheme}>
+              <i className={`fa-solid ${theme === "dark" ? "fa-moon" : "fa-sun"}`}></i>
+              <p>{theme === "dark" ? "DARK" : "LIGHT"}</p>
+            </button>
 
-            {/* Mobile Hamburger Menu */}
+            {/* Mobile hamburger menu */}
             <button className={styles.hamburger} onClick={() => setMenuOpen(true)}>
-              <i className="fa-solid fa-bars"></i>
+              <i className="fa-solid fa-bars fa-xl"></i>
             </button>
           </section>
         </section>
       </header>
 
-      {/* Sidebar Overlay */}
+      {/* Sidebar */}
       {menuOpen &&
         createPortal(
           <section className={styles.sidebarOverlay} onClick={() => setMenuOpen(false)}>
-            {/* Sidebar */}
             <section className={styles.sidebar} onClick={(e) => e.stopPropagation()}>
-              {/* Sidebar Close Button */}
+              {/* Sidebar close button */}
               <button className={styles.sidebarClose} onClick={() => setMenuOpen(false)}>
                 <i className="fa-solid fa-xmark"></i>
               </button>
 
-              {/* Sidebar Site Navigation */}
+              {/* Sidebar site navigation */}
               <nav className={styles.sidebarNavItems}>
                 <NavLink to="/" className={navLinkClass} onClick={() => setMenuOpen(false)}>
-                  Home
+                  HOME
                 </NavLink>
-                <NavLink to="/services" className={navLinkClass} onClick={() => setMenuOpen(false)}>
-                  Services
+                <NavLink to="/menu" className={navLinkClass} onClick={() => setMenuOpen(false)}>
+                  MENU
                 </NavLink>
-                <NavLink to="/reviews" className={navLinkClass} onClick={() => setMenuOpen(false)}>
-                  Reviews
+                <NavLink to="/party-packs" className={navLinkClass} onClick={() => setMenuOpen(false)}>
+                  PARTY PACKS
                 </NavLink>
-                <NavLink to="/information" className={navLinkClass} onClick={() => setMenuOpen(false)}>
-                  Information
+                <NavLink to="/order-online" className={navLinkClass} onClick={() => setMenuOpen(false)}>
+                  ORDER ONLINE
                 </NavLink>
               </nav>
 
-              {/* Sidebar Functional Buttons */}
-              <div className={styles.sidebarFunctionalButtons}>
-                {/* Theme Button */}
+              {/* Sidebar footer */}
+              <footer className={styles.sidebarFooter}>
                 <button className={`${styles.themeButton} ${styles.sidebarThemeButton}`} onClick={toggleTheme}>
                   <i className={`fa-solid ${theme === "dark" ? "fa-moon" : "fa-sun"} fa-sm`}></i>
-                  <p>{theme === "dark" ? "Dark" : "Light"}</p>
+                  <p>{theme === "dark" ? "DARK" : "LIGHT"}</p>
                 </button>
-                {/* Book Now Button */}
-                <button className={`${styles.bookNowButton} ${styles.sidebarBookNowButton}`}>
-                  <a href="https://moonstaresthetics.setmore.com/" target="_blank" rel="noopener noreferrer">
-                    Book Now
-                  </a>
-                </button>
-              </div>
-
-              {/* Site Map */}
-              <footer className={styles.sidebarFooter}>
                 <NavLink to="/contact" className={navLinkClass} onClick={() => setMenuOpen(false)}>
-                  Contact
+                  CONTACT
                 </NavLink>
                 <NavLink to="/privacy-policy" className={navLinkClass} onClick={() => setMenuOpen(false)}>
-                  Privacy Policy
+                  PRIVACY POLICY
                 </NavLink>
                 <NavLink to="/terms-of-service" className={navLinkClass} onClick={() => setMenuOpen(false)}>
-                  Terms of Service
+                  TERMS OF SERVICE
                 </NavLink>
               </footer>
             </section>

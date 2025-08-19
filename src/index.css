@@ -105,14 +105,17 @@ body {
 /* Header - Shared structural styling */
 header {
   width: 100%; /* Ensures full-width layout across viewport */
-  padding: 1.5rem 2rem; /* Provides consistent spacing inside header */
+  padding: 1rem 2rem; /* Provides consistent spacing inside header */
+  transition: 0.3s ease-in; /* Smooth transition for header */
   background-color: var(--header-bg-color); /* Applies theme background color from CSS variables */
 }
 
 /* Main - Base layout for page content */
 main {
   width: 100%; /* Ensures content stretches to full container width */
+
   padding: 2rem; /* Adds breathing room around main content */
+  transition: 0.3s ease-in; /* Smooth transition for main */
   background-color: var(---bg-color); /* Matches the background of header/footer for visual cohesion */
 }
 
@@ -120,5 +123,36 @@ main {
 footer {
   width: 100%; /* Ensures full-width layout across viewport */
   padding: 2rem; /* Provides consistent spacing inside footer */
+  transition: 0.3s ease-in; /* Smooth transition for footer */
   background-color: var(--footer-bg-color); /* Applies theme background color from CSS variables */
+}
+
+/* Tablet responsiveness */
+@media (max-width: 768px) {
+  header {
+    padding: 0.75rem 2rem;
+  }
+
+  main {
+    padding: 1.75rem;
+  }
+
+  footer {
+    padding: 1.75rem;
+  }
+}
+
+/* Mobile responsiveness */
+@media (max-width: 480px) {
+  header {
+    padding: 0.75rem 2rem;
+  }
+
+  main {
+    padding: 1.5rem;
+  }
+
+  footer {
+    padding: 1.5rem;
+  }
 }
