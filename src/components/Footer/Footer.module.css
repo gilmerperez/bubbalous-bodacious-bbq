@@ -3,8 +3,162 @@
   display: flex;
   margin: 0 auto;
   max-width: 1200px;
-  text-align: center;
   align-items: center;
   flex-direction: column;
   justify-content: center;
+  color: hsl(0, 0%, 100%);
+}
+
+/* Logo, legal disclaimer, and copyright */
+.topContainer {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+* {
+  /* border: 1px solid red; */
+}
+
+.logoContainer {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.75rem;
+  justify-content: center;
+}
+
+/* Logo */
+.logoContainer img {
+  width: 250px;
+  transition: 0.3s ease-in;
+}
+
+/* Legal disclaimer */
+.legalDisclaimer {
+  margin: 0 auto;
+  max-width: 800px;
+  font-size: 1.15rem;
+  margin-bottom: 0.5rem;
+  color: hsl(0, 0%, 80%);
+}
+
+/* Copyright */
+.copyright {
+  font-weight: 500;
+  font-size: 1.15rem;
+}
+
+/* Seperator */
+.seperator {
+  width: 100%;
+  height: 2px;
+  border: none;
+  margin-bottom: 0.75rem;
+  background-color: hsl(0, 0%, 50%);
+}
+
+/* Legal pages, social links, site navigation, and contact info */
+.bottomContainer {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-evenly;
+}
+
+.legalPages,
+.siteNavigation,
+.socialLinks,
+.contactInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.navHeader {
+  font-weight: 500;
+  font-size: 1.5rem;
+  margin-bottom: 0.25rem;
+}
+
+.navItems {
+  gap: 0.15rem;
+  display: flex;
+  font-weight: 400;
+  flex-direction: column;
+}
+
+.navItems a {
+  position: relative;
+  font-size: 1.25rem;
+  transition: 0.3s ease-in;
+  color: hsl(0, 0%, 80%);
+}
+
+.navItems a:hover {
+  color: hsl(0, 0%, 100%);
+}
+
+/* Tablet responsiveness */
+@media (max-width: 768px) {
+  .logoContainer img {
+    width: 225px;
+  }
+
+  .bottomContainer {
+    flex-direction: column;
+  }
+
+  .legalPages:not(:last-child),
+  .siteNavigation:not(:last-child),
+  .socialLinks:not(:last-child),
+  .contactInfo:not(:last-child) {
+    margin-bottom: 1rem;
+  }
+
+  .navHeader {
+    font-size: 1.75rem;
+    margin-bottom: 0rem;
+  }
+
+  .navItems a {
+    gap: 0.1rem;
+    font-size: 1.25rem;
+  }
+
+  .navItems a:hover {
+    margin-left: 0.25rem;
+  }
+}
+
+/* Mobile responsiveness */
+@media (max-width: 480px) {
+  .logoContainer img {
+    width: 200px;
+  }
+
+  .legalDisclaimer {
+    font-size: 1rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .copyright {
+    font-size: 1rem;
+  }
+
+  .seperator {
+    height: 1px;
+  }
+
+  .legalPages:not(:last-child),
+  .siteNavigation:not(:last-child),
+  .socialLinks:not(:last-child),
+  .contactInfo:not(:last-child) {
+    margin-bottom: 0.75rem;
+  }
+
+  .navHeader {
+    font-size: 1.5rem;
+  }
+
+  .navItems a {
+    font-size: 1.15rem;
+  }
 }
