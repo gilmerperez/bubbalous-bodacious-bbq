@@ -54,7 +54,7 @@ function Header() {
           </NavLink>
 
           {/* Site navigation */}
-          <section className={styles.navContainer}>
+          <div className={styles.navContainer}>
             <nav className={styles.navItems}>
               <NavLink to="/" className={navLinkClass}>
                 HOME
@@ -83,15 +83,15 @@ function Header() {
             <button className={styles.hamburger} onClick={() => setMenuOpen(true)}>
               <i className="fa-solid fa-bars fa-xl"></i>
             </button>
-          </section>
+          </div>
         </section>
       </header>
 
       {/* Sidebar */}
       {menuOpen &&
         createPortal(
-          <section className={styles.sidebarOverlay} onClick={() => setMenuOpen(false)}>
-            <section className={styles.sidebar} onClick={(e) => e.stopPropagation()}>
+          <div className={styles.sidebarOverlay} onClick={() => setMenuOpen(false)}>
+            <div className={styles.sidebar} onClick={(e) => e.stopPropagation()}>
               {/* Sidebar close button */}
               <button className={styles.sidebarClose} onClick={() => setMenuOpen(false)}>
                 <i className="fa-solid fa-xmark"></i>
@@ -115,10 +115,12 @@ function Header() {
 
               {/* Sidebar footer */}
               <footer className={styles.sidebarFooter}>
+                {/* Theme button */}
                 <button className={`${styles.themeButton} ${styles.sidebarThemeButton}`} onClick={toggleTheme}>
                   <i className={`fa-solid ${theme === "dark" ? "fa-moon" : "fa-sun"} fa-sm`}></i>
                   <p>{theme === "dark" ? "DARK" : "LIGHT"}</p>
                 </button>
+                {/* Legal pages */}
                 <NavLink to="/contact" className={navLinkClass} onClick={() => setMenuOpen(false)}>
                   CONTACT
                 </NavLink>
@@ -129,8 +131,8 @@ function Header() {
                   TERMS OF SERVICE
                 </NavLink>
               </footer>
-            </section>
-          </section>,
+            </div>
+          </div>,
           document.body
         )}
     </>

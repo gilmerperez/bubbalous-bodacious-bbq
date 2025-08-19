@@ -87,7 +87,6 @@
   color: var(--text-secondary);
 }
 
-
 @media (max-width: 850px) {
   .logoContainer img {
     height: 65px;
