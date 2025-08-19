@@ -1,3 +1,8 @@
+/* Shadow effect */
+header {
+  box-shadow: 0 3px 8px hsla(0, 0%, 0%, 0.15);
+}
+
 .headerContainer {
   width: 100%;
   display: flex;
