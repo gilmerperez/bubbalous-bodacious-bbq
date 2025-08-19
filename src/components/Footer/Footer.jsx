@@ -6,31 +6,67 @@ function Footer() {
     <>
       <footer>
         <div className={styles.footerContainer}>
-          <section className={styles.topContainer}>
+          <div className={styles.topContainer}>
             {/* Logo */}
             <div className={styles.logoContainer}>
-              <img src="/pigs.webp" alt="Bubbalous Bodacious BBQ Logo" />
+              <img src="/favicon.jpg" alt="Bubbalous Bodacious BBQ Logo" />
             </div>
 
-            {/* Legal text */}
+            {/* Legal disclaimer */}
             <p className={styles.legalDisclaimer}>
-              Kingdom Movement offers fitness training and wellness guidance for educational and informational purposes
-              only. This site does not provide medical advice, diagnosis, or treatment. Participation in classes is at
-              your own risk. Always consult with a licensed medical professional before beginning any new exercise
-              program.
+              Bubbalous Bodacious BBQ provides delicious barbecue meals and catering services for enjoyment and
+              satisfaction. This site does not offer dietary advice or nutritional guidance. Consumption of our products
+              is at your own discretion. Always consult with a dietary professional if you have specific health concerns
+              or dietary restrictions.
             </p>
 
             {/* Copyright */}
-            <p className={styles.copyright}>&copy; {new Date().getFullYear()} Kingdom Movement. All rights reserved.</p>
-          </section>
+            <p className={styles.copyright}>
+              &copy; {new Date().getFullYear()} Bubbalous Bodacious BBQ. All rights reserved.
+            </p>
+          </div>
 
           {/* Seperator */}
           <hr className={styles.seperator} />
 
           <section className={styles.bottomContainer}>
+            {/* Site navigation */}
+            <section className={styles.siteNavigation}>
+              <h5 className={styles.navHeader}>PAGES</h5>
+              <nav className={styles.navItems}>
+                <NavLink to="/">Home</NavLink>
+                <NavLink to="/menu">Menu</NavLink>
+                <NavLink to="/party-packs">Party Packs</NavLink>
+                <NavLink to="/order-online">Order Online</NavLink>
+              </nav>
+            </section>
+
+            {/* Social links */}
+            <section className={styles.socialLinks}>
+              <h5 className={styles.navHeader}>CONNECT</h5>
+              <nav className={styles.navItems}>
+                {/* Facebook */}
+                <a href="https://www.facebook.com/BubbalousConroy/" target="_blank" rel="noopener noreferrer">
+                  Facebook
+                </a>
+                {/* Instagram */}
+                <a href="https://www.instagram.com/bubbalousonconroy/" target="_blank" rel="noopener noreferrer">
+                  Instagram
+                </a>
+                {/* Google page */}
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://www.google.com/search?sa=X&sca_esv=19a04cb715b89171&rlz=1C1RXQR_enUS1087US1087&q=Bubbalou%27s+Bodacious+Bar-B-Que&ludocid=15616216618251093981&lsig=AB86z5V2Tiz1kh1SIkGwpkt0_9tm&ved=2ahUKEwiZloWK1ZePAxUvTDABHcBzFCwQoAJ6BAgcEBw&biw=1745&bih=828&dpr=1.1"
+                >
+                  Google Page
+                </a>
+              </nav>
+            </section>
+
             {/* Legal pages */}
             <section className={styles.legalPages}>
-              <h5 className={styles.navHeader}>Legal</h5>
+              <h5 className={styles.navHeader}>LEGAL</h5>
               <nav className={styles.navItems}>
                 <NavLink to="/contact">Contact</NavLink>
                 <NavLink to="/privacy-policy">Privacy Policy</NavLink>
@@ -38,60 +74,22 @@ function Footer() {
               </nav>
             </section>
 
-            {/* Site navigation */}
-            <section className={styles.siteNavigation}>
-              <h5 className={styles.navHeader}>Pages</h5>
-              <nav className={styles.navItems}>
-                <NavLink to="/">Home</NavLink>
-                <NavLink to="/nutrition">Nutrition</NavLink>
-                <NavLink to="/schedule">Schedule</NavLink>
-                <NavLink to="/membership">Membership</NavLink>
-              </nav>
-            </section>
-
-            {/* Social links */}
-            <section className={styles.socialLinks}>
-              <h5 className={styles.navHeader}>Connect</h5>
-              <nav className={styles.navItems}>
-                {/* Facebook */}
-                <a
-                  href="https://www.facebook.com/profile.php?id=61554804519847&ref=_ig_profile_ac"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Facebook
-                </a>
-                {/* Instagram */}
-                <a href="https://www.instagram.com/kngdm.mvmnt/" target="_blank" rel="noopener noreferrer">
-                  Instagram
-                </a>
-                {/* Google page */}
-                <a
-                  href="https://www.google.com/search?q=Rangers+Kingdom+LLC+&sca_esv=21b8fdcecfe5527b&rlz=1C1RXQR_enUS1087US1087&ei=31iBaKqHHraWwbkPo5zZkQM&ved=0ahUKEwjq8uDy-tOOAxU2SzABHSNONjIQ4dUDCBA&uact=5&oq=Rangers+Kingdom+LLC+&gs_lp=Egxnd3Mtd2l6LXNlcnAiFFJhbmdlcnMgS2luZ2RvbSBMTEMgMgYQABgWGB4yBhAAGBYYHjIGEAAYFhgeMggQABiiBBiJBTIIEAAYogQYiQUyCBAAGIAEGKIEMggQABiABBiiBDIIEAAYgAQYogRI4g1QvQNYmApwAXgAkAEAmAFloAHEA6oBAzQuMbgBA8gBAPgBAZgCBqAC2APCAhEQLhiABBiwAxjHARiOBRivAcICCRAAGLADGAcYHsICCBAAGIAEGLADwgIHEAAYsAMYHsICBRAAGIAEwgILEAAYgAQYhgMYigXCAgUQABjvBZgDAIgGAZAGCpIHAzUuMaAH1BqyBwM0LjG4B9UDwgcFMC40LjLIBxA&sclient=gws-wiz-serp"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Google Page
-                </a>
-              </nav>
-            </section>
-
             {/* Contact info */}
             <section className={styles.contactInfo}>
-              <h5 className={styles.navHeader}>Contact</h5>
+              <h5 className={styles.navHeader}>CONTACT</h5>
               <nav className={styles.navItems}>
                 {/* Phone number */}
-                <a href="tel:3213375193">(321) 337-5193</a>
+                <a href="tel:4072951212">(407) 295-1212</a>
+                {/* Email */}
+                <a href="mailto:bubbalousbbq@aol.com">bubbalousbbq@aol.com</a>
                 {/* Address */}
                 <a
-                  href="https://www.google.com/maps/place/Rangers+Kingdom+LLC/@28.4598745,-81.4403449,17z/data=!4m6!3m5!1s0x88dd87daa64f54c7:0xb0e764b4072e95b9!8m2!3d28.4598745!4d-81.43777!16s%2Fg%2F11rdz8gr7f?authuser=1&entry=tts&g_ep=EgoyMDI1MDIxMC4wIPu8ASoASAFQAw%3D%3D"
+                  href="https://www.google.com/maps?sca_esv=19a04cb715b89171&rlz=1C1RXQR_enUS1087US1087&lsig=AB86z5V2Tiz1kh1SIkGwpkt0_9tm&biw=1745&bih=828&dpr=1.1&um=1&ie=UTF-8&fb=1&gl=us&sa=X&geocode=KQekdArSfueIMd2HaKpG8rfY&daddr=5818+Conroy+Rd,+Orlando,+FL+32835"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  6881 Kingspointe Parkway <br /> Suite #4 Orlando, FL 32819
+                  5818 Conroy Road, Orlando FL 32835
                 </a>
-                {/* Email */}
-                <a href="mailto:kngdm.mvmnt.llc@gmail.com">kngdm.mvmnt.llc@gmail.com</a>
               </nav>
             </section>
           </section>
