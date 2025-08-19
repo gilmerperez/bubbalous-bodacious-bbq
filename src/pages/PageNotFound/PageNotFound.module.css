@@ -8,3 +8,72 @@
   flex-direction: column;
   justify-content: center;
 }
+
+/* Heading */
+.heading {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  transition: 0.3s ease-in;
+  border-bottom: 4px solid var(--primary);
+}
+
+/* Introduction */
+.introduction {
+  font-size: 1.5rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+/* Home link */
+.homeLink {
+  font-weight: 500;
+  font-size: 1.75rem;
+  border-radius: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  transition: 0.3s ease-in;
+  border: 3px solid var(--primary);
+  background-color: var(--header-bg-color);
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
+}
+
+.homeLink:hover {
+  transform: scale(1.05);
+  color: hsl(0, 0%, 100%);
+  background-color: var(--primary);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Tablet responsiveness */
+@media (max-width: 768px) {
+  .heading {
+    font-size: 2.75rem;
+  }
+
+  .introduction {
+    font-size: 1.25rem;
+  }
+
+  .homeLink {
+    font-size: 1.5rem;
+    padding: 0.4rem 0.65rem;
+  }
+}
+
+/* Mobile responsiveness */
+@media (max-width: 480px) {
+  .heading {
+    font-size: 2.25rem;
+    border-bottom: 3px solid var(--primary);
+  }
+
+  .introduction {
+    font-size: 1.15rem;
+  }
+
+  .homeLink {
+    font-size: 1.25rem;
+    padding: 0.3rem 0.55rem;
+    border: 2px solid var(--primary);
+  }
+}
