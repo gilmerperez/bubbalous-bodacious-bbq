@@ -2,17 +2,19 @@
   width: 100%;
   display: flex;
   margin: 0 auto;
-  max-width: 1400px;
+  max-width: 1200px;
   text-align: center;
   align-items: center;
   justify-content: space-between;
 }
 
+/* Logo */
 .logoContainer img {
   height: 75px;
   transition: 0.3s ease-in;
 }
 
+/* Site navigation */
 .navContainer {
   gap: 1rem;
   display: flex;
@@ -24,38 +26,56 @@
 .navItems {
   gap: 1rem;
   display: flex;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   align-items: center;
   justify-content: center;
   transition: 0.3s ease-in;
 }
 
 .navItems a {
+  position: relative;
   transition: transform 0.2s ease-in, color 0.3s ease-in;
 }
 
-.activeLink {
+/* Prevent hover effect on active link */
+.navItems a:hover:not(.activeLink) {
+  transform: translateY(-3px);
+  color: var(--text-secondary);
+}
+
+/* Active link */
+.navItems a.activeLink {
   color: var(--primary);
 }
 
-/* Only apply hover effect to devices with a pointer */
-@media (hover: hover) {
-  /* Prevent hover effect on active link */
-  .navItems a:hover:not(.activeLink) {
-    color: var(--primary);
-    transform: translateY(-3px);
-  }
+/* Underline effect */
+.navItems a::after {
+  width: 0;
+  left: 50%;
+  height: 2px;
+  content: "";
+  bottom: -5px;
+  position: absolute;
+  transform: translateX(-50%);
+  background-color: var(--primary);
+  transition: width 0.3s ease-in, left 0.3s ease-in;
 }
 
+.navItems a.activeLink::after {
+  width: 100%;
+}
+
+/* Seperator */
 .seperator {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   transition: 0.3s ease-in;
 }
 
+/* Theme button */
 .themeButton {
   gap: 0.5rem;
   display: flex;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   align-items: center;
   justify-content: center;
   transition: 0.3s ease-in;
@@ -67,28 +87,6 @@
   color: var(--text-secondary);
 }
 
-@media (max-width: 1000px) {
-  .logoContainer img {
-    height: 70px;
-  }
-
-  .navContainer {
-    gap: 0.95rem;
-  }
-
-  .navItems {
-    gap: 0.95rem;
-    font-size: 1.25rem;
-  }
-
-  .seperator {
-    font-size: 1.25rem;
-  }
-
-  .themeButton {
-    font-size: 1.25rem;
-  }
-}
 
 @media (max-width: 850px) {
   .logoContainer img {
@@ -165,6 +163,7 @@
   }
 }
 
+/* Mobile hamburger menu */
 .hamburger {
   display: none;
   cursor: pointer;
@@ -172,6 +171,7 @@
   color: var(--text-primary);
 }
 
+/* Sidebar */
 .sidebarOverlay {
   inset: 0;
   z-index: 999;
@@ -191,6 +191,7 @@
   background-color: var(--header-bg-color);
 }
 
+/* Sidebar close button */
 .sidebarClose {
   top: 1.25rem;
   right: 1.25rem;
@@ -207,10 +208,7 @@
   color: var(--text-secondary);
 }
 
-* {
-  /* border: 1px solid red; */
-}
-
+/* Sidebar site navigation */
 .sidebarNavItems {
   gap: 1rem;
   display: flex;
@@ -223,11 +221,18 @@
   transition: transform 0.2s ease-in, color 0.3s ease-in-out;
 }
 
+/* Prevent hover effect on active link */
 .sidebarNavItems a:hover:not(.activeLink) {
-  color: var(--primary);
   transform: translateX(5px);
+  color: var(--text-secondary);
 }
 
+/* Active link */
+.sidebarNavItems a.activeLink {
+  color: var(--primary);
+}
+
+/* Sidebar footer */
 .sidebarFooter {
   padding: 0;
   gap: 0.75rem;

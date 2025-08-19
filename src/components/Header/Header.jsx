@@ -62,11 +62,11 @@ function Header() {
               <NavLink to="/menu" className={navLinkClass}>
                 MENU
               </NavLink>
-              <NavLink to="/order-online" className={navLinkClass}>
-                ORDER ONLINE
-              </NavLink>
               <NavLink to="/party-packs" className={navLinkClass}>
                 PARTY PACKS
+              </NavLink>
+              <NavLink to="/order-online" className={navLinkClass}>
+                ORDER ONLINE
               </NavLink>
             </nav>
 
