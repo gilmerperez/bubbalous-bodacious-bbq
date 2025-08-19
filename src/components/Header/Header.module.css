@@ -5,6 +5,421 @@
   max-width: 1200px;
   text-align: center;
   align-items: center;
-  flex-direction: row;
   justify-content: space-between;
+}
+
+.moonstarLogo {
+  display: flex;
+  line-height: 1;
+  font-weight: 500;
+  align-items: center;
+  white-space: nowrap;
+  flex-direction: column;
+  letter-spacing: 0.25rem;
+  justify-content: center;
+}
+
+.moonstar {
+  font-size: 2rem;
+  color: var(--primary);
+  transition: 0.3s ease-in;
+  font-family: "Raleway", sans-serif;
+}
+
+.esthetics {
+  color: var(--secondary);
+  font-size: 1.25rem;
+  transition: 0.3s ease-in;
+  font-family: "Raleway", sans-serif;
+}
+
+.navContainer {
+  gap: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s ease-in;
+}
+
+.navItems {
+  gap: 1rem;
+  display: flex;
+  font-size: 1.25rem;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s ease-in;
+}
+
+.activeLink {
+  color: var(--primary);
+}
+
+.navItems a {
+  transition: transform 0.2s ease-in, color 0.3s ease-in;
+}
+
+/* Only apply hover effect to devices with a pointer */
+@media (hover: hover) {
+  /* Prevent hover effect on active link */
+  .navItems a:hover:not(.activeLink) {
+    color: var(--primary);
+    transform: translateY(-2px);
+  }
+}
+
+.seperator {
+  font-size: 1.25rem;
+  transition: 0.3s ease-in;
+}
+
+.functionalButtons {
+  gap: 1rem;
+  display: flex;
+  font-size: 1.1rem;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s ease-in;
+}
+
+.themeButton {
+  gap: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-primary);
+  background-color: var(--header-footer-bg-color);
+}
+
+.themeButton:hover {
+  color: var(--text-secondary);
+}
+
+.bookNowButton {
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 8px;
+  padding: 0.5rem 0.75rem;
+  transition: 0.3s ease-in;
+  color: var(--text-primary);
+  border: 2px solid var(--primary);
+  background-color: var(--header-footer-bg-color);
+}
+
+.bookNowButton:hover {
+  background-color: var(--primary);
+  box-shadow: 0 0 10px var(--primary);
+  color: var(--header-footer-bg-color);
+}
+
+@media (max-width: 1100px) {
+  .moonstar {
+    font-size: 1.85rem;
+  }
+
+  .esthetics {
+    font-size: 1.15rem;
+  }
+
+  .navItems {
+    font-size: 1.15rem;
+  }
+}
+
+@media (max-width: 1050px) {
+  .moonstar {
+    font-size: 1.65rem;
+  }
+
+  .esthetics {
+    font-size: 1rem;
+  }
+
+  .navContainer {
+    gap: 0.95rem;
+  }
+
+  .navItems {
+    gap: 0.95rem;
+    font-size: 1.1rem;
+  }
+
+  .seperator {
+    font-size: 1.15rem;
+  }
+
+  .functionalButtons {
+    gap: 0.8rem;
+    font-size: 0.95rem;
+  }
+
+  .themeButton {
+    gap: 0.45rem;
+  }
+
+  .bookNowButton {
+    font-size: 0.95rem;
+    padding: 0.45rem 0.7rem;
+  }
+}
+
+@media (max-width: 990px) {
+  .moonstar {
+    font-size: 1.55rem;
+  }
+
+  .esthetics {
+    font-size: 0.95rem;
+  }
+
+  .navContainer {
+    gap: 0.9rem;
+  }
+
+  .navItems {
+    gap: 0.7rem;
+    font-size: 1.05rem;
+  }
+
+  .seperator {
+    font-size: 1.1rem;
+  }
+
+  .functionalButtons {
+    gap: 0.5rem;
+  }
+
+  .themeButton {
+    gap: 0.4rem;
+  }
+
+  .bookNowButton {
+    font-size: 0.95rem;
+    padding: 0.4rem 0.65rem;
+  }
+}
+
+@media (max-width: 940px) {
+  .navContainer {
+    gap: 0.8rem;
+  }
+
+  .functionalButtons {
+    gap: 0.45rem;
+  }
+
+  .themeButton:not(.sidebarThemeButton) {
+    padding: 0.25rem;
+  }
+
+  .themeButton:not(.sidebarThemeButton) p {
+    display: none;
+  }
+}
+
+@media (max-width: 830px) {
+  .moonstar {
+    font-size: 1.45rem;
+  }
+
+  .esthetics {
+    font-size: 0.85rem;
+  }
+
+  .navContainer {
+    gap: 0.7rem;
+  }
+
+  .navItems {
+    gap: 0.6rem;
+  }
+
+  .seperator {
+    font-size: 1rem;
+  }
+
+  .bookNowButton {
+    padding: 0.35rem 0.6rem;
+  }
+}
+
+@media (max-width: 790px) {
+  .themeButton:not(.sidebarThemeButton) {
+    display: none;
+  }
+}
+
+@media (max-width: 750px) {
+  .navItems {
+    font-size: 1.25rem;
+  }
+
+  .seperator {
+    display: none;
+  }
+
+  .bookNowButton:not(.sidebarBookNowButton) {
+    display: none;
+  }
+}
+
+@media (max-width: 700px) {
+  .moonstar {
+    font-size: 1.25rem;
+  }
+
+  .esthetics {
+    font-size: 0.75rem;
+  }
+
+  .navItems {
+    font-size: 1.15rem;
+  }
+}
+
+@media (max-width: 650px) {
+  .moonstar {
+    font-size: 1.15rem;
+  }
+
+  .esthetics {
+    font-size: 0.7rem;
+  }
+
+  .navItems {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 610px) {
+  .moonstar {
+    font-size: 1.05rem;
+  }
+
+  .esthetics {
+    font-size: 0.65rem;
+  }
+
+  .navItems {
+    font-size: 0.95rem;
+  }
+}
+
+.hamburger {
+  border: none;
+  display: none;
+  cursor: pointer;
+  background: none;
+  color: var(--text-primary);
+}
+
+.sidebarOverlay {
+  inset: 0;
+  z-index: 999;
+  display: flex;
+  position: fixed;
+  justify-content: flex-start;
+  background: hsla(0, 0%, 0%, 0.75);
+}
+
+.sidebar {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  padding: 1.5rem;
+  max-width: 250px;
+  position: relative;
+  flex-direction: column;
+  background-color: var(--header-footer-bg-color);
+}
+
+.sidebarClose {
+  border: none;
+  top: 1.25rem;
+  right: 1.5rem;
+  cursor: pointer;
+  background: none;
+  position: absolute;
+  color: var(--text-primary);
+}
+
+.sidebarClose:hover {
+  color: var(--text-secondary);
+}
+
+.sidebarNavItems {
+  gap: 0.75rem;
+  display: flex;
+  margin-top: 2rem;
+  font-size: 1.25rem;
+  flex-direction: column;
+}
+
+.sidebarNavItems a {
+  transition: transform 0.2s ease-in, color 0.3s ease-in-out;
+}
+
+.sidebarNavItems a:hover:not(.activeLink) {
+  color: var(--secondary);
+  transform: translateX(5px);
+}
+
+.sidebarFunctionalButtons {
+  gap: 1rem;
+  display: flex;
+  margin-top: 3rem;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.sidebarBookNowButton {
+  width: 100%;
+  font-size: 1rem;
+  padding: 0.75rem;
+}
+
+.sidebarFooter {
+  margin: 0;
+  padding: 0;
+  gap: 0.5rem;
+  display: flex;
+  font-size: 1rem;
+  margin-top: auto;
+  flex-direction: column;
+}
+
+.sidebarFooter a {
+  color: var(--text-secondary);
+}
+
+.sidebarFooter a:hover {
+  color: var(--text-primary);
+}
+
+/* Hide site nav and show hamburger menu */
+@media (max-width: 570px) {
+  .headerContainer {
+    justify-content: space-between;
+  }
+
+  .moonstar {
+    font-size: 1.5rem;
+  }
+
+  .esthetics {
+    font-size: 1rem;
+  }
+
+  .navContainer {
+    gap: 0;
+  }
+
+  .navItems,
+  .seperator,
+  .functionalButtons {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+  }
 }
