@@ -29,10 +29,6 @@ header {
   font-family: "Oswald", sans-serif;
 }
 
-* {
-  /* border: 1px solid red; */
-}
-
 .navItems {
   gap: 1rem;
   display: flex;

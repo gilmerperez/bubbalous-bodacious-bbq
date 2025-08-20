@@ -84,9 +84,9 @@ function Footer() {
                 <a href="mailto:bubbalousbbq@aol.com">bubbalousbbq@aol.com</a>
                 {/* Address */}
                 <a
-                  href="https://www.google.com/maps?sca_esv=19a04cb715b89171&rlz=1C1RXQR_enUS1087US1087&lsig=AB86z5V2Tiz1kh1SIkGwpkt0_9tm&biw=1745&bih=828&dpr=1.1&um=1&ie=UTF-8&fb=1&gl=us&sa=X&geocode=KQekdArSfueIMd2HaKpG8rfY&daddr=5818+Conroy+Rd,+Orlando,+FL+32835"
                   target="_blank"
                   rel="noopener noreferrer"
+                  href="https://www.google.com/maps?sca_esv=19a04cb715b89171&rlz=1C1RXQR_enUS1087US1087&lsig=AB86z5V2Tiz1kh1SIkGwpkt0_9tm&biw=1745&bih=828&dpr=1.1&um=1&ie=UTF-8&fb=1&gl=us&sa=X&geocode=KQekdArSfueIMd2HaKpG8rfY&daddr=5818+Conroy+Rd,+Orlando,+FL+32835"
                 >
                   5818 Conroy Road, Orlando FL 32835
                 </a>
