@@ -100,15 +100,19 @@ function Header() {
               {/* Sidebar site navigation */}
               <nav className={styles.sidebarNavItems}>
                 <NavLink to="/" className={navLinkClass} onClick={() => setMenuOpen(false)}>
+                  <i className="fa-solid fa-house"></i>
                   HOME
                 </NavLink>
                 <NavLink to="/menu" className={navLinkClass} onClick={() => setMenuOpen(false)}>
+                  <i className="fa-solid fa-burger"></i>
                   MENU
                 </NavLink>
                 <NavLink to="/party-packs" className={navLinkClass} onClick={() => setMenuOpen(false)}>
+                  <i className="fa-solid fa-people-group"></i>
                   PARTY PACKS
                 </NavLink>
                 <NavLink to="/order-online" className={navLinkClass} onClick={() => setMenuOpen(false)}>
+                  <i className="fa-solid fa-mobile-screen-button"></i>
                   ORDER ONLINE
                 </NavLink>
               </nav>
@@ -122,12 +126,15 @@ function Header() {
                 </button>
                 {/* Legal pages */}
                 <NavLink to="/contact" className={navLinkClass} onClick={() => setMenuOpen(false)}>
+                  <i className="fa-solid fa-paper-plane"></i>
                   CONTACT
                 </NavLink>
                 <NavLink to="/privacy-policy" className={navLinkClass} onClick={() => setMenuOpen(false)}>
+                  <i className="fa-solid fa-shield-halved"></i>
                   PRIVACY POLICY
                 </NavLink>
                 <NavLink to="/terms-of-service" className={navLinkClass} onClick={() => setMenuOpen(false)}>
+                  <i className="fa-solid fa-asterisk"></i>
                   TERMS OF SERVICE
                 </NavLink>
               </footer>

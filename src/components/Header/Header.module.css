@@ -186,6 +186,7 @@ header {
   max-width: 250px;
   position: relative;
   flex-direction: column;
+  font-family: "Oswald", sans-serif;
   background-color: var(--header-bg-color);
 }
 
@@ -227,7 +228,12 @@ header {
 
 /* Active link */
 .sidebarNavItems a.activeLink {
-  color: var(--primary);
+  border-radius: 0.25rem;
+  padding: 0.25rem 0.5rem;
+  color: hsl(0, 0%, 100%);
+  background-color: var(--primary);
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
+  text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
 }
 
 /* Sidebar footer */
