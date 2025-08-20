@@ -4,11 +4,8 @@ import { NavLink } from "react-router-dom";
 import { useState, useEffect } from "react";
 
 function Header() {
-  // Theme switch
+  // * Theme switch
   const [theme, setTheme] = useState("dark");
-
-  // Mobile sidebar toggle
-  const [menuOpen, setMenuOpen] = useState(false);
 
   // Make theme be set in DOM
   useEffect(() => {
@@ -41,7 +38,7 @@ function Header() {
     return () => mediaQuery.removeEventListener("change", handleChange);
   }, []);
 
-  // Header visibility for sticky behavior
+  // * Header visibility for sticky behavior
   const [lastScrollY, setLastScrollY] = useState(0);
   const [isHeaderVisible, setIsHeaderVisible] = useState(true);
 
@@ -67,8 +64,23 @@ function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [lastScrollY]);
 
-  // Custom styles for active page
+  // * Custom styles for active page
   const navLinkClass = ({ isActive }) => (isActive ? styles.activeLink : undefined);
+
+  // * Mobile sidebar toggle
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [isSpinning, setIsSpinning] = useState(false);
+
+  // Handle hamburger click with spin animation
+  const handleHamburgerClick = () => {
+    setIsSpinning(true);
+    setMenuOpen(true);
+
+    // Reset spinning state after animation completes
+    setTimeout(() => {
+      setIsSpinning(false);
+    }, 300);
+  };
 
   return (
     <>
@@ -106,8 +118,8 @@ function Header() {
             </button>
 
             {/* Mobile hamburger menu */}
-            <button className={styles.hamburger} onClick={() => setMenuOpen(true)}>
-              <i className="fa-solid fa-bars fa-xl"></i>
+            <button className={styles.hamburger} onClick={handleHamburgerClick}>
+              <i className={`fa-solid fa-bars fa-xl ${isSpinning ? styles.spin : ""}`}></i>
             </button>
           </div>
         </section>
