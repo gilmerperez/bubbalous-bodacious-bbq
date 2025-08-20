@@ -134,7 +134,7 @@ function Header() {
                   MENU
                 </NavLink>
                 <NavLink to="/party-packs" className={navLinkClass} onClick={() => setMenuOpen(false)}>
-                  <i className="fa-solid fa-people-group"></i>
+                  <i className="fa-solid fa-box"></i>
                   PARTY PACKS
                 </NavLink>
                 <NavLink to="/order-online" className={navLinkClass} onClick={() => setMenuOpen(false)}>
@@ -147,7 +147,7 @@ function Header() {
               <footer className={styles.sidebarFooter}>
                 {/* Theme button */}
                 <button className={`${styles.themeButton} ${styles.sidebarThemeButton}`} onClick={toggleTheme}>
-                  <i className={`fa-solid ${theme === "dark" ? "fa-moon" : "fa-sun"} fa-sm`}></i>
+                  <i className={`fa-solid ${theme === "dark" ? "fa-moon" : "fa-sun"}`}></i>
                   <p>{theme === "dark" ? "DARK" : "LIGHT"}</p>
                 </button>
                 {/* Legal pages */}

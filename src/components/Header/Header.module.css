@@ -230,6 +230,9 @@ header {
 }
 
 .sidebarNavItems a {
+  gap: 0.5rem;
+  display: flex;
+  align-items: center;
   transition: transform 0.2s ease-in, color 0.3s ease-in-out;
 }
 
@@ -263,7 +266,10 @@ header {
 
 .sidebarFooter a,
 .sidebarThemeButton {
+  gap: 0.5rem;
+  display: flex;
   font-size: 1.15rem;
+  align-items: center;
   color: var(--text-secondary);
   transition: transform 0.2s ease-in, color 0.3s ease-in-out;
 }
