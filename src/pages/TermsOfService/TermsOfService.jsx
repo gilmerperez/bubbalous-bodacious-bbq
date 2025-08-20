@@ -33,11 +33,12 @@ function TermsOfService() {
           {/* Heading */}
           <h1 className={styles.heading}>TERMS OF SERVICE</h1>
 
-          <section className={styles.terms}>
+          <div className={styles.terms}>
             {/* Introduction */}
             <p className={styles.introduction}>
-              By accessing this website, you agree to comply with the following terms and conditions. Please read these
-              terms carefully before using our services.
+              By accessing this website, you agree to comply with the following terms and conditions. It is important to
+              thoroughly read and understand these terms as they govern your use of our services and website. If you do
+              not agree with any part of these terms, please refrain from using our website.
             </p>
 
             {/* Site usage */}
@@ -51,7 +52,7 @@ function TermsOfService() {
             <p className={styles.termsHeading}>NO LIABILITY</p>
             <p className={styles.termsText}>
               We are not responsible for any loss or damage that may occur from using this website. All information is
-              provided “as is,” without any warranties of any kind.
+              provided "as is" without any warranties of any kind.
             </p>
 
             {/* Modifications */}
@@ -68,7 +69,7 @@ function TermsOfService() {
               all information up-to-date, availability and offerings may vary. Please contact our team directly for the
               most current details.
             </p>
-          </section>
+          </div>
         </section>
       </main>
     </>

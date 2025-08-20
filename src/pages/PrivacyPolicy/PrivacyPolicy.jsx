@@ -33,7 +33,7 @@ function PrivacyPolicy() {
           {/* Heading */}
           <h1 className={styles.heading}>PRIVACY POLICY</h1>
 
-          <section className={styles.policy}>
+          <div className={styles.policy}>
             {/* Introduction */}
             <p className={styles.introduction}>
               Your privacy matters. This privacy policy outlines how we manage your information when visiting our
@@ -52,7 +52,8 @@ function PrivacyPolicy() {
             <p className={styles.policyHeading}>PURPOSE OF THE SITE</p>
             <p className={styles.policyText}>
               This website serves as an informational platform for Bubbalous Bodacious BBQ. It includes details about
-              our menu, party packs, and catering services. No purchases or account logins are required to browse.
+              our location, our menu, party packs, and catering services. No purchases or account logins are required to
+              browse.
             </p>
 
             {/* Personal information */}
@@ -68,7 +69,7 @@ function PrivacyPolicy() {
               This website does not use cookies, tracking pixels, or third-party analytics tools. We do not track your
               browsing behavior or device usage.
             </p>
-          </section>
+          </div>
         </section>
       </main>
     </>

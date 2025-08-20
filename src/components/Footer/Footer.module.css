@@ -21,7 +21,7 @@
 
 /* Logo */
 .logoContainer img {
-  width: 250px;
+  width: 200px;
   transition: 0.3s ease-in;
 }
 
@@ -47,7 +47,7 @@
   height: 2px;
   border: none;
   margin-bottom: 0.75rem;
-  background-color: var(--text-secondary);
+  background-color: var(--text-primary);
 }
 
 .bottomContainer {
@@ -96,7 +96,7 @@
 /* Tablet responsiveness */
 @media (max-width: 768px) {
   .logoContainer img {
-    width: 200px;
+    width: 180px;
     margin-bottom: 0.15rem;
   }
 
@@ -110,6 +110,7 @@
   }
 
   .bottomContainer {
+    gap: 0rem;
     flex-direction: column;
   }
 
@@ -132,7 +133,7 @@
 /* Mobile responsiveness */
 @media (max-width: 480px) {
   .logoContainer img {
-    width: 150px;
+    width: 160px;
   }
 
   .legalDisclaimer {

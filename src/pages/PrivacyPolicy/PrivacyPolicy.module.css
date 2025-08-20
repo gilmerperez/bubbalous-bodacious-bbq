@@ -2,7 +2,7 @@
   width: 100%;
   display: flex;
   margin: 0 auto;
-  max-width: 1000px;
+  max-width: 1200px;
   align-items: center;
   flex-direction: column;
   justify-content: center;
@@ -10,16 +10,16 @@
 
 /* Heading */
 .heading {
-  font-size: 3rem;
-  padding: 0.5rem 1rem;
+  font-size: 2.75rem;
+  margin-bottom: 1rem;
+  padding: 0.25rem 1rem;
   border-radius: 0.25rem;
-  margin-bottom: 0.75rem;
   transition: 0.3s ease-in;
   color: hsl(0, 0%, 100%);
   background-color: var(--primary);
   font-family: "Oswald", sans-serif;
-  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
-  text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
+  box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.3);
+  text-shadow: 5px 5px 3px rgba(0, 0, 0, 0.3);
 }
 
 .policy {
@@ -35,11 +35,11 @@
 
 .policyHeading {
   font-weight: 500;
-  font-size: 1.5rem;
+  font-size: 1.75rem;
+  padding: 0.25rem 1rem;
   display: inline-block;
   margin-bottom: 0.5rem;
   border-radius: 0.25rem;
-  padding: 0.25rem 0.5rem;
   color: hsl(0, 0%, 100%);
   background-color: var(--primary);
   font-family: "Oswald", sans-serif;
@@ -48,7 +48,7 @@
 }
 
 .policyText {
-  font-size: 1.25rem;
+  font-size: 1.5rem;
 }
 
 .policyText:not(:last-child) {
@@ -58,7 +58,7 @@
 /* Tablet responsiveness */
 @media (max-width: 768px) {
   .heading {
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
 
   .introduction {
@@ -66,7 +66,7 @@
   }
 
   .policyHeading {
-    font-size: 1.5rem;
+    font-size: 1.35rem;
   }
 
   .policyText {
@@ -77,7 +77,7 @@
 /* Mobile responsiveness */
 @media (max-width: 480px) {
   .heading {
-    font-size: 2rem;
+    font-size: 1.75rem;
   }
 
   .introduction {

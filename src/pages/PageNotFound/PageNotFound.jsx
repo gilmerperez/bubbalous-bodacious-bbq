@@ -11,7 +11,7 @@ function PageNotFound() {
   return (
     <>
       <main>
-        <div className={styles.pageNotFoundContainer}>
+        <section className={styles.pageNotFoundContainer}>
           {/* Heading */}
           <h1 className={styles.heading}>PAGE NOT FOUND</h1>
 
@@ -22,7 +22,7 @@ function PageNotFound() {
           <Link to="/" className={styles.homeLink}>
             BACK TO HOME PAGE
           </Link>
-        </div>
+        </section>
       </main>
     </>
   );
