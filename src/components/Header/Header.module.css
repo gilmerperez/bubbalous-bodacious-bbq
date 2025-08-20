@@ -1,6 +1,19 @@
-/* Shadow effect */
+/* Sticky header behavior + shadow effect */
 header {
+  top: 0;
+  left: 0;
+  right: 0;
+  position: fixed;
+  transition: transform 0.3s ease-in-out;
   box-shadow: 0px 3px 8px hsla(0, 0%, 0%, 0.15);
+}
+
+.headerVisible {
+  transform: translateY(0);
+}
+
+.headerHidden {
+  transform: translateY(-100%);
 }
 
 .headerContainer {

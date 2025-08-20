@@ -10,9 +10,6 @@ function Header() {
   // Mobile sidebar toggle
   const [menuOpen, setMenuOpen] = useState(false);
 
-  // Custom styles for active page
-  const navLinkClass = ({ isActive }) => (isActive ? styles.activeLink : undefined);
-
   // Make theme be set in DOM
   useEffect(() => {
     const storedTheme = localStorage.getItem("theme");
@@ -44,9 +41,38 @@ function Header() {
     return () => mediaQuery.removeEventListener("change", handleChange);
   }, []);
 
+  // Header visibility for sticky behavior
+  const [lastScrollY, setLastScrollY] = useState(0);
+  const [isHeaderVisible, setIsHeaderVisible] = useState(true);
+
+  // Scroll detection for sticky header
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+
+      // Show header when scrolling up or at the top
+      if (currentScrollY < lastScrollY || currentScrollY < 100) {
+        setIsHeaderVisible(true);
+      }
+      // Hide header when scrolling down (but not at the very top)
+      else if (currentScrollY > lastScrollY && currentScrollY > 100) {
+        setIsHeaderVisible(false);
+      }
+
+      setLastScrollY(currentScrollY);
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [lastScrollY]);
+
+  // Custom styles for active page
+  const navLinkClass = ({ isActive }) => (isActive ? styles.activeLink : undefined);
+
   return (
     <>
-      <header>
+      <header className={`${isHeaderVisible ? styles.headerVisible : styles.headerHidden}`}>
         <section className={styles.headerContainer}>
           {/* Logo */}
           <NavLink to="/" className={styles.logoContainer}>
