@@ -1,6 +1,6 @@
 /* Shadow effect */
 header {
-  box-shadow: 0 3px 8px hsla(0, 0%, 0%, 0.15);
+  box-shadow: 0px 3px 8px hsla(0, 0%, 0%, 0.15);
 }
 
 .headerContainer {
@@ -8,7 +8,7 @@ header {
   display: flex;
   margin: 0 auto;
   max-width: 1200px;
-  text-align: center;
+  /* text-align: center; */
   align-items: center;
   justify-content: space-between;
 }
@@ -26,12 +26,17 @@ header {
   align-items: center;
   justify-content: center;
   transition: 0.3s ease-in;
+  font-family: "Oswald", sans-serif;
+}
+
+* {
+  /* border: 1px solid red; */
 }
 
 .navItems {
   gap: 1rem;
   display: flex;
-  font-size: 1.25rem;
+  font-size: 1.75rem;
   align-items: center;
   justify-content: center;
   transition: 0.3s ease-in;
@@ -46,33 +51,22 @@ header {
 .navItems a:hover:not(.activeLink) {
   transform: translateY(-3px);
   color: var(--text-secondary);
+  border-bottom: 3px solid var(--primary);
 }
 
 /* Active link */
 .navItems a.activeLink {
-  color: var(--primary);
-}
-
-/* Underline effect */
-.navItems a::after {
-  width: 0;
-  left: 50%;
-  height: 2px;
-  content: "";
-  bottom: -5px;
-  position: absolute;
-  transform: translateX(-50%);
+  border-radius: 0.25rem;
+  padding: 0.25rem 0.5rem;
+  color: hsl(0, 0%, 100%);
   background-color: var(--primary);
-  transition: width 0.3s ease-in, left 0.3s ease-in;
-}
-
-.navItems a.activeLink::after {
-  width: 100%;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
+  text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
 }
 
 /* Seperator */
 .seperator {
-  font-size: 1.25rem;
+  font-size: 1.75rem;
   transition: 0.3s ease-in;
 }
 
@@ -80,15 +74,16 @@ header {
 .themeButton {
   gap: 0.5rem;
   display: flex;
-  font-size: 1.25rem;
+  font-size: 1.75rem;
   align-items: center;
   justify-content: center;
-  transition: 0.3s ease-in;
   color: var(--text-primary);
   background-color: var(--header-bg-color);
+  transition: transform 0.2s ease-in, color 0.3s ease-in;
 }
 
 .themeButton:hover {
+  transform: translateY(-3px);
   color: var(--text-secondary);
 }
 
@@ -103,15 +98,15 @@ header {
 
   .navItems {
     gap: 0.85rem;
-    font-size: 1.15rem;
+    font-size: 1.5rem;
   }
 
   .seperator {
-    font-size: 1.15rem;
+    font-size: 1.5rem;
   }
 
   .themeButton {
-    font-size: 1.15rem;
+    font-size: 1.5rem;
   }
 }
 
@@ -126,15 +121,19 @@ header {
 
   .navItems {
     gap: 0.75rem;
-    font-size: 1rem;
+    font-size: 1.25rem;
+  }
+
+  .navItems a:hover:not(.activeLink) {
+    border-bottom: 2px solid var(--primary);
   }
 
   .seperator {
-    font-size: 1rem;
+    font-size: 1.25rem;
   }
 
   .themeButton {
-    font-size: 1rem;
+    font-size: 1.25rem;
   }
 
   .themeButton:not(.sidebarThemeButton) p {
@@ -142,7 +141,7 @@ header {
   }
 }
 
-@media (max-width: 650px) {
+@media (max-width: 625px) {
   .seperator {
     display: none;
   }
@@ -152,7 +151,7 @@ header {
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 575px) {
   .logoContainer img {
     height: 55px;
   }
@@ -163,7 +162,7 @@ header {
 
   .navItems {
     gap: 0.65rem;
-    font-size: 0.95rem;
+    font-size: 1.15rem;
   }
 }
 
@@ -262,7 +261,7 @@ header {
 }
 
 /* Hide site nav and show hamburger menu */
-@media (max-width: 550px) {
+@media (max-width: 525px) {
   .headerContainer {
     justify-content: space-between;
   }

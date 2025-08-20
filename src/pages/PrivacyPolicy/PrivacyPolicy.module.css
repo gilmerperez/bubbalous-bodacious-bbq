@@ -11,9 +11,9 @@
 /* Heading */
 .heading {
   font-size: 3rem;
+  padding: 0.5rem 1rem;
   border-radius: 0.25rem;
   margin-bottom: 0.75rem;
-  padding: 0.5rem 1rem;
   transition: 0.3s ease-in;
   color: hsl(0, 0%, 100%);
   background-color: var(--primary);
@@ -37,8 +37,8 @@
   font-weight: 500;
   font-size: 1.5rem;
   display: inline-block;
-  border-radius: 0.25rem;
   margin-bottom: 0.5rem;
+  border-radius: 0.25rem;
   padding: 0.25rem 0.5rem;
   color: hsl(0, 0%, 100%);
   background-color: var(--primary);
