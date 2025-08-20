@@ -1,0 +1,130 @@
+[
+  {
+    "id": 1,
+    "name": "Party Pack #1",
+    "servingSize": "Serves 6-8 people",
+    "price": 109.99,
+    "items": [
+      {
+        "name": "Ribs",
+        "quantity": "2 LBS"
+      },
+      {
+        "name": "Pulled Pork",
+        "quantity": "2 LBS"
+      },
+      {
+        "name": "Whole Chicken",
+        "quantity": "1"
+      },
+      {
+        "name": "Baked Beans",
+        "quantity": "1 Quart"
+      },
+      {
+        "name": "Cole Slaw",
+        "quantity": "1 Quart"
+      },
+      {
+        "name": "Garlic Bread",
+        "quantity": "8 Slices"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Party Pack #2",
+    "servingSize": "Serves 10-14 people",
+    "price": 179.99,
+    "items": [
+      {
+        "name": "Pulled Pork",
+        "quantity": "3 LBS"
+      },
+      {
+        "name": "Ribs",
+        "quantity": "3 LBS"
+      },
+      {
+        "name": "Whole Chicken",
+        "quantity": "2"
+      },
+      {
+        "name": "Baked Beans",
+        "quantity": "1/2 Gallon"
+      },
+      {
+        "name": "Cole Slaw",
+        "quantity": "1/2 Gallon"
+      },
+      {
+        "name": "Garlic Bread",
+        "quantity": "14 Slices"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Party Pack #3",
+    "servingSize": "Serves 25-30 people",
+    "price": 419.99,
+    "items": [
+      {
+        "name": "Pulled Pork",
+        "quantity": "8 LBS"
+      },
+      {
+        "name": "Whole Chicken",
+        "quantity": "5"
+      },
+      {
+        "name": "Ribs",
+        "quantity": "10 LBS"
+      },
+      {
+        "name": "Baked Beans",
+        "quantity": "1 Gallon"
+      },
+      {
+        "name": "Cole Slaw",
+        "quantity": "1 Gallon"
+      },
+      {
+        "name": "Buns",
+        "quantity": "3 Dozen"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Party Pack #4",
+    "servingSize": "Feast for 100 people",
+    "price": 1149.00,
+    "items": [
+      {
+        "name": "Pulled Pork",
+        "quantity": "20 LBS"
+      },
+      {
+        "name": "Ribs",
+        "quantity": "30 LBS"
+      },
+      {
+        "name": "Whole Chicken",
+        "quantity": "13"
+      },
+      {
+        "name": "Baked Beans",
+        "quantity": "3 Gallons"
+      },
+      {
+        "name": "Cole Slaw",
+        "quantity": "3 Gallons"
+      },
+      {
+        "name": "Buns",
+        "quantity": "100"
+      }
+    ]
+  }
+]
