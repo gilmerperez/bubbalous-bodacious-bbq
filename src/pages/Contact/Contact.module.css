@@ -2,7 +2,7 @@
   width: 100%;
   display: flex;
   margin: 0 auto;
-  max-width: 1000px;
+  max-width: 1200px;
   text-align: center;
   align-items: center;
   flex-direction: column;
@@ -11,16 +11,16 @@
 
 /* Heading */
 .heading {
-  font-size: 3rem;
+  font-size: 2.75rem;
   margin-bottom: 1rem;
-  padding: 0.5rem 1rem;
+  padding: 0.25rem 1rem;
   border-radius: 0.25rem;
   transition: 0.3s ease-in;
   color: hsl(0, 0%, 100%);
   background-color: var(--primary);
   font-family: "Oswald", sans-serif;
-  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
-  text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
+  box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.3);
+  text-shadow: 5px 5px 3px rgba(0, 0, 0, 0.3);
 }
 
 /* Introduction */
@@ -35,7 +35,7 @@
   padding: 1.25rem;
   border-radius: 0.25rem;
   background-color: var(--header-bg-color);
-  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
+  box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.3);
 }
 
 /* Form */
@@ -60,10 +60,11 @@ form {
   border-radius: 0.25rem;
   transition: 0.3s ease-in;
   color: var(--text-primary);
-  padding: 2.5rem 1rem 0.75rem;
+  padding: 2.25rem 0.75rem 0.75rem;
   font-family: "Inter", sans-serif;
   border: 2px solid var(--bg-color);
   background-color: var(--bg-color);
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
 }
 
 .formControl::placeholder {
@@ -77,7 +78,7 @@ textarea.formControl {
 
 .formControl:focus {
   border: 2px solid var(--primary);
-  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
+  box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.3);
 }
 
 label {
@@ -108,57 +109,62 @@ textarea:-webkit-autofill {
 
 /* Submit button */
 .submitBtn {
-  font-size: 2rem;
-  padding: 0.75rem;
+  display: flex;
+  padding: 0.5rem;
   font-weight: 500;
+  font-size: 1.75rem;
+  align-items: center;
   border-radius: 0.25rem;
+  justify-content: center;
   transition: 0.3s ease-in;
   color: var(--text-primary);
   border: 2px solid var(--primary);
   font-family: "Oswald", sans-serif;
   background-color: var(--header-bg-color);
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
 }
 
 .submitBtn:hover {
   color: hsl(0, 0%, 100%);
   background-color: var(--primary);
-  text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
+  box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.3);
+  text-shadow: 5px 5px 3px rgba(0, 0, 0, 0.3);
 }
 
 .submitBtn i {
-  margin-left: 0.5rem;
+  margin-left: 0.75rem;
   transition: 0.3s ease-in;
   color: var(--text-primary);
 }
 
 .submitBtn:hover i {
+  margin-left: 1.25rem;
   color: hsl(0, 0%, 100%);
 }
 
-/* CAPTCHA Styles */
+/* CAPTCHA */
 .captchaTitle {
-  font-size: 3rem;
+  font-size: 2.75rem;
   margin-bottom: 0.5rem;
   transition: 0.3s ease-in;
 }
 
 .captchaDescription {
   font-size: 1.5rem;
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.5rem;
   transition: 0.3s ease-in;
-  color: var(--text-secondary);
 }
 
 .captchaQuestion p {
   font-weight: 700;
-  font-size: 1.75rem;
+  font-size: 1.5rem;
   margin-bottom: 1rem;
   transition: 0.3s ease-in;
 }
 
 .errorMessage {
-  font-size: 1rem;
-  margin-top: 1.5rem;
+  font-size: 1.5rem;
+  margin-top: 1.75rem;
   color: var(--primary);
   transition: 0.3s ease-in;
 }
@@ -166,7 +172,7 @@ textarea:-webkit-autofill {
 /* Tablet responsiveness */
 @media (max-width: 768px) {
   .heading {
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
 
   .introduction {
@@ -174,7 +180,7 @@ textarea:-webkit-autofill {
   }
 
   .formControl {
-    padding: 2.15rem 1rem 0.75rem;
+    padding: 2.15rem 0.75rem 0.75rem;
   }
 
   .captchaTitle {
@@ -186,14 +192,18 @@ textarea:-webkit-autofill {
   }
 
   .captchaQuestion p {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
+  }
+
+  .errorMessage {
+    font-size: 1.25rem;
   }
 }
 
 /* Mobile responsiveness */
 @media (max-width: 480px) {
   .heading {
-    font-size: 2.25rem;
+    font-size: 1.75rem;
   }
 
   .introduction {
@@ -202,25 +212,15 @@ textarea:-webkit-autofill {
 
   .formControl {
     font-size: 1.15rem;
-    padding: 2rem 0.75rem 0.75rem;
-    border: 1px solid var(--bg-color);
-  }
-
-  textarea.formControl {
-    height: 150px;
-  }
-
-  .formControl:focus {
-    border: 1px solid var(--primary);
+    padding: 1.85rem 0.75rem 0.75rem;
   }
 
   label {
-    font-size: 1rem;
+    font-size: 1.15rem;
   }
 
   .submitBtn {
     font-size: 1.25rem;
-    border: 1px solid var(--primary);
   }
 
   .captchaTitle {
@@ -232,6 +232,10 @@ textarea:-webkit-autofill {
   }
 
   .captchaQuestion p {
+    font-size: 1.15rem;
+  }
+
+  .errorMessage {
     font-size: 1.15rem;
   }
 }
