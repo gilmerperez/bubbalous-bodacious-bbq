@@ -61,19 +61,19 @@ function HomeBanner() {
                 ORDER ONLINE
               </Link>
             </div>
-          </div>
-        </div>
 
-        {/* Carousel indicators */}
-        <div className={styles.carouselIndicators}>
-          {images.map((_, index) => (
-            <button
-              key={index}
-              aria-label={`Go to slide ${index + 1}`}
-              onClick={() => setCurrentImageIndex(index)}
-              className={`${styles.indicator} ${index === currentImageIndex ? styles.activeIndicator : ""}`}
-            />
-          ))}
+            {/* Carousel indicators */}
+            <div className={styles.carouselIndicators}>
+              {images.map((_, index) => (
+                <button
+                  key={index}
+                  aria-label={`Go to slide ${index + 1}`}
+                  onClick={() => setCurrentImageIndex(index)}
+                  className={`${styles.indicator} ${index === currentImageIndex ? styles.activeIndicator : ""}`}
+                />
+              ))}
+            </div>
+          </div>
         </div>
       </section>
     </>

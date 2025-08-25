@@ -6,8 +6,6 @@
   position: relative;
   align-items: center;
   justify-content: center;
-  /* margin-left: calc(-50vw + 50%);
-  margin-right: calc(-50vw + 50%); */
 }
 
 /* Banner image carousel */
@@ -73,6 +71,7 @@
 }
 
 .subtitle {
+  margin: 0 auto;
   max-width: 800px;
   line-height: 1.5;
   font-size: 1.5rem;
@@ -128,13 +127,10 @@
 
 /* Carousel indicators */
 .carouselIndicators {
-  left: 50%;
-  z-index: 4;
   gap: 0.75rem;
-  bottom: 2rem;
   display: flex;
-  position: absolute;
-  transform: translateX(-50%);
+  margin-top: 2rem;
+  justify-content: center;
 }
 
 .indicator {
@@ -176,7 +172,7 @@
   }
 
   .carouselIndicators {
-    bottom: 1.5rem;
+    margin-top: 1.75rem;
   }
 }
 
@@ -204,6 +200,10 @@
   .ctaButton {
     width: 100%;
     font-size: 1.15rem;
+  }
+
+  .carouselIndicators {
+    margin-top: 1.5rem;
   }
 
   .indicator {
