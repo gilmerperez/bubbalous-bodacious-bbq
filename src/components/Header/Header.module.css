@@ -65,7 +65,7 @@ header {
 /* Active link */
 .navItems a.activeLink {
   border-radius: 0.25rem;
-  padding: 0.25rem 0.5rem;
+  padding: 0.25rem 0.75rem;
   color: hsl(0, 0%, 100%);
   background-color: var(--primary);
   box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
