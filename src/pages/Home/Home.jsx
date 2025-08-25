@@ -10,11 +10,11 @@ function Home() {
 
   return (
     <>
-      {/* Home banner */}
-      <HomeBanner />
-
       <main>
-        <div className={styles.homeContainer}></div>
+        <div className={styles.homeContainer}>
+          {/* Home banner */}
+          <HomeBanner />
+        </div>
       </main>
     </>
   );

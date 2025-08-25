@@ -8,3 +8,8 @@
   flex-direction: column;
   justify-content: center;
 }
+
+/* Remove top padding from home banner */
+main {
+  padding-top: 0 !important;
+}

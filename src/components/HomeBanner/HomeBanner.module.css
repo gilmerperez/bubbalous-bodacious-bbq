@@ -6,6 +6,8 @@
   position: relative;
   align-items: center;
   justify-content: center;
+  margin-left: calc(-50vw + 50%);
+  margin-right: calc(-50vw + 50%);
 }
 
 /* Banner image carousel */
@@ -50,7 +52,7 @@
 .contentContainer {
   z-index: 3;
   width: 100%;
-  padding: 0 2rem;
+  padding: 2rem;
   max-width: 1200px;
   position: relative;
   text-align: center;
@@ -59,12 +61,15 @@
 
 .textContent {
   margin: 0 auto;
-  max-width: 800px;
+}
+
+* {
+  /* border: 1px solid red; */
 }
 
 .mainTitle {
   font-size: 4rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0.75rem;
   transition: 0.3s ease-in;
   font-family: "Oswald", sans-serif;
   text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
@@ -72,8 +77,8 @@
 
 .subtitle {
   margin: 0 auto;
-  max-width: 800px;
   line-height: 1.5;
+  max-width: 1000px;
   font-size: 1.5rem;
   margin-bottom: 1.5rem;
   transition: 0.3s ease-in;
@@ -86,6 +91,7 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  margin-bottom: 2rem;
   justify-content: center;
   transition: 0.3s ease-in;
 }
@@ -129,7 +135,6 @@
 .carouselIndicators {
   gap: 0.75rem;
   display: flex;
-  margin-top: 2rem;
   justify-content: center;
 }
 
@@ -152,9 +157,13 @@
 
 /* Tablet responsiveness */
 @media (max-width: 768px) {
+  .contentContainer {
+    padding: 1.75rem;
+  }
+
   .mainTitle {
     font-size: 3rem;
-    margin-bottom: 0.75rem;
+    margin-bottom: 0.5rem;
   }
 
   .subtitle {
@@ -164,28 +173,24 @@
 
   .buttonContainer {
     gap: 1.75rem;
+    margin-bottom: 1.75rem;
   }
 
   .ctaButton {
     font-size: 1.25rem;
     padding: 0.5rem 1rem;
   }
-
-  .carouselIndicators {
-    margin-top: 1.75rem;
-  }
 }
 
 /* Mobile responsiveness */
 @media (max-width: 480px) {
-  .homeBannerContainer {
-    height: 60vh;
-    min-height: 350px;
+  .contentContainer {
+    padding: 1.5rem;
   }
 
   .mainTitle {
     font-size: 2.5rem;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.25rem;
   }
 
   .subtitle {
@@ -195,15 +200,12 @@
 
   .buttonContainer {
     gap: 1rem;
+    margin-bottom: 1.5rem;
   }
 
   .ctaButton {
     width: 100%;
     font-size: 1.15rem;
-  }
-
-  .carouselIndicators {
-    margin-top: 1.5rem;
   }
 
   .indicator {
