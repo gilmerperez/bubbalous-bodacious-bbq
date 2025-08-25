@@ -25,9 +25,31 @@ header {
   justify-content: space-between;
 }
 
+/* Desktop Layout */
+.desktopLayout {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Mobile Layout */
+.mobileLayout {
+  width: 100%;
+  display: none;
+  align-items: center;
+  justify-content: space-between;
+}
+
 /* Logo */
 .logoContainer img {
   height: 75px;
+  transition: 0.3s ease-in;
+}
+
+/* Mobile Logo */
+.mobileLogoContainer img {
+  height: 50px;
   transition: 0.3s ease-in;
 }
 
@@ -92,6 +114,49 @@ header {
 
 .themeButton:hover {
   transform: translateY(-3px);
+  color: var(--text-secondary);
+}
+
+/* Mobile hamburger menu */
+.hamburger {
+  display: none;
+  background: none;
+  color: var(--text-primary);
+  transition: transform 0.2s ease-in, color 0.3s ease-in;
+}
+
+.hamburger:hover {
+  transform: scale(1.15);
+  color: var(--text-secondary);
+}
+
+.hamburger i {
+  transition: transform 0.3s ease-in-out;
+}
+
+.hamburger i.spin {
+  animation: hamburgerSpin 0.3s ease-in-out;
+}
+
+@keyframes hamburgerSpin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Mobile phone button */
+.phoneButton {
+  display: none;
+  background: none;
+  color: var(--text-primary);
+  transition: transform 0.2s ease-in, color 0.3s ease-in;
+}
+
+.phoneButton:hover {
+  transform: scale(1.15);
   color: var(--text-secondary);
 }
 
@@ -174,28 +239,26 @@ header {
   }
 }
 
-/* Mobile hamburger menu */
-.hamburger {
-  display: none;
-  cursor: pointer;
-  background: none;
-  color: var(--text-primary);
-}
-
-.hamburger i {
-  transition: transform 0.3s ease-in-out;
-}
-
-.hamburger i.spin {
-  animation: hamburgerSpin 0.3s ease-in-out;
-}
-
-@keyframes hamburgerSpin {
-  0% {
-    transform: rotate(0deg);
+/* Hide desktop layout and show mobile layout */
+@media (max-width: 525px) {
+  .desktopLayout {
+    display: none;
   }
-  100% {
-    transform: rotate(360deg);
+
+  .mobileLayout {
+    display: flex;
+  }
+
+  .mobileLogoContainer img {
+    height: 45px;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .phoneButton {
+    display: block;
   }
 }
 
@@ -295,23 +358,4 @@ header {
 .sidebarThemeButton:hover {
   color: var(--text-primary);
   transform: translateX(5px);
-}
-
-/* Hide site nav and show hamburger menu */
-@media (max-width: 525px) {
-  .headerContainer {
-    justify-content: space-between;
-  }
-
-  .logoContainer img {
-    height: 50px;
-  }
-
-  .navItems {
-    display: none;
-  }
-
-  .hamburger {
-    display: block;
-  }
 }

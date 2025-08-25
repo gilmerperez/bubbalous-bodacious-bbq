@@ -71,44 +71,65 @@ function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [lastScrollY]);
 
+  // * Phone call handler
+  const handlePhoneClick = () => {
+    window.location.href = "tel:(407) 295-1212";
+  };
+
   return (
     <>
       <header className={`${isScrollingUp ? styles.visible : styles.hidden}`}>
         <section className={styles.headerContainer}>
-          {/* Logo */}
-          <NavLink to="/" className={styles.logoContainer}>
-            <img src="/favicon.jpg" alt="Bubbalous Bodacious BBQ Logo" />
-          </NavLink>
+          {/* Desktop Layout */}
+          <div className={styles.desktopLayout}>
+            {/* Logo */}
+            <NavLink to="/" className={styles.logoContainer}>
+              <img src="/favicon.jpg" alt="Bubbalous Bodacious BBQ Logo" />
+            </NavLink>
 
-          {/* Site navigation */}
-          <div className={styles.navContainer}>
-            <nav className={styles.navItems}>
-              <NavLink to="/" className={navLinkClass}>
-                HOME
-              </NavLink>
-              <NavLink to="/menu" className={navLinkClass}>
-                MENU
-              </NavLink>
-              <NavLink to="/party-packs" className={navLinkClass}>
-                PARTY PACKS
-              </NavLink>
-              <NavLink to="/order-online" className={navLinkClass}>
-                ORDER ONLINE
-              </NavLink>
-            </nav>
+            {/* Site navigation */}
+            <div className={styles.navContainer}>
+              <nav className={styles.navItems}>
+                <NavLink to="/" className={navLinkClass}>
+                  HOME
+                </NavLink>
+                <NavLink to="/menu" className={navLinkClass}>
+                  MENU
+                </NavLink>
+                <NavLink to="/party-packs" className={navLinkClass}>
+                  PARTY PACKS
+                </NavLink>
+                <NavLink to="/order-online" className={navLinkClass}>
+                  ORDER ONLINE
+                </NavLink>
+              </nav>
 
-            {/* Seperator */}
-            <span className={styles.seperator}>|</span>
+              {/* Seperator */}
+              <span className={styles.seperator}>|</span>
 
-            {/* Theme button */}
-            <button className={styles.themeButton} onClick={toggleTheme}>
-              <i className={`fa-solid ${theme === "dark" ? "fa-moon" : "fa-sun"}`}></i>
-              <p>{theme === "dark" ? "DARK" : "LIGHT"}</p>
-            </button>
+              {/* Theme button */}
+              <button className={styles.themeButton} onClick={toggleTheme}>
+                <i className={`fa-solid ${theme === "dark" ? "fa-moon" : "fa-sun"}`}></i>
+                <p>{theme === "dark" ? "DARK" : "LIGHT"}</p>
+              </button>
+            </div>
+          </div>
 
+          {/* Mobile Layout */}
+          <div className={styles.mobileLayout}>
             {/* Mobile hamburger menu */}
             <button className={styles.hamburger} onClick={handleHamburgerClick}>
               <i className={`fa-solid fa-bars fa-xl ${isSpinning ? styles.spin : ""}`}></i>
+            </button>
+
+            {/* Mobile Logo */}
+            <NavLink to="/" className={styles.mobileLogoContainer}>
+              <img src="/favicon.jpg" alt="Bubbalous Bodacious BBQ Logo" />
+            </NavLink>
+
+            {/* Mobile phone button */}
+            <button className={styles.phoneButton} onClick={handlePhoneClick}>
+              <i className="fa-solid fa-phone fa-xl"></i>
             </button>
           </div>
         </section>
