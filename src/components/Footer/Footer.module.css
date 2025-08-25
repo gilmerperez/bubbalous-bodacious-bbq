@@ -47,7 +47,7 @@
   height: 2px;
   border: none;
   margin-bottom: 0.75rem;
-  background-color: var(--text-primary);
+  background-color: var(--text-secondary);
 }
 
 .bottomContainer {

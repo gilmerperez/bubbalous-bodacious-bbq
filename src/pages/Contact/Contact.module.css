@@ -3,6 +3,7 @@
   display: flex;
   margin: 0 auto;
   max-width: 1200px;
+  padding-top: 2rem;
   text-align: center;
   align-items: center;
   flex-direction: column;
@@ -171,6 +172,10 @@ textarea:-webkit-autofill {
 
 /* Tablet responsiveness */
 @media (max-width: 768px) {
+  .contactContainer {
+    padding-top: 1.75rem;
+  }
+
   .heading {
     font-size: 2rem;
   }
@@ -202,6 +207,10 @@ textarea:-webkit-autofill {
 
 /* Mobile responsiveness */
 @media (max-width: 480px) {
+  .contactContainer {
+    padding-top: 1.5rem;
+  }
+
   .heading {
     font-size: 1.75rem;
   }

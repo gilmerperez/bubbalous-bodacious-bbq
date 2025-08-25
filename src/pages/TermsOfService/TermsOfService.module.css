@@ -3,6 +3,7 @@
   display: flex;
   margin: 0 auto;
   max-width: 1200px;
+  padding-top: 2rem;
   align-items: center;
   flex-direction: column;
   justify-content: center;
@@ -57,6 +58,10 @@
 
 /* Tablet responsiveness */
 @media (max-width: 768px) {
+  .termsOfServiceContainer {
+    padding-top: 1.75rem;
+  }
+
   .heading {
     font-size: 2rem;
   }
@@ -76,6 +81,10 @@
 
 /* Mobile responsiveness */
 @media (max-width: 480px) {
+  .termsOfServiceContainer {
+    padding-top: 1.5rem;
+  }
+
   .heading {
     font-size: 1.75rem;
   }
