@@ -1,5 +1,19 @@
 header {
+  top: 0;
+  z-index: 999;
+  position: sticky;
+  transition: 0.3s ease;
   box-shadow: 0px 3px 8px hsla(0, 0%, 0%, 0.15);
+}
+
+/* Show mobile header on scroll up */
+.visible {
+  transform: translateY(0%);
+}
+
+/* Hide mobile header on scroll down */
+.hidden {
+  transform: translateY(-100%);
 }
 
 .headerContainer {
