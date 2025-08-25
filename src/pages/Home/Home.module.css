@@ -91,6 +91,7 @@ main {
 
   .contentWrapper {
     gap: 1.75rem;
+    grid-template-columns: 1fr;
   }
 
   .contentTitle {
@@ -110,7 +111,6 @@ main {
 
   .contentWrapper {
     gap: 1.5rem;
-    grid-template-columns: 1fr;
   }
 
   .contentTitle {
