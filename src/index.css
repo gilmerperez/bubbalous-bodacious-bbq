@@ -23,7 +23,7 @@ html[data-theme="dark"] {
   --text-secondary: hsl(0, 0%, 80%);
   --primary: hsl(3, 76%, 50%);
   --primary-dark: hsl(3, 76%, 40%);
-  --header-bg-color: hsl(0, 0%, 5%);
+  --footer-bg-color: hsl(0, 0%, 5%);
 }
 
 /* Highlighted text */
