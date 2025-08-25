@@ -94,7 +94,6 @@ body {
   display: flex; /* Enables flexbox layout */
   min-height: 100vh; /* Ensures body fills at least full screen */
   overflow-x: hidden; /* Prevents horizontal scroll */
-  padding-top: 107px; /* Account for fixed header height */
   flex-direction: column; /* Stacks header, main, and footer vertically */
   color: var(--text-primary); /* Sets a default text color */
   background-color: var(--bg-color); /* Sets a default background color */
