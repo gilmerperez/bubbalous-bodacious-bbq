@@ -83,6 +83,59 @@ main {
   box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.3);
 }
 
+/* Information banner */
+.informationBanner {
+  width: 100vw;
+  padding: 1.5rem;
+  transition: 0.3s ease-in;
+  background-color: var(--primary);
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
+}
+
+.informationBanner:hover {
+  box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.3);
+}
+
+.bannerContent {
+  display: flex;
+  margin: 0 auto;
+  max-width: 1200px;
+  align-items: center;
+  justify-content: center;
+}
+
+.infoItem {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  color: hsl(0, 0%, 100%);
+}
+
+.infoItem i {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
+}
+
+.infoItem h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.25rem;
+  font-family: "Oswald", sans-serif;
+  text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
+}
+
+.infoItem a {
+  font-size: 1.15rem;
+  transition: 0.3s ease-in;
+  text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
+}
+
+.infoItem a:hover {
+  text-decoration: underline;
+}
+
 /* Tablet responsiveness */
 @media (max-width: 768px) {
   .contentSection {
@@ -100,6 +153,22 @@ main {
 
   .contentText {
     font-size: 1.15rem;
+  }
+
+  .informationBanner {
+    padding: 1rem;
+  }
+
+  .infoItem i {
+    font-size: 1.5rem;
+  }
+
+  .infoItem h3 {
+    font-size: 1.25rem;
+  }
+
+  .infoItem a {
+    font-size: 1rem;
   }
 }
 
@@ -120,5 +189,27 @@ main {
 
   .contentText {
     font-size: 1rem;
+  }
+
+  .informationBanner {
+    padding: 1.5rem;
+  }
+
+  .bannerContent {
+    gap: 1.5rem;
+    flex-direction: column;
+  }
+
+  .infoItem i {
+    font-size: 1.75rem;
+  }
+
+  .infoItem h3 {
+    font-size: 1.5rem;
+  }
+
+  .infoItem a {
+    max-width: 200px;
+    font-size: 1.15rem;
   }
 }
