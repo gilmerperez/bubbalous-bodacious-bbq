@@ -2,8 +2,7 @@
   width: 100%;
   display: flex;
   margin: 0 auto;
-  max-width: 1200px;
-  padding-top: 2rem;
+  max-width: 1000px;
   text-align: center;
   align-items: center;
   flex-direction: column;
@@ -12,7 +11,7 @@
 
 /* Heading */
 .heading {
-  font-size: 2.75rem;
+  font-size: 2.5rem;
   margin-bottom: 1rem;
   padding: 0.25rem 1rem;
   border-radius: 0.25rem;
@@ -26,7 +25,7 @@
 
 /* Introduction */
 .introduction {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   text-align: center;
   margin-bottom: 1rem;
 }
@@ -145,13 +144,13 @@ textarea:-webkit-autofill {
 
 /* CAPTCHA */
 .captchaTitle {
-  font-size: 2.75rem;
+  font-size: 2.5rem;
   margin-bottom: 0.5rem;
   transition: 0.3s ease-in;
 }
 
 .captchaDescription {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   margin-bottom: 0.5rem;
   transition: 0.3s ease-in;
 }
@@ -172,16 +171,12 @@ textarea:-webkit-autofill {
 
 /* Tablet responsiveness */
 @media (max-width: 768px) {
-  .contactContainer {
-    padding-top: 1.75rem;
-  }
-
   .heading {
     font-size: 2rem;
   }
 
   .introduction {
-    font-size: 1.25rem;
+    font-size: 1.15rem;
   }
 
   .formControl {
@@ -193,7 +188,7 @@ textarea:-webkit-autofill {
   }
 
   .captchaDescription {
-    font-size: 1.25rem;
+    font-size: 1.15rem;
   }
 
   .captchaQuestion p {
@@ -207,16 +202,12 @@ textarea:-webkit-autofill {
 
 /* Mobile responsiveness */
 @media (max-width: 480px) {
-  .contactContainer {
-    padding-top: 1.5rem;
-  }
-
   .heading {
     font-size: 1.75rem;
   }
 
   .introduction {
-    font-size: 1.15rem;
+    font-size: 1rem;
   }
 
   .formControl {
@@ -237,7 +228,7 @@ textarea:-webkit-autofill {
   }
 
   .captchaDescription {
-    font-size: 1.15rem;
+    font-size: 1rem;
   }
 
   .captchaQuestion p {

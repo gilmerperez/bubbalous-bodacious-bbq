@@ -1,6 +1,7 @@
 .homeBannerContainer {
   width: 100vw;
   display: flex;
+  padding: 2rem;
   overflow: hidden;
   min-height: 50vh;
   position: relative;
@@ -52,7 +53,6 @@
 .contentContainer {
   z-index: 3;
   width: 100%;
-  padding: 2rem;
   max-width: 1200px;
   position: relative;
   text-align: center;
@@ -61,10 +61,6 @@
 
 .textContent {
   margin: 0 auto;
-}
-
-* {
-  /* border: 1px solid red; */
 }
 
 .mainTitle {
@@ -157,7 +153,7 @@
 
 /* Tablet responsiveness */
 @media (max-width: 768px) {
-  .contentContainer {
+  .homeBannerContainer {
     padding: 1.75rem;
   }
 
@@ -184,7 +180,7 @@
 
 /* Mobile responsiveness */
 @media (max-width: 480px) {
-  .contentContainer {
+  .homeBannerContainer {
     padding: 1.5rem;
   }
 
