@@ -247,6 +247,7 @@ header {
 
   .mobileLayout {
     display: flex;
+    flex-direction: row-reverse;
   }
 
   .mobileLogoContainer img {
