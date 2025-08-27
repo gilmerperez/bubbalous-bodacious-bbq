@@ -8,3 +8,46 @@
   flex-direction: column;
   justify-content: center;
 }
+
+.pageTitle {
+  font-size: 3rem;
+  font-style: italic;
+  margin-bottom: 1rem;
+  padding: 0.25rem 1rem;
+  border-radius: 0.25rem;
+  transition: 0.3s ease-in;
+  color: hsl(0, 0%, 100%);
+  background-color: var(--primary);
+  font-family: "Oswald", sans-serif;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
+  text-shadow: 5px 5px 3px rgba(0, 0, 0, 0.3);
+}
+
+.pageDescription {
+  line-height: 1.5;
+  max-width: 1000px;
+  font-size: 1.25rem;
+  color: var(--text-secondary);
+}
+
+/* Tablet responsiveness */
+@media (max-width: 768px) {
+  .pageTitle {
+    font-size: 2.25rem;
+  }
+
+  .pageDescription {
+    font-size: 1.15rem;
+  }
+}
+
+/* Mobile responsiveness */
+@media (max-width: 480px) {
+  .pageTitle {
+    font-size: 2rem;
+  }
+
+  .pageDescription {
+    font-size: 1rem;
+  }
+}
