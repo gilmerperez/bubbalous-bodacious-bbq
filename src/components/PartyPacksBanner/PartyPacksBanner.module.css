@@ -1,0 +1,145 @@
+.partyPacksBannerContainer {
+  width: 100vw;
+  display: flex;
+  padding: 2rem;
+  overflow: hidden;
+  min-height: 50vh;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  margin-left: calc(-50vw + 50%);
+  margin-right: calc(-50vw + 50%);
+}
+
+/* Banner image carousel */
+.carouselContainer {
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.carouselImage {
+  top: 0;
+  left: 0;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: opacity 1s ease-in-out;
+}
+
+.carouselImage.active {
+  opacity: 1;
+}
+
+/* Overlay */
+.overlay {
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0.7) 100%);
+}
+
+/* Content */
+.contentContainer {
+  z-index: 3;
+  width: 100%;
+  max-width: 1200px;
+  position: relative;
+  text-align: center;
+  color: hsl(0, 0%, 100%);
+}
+
+.textContent {
+  margin: 0 auto;
+}
+
+.mainTitle {
+  font-size: 4rem;
+  margin-bottom: 0.75rem;
+  transition: 0.3s ease-in;
+  font-family: "Oswald", sans-serif;
+  text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
+}
+
+.subtitle {
+  margin: 0 auto;
+  line-height: 1.5;
+  max-width: 1000px;
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  transition: 0.3s ease-in;
+  text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
+}
+
+/* Carousel indicators */
+.carouselIndicators {
+  gap: 0.75rem;
+  display: flex;
+  justify-content: center;
+}
+
+.indicator {
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  background-color: hsla(0, 0%, 100%, 0.5);
+}
+
+.indicator:hover {
+  background-color: hsla(0, 0%, 100%, 0.75);
+}
+
+.activeIndicator {
+  transform: scale(1.25);
+  background-color: hsl(0, 0%, 100%);
+}
+
+/* Tablet responsiveness */
+@media (max-width: 768px) {
+  .partyPacksBannerContainer {
+    padding: 1.75rem;
+  }
+
+  .mainTitle {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .subtitle {
+    font-size: 1.25rem;
+    margin-bottom: 1.25rem;
+  }
+}
+
+/* Mobile responsiveness */
+@media (max-width: 480px) {
+  .partyPacksBannerContainer {
+    padding: 1.5rem;
+  }
+
+  .mainTitle {
+    font-size: 2.5rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .subtitle {
+    font-size: 1.15rem;
+    margin-bottom: 1rem;
+  }
+
+  .indicator {
+    width: 0.5rem;
+    height: 0.5rem;
+  }
+}

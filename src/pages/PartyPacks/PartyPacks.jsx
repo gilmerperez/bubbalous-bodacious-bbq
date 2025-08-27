@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import styles from "./PartyPacks.module.css";
+import PartyPacksBanner from "../../components/PartyPacksBanner/PartyPacksBanner";
 
 function PartyPacks() {
   // Set page title
@@ -9,6 +10,9 @@ function PartyPacks() {
 
   return (
     <>
+      {/* Home banner */}
+      <PartyPacksBanner />
+
       <main>
         <div className={styles.partyPacksContainer}>party packs</div>
       </main>
