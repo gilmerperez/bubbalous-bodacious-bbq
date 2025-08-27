@@ -57,6 +57,32 @@ function PartyPacks() {
             </div>
           </section>
         </div>
+
+        {/* Additional info */}
+        <section className={styles.additionalInfoSection}>
+          <div className={styles.additionalInfoContainer}>
+            <h3 className={styles.additionalInfoTitle}>Additional Info</h3>
+            <ul className={styles.additionalInfoList}>
+              <li className={styles.additionalInfoItem}>Party Packs are for Pick-Up & Delivery ONLY!</li>
+              <li className={styles.additionalInfoItem}>Delivery is Available for an Additional Charge.</li>
+              <li className={styles.additionalInfoItem}>
+                Serving Utensils will be an additional charge of $1.50 each.
+              </li>
+              <li className={styles.additionalInfoItem}>
+                Substitutions may be made with any of the following:
+                <ul className={styles.substitutionList}>
+                  <li>Collard Greens</li>
+                  <li>Black-Eyed Peas</li>
+                  <li>Potato Salad</li>
+                  <li>Nibblet Corn</li>
+                  <li>Texas Caviar</li>
+                  <li>Green Beans</li>
+                  <li>Tossed Salad</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </section>
       </main>
     </>
   );
