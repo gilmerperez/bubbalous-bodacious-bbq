@@ -2,7 +2,7 @@
   {
     "id": 1,
     "name": "Party Pack #1",
-    "servingSize": "Serves 6-8 people",
+    "servingSize": "Serves 6 - 8",
     "price": 109.99,
     "items": [
       {
@@ -34,7 +34,7 @@
   {
     "id": 2,
     "name": "Party Pack #2",
-    "servingSize": "Serves 10-14 people",
+    "servingSize": "Serves 10 - 14",
     "price": 179.99,
     "items": [
       {
@@ -66,7 +66,7 @@
   {
     "id": 3,
     "name": "Party Pack #3",
-    "servingSize": "Serves 25-30 people",
+    "servingSize": "Serves 25 - 30",
     "price": 419.99,
     "items": [
       {
@@ -98,7 +98,7 @@
   {
     "id": 4,
     "name": "Party Pack #4",
-    "servingSize": "Feast for 100 people",
+    "servingSize": "Feast for 100",
     "price": 1149.00,
     "items": [
       {

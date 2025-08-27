@@ -9,11 +9,12 @@
   justify-content: center;
 }
 
+/* Title */
 .pageTitle {
   font-size: 3rem;
   font-style: italic;
-  margin-bottom: 1rem;
   padding: 0.25rem 1rem;
+  margin-bottom: 1.5rem;
   border-radius: 0.25rem;
   transition: 0.3s ease-in;
   color: hsl(0, 0%, 100%);
@@ -27,143 +28,142 @@
   line-height: 1.5;
   max-width: 1000px;
   font-size: 1.25rem;
+  margin-bottom: 1.75rem;
   color: var(--text-secondary);
 }
 
-/* Party Packs Section */
+/* Party packs */
 .partyPacksSection {
   width: 100%;
-  margin-top: 3rem;
 }
 
 .partyPacksGrid {
+  gap: 2rem;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-  padding: 0 1rem;
 }
 
 /* Party Pack Card */
 .partyPackCard {
-  position: relative;
-  min-height: 400px;
-  border-radius: 1rem;
   overflow: hidden;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-  transition: all 0.4s ease;
-  cursor: pointer;
+  min-height: 400px;
+  position: relative;
+  border-radius: 0.25rem;
+  transition: 0.3s ease-in;
+  background-color: hsl(0, 0%, 5%);
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
 }
 
+.partyPackCard:hover {
+  transform: translateY(-3px);
+  box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.3);
+}
+
+/* Blur & black and white effect */
 .partyPackCard::before {
-  content: "";
-  position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: url("/images/plate-of-food-3.avif");
+  z-index: 1;
+  content: "";
+  position: absolute;
   background-size: cover;
+  transition: 0.3s ease-in;
   background-position: center;
   background-repeat: no-repeat;
-  filter: blur(8px) brightness(0.7);
-  transition: all 0.4s ease;
-  z-index: 1;
+  filter: blur(5px) brightness(0.75);
+  background-image: url("/pigs.webp");
 }
 
 .partyPackCard:hover::before {
-  filter: blur(12px) brightness(0.5);
-  transform: scale(1.1);
+  transform: scale(1.05);
+  filter: blur(10px) brightness(0.75);
 }
 
 .cardContent {
-  position: relative;
   z-index: 2;
   height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
   padding: 2rem;
+  display: flex;
+  position: relative;
+  flex-direction: column;
   color: hsl(0, 0%, 100%);
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  justify-content: space-between;
+  text-shadow: 5px 5px 3px rgba(0, 0, 0, 0.3);
 }
 
 .packName {
   font-size: 2rem;
-  font-weight: 700;
-  margin-bottom: 0.5rem;
-  font-family: "Oswald", sans-serif;
+  margin-bottom: 0.25rem;
   color: hsl(0, 0%, 100%);
+  font-family: "Oswald", sans-serif;
 }
 
 .servingSize {
-  font-size: 1.1rem;
-  margin-bottom: 1.5rem;
-  color: hsl(0, 0%, 90%);
   font-weight: 500;
+  font-size: 1.15rem;
+  margin-bottom: 0.75rem;
+  color: hsl(0, 0%, 80%);
 }
 
 .itemsList {
-  list-style: none;
-  padding: 0;
-  margin: 0 0 1.5rem 0;
   flex-grow: 1;
 }
 
 .item {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
   padding: 0.5rem 0;
-  border-bottom: 1px solid hsla(0, 0%, 100%, 0.2);
-}
-
-.item:last-child {
-  border-bottom: none;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 2px solid hsla(0, 0%, 100%, 0.5);
 }
 
 .itemName {
-  font-weight: 600;
   font-size: 1rem;
+  font-weight: 600;
 }
 
 .itemQuantity {
+  font-size: 1rem;
   font-weight: 500;
-  font-size: 0.9rem;
-  color: hsl(0, 0%, 85%);
+  color: hsl(0, 0%, 80%);
 }
 
 .priceContainer {
-  text-align: center;
-  padding-top: 1rem;
-  border-top: 2px solid hsla(0, 0%, 100%, 0.3);
+  padding-top: 1.5rem;
 }
 
 .price {
-  font-size: 2.5rem;
+  display: block;
   font-weight: 700;
-  color: var(--primary);
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  font-size: 2.25rem;
+  font-style: italic;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  transition: 0.3s ease-in;
+  color: hsl(0, 0%, 100%);
+  background-color: var(--primary);
   font-family: "Oswald", sans-serif;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
+  text-shadow: 5px 5px 3px rgba(0, 0, 0, 0.3);
 }
 
 /* Tablet responsiveness */
 @media (max-width: 768px) {
   .pageTitle {
     font-size: 2.25rem;
+    margin-bottom: 1.25rem;
   }
 
   .pageDescription {
     font-size: 1.15rem;
-  }
-
-  .partyPacksSection {
-    margin-top: 2rem;
+    margin-bottom: 1.5rem;
   }
 
   .partyPacksGrid {
+    gap: 1.75rem;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 1.5rem;
-    padding: 0 0.75rem;
   }
 
   .partyPackCard {
@@ -171,7 +171,7 @@
   }
 
   .cardContent {
-    padding: 1.5rem;
+    padding: 1.75rem;
   }
 
   .packName {
@@ -180,7 +180,6 @@
 
   .servingSize {
     font-size: 1rem;
-    margin-bottom: 1.25rem;
   }
 
   .itemName {
@@ -188,11 +187,11 @@
   }
 
   .itemQuantity {
-    font-size: 0.85rem;
+    font-size: 0.95rem;
   }
 
   .price {
-    font-size: 2.25rem;
+    font-size: 2rem;
   }
 }
 
@@ -200,52 +199,28 @@
 @media (max-width: 480px) {
   .pageTitle {
     font-size: 2rem;
+    margin-bottom: 1rem;
   }
 
   .pageDescription {
     font-size: 1rem;
-  }
-
-  .partyPacksSection {
-    margin-top: 1.5rem;
+    margin-bottom: 1.25rem;
   }
 
   .partyPacksGrid {
+    gap: 1.5rem;
     grid-template-columns: 1fr;
-    gap: 1rem;
-    padding: 0 0.5rem;
   }
 
   .partyPackCard {
-    min-height: 320px;
+    min-height: 325px;
   }
 
   .cardContent {
-    padding: 1.25rem;
-  }
-
-  .packName {
-    font-size: 1.5rem;
-  }
-
-  .servingSize {
-    font-size: 0.95rem;
-    margin-bottom: 1rem;
-  }
-
-  .item {
-    padding: 0.4rem 0;
-  }
-
-  .itemName {
-    font-size: 0.9rem;
-  }
-
-  .itemQuantity {
-    font-size: 0.8rem;
+    padding: 1.5rem;
   }
 
   .price {
-    font-size: 2rem;
+    font-size: 1.75rem;
   }
 }
