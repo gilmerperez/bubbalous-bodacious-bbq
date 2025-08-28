@@ -59,30 +59,26 @@ function PartyPacks() {
         </div>
 
         {/* Additional info */}
-        <section className={styles.additionalInfoSection}>
-          <div className={styles.additionalInfoContainer}>
-            <h3 className={styles.additionalInfoTitle}>Additional Info</h3>
+        <div className={styles.additionalInfoContainer}>
+          <div className={styles.additionalInfo}>
+            {/* Heading */}
+            <h2 className={styles.additionalInfoTitle}>ADDITIONAL INFO</h2>
+            {/* List of additional info */}
             <ul className={styles.additionalInfoList}>
-              <li className={styles.additionalInfoItem}>Party packs are for pick-up & delivery only</li>
-              <li className={styles.additionalInfoItem}>Delivery is available for an additional charge.</li>
-              <li className={styles.additionalInfoItem}>
-                Serving utensils will be an additional charge of $1.50 each.
-              </li>
-              <li className={styles.additionalInfoItem}>
-                Substitutions may be made with any of the following sides:
-                <ul className={styles.substitutionList}>
-                  <li>Potato Salad</li>
-                  <li>Nibblet Corn</li>
-                  <li>Green Beans</li>
-                  <li>Texas Caviar</li>
-                  <li>Tossed Salad</li>
-                  <li>Collard Greens</li>
-                  <li>Black-Eyed Peas</li>
-                </ul>
+              <li>Party Packs are for pick-up & delivery only</li>
+              <br />
+              <li>Delivery is available for an additional charge</li>
+              <br />
+              <li>Serving utensils will be an additional charge of $1.50 each</li>
+              <li>
+                Substitutions may be made with any of our other popular sides:
+                <br />
+                Potato Salad | Niblet Corn | Green Beans | Texas Caviar | Tossed Salad | Collard Greens | Black-Eyed
+                Peas
               </li>
             </ul>
           </div>
-        </section>
+        </div>
       </main>
     </>
   );
