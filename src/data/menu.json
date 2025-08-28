@@ -1,0 +1,54 @@
+{
+  "appetizers": [
+    {
+      "name": "Corn Nuggets",
+      "price": 5.99,
+      "description": "Golden fried corn nuggets with a crispy exterior and sweet corn center."
+    },
+    {
+      "name": "Fried Okra",
+      "price": 5.99,
+      "description": "Southern-style fried okra with a crispy breaded coating."
+    },
+    {
+      "name": "Fried Pickles",
+      "price": 5.99,
+      "description": "Crispy fried dill pickle chips served with ranch dipping sauce."
+    },
+    {
+      "name": "Onion Petals",
+      "price": 5.99,
+      "description": "Battered and fried onion petals with a crispy golden coating."
+    },
+    {
+      "name": "Mac & Cheese Bites",
+      "price": 7.49,
+      "description": "Breaded and fried macaroni and cheese bites with melted cheese center."
+    },
+    {
+      "name": "Gator Nuggets",
+      "price": 13.99,
+      "description": "Crispy fried alligator meat nuggets served with dipping sauce."
+    },
+    {
+      "name": "10 Wings",
+      "price": 15.49,
+      "description": "Ten chicken wings tossed in your choice of mild, hot, or sweet sauce."
+    },
+    {
+      "name": "10 Wings & Fries",
+      "price": 16.49,
+      "description": "Ten chicken wings with your choice of sauce served with crispy fries."
+    },
+    {
+      "name": "House Garden Salad",
+      "price": 3.99,
+      "description": "Fresh tossed greens with tomatoes, cucumber, and red onions."
+    },
+    {
+      "name": "Bubbalou's Garden Salad",
+      "price": 11.99,
+      "description": "Fresh tossed greens topped with tomatoes, cucumber, and red onions with your choice of smoked pulled pork, pork, beef, or turkey."
+    }
+  ]
+}
