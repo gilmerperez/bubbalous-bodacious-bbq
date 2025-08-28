@@ -149,6 +149,79 @@
   text-shadow: 5px 5px 3px rgba(0, 0, 0, 0.3);
 }
 
+/* Additional info */
+.additionalInfoSection {
+  width: 100vw;
+  padding: 2rem;
+  margin: 0rem -2rem -2rem -2rem;
+  background: linear-gradient(to bottom, var(--bg-color) 0%, var(--footer-bg-color) 100%);
+}
+
+.additionalInfoContainer {
+  margin: 0 auto;
+  max-width: 800px;
+  text-align: center;
+}
+
+.additionalInfoTitle {
+  font-size: 3rem;
+  font-style: italic;
+  margin-bottom: 2rem;
+  display: inline-block;
+  padding: 0.25rem 1rem;
+  border-radius: 0.25rem;
+  color: hsl(0, 0%, 100%);
+  background-color: var(--primary);
+  font-family: "Oswald", sans-serif;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
+  text-shadow: 5px 5px 3px rgba(0, 0, 0, 0.3);
+}
+
+.additionalInfoItem {
+  font-weight: 500;
+  font-size: 1.25rem;
+  position: relative;
+  padding-left: 2rem;
+  color: var(--text-primary);
+}
+
+.additionalInfoItem:not(:last-child) {
+  margin-bottom: 1.25rem;
+}
+
+.additionalInfoItem::before {
+  left: 0;
+  content: "•";
+  top: -0.65rem;
+  font-size: 2rem;
+  font-weight: bold;
+  position: absolute;
+  color: var(--primary);
+}
+
+.substitutionList {
+  margin-top: 1rem;
+}
+
+.substitutionList li {
+  position: relative;
+  font-size: 1.25rem;
+  color: var(--text-secondary);
+}
+
+.substitutionList li:not(:last-child) {
+  margin-bottom: 0.75rem;
+}
+
+.substitutionList li::before {
+  top: 0;
+  left: 0;
+  content: "◦";
+  position: absolute;
+  font-size: 1.75rem;
+  color: var(--primary);
+}
+
 /* Tablet responsiveness */
 @media (max-width: 768px) {
   .pageTitle {
@@ -193,6 +266,23 @@
   .price {
     font-size: 2rem;
   }
+
+  .additionalInfoSection {
+    padding: 1.75rem;
+  }
+
+  .additionalInfoTitle {
+    font-size: 2.5rem;
+    margin-bottom: 1.75rem;
+  }
+
+  .additionalInfoItem {
+    font-size: 1.15rem;
+  }
+
+  .substitutionList li {
+    font-size: 1.15rem;
+  }
 }
 
 /* Mobile responsiveness */
@@ -223,91 +313,9 @@
   .price {
     font-size: 1.75rem;
   }
-}
 
-/* Additional info */
-.additionalInfoSection {
-  width: 100%;
-  margin-top: 4rem;
-  padding: 3rem 2rem;
-  background: linear-gradient(to bottom, var(--bg-color) 0%, var(--footer-bg-color) 100%);
-  border-radius: 1rem;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-}
-
-.additionalInfoContainer {
-  max-width: 800px;
-  margin: 0 auto;
-  text-align: center;
-}
-
-.additionalInfoTitle {
-  font-size: 2.5rem;
-  font-weight: 700;
-  margin-bottom: 2rem;
-  color: var(--text-primary);
-  font-family: "Oswald", sans-serif;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-}
-
-.additionalInfoList {
-  text-align: left;
-  list-style: none;
-  padding: 0;
-}
-
-.additionalInfoItem {
-  font-size: 1.25rem;
-  line-height: 1.6;
-  margin-bottom: 1.5rem;
-  padding-left: 2rem;
-  position: relative;
-  color: var(--text-primary);
-  font-weight: 500;
-}
-
-.additionalInfoItem::before {
-  content: "•";
-  position: absolute;
-  left: 0;
-  top: 0;
-  font-size: 1.5rem;
-  color: var(--primary);
-  font-weight: bold;
-}
-
-.substitutionList {
-  margin-top: 1rem;
-  margin-left: 1rem;
-  list-style: none;
-  padding: 0;
-}
-
-.substitutionList li {
-  font-size: 1.1rem;
-  line-height: 1.5;
-  margin-bottom: 0.5rem;
-  padding-left: 1.5rem;
-  position: relative;
-  color: var(--text-secondary);
-  font-weight: 400;
-}
-
-.substitutionList li::before {
-  content: "◦";
-  position: absolute;
-  left: 0;
-  top: 0;
-  font-size: 1.2rem;
-  color: var(--primary);
-}
-
-/* Tablet responsiveness for additional info */
-@media (max-width: 768px) {
   .additionalInfoSection {
-    margin-top: 3rem;
-    padding: 2.5rem 1.5rem;
+    padding: 1.5rem;
   }
 
   .additionalInfoTitle {
@@ -316,43 +324,10 @@
   }
 
   .additionalInfoItem {
-    font-size: 1.15rem;
-    margin-bottom: 1.25rem;
-    padding-left: 1.75rem;
+    font-size: 1rem;
   }
 
   .substitutionList li {
     font-size: 1rem;
-    margin-bottom: 0.4rem;
-    padding-left: 1.25rem;
-  }
-}
-
-/* Mobile responsiveness for additional info */
-@media (max-width: 480px) {
-  .additionalInfoSection {
-    margin-top: 2rem;
-    padding: 2rem 1rem;
-  }
-
-  .additionalInfoTitle {
-    font-size: 1.75rem;
-    margin-bottom: 1.25rem;
-  }
-
-  .additionalInfoItem {
-    font-size: 1rem;
-    margin-bottom: 1rem;
-    padding-left: 1.5rem;
-  }
-
-  .substitutionList {
-    margin-left: 0.75rem;
-  }
-
-  .substitutionList li {
-    font-size: 0.95rem;
-    margin-bottom: 0.3rem;
-    padding-left: 1rem;
   }
 }

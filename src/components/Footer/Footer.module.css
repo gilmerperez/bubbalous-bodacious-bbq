@@ -21,14 +21,14 @@
 
 /* Logo */
 .logoContainer img {
-  width: 200px;
+  width: 175px;
   transition: 0.3s ease-in;
 }
 
 /* Legal disclaimer */
 .legalDisclaimer {
+  font-size: 1rem;
   max-width: 1000px;
-  font-size: 1.15rem;
   margin-bottom: 0.5rem;
   transition: 0.3s ease-in;
   color: var(--text-secondary);
@@ -36,8 +36,9 @@
 
 /* Copyright */
 .copyright {
+  margin: 0 auto;
+  font-size: 1rem;
   font-weight: 500;
-  font-size: 1.15rem;
   transition: 0.3s ease-in;
 }
 
@@ -69,7 +70,7 @@
 /* Nav headers */
 .navHeader {
   font-weight: 500;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   font-family: "Oswald", sans-serif;
 }
 
@@ -83,7 +84,7 @@
 
 .navItems a {
   position: relative;
-  font-size: 1.25rem;
+  font-size: 1.15rem;
   transition: 0.3s ease-in;
   color: var(--text-secondary);
 }
@@ -96,17 +97,7 @@
 /* Tablet responsiveness */
 @media (max-width: 768px) {
   .logoContainer img {
-    width: 180px;
-    margin-bottom: 0.15rem;
-  }
-
-  .legalDisclaimer {
-    font-size: 1rem;
-    margin-bottom: 0.25rem;
-  }
-
-  .copyright {
-    font-size: 1rem;
+    width: 150px;
   }
 
   .bottomContainer {
@@ -120,29 +111,12 @@
   .contactInfo:not(:last-child) {
     margin-bottom: 1rem;
   }
-
-  .navHeader {
-    font-size: 1.25rem;
-  }
-
-  .navItems a {
-    font-size: 1.15rem;
-  }
 }
 
 /* Mobile responsiveness */
 @media (max-width: 480px) {
-  .logoContainer img {
-    width: 160px;
-  }
-
-  .legalDisclaimer {
-    margin-bottom: 0.5rem;
-  }
-
   .copyright {
     width: 275px;
-    margin: 0 auto;
   }
 
   .navHeader {
