@@ -43,13 +43,7 @@ header {
 
 /* Logo */
 .logoContainer img {
-  height: 75px;
-  transition: 0.3s ease-in;
-}
-
-/* Mobile Logo */
-.mobileLogoContainer img {
-  height: 50px;
+  height: 60px;
   transition: 0.3s ease-in;
 }
 
@@ -66,7 +60,7 @@ header {
 .navItems {
   gap: 1rem;
   display: flex;
-  font-size: 1.75rem;
+  font-size: 1.5rem;
   align-items: center;
   justify-content: center;
   transition: 0.3s ease-in;
@@ -96,7 +90,7 @@ header {
 
 /* Seperator */
 .seperator {
-  font-size: 1.75rem;
+  font-size: 1.5rem;
   transition: 0.3s ease-in;
 }
 
@@ -104,7 +98,7 @@ header {
 .themeButton {
   gap: 0.5rem;
   display: flex;
-  font-size: 1.75rem;
+  font-size: 1.5rem;
   align-items: center;
   justify-content: center;
   color: var(--text-primary);
@@ -114,6 +108,88 @@ header {
 
 .themeButton:hover {
   transform: translateY(-3px);
+  color: var(--text-secondary);
+}
+
+/* Tablet responsiveness */
+@media (max-width: 768px) {
+  .logoContainer img {
+    height: 50px;
+  }
+
+  .navContainer {
+    gap: 0.75rem;
+  }
+
+  .navItems {
+    gap: 0.75rem;
+    font-size: 1.15rem;
+  }
+
+  .navItems a:hover:not(.activeLink) {
+    border-bottom: 2px solid var(--primary);
+  }
+
+  .seperator {
+    font-size: 1.15rem;
+  }
+
+  .themeButton {
+    font-size: 1.15rem;
+  }
+
+  .themeButton:not(.sidebarThemeButton) p {
+    display: none;
+  }
+}
+
+@media (max-width: 575px) {
+  .logoContainer img {
+    height: 45px;
+  }
+
+  .navContainer {
+    gap: 0.65rem;
+  }
+
+  .navItems {
+    gap: 0.65rem;
+    font-size: 1rem;
+  }
+
+  .seperator {
+    font-size: 1rem;
+  }
+
+  .themeButton {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .logoContainer img {
+    height: 40px;
+  }
+
+  .seperator {
+    display: none;
+  }
+
+  .themeButton:not(.sidebarThemeButton) {
+    display: none;
+  }
+}
+
+/* Mobile phone button */
+.phoneButton {
+  display: none;
+  background: none;
+  color: var(--text-primary);
+  transition: transform 0.2s ease-in, color 0.3s ease-in;
+}
+
+.phoneButton:hover {
+  transform: scale(1.15);
   color: var(--text-secondary);
 }
 
@@ -147,111 +223,18 @@ header {
   }
 }
 
-/* Mobile phone button */
-.phoneButton {
-  display: none;
-  background: none;
-  color: var(--text-primary);
-  transition: transform 0.2s ease-in, color 0.3s ease-in;
-}
-
-.phoneButton:hover {
-  transform: scale(1.15);
-  color: var(--text-secondary);
-}
-
-@media (max-width: 850px) {
-  .logoContainer img {
-    height: 65px;
-  }
-
-  .navContainer {
-    gap: 0.85rem;
-  }
-
-  .navItems {
-    gap: 0.85rem;
-    font-size: 1.5rem;
-  }
-
-  .seperator {
-    font-size: 1.5rem;
-  }
-
-  .themeButton {
-    font-size: 1.5rem;
-  }
-}
-
-@media (max-width: 750px) {
-  .logoContainer img {
-    height: 60px;
-  }
-
-  .navContainer {
-    gap: 0.75rem;
-  }
-
-  .navItems {
-    gap: 0.75rem;
-    font-size: 1.25rem;
-  }
-
-  .navItems a:hover:not(.activeLink) {
-    border-bottom: 2px solid var(--primary);
-  }
-
-  .seperator {
-    font-size: 1.25rem;
-  }
-
-  .themeButton {
-    font-size: 1.25rem;
-  }
-
-  .themeButton:not(.sidebarThemeButton) p {
-    display: none;
-  }
-}
-
-@media (max-width: 625px) {
-  .seperator {
-    display: none;
-  }
-
-  .themeButton:not(.sidebarThemeButton) {
-    display: none;
-  }
-}
-
-@media (max-width: 575px) {
-  .logoContainer img {
-    height: 55px;
-  }
-
-  .navContainer {
-    gap: 0.65rem;
-  }
-
-  .navItems {
-    gap: 0.65rem;
-    font-size: 1.15rem;
-  }
-}
-
 /* Hide desktop layout and show mobile layout */
-@media (max-width: 525px) {
+@media (max-width: 480px) {
   .desktopLayout {
     display: none;
   }
 
   .mobileLayout {
     display: flex;
-    flex-direction: row-reverse;
   }
 
   .mobileLogoContainer img {
-    height: 45px;
+    height: 50px;
   }
 
   .hamburger {
@@ -260,6 +243,7 @@ header {
 
   .phoneButton {
     display: block;
+    font-size: 0.95rem;
   }
 }
 

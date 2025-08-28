@@ -11,10 +11,10 @@
 
 /* Title */
 .pageTitle {
-  font-size: 3rem;
+  font-size: 2rem;
   font-style: italic;
   padding: 0.25rem 1rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
   border-radius: 0.25rem;
   transition: 0.3s ease-in;
   color: hsl(0, 0%, 100%);
@@ -27,8 +27,8 @@
 .pageDescription {
   line-height: 1.5;
   max-width: 1000px;
-  font-size: 1.25rem;
-  margin-bottom: 1.75rem;
+  font-size: 1.15rem;
+  margin-bottom: 1.5rem;
   color: var(--text-secondary);
 }
 
@@ -94,7 +94,7 @@
 }
 
 .packName {
-  font-size: 2rem;
+  font-size: 1.75rem;
   margin-bottom: 0.25rem;
   color: hsl(0, 0%, 100%);
   font-family: "Oswald", sans-serif;
@@ -136,8 +136,8 @@
 
 .price {
   display: block;
+  font-size: 2rem;
   font-weight: 700;
-  font-size: 2.25rem;
   font-style: italic;
   padding: 0.5rem 1rem;
   border-radius: 0.25rem;
@@ -173,7 +173,7 @@
 }
 
 .additionalInfoTitle {
-  font-size: 3rem;
+  font-size: 2rem;
   font-style: italic;
   margin-bottom: 1rem;
   display: inline-block;
@@ -189,7 +189,7 @@
 
 .additionalInfoList > li {
   font-weight: 500;
-  font-size: 1.25rem;
+  font-size: 1.15rem;
   display: inline-block;
   margin-bottom: 0.75rem;
   padding-bottom: 0.75rem;
@@ -204,13 +204,13 @@
 /* Tablet responsiveness */
 @media (max-width: 768px) {
   .pageTitle {
-    font-size: 2.25rem;
-    margin-bottom: 1.25rem;
+    font-size: 1.75rem;
+    margin-bottom: 0.75rem;
   }
 
   .pageDescription {
-    font-size: 1.15rem;
-    margin-bottom: 1.5rem;
+    font-size: 1rem;
+    margin-bottom: 1.25rem;
   }
 
   .partyPacksGrid {
@@ -227,7 +227,7 @@
   }
 
   .packName {
-    font-size: 1.75rem;
+    font-size: 1.5rem;
   }
 
   .servingSize {
@@ -235,15 +235,15 @@
   }
 
   .itemName {
-    font-size: 0.95rem;
+    font-size: 1rem;
   }
 
   .itemQuantity {
-    font-size: 0.95rem;
+    font-size: 1rem;
   }
 
   .price {
-    font-size: 2rem;
+    font-size: 1.75rem;
   }
 
   .additionalInfoContainer {
@@ -252,26 +252,18 @@
   }
 
   .additionalInfoTitle {
-    font-size: 2.25rem;
+    font-size: 1.75rem;
   }
 
   .additionalInfoList > li {
-    font-size: 1.15rem;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    padding-bottom: 0.5rem;
   }
 }
 
 /* Mobile responsiveness */
 @media (max-width: 480px) {
-  .pageTitle {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-  }
-
-  .pageDescription {
-    font-size: 1rem;
-    margin-bottom: 1.25rem;
-  }
-
   .partyPacksGrid {
     gap: 1.5rem;
     grid-template-columns: 1fr;
@@ -285,8 +277,8 @@
     padding: 1.5rem;
   }
 
-  .price {
-    font-size: 1.75rem;
+  .item {
+    border-bottom: 1px solid hsla(0, 0%, 100%, 0.5);
   }
 
   .additionalInfoContainer {
@@ -294,11 +286,7 @@
     margin-bottom: -1.5rem;
   }
 
-  .additionalInfoTitle {
-    font-size: 2rem;
-  }
-
   .additionalInfoList > li {
-    font-size: 1rem;
+    border-bottom: 1px solid var(--text-secondary);
   }
 }

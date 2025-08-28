@@ -46,7 +46,7 @@
   width: 100%;
   height: 100%;
   position: absolute;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0.7) 100%);
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0.75) 100%);
 }
 
 /* Content */
@@ -64,8 +64,8 @@
 }
 
 .mainTitle {
-  font-size: 4rem;
-  margin-bottom: 0.75rem;
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
   transition: 0.3s ease-in;
   font-family: "Oswald", sans-serif;
   text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
@@ -74,9 +74,9 @@
 .subtitle {
   margin: 0 auto;
   line-height: 1.5;
-  max-width: 1000px;
-  font-size: 1.5rem;
-  margin-bottom: 1.5rem;
+  max-width: 800px;
+  font-size: 1.25rem;
+  margin-bottom: 1.25rem;
   transition: 0.3s ease-in;
   text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
 }
@@ -87,17 +87,17 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  margin-bottom: 2rem;
+  margin-bottom: 1.25rem;
   justify-content: center;
   transition: 0.3s ease-in;
 }
 
 .ctaButton {
   font-weight: 600;
-  font-size: 1.5rem;
+  font-size: 1.375rem;
   transition: 0.3s ease;
   border-radius: 0.25rem;
-  padding: 0.75rem 1.5rem;
+  padding: 0.75rem 1.25rem;
   font-family: "Oswald", sans-serif;
 }
 
@@ -135,8 +135,8 @@
 }
 
 .indicator {
-  width: 0.75rem;
-  height: 0.75rem;
+  width: 0.5rem;
+  height: 0.5rem;
   border-radius: 50%;
   transition: all 0.3s ease;
   background-color: hsla(0, 0%, 100%, 0.5);
@@ -147,7 +147,7 @@
 }
 
 .activeIndicator {
-  transform: scale(1.25);
+  transform: scale(1.5);
   background-color: hsl(0, 0%, 100%);
 }
 
@@ -158,18 +158,17 @@
   }
 
   .mainTitle {
-    font-size: 3rem;
-    margin-bottom: 0.5rem;
+    font-size: 2.5rem;
+    margin-bottom: 0.25rem;
   }
 
   .subtitle {
-    font-size: 1.25rem;
-    margin-bottom: 1.25rem;
+    font-size: 1.15rem;
+    margin-bottom: 1.15rem;
   }
 
   .buttonContainer {
     gap: 1.75rem;
-    margin-bottom: 1.75rem;
   }
 
   .ctaButton {
@@ -185,27 +184,23 @@
   }
 
   .mainTitle {
-    font-size: 2.5rem;
-    margin-bottom: 0.25rem;
+    font-size: 2.25rem;
   }
 
   .subtitle {
-    font-size: 1.15rem;
+    font-size: 1rem;
     margin-bottom: 1rem;
   }
 
   .buttonContainer {
     gap: 1rem;
-    margin-bottom: 1.5rem;
   }
 
   .ctaButton {
-    width: 100%;
-    font-size: 1.25rem;
+    font-size: 1.15rem;
   }
 
-  .indicator {
-    width: 0.5rem;
-    height: 0.5rem;
+  .activeIndicator {
+    transform: scale(1.25);
   }
 }

@@ -18,11 +18,11 @@
         "quantity": "1"
       },
       {
-        "name": "Baked Beans",
+        "name": "Cole Slaw",
         "quantity": "1 Quart"
       },
       {
-        "name": "Cole Slaw",
+        "name": "Baked Beans",
         "quantity": "1 Quart"
       },
       {
@@ -38,11 +38,11 @@
     "price": 179.99,
     "items": [
       {
-        "name": "Pulled Pork",
+        "name": "Ribs",
         "quantity": "3 LBS"
       },
       {
-        "name": "Ribs",
+        "name": "Pulled Pork",
         "quantity": "3 LBS"
       },
       {
@@ -50,11 +50,11 @@
         "quantity": "2"
       },
       {
-        "name": "Baked Beans",
+        "name": "Cole Slaw",
         "quantity": "1/2 Gallon"
       },
       {
-        "name": "Cole Slaw",
+        "name": "Baked Beans",
         "quantity": "1/2 Gallon"
       },
       {
@@ -70,6 +70,10 @@
     "price": 419.99,
     "items": [
       {
+        "name": "Ribs",
+        "quantity": "10 LBS"
+      },
+      {
         "name": "Pulled Pork",
         "quantity": "8 LBS"
       },
@@ -78,15 +82,11 @@
         "quantity": "5"
       },
       {
-        "name": "Ribs",
-        "quantity": "10 LBS"
-      },
-      {
-        "name": "Baked Beans",
+        "name": "Cole Slaw",
         "quantity": "1 Gallon"
       },
       {
-        "name": "Cole Slaw",
+        "name": "Baked Beans",
         "quantity": "1 Gallon"
       },
       {
@@ -102,27 +102,27 @@
     "price": 1149.00,
     "items": [
       {
-        "name": "Pulled Pork",
-        "quantity": "20 LBS"
-      },
-      {
         "name": "Ribs",
         "quantity": "30 LBS"
+      },
+      {
+        "name": "Pulled Pork",
+        "quantity": "20 LBS"
       },
       {
         "name": "Whole Chicken",
         "quantity": "13"
       },
       {
-        "name": "Baked Beans",
-        "quantity": "3 Gallons"
-      },
-      {
         "name": "Cole Slaw",
         "quantity": "3 Gallons"
       },
       {
-        "name": "Buns",
+        "name": "Baked Beans",
+        "quantity": "3 Gallons"
+      },
+      {
+        "name": "Sandwich Buns",
         "quantity": "100"
       }
     ]

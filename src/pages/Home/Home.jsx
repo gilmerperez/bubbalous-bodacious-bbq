@@ -43,6 +43,12 @@ function Home() {
           {/* Information banner */}
           <section className={styles.informationBanner}>
             <div className={styles.bannerContent}>
+              {/* Telephone */}
+              <div className={styles.infoItem}>
+                <i className="fas fa-phone"></i>
+                <h3>TELEPHONE</h3>
+                <a href="tel:(407) 295-1212">(407) 295 - 1212</a>
+              </div>
               {/* Location */}
               <div className={styles.infoItem}>
                 <i className="fas fa-map-marker-alt"></i>
@@ -54,12 +60,6 @@ function Home() {
                 >
                   5818 Conroy Road, Orlando FL 32835
                 </a>
-              </div>
-              {/* Telephone */}
-              <div className={styles.infoItem}>
-                <i className="fas fa-phone"></i>
-                <h3>TELEPHONE</h3>
-                <a href="tel:(407) 295-1212">(407) 295 - 1212</a>
               </div>
               {/* Hours */}
               <div className={styles.infoItem}>

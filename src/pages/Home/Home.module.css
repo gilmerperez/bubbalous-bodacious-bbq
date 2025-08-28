@@ -15,19 +15,18 @@
   margin: 0 auto;
   align-items: center;
   margin-bottom: 2rem;
-  justify-content: center;
   transition: 0.3s ease-in;
+  justify-content: space-between;
   grid-template-columns: 1fr 1fr;
 }
 
 /* Text */
 .textContent {
   text-align: left;
-  align-self: flex-start;
 }
 
 .contentTitle {
-  font-size: 2.75rem;
+  font-size: 2.25rem;
   font-style: italic;
   margin-bottom: 1rem;
   padding: 0.25rem 1rem;
@@ -42,7 +41,7 @@
 
 .contentText {
   line-height: 1.5;
-  font-size: 1.25rem;
+  font-size: 1.15rem;
   transition: 0.3s ease-in;
   color: var(--text-secondary);
 }
@@ -59,7 +58,7 @@
 }
 
 .pigsImage {
-  width: 100%;
+  width: 60%;
   transition: 0.3s ease;
   border-radius: 0.25rem;
   border: 2px solid var(--primary);
@@ -75,7 +74,7 @@
 /* Information banner */
 .informationBanner {
   width: 100vw;
-  padding: 2rem;
+  padding: 1.25rem;
   margin-bottom: -2rem;
   transition: 0.3s ease-in;
   background-color: var(--primary);
@@ -131,23 +130,32 @@
   transform: translateY(-3px) scale(1.15);
 }
 
-/* Tablet responsiveness */
-@media (max-width: 768px) {
+@media (max-width: 950px) {
   .infoSection {
-    gap: 1.75rem;
     grid-template-columns: 1fr;
   }
 
   .contentTitle {
-    font-size: 2.25rem;
+    display: inline-block;
+  }
+}
+
+/* Tablet responsiveness */
+@media (max-width: 768px) {
+  .infoSection {
+    gap: 1.75rem;
+  }
+
+  .contentTitle {
+    font-size: 2rem;
   }
 
   .contentText {
-    font-size: 1.15rem;
+    font-size: 1rem;
   }
 
   .informationBanner {
-    padding: 1.75rem;
+    padding: 1rem;
     margin-bottom: -1.75rem;
   }
 
@@ -156,7 +164,7 @@
   }
 
   .infoItem h3 {
-    font-size: 1.25rem;
+    font-size: 1.15rem;
   }
 
   .infoItem a {
@@ -171,34 +179,23 @@
   }
 
   .contentTitle {
-    font-size: 2rem;
-    padding: 0.75rem 1rem;
-  }
-
-  .contentText {
-    font-size: 1rem;
-  }
-
-  .informationBanner {
-    padding: 1.5rem;
-    margin-bottom: -1.5rem;
-  }
-
-  .bannerContent {
-    gap: 1.5rem;
-    flex-direction: column;
-  }
-
-  .infoItem i {
     font-size: 1.75rem;
   }
 
+  .informationBanner {
+    padding: 0.85rem 0rem;
+    margin-bottom: -1.5rem;
+  }
+
+  .infoItem i {
+    font-size: 1.25rem;
+  }
+
   .infoItem h3 {
-    font-size: 1.5rem;
+    font-size: 1rem;
   }
 
   .infoItem a {
-    max-width: 200px;
-    font-size: 1.15rem;
+    font-size: 0.85rem;
   }
 }

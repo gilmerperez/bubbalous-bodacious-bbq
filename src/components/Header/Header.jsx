@@ -117,9 +117,9 @@ function Header() {
 
           {/* Mobile Layout */}
           <div className={styles.mobileLayout}>
-            {/* Mobile hamburger menu */}
-            <button className={styles.hamburger} onClick={handleHamburgerClick}>
-              <i className={`fa-solid fa-bars fa-xl ${isSpinning ? styles.spin : ""}`}></i>
+            {/* Mobile phone button */}
+            <button className={styles.phoneButton} onClick={handlePhoneClick}>
+              <i className="fa-solid fa-phone fa-xl"></i>
             </button>
 
             {/* Mobile Logo */}
@@ -127,9 +127,9 @@ function Header() {
               <img src="/favicon.jpg" alt="Bubbalous Bodacious BBQ Logo" />
             </NavLink>
 
-            {/* Mobile phone button */}
-            <button className={styles.phoneButton} onClick={handlePhoneClick}>
-              <i className="fa-solid fa-phone fa-xl"></i>
+            {/* Mobile hamburger menu */}
+            <button className={styles.hamburger} onClick={handleHamburgerClick}>
+              <i className={`fa-solid fa-bars fa-xl ${isSpinning ? styles.spin : ""}`}></i>
             </button>
           </div>
         </section>
