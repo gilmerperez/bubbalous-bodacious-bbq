@@ -28,7 +28,7 @@
     {
       "name": "Gator Nuggets",
       "price": 13.99,
-      "description": "Crispy fried alligator meat nuggets served with dipping sauce."
+      "description": "Crispy fried alligator meat nuggets served with your choice of dipping sauce."
     },
     {
       "name": "10 Wings",
@@ -63,7 +63,7 @@
       "description": "Classic corn dog on a stick served with fries and a small beverage, side can be substituted at no cost, free refills on drinks."
     },
     {
-      "name": "Mac & Cheese with Fries or Garlic Bread",
+      "name": "Mac & Cheese",
       "price": 6.49,
       "description": "Creamy macaroni and cheese with your choice of fries or garlic bread, plus a small beverage, side can be substituted at no cost, free refills on drinks."
     },
@@ -80,12 +80,17 @@
     {
       "name": "Spare Ribs",
       "price": 7.99,
-      "description": "Tender spare ribs served with fries and a small beverage, side can be substituted at no cost, free refills on drinks."
+      "description": "Tender spare ribs served with garlic bread and a small beverage, side can be substituted at no cost, free refills on drinks."
     },
     {
-      "name": "Small Beef or Pork Sandwich",
+      "name": "Small Beef Sandwich",
       "price": 7.99,
-      "description": "Small BBQ beef or pork sandwich served with fries and a small beverage, side can be substituted at no cost, free refills on drinks."
+      "description": "Small BBQ beef sandwich served with fries and a small beverage, side can be substituted at no cost, free refills on drinks."
+    },
+    {
+      "name": "Small Pork Sandwich",
+      "price": 7.99,
+      "description": "Small BBQ pork sandwich served with fries and a small beverage, side can be substituted at no cost, free refills on drinks."
     },
     {
       "name": "Cheeseburger",
@@ -95,74 +100,74 @@
   ],
   "sandwiches": [
     {
-      "name": "Sliced BBQ Beef or Pork - Regular",
+      "name": "Sliced BBQ Beef or Pork Sandwich - Regular",
       "price": 7.99,
       "description": "Sliced BBQ beef or pork served on a buttered sandwich bun, upgrade to garlic bread available."
     },
     {
-      "name": "Sliced BBQ Beef or Pork - Large",
+      "name": "Sliced BBQ Beef or Pork Sandwich - Large",
       "price": 8.99,
       "description": "Large portion of sliced BBQ beef or pork served on a buttered sandwich bun, upgrade to garlic bread available."
     },
     {
-      "name": "1/4 Chicken on the Bone",
+      "name": "1/4 Chicken on the Bone Sandwich",
       "price": 9.49,
       "description": "Quarter chicken on the bone served on a buttered sandwich bun, upgrade to garlic bread available."
     },
     {
-      "name": "Catfish",
+      "name": "Catfish Sandwich",
       "price": 9.99,
       "description": "Fried catfish fillet served on a buttered sandwich bun, upgrade to garlic bread available."
     },
     {
-      "name": "Livers",
+      "name": "Livers Sandwich",
       "price": 9.99,
       "description": "Fried chicken livers served on a buttered sandwich bun, upgrade to garlic bread available."
     },
     {
-      "name": "Gizzards",
+      "name": "Gizzards Sandwich",
       "price": 9.99,
       "description": "Fried chicken gizzards served on a buttered sandwich bun, upgrade to garlic bread available."
     },
     {
-      "name": "Pulled Pork",
+      "name": "Pulled Pork Sandwich",
       "price": 9.99,
       "description": "Smoked pulled pork served on a buttered sandwich bun, upgrade to garlic bread available."
     },
     {
-      "name": "Pulled Chicken",
+      "name": "Pulled Chicken Sandwich",
       "price": 9.99,
       "description": "Smoked pulled chicken served on a buttered sandwich bun, upgrade to garlic bread available."
     },
     {
-      "name": "Smoked Turkey",
+      "name": "Smoked Turkey Sandwich",
       "price": 9.99,
       "description": "Smoked turkey served on garlic bread."
     },
     {
-      "name": "Sausage",
+      "name": "Sausage Sandwich",
       "price": 10.49,
       "description": "Smoked sausage served on a buttered sandwich bun, upgrade to garlic bread available."
     },
     {
-      "name": "Spare Ribs",
+      "name": "Spare Ribs Sandwich",
       "price": 10.99,
       "description": "Spare ribs served on a buttered sandwich bun, upgrade to garlic bread available."
     },
     {
-      "name": "Brisket",
+      "name": "Brisket Sandwich",
       "price": 11.49,
       "description": "Smoked brisket served on a buttered sandwich bun, upgrade to garlic bread available."
     }
   ],
   "sandwichBaskets": [
     {
-      "name": "Sliced BBQ Beef or Pork - Regular",
+      "name": "Sliced BBQ Beef or Pork Basket - Regular",
       "price": 10.99,
       "description": "Sliced BBQ beef or pork served on a buttered sandwich bun with fries and baked beans, upgrade to garlic bread available, sides can be substituted at no cost."
     },
     {
-      "name": "Sliced BBQ Beef or Pork - Large",
+      "name": "Sliced BBQ Beef or Pork Basket - Large",
       "price": 11.99,
       "description": "Large portion of sliced BBQ beef or pork served on a buttered sandwich bun with fries and baked beans, upgrade to garlic bread available, sides can be substituted at no cost."
     },
@@ -361,26 +366,71 @@
       "description": "The ultimate pork lover's platter with pulled pork, sliced pork, and spare ribs served with fries, baked beans, cole slaw, and garlic bread, sides can be substituted at no cost."
     }
   ],
-  "bbqSauce": [
+  "byThePound": [
     {
-      "name": "Extra Side of BBQ Sauce - Small",
-      "price": 0.50,
-      "description": "Small portion of our signature BBQ sauce for dipping or topping."
+      "name": "Sliced Beef - 1/2 Pound",
+      "price": 8.99,
+      "description": "Half pound of tender sliced BBQ beef, perfect for a hearty meal."
     },
     {
-      "name": "Extra Side of BBQ Sauce - Large",
-      "price": 1.00,
-      "description": "Large portion of our signature BBQ sauce for dipping or topping."
+      "name": "Sliced Beef - 1 Pound",
+      "price": 16.99,
+      "description": "Full pound of tender sliced BBQ beef, great for sharing or leftovers."
     },
     {
-      "name": "Bottle of BBQ Sauce - Small",
-      "price": 6.99,
-      "description": "Take home our signature BBQ sauce in a small bottle."
+      "name": "Sliced Pork - 1/2 Pound",
+      "price": 8.99,
+      "description": "Half pound of juicy sliced BBQ pork, slow-smoked to perfection."
     },
     {
-      "name": "Bottle of BBQ Sauce - Large",
-      "price": 10.99,
-      "description": "Take home our signature BBQ sauce in a large bottle."
+      "name": "Sliced Pork - 1 Pound",
+      "price": 16.99,
+      "description": "Full pound of juicy sliced BBQ pork, enough for the whole family."
+    },
+    {
+      "name": "Pulled Pork - 1/2 Pound",
+      "price": 8.99,
+      "description": "Half pound of our signature pulled pork, hand-pulled and smothered in BBQ sauce."
+    },
+    {
+      "name": "Pulled Pork - 1 Pound",
+      "price": 16.99,
+      "description": "Full pound of our signature pulled pork, perfect for parties and gatherings."
+    },
+    {
+      "name": "Pulled Chicken - 1/2 Pound",
+      "price": 8.99,
+      "description": "Half pound of tender pulled chicken, perfectly seasoned and smoked."
+    },
+    {
+      "name": "Pulled Chicken - 1 Pound",
+      "price": 16.99,
+      "description": "Full pound of tender pulled chicken, ideal for feeding a crowd."
+    },
+    {
+      "name": "Brisket - 1/2 Pound",
+      "price": 12.99,
+      "description": "Half pound of our famous smoked brisket, tender and full of flavor."
+    },
+    {
+      "name": "Brisket - 1 Pound",
+      "price": 24.99,
+      "description": "Full pound of our famous smoked brisket, the ultimate BBQ experience."
+    },
+    {
+      "name": "1/2 Chicken",
+      "price": 12.99,
+      "description": "Half of a whole smoked chicken, juicy and flavorful with crispy skin."
+    },
+    {
+      "name": "Whole Chicken",
+      "price": 22.99,
+      "description": "Complete whole smoked chicken, perfect for family meals or special occasions."
+    },
+    {
+      "name": "Baby Back Ribs - 1 Slab",
+      "price": 24.99,
+      "description": "Full slab of tender baby back ribs, fall-off-the-bone delicious."
     }
   ],
   "drinks": [
@@ -514,71 +564,26 @@
       "description": "Choose from: Baked Beans, Cole Slaw, Green Beans, Black-Eyed Peas, Texas Caviar, Mashed Potatoes, Brunswick Stew, Collard Greens, Potato Salad, Mac & Cheese"
     }
   ],
-  "byThePound": [
+  "bbqSauce": [
     {
-      "name": "Sliced Beef - 1/2 Pound",
-      "price": 8.99,
-      "description": "Half pound of tender sliced BBQ beef, perfect for a hearty meal."
+      "name": "Extra Side of BBQ Sauce - Small",
+      "price": 0.50,
+      "description": "Small portion of our signature BBQ sauce for dipping or topping."
     },
     {
-      "name": "Sliced Beef - 1 Pound",
-      "price": 16.99,
-      "description": "Full pound of tender sliced BBQ beef, great for sharing or leftovers."
+      "name": "Extra Side of BBQ Sauce - Large",
+      "price": 1.00,
+      "description": "Large portion of our signature BBQ sauce for dipping or topping."
     },
     {
-      "name": "Sliced Pork - 1/2 Pound",
-      "price": 8.99,
-      "description": "Half pound of juicy sliced BBQ pork, slow-smoked to perfection."
+      "name": "Bottle of BBQ Sauce - Small",
+      "price": 6.99,
+      "description": "Take home our signature BBQ sauce in a small bottle."
     },
     {
-      "name": "Sliced Pork - 1 Pound",
-      "price": 16.99,
-      "description": "Full pound of juicy sliced BBQ pork, enough for the whole family."
-    },
-    {
-      "name": "Pulled Pork - 1/2 Pound",
-      "price": 8.99,
-      "description": "Half pound of our signature pulled pork, hand-pulled and smothered in BBQ sauce."
-    },
-    {
-      "name": "Pulled Pork - 1 Pound",
-      "price": 16.99,
-      "description": "Full pound of our signature pulled pork, perfect for parties and gatherings."
-    },
-    {
-      "name": "Pulled Chicken - 1/2 Pound",
-      "price": 8.99,
-      "description": "Half pound of tender pulled chicken, perfectly seasoned and smoked."
-    },
-    {
-      "name": "Pulled Chicken - 1 Pound",
-      "price": 16.99,
-      "description": "Full pound of tender pulled chicken, ideal for feeding a crowd."
-    },
-    {
-      "name": "Brisket - 1/2 Pound",
-      "price": 12.99,
-      "description": "Half pound of our famous smoked brisket, tender and full of flavor."
-    },
-    {
-      "name": "Brisket - 1 Pound",
-      "price": 24.99,
-      "description": "Full pound of our famous smoked brisket, the ultimate BBQ experience."
-    },
-    {
-      "name": "1/2 Chicken",
-      "price": 12.99,
-      "description": "Half of a whole smoked chicken, juicy and flavorful with crispy skin."
-    },
-    {
-      "name": "Whole Chicken",
-      "price": 22.99,
-      "description": "Complete whole smoked chicken, perfect for family meals or special occasions."
-    },
-    {
-      "name": "Baby Back Ribs - 1 Slab",
-      "price": 24.99,
-      "description": "Full slab of tender baby back ribs, fall-off-the-bone delicious."
+      "name": "Bottle of BBQ Sauce - Large",
+      "price": 10.99,
+      "description": "Take home our signature BBQ sauce in a large bottle."
     }
   ]
 }
