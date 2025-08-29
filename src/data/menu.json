@@ -568,22 +568,22 @@
     {
       "name": "Extra Side of BBQ Sauce - Small",
       "price": 0.50,
-      "description": "Small portion of our signature BBQ sauce for dipping or topping."
+      "description": "Small portion of our signature BBQ sauce for dipping or topping. Choose from: Sweet, Mild, Hot, Killer, Mustard BBQ."
     },
     {
       "name": "Extra Side of BBQ Sauce - Large",
       "price": 1.00,
-      "description": "Large portion of our signature BBQ sauce for dipping or topping."
+      "description": "Large portion of our signature BBQ sauce for dipping or topping. Choose from: Sweet, Mild, Hot, Killer, Mustard BBQ."
     },
     {
       "name": "Bottle of BBQ Sauce - Small",
       "price": 6.99,
-      "description": "Take home our signature BBQ sauce in a small bottle."
+      "description": "Take home our signature BBQ sauce in a small bottle. Choose from: Sweet, Mild, Hot, Killer, Mustard BBQ."
     },
     {
       "name": "Bottle of BBQ Sauce - Large",
       "price": 10.99,
-      "description": "Take home our signature BBQ sauce in a large bottle."
+      "description": "Take home our signature BBQ sauce in a large bottle. Choose from: Sweet, Mild, Hot, Killer, Mustard BBQ."
     }
   ]
 }
