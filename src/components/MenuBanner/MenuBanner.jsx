@@ -7,13 +7,22 @@ function MenuBanner() {
 
   // Array of images
   const images = [
-    "/images/table-of-food-1.avif",
-    "/images/table-of-food-2.avif",
-    "/images/table-of-food-3.avif",
-    "/images/table-of-food-4.avif",
-    "/images/table-of-food-5.avif",
-    "/images/table-of-food-6.avif",
-    "/images/table-of-food-7.avif",
+    "/images/2-meat-combo.avif",
+    "/images/catfish-basket.avif",
+    "/images/chicken-basket.avif",
+    "/images/close-up.avif",
+    "/images/gator-sandwich.avif",
+    "/images/half-chicken-dinner.avif",
+    "/images/pulled-pork-basket.avif",
+    "/images/pulled-pork-dinner.avif",
+    "/images/rib-chicken-combo.avif",
+    "/images/rib-dinner.avif",
+    "/images/rib-shrimp-dinner.avif",
+    "/images/sausage-dinner.avif",
+    "/images/shrimp-dinner.avif",
+    "/images/side-of-corn.avif",
+    "/images/side-of-corn-nuggets.avif",
+    "/images/side-of-okra.avif",
   ];
 
   // Switch image every 3 seconds
@@ -45,11 +54,11 @@ function MenuBanner() {
         {/* Content */}
         <div className={styles.contentContainer}>
           <div className={styles.textContent}>
-            <h1 className={styles.mainTitle}>BODACIOUS PARTY PACKS</h1>
+            <h1 className={styles.mainTitle}>ORLANDO'S FAVORITE BBQ MENU</h1>
             <p className={styles.subtitle}>
-              Perfect for any gathering! Our party packs include generous portions of mouth-watering BBQ meats, homemade
-              sides, and fresh bread - from intimate family dinners to legendary feasts that will be remembered for
-              years. Build your own BBQ feast with our flexible, family-style dining options.
+              Our menu is a delicious mix of classic BBQ favorites and unique, mouth-watering creations. From tender
+              pulled pork and succulent brisket to crispy fried catfish and savory BBQ sauces, we have something for
+              everyone. Whether you're craving a classic sandwich or a hearty plate of BBQ, we've got you covered.
             </p>
 
             {/* Carousel indicators */}
