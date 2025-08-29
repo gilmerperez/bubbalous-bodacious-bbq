@@ -73,8 +73,7 @@ function PartyPacks() {
               <li>
                 Substitutions may be made with any of our other popular sides:
                 <br />
-                Potato Salad | Niblet Corn | Green Beans | Texas Caviar | Tossed Salad | Collard Greens | Black-Eyed
-                Peas
+                Potato Salad, Niblet Corn, Green Beans, Texas Caviar, Tossed Salad, Collard Greens, Black-Eyed Peas
               </li>
             </ul>
           </div>
