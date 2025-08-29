@@ -341,7 +341,7 @@
       "description": "Take home our signature BBQ sauce in a large bottle."
     }
   ],
-  "beverages": [
+  "drinks": [
     {
       "name": "Milk",
       "price": 1.89,
@@ -376,6 +376,38 @@
       "name": "Bottled Beer - Imported",
       "price": 4.50,
       "description": "Choose from popular imported beers: Heineken, Stella Artois, Guinness, Dos Equis, Modelo Especial, Peroni, Amstel Light, Beck's, Carlsberg, Kronenbourg 1664."
+    }
+  ],
+  "desserts": [
+    {
+      "name": "Brownies",
+      "price": 2.79,
+      "description": "Rich, fudgy chocolate brownie with a perfect chewy texture and chocolate chips."
+    },
+    {
+      "name": "Carrot Cake Slice",
+      "price": 6.49,
+      "description": "Moist carrot cake with cream cheese frosting, loaded with fresh carrots and warm spices."
+    },
+    {
+      "name": "Red Velvet Cake Slice",
+      "price": 6.49,
+      "description": "Classic red velvet cake with smooth cream cheese frosting and a hint of cocoa."
+    },
+    {
+      "name": "Chocolate Cake Slice",
+      "price": 6.49,
+      "description": "Decadent chocolate cake with rich chocolate frosting and a moist, tender crumb."
+    },
+    {
+      "name": "Sweet Potato Pie",
+      "price": 9.50,
+      "description": "Traditional Southern sweet potato pie with warm spices and a flaky crust."
+    },
+    {
+      "name": "Pecan Pie",
+      "price": 10.50,
+      "description": "Classic pecan pie with a golden brown filling and crunchy pecan topping."
     }
   ]
 }
