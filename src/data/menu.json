@@ -51,6 +51,48 @@
       "description": "Fresh tossed greens topped with tomatoes, cucumber, and red onions with your choice of smoked pulled pork, pork, beef, or turkey."
     }
   ],
+  "kidsMeals": [
+    {
+      "name": "BBQ Chicken",
+      "price": 6.49,
+      "description": "Tender BBQ chicken served with fries and a small beverage, side can be substituted at no cost, free refills on drinks."
+    },
+    {
+      "name": "Corn Dog",
+      "price": 6.49,
+      "description": "Classic corn dog on a stick served with fries and a small beverage, side can be substituted at no cost, free refills on drinks."
+    },
+    {
+      "name": "Mac & Cheese with Fries or Garlic Bread",
+      "price": 6.49,
+      "description": "Creamy macaroni and cheese with your choice of fries or garlic bread, plus a small beverage, side can be substituted at no cost, free refills on drinks."
+    },
+    {
+      "name": "Chicken Strips",
+      "price": 6.99,
+      "description": "Crispy chicken strips served with fries and a small beverage, side can be substituted at no cost, free refills on drinks."
+    },
+    {
+      "name": "Pulled Pork Sandwich",
+      "price": 7.99,
+      "description": "Smoked pulled pork sandwich served with fries and a small beverage, side can be substituted at no cost, free refills on drinks."
+    },
+    {
+      "name": "Spare Ribs",
+      "price": 7.99,
+      "description": "Tender spare ribs served with fries and a small beverage, side can be substituted at no cost, free refills on drinks."
+    },
+    {
+      "name": "Small Beef or Pork Sandwich",
+      "price": 7.99,
+      "description": "Small BBQ beef or pork sandwich served with fries and a small beverage, side can be substituted at no cost, free refills on drinks."
+    },
+    {
+      "name": "Cheeseburger",
+      "price": 8.99,
+      "description": "Juicy cheeseburger served with fries and a small beverage, side can be substituted at no cost, free refills on drinks."
+    }
+  ],
   "sandwiches": [
     {
       "name": "Sliced BBQ Beef or Pork - Regular",
@@ -297,6 +339,43 @@
       "name": "Bottle of BBQ Sauce - Large",
       "price": 10.99,
       "description": "Take home our signature BBQ sauce in a large bottle."
+    }
+  ],
+  "beverages": [
+    {
+      "name": "Milk",
+      "price": 1.89,
+      "description": "Cold, fresh whole milk."
+    },
+    {
+      "name": "Bottled Water",
+      "price": 2.69,
+      "description": "Bottled water."
+    },
+    {
+      "name": "Cheerwine",
+      "price": 2.69,
+      "description": "Bottled Cheerwine cherry cola."
+    },
+    {
+      "name": "Fountain Drinks - Regular",
+      "price": 3.09,
+      "description": "Choose from: Pepsi, Diet Pepsi, Sierra Mist, Mug Root Beer, Dr. Pepper, Mountain Dew, Lemonade, Cheerwine, Iced Tea. Free refills included."
+    },
+    {
+      "name": "Fountain Drinks - Large",
+      "price": 3.49,
+      "description": "Choose from: Pepsi, Diet Pepsi, Sierra Mist, Mug Root Beer, Dr. Pepper, Mountain Dew, Lemonade, Cheerwine, Iced Tea. Free refills included."
+    },
+    {
+      "name": "Bottled Beer - Domestic",
+      "price": 3.50,
+      "description": "Choose from popular domestic beers: Budweiser, Coors Light, Miller Lite, Bud Light, Michelob Ultra, Corona, Blue Moon, Yuengling, Sam Adams, Pabst Blue Ribbon."
+    },
+    {
+      "name": "Bottled Beer - Imported",
+      "price": 4.50,
+      "description": "Choose from popular imported beers: Heineken, Stella Artois, Guinness, Dos Equis, Modelo Especial, Peroni, Amstel Light, Beck's, Carlsberg, Kronenbourg 1664."
     }
   ]
 }
