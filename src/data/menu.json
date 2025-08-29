@@ -214,5 +214,269 @@
       "price": 15.99,
       "description": "Fried gator served on garlic bread with fries and baked beans, sides can be substituted at no cost."
     }
+  ],
+  "sides": [
+    {
+      "name": "Dill Pickle",
+      "price": 1.99,
+      "description": "Crisp, tangy dill pickle spear with perfect crunch and bold flavor."
+    },
+    {
+      "name": "Garlic Bread",
+      "price": 2.59,
+      "description": "Warm, buttery garlic bread with golden crust and aromatic garlic butter."
+    },
+    {
+      "name": "Baked Beans - Side",
+      "price": 2.99,
+      "description": "Sweet and smoky baked beans slow-cooked with rich BBQ sauce and tender beans."
+    },
+    {
+      "name": "Cole Slaw - Side",
+      "price": 2.99,
+      "description": "Creamy, crisp cole slaw with fresh cabbage and tangy dressing."
+    },
+    {
+      "name": "Green Beans - Side",
+      "price": 2.99,
+      "description": "Tender green beans seasoned with savory spices and slow-cooked to perfection."
+    },
+    {
+      "name": "Black-Eyed Peas - Side",
+      "price": 2.99,
+      "description": "Traditional Southern black-eyed peas cooked with smoky ham hock and rich seasonings."
+    },
+    {
+      "name": "Texas Caviar - Side",
+      "price": 2.99,
+      "description": "Fresh black-eyed pea salad with diced vegetables and zesty vinaigrette dressing."
+    },
+    {
+      "name": "Mashed Potatoes - Side",
+      "price": 2.99,
+      "description": "Creamy, buttery mashed potatoes whipped to fluffy perfection."
+    },
+    {
+      "name": "Brunswick Stew - Side",
+      "price": 2.99,
+      "description": "Hearty Southern stew with tender meat, vegetables, and rich tomato broth."
+    },
+    {
+      "name": "Collard Greens - Side",
+      "price": 2.99,
+      "description": "Slow-cooked collard greens with smoky bacon and traditional Southern seasonings."
+    },
+    {
+      "name": "Potato Salad - Side",
+      "price": 2.99,
+      "description": "Creamy potato salad with tender potatoes, crisp celery, and tangy dressing."
+    },
+    {
+      "name": "Mac & Cheese - Side",
+      "price": 2.99,
+      "description": "Rich and creamy macaroni and cheese with melted cheddar and golden breadcrumb topping."
+    },
+    {
+      "name": "Corn Bread",
+      "price": 3.49,
+      "description": "Moist, sweet cornbread with golden crust and perfect crumb texture."
+    },
+    {
+      "name": "French Fries",
+      "price": 3.49,
+      "description": "Crispy golden fries seasoned with our signature blend of spices."
+    },
+    {
+      "name": "Fried Corn on the Cob",
+      "price": 3.49,
+      "description": "Sweet corn on the cob battered and fried to golden perfection with crispy coating."
+    },
+    {
+      "name": "Brunswick Stew with Corn Bread",
+      "price": 8.99,
+      "description": "Hearty Southern stew with tender meat and vegetables, served with warm cornbread."
+    },
+    {
+      "name": "Collard Greens with Corn Bread",
+      "price": 8.99,
+      "description": "Slow-cooked collard greens with smoky bacon, served with warm cornbread."
+    },
+    {
+      "name": "Veggie Plate - Any 4 Vegetables",
+      "price": 10.49,
+      "description": "Choose any four of our delicious Southern-style vegetables for a perfect vegetarian meal."
+    },
+    {
+      "name": "Baked Beans - Pint",
+      "price": 7.49,
+      "description": "Sweet and smoky baked beans slow-cooked with rich BBQ sauce and tender beans."
+    },
+    {
+      "name": "Cole Slaw - Pint",
+      "price": 7.49,
+      "description": "Creamy, crisp cole slaw with fresh cabbage and tangy dressing."
+    },
+    {
+      "name": "Green Beans - Pint",
+      "price": 7.49,
+      "description": "Tender green beans seasoned with savory spices and slow-cooked to perfection."
+    },
+    {
+      "name": "Black-Eyed Peas - Pint",
+      "price": 7.49,
+      "description": "Traditional Southern black-eyed peas cooked with smoky ham hock and rich seasonings."
+    },
+    {
+      "name": "Texas Caviar - Pint",
+      "price": 7.49,
+      "description": "Fresh black-eyed pea salad with diced vegetables and zesty vinaigrette dressing."
+    },
+    {
+      "name": "Mashed Potatoes - Pint",
+      "price": 7.49,
+      "description": "Creamy, buttery mashed potatoes whipped to fluffy perfection."
+    },
+    {
+      "name": "Brunswick Stew - Pint",
+      "price": 7.49,
+      "description": "Hearty Southern stew with tender meat, vegetables, and rich tomato broth."
+    },
+    {
+      "name": "Collard Greens - Pint",
+      "price": 7.49,
+      "description": "Slow-cooked collard greens with smoky bacon and traditional Southern seasonings."
+    },
+    {
+      "name": "Potato Salad - Pint",
+      "price": 7.49,
+      "description": "Creamy potato salad with tender potatoes, crisp celery, and tangy dressing."
+    },
+    {
+      "name": "Mac & Cheese - Pint",
+      "price": 7.49,
+      "description": "Rich and creamy macaroni and cheese with melted cheddar and golden breadcrumb topping."
+    },
+    {
+      "name": "Baked Beans - Quart",
+      "price": 11.99,
+      "description": "Sweet and smoky baked beans slow-cooked with rich BBQ sauce and tender beans."
+    },
+    {
+      "name": "Cole Slaw - Quart",
+      "price": 11.99,
+      "description": "Creamy, crisp cole slaw with fresh cabbage and tangy dressing."
+    },
+    {
+      "name": "Green Beans - Quart",
+      "price": 11.99,
+      "description": "Tender green beans seasoned with savory spices and slow-cooked to perfection."
+    },
+    {
+      "name": "Black-Eyed Peas - Quart",
+      "price": 11.99,
+      "description": "Traditional Southern black-eyed peas cooked with smoky ham hock and rich seasonings."
+    },
+    {
+      "name": "Texas Caviar - Quart",
+      "price": 11.99,
+      "description": "Fresh black-eyed pea salad with diced vegetables and zesty vinaigrette dressing."
+    },
+    {
+      "name": "Mashed Potatoes - Quart",
+      "price": 11.99,
+      "description": "Creamy, buttery mashed potatoes whipped to fluffy perfection."
+    },
+    {
+      "name": "Brunswick Stew - Quart",
+      "price": 11.99,
+      "description": "Hearty Southern stew with tender meat, vegetables, and rich tomato broth."
+    },
+    {
+      "name": "Collard Greens - Quart",
+      "price": 11.99,
+      "description": "Slow-cooked collard greens with smoky bacon and traditional Southern seasonings."
+    },
+    {
+      "name": "Potato Salad - Quart",
+      "price": 11.99,
+      "description": "Creamy potato salad with tender potatoes, crisp celery, and tangy dressing."
+    },
+    {
+      "name": "Mac & Cheese - Quart",
+      "price": 11.99,
+      "description": "Rich and creamy macaroni and cheese with melted cheddar and golden breadcrumb topping."
+    },
+    {
+      "name": "Baked Beans - Gallon",
+      "price": 34.99,
+      "description": "Sweet and smoky baked beans slow-cooked with rich BBQ sauce and tender beans."
+    },
+    {
+      "name": "Cole Slaw - Gallon",
+      "price": 34.99,
+      "description": "Creamy, crisp cole slaw with fresh cabbage and tangy dressing."
+    },
+    {
+      "name": "Green Beans - Gallon",
+      "price": 34.99,
+      "description": "Tender green beans seasoned with savory spices and slow-cooked to perfection."
+    },
+    {
+      "name": "Black-Eyed Peas - Gallon",
+      "price": 34.99,
+      "description": "Traditional Southern black-eyed peas cooked with smoky ham hock and rich seasonings."
+    },
+    {
+      "name": "Texas Caviar - Gallon",
+      "price": 34.99,
+      "description": "Fresh black-eyed pea salad with diced vegetables and zesty vinaigrette dressing."
+    },
+    {
+      "name": "Mashed Potatoes - Gallon",
+      "price": 34.99,
+      "description": "Creamy, buttery mashed potatoes whipped to fluffy perfection."
+    },
+    {
+      "name": "Brunswick Stew - Gallon",
+      "price": 34.99,
+      "description": "Hearty Southern stew with tender meat, vegetables, and rich tomato broth."
+    },
+    {
+      "name": "Collard Greens - Gallon",
+      "price": 34.99,
+      "description": "Slow-cooked collard greens with smoky bacon and traditional Southern seasonings."
+    },
+    {
+      "name": "Potato Salad - Gallon",
+      "price": 34.99,
+      "description": "Creamy potato salad with tender potatoes, crisp celery, and tangy dressing."
+    },
+    {
+      "name": "Mac & Cheese - Gallon",
+      "price": 34.99,
+      "description": "Rich and creamy macaroni and cheese with melted cheddar and golden breadcrumb topping."
+    }
+  ],
+  "bbqSauce": [
+    {
+      "name": "Extra Side of BBQ Sauce - Small",
+      "price": 0.50,
+      "description": "Small portion of our signature BBQ sauce for dipping or topping."
+    },
+    {
+      "name": "Extra Side of BBQ Sauce - Large",
+      "price": 1.00,
+      "description": "Large portion of our signature BBQ sauce for dipping or topping."
+    },
+    {
+      "name": "Bottle of BBQ Sauce - Small",
+      "price": 6.99,
+      "description": "Take home our signature BBQ sauce in a small bottle."
+    },
+    {
+      "name": "Bottle of BBQ Sauce - Large",
+      "price": 10.99,
+      "description": "Take home our signature BBQ sauce in a large bottle."
+    }
   ]
 }
