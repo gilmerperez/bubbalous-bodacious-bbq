@@ -33,17 +33,9 @@ header {
   justify-content: space-between;
 }
 
-/* Mobile Layout */
-.mobileLayout {
-  width: 100%;
-  display: none;
-  align-items: center;
-  justify-content: space-between;
-}
-
 /* Logo */
 .logoContainer img {
-  height: 60px;
+  height: 50px;
   transition: 0.3s ease-in;
 }
 
@@ -60,7 +52,7 @@ header {
 .navItems {
   gap: 1rem;
   display: flex;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   align-items: center;
   justify-content: center;
   transition: 0.3s ease-in;
@@ -81,7 +73,7 @@ header {
 /* Active link */
 .navItems a.activeLink {
   border-radius: 0.25rem;
-  padding: 0.25rem 0.75rem;
+  padding: 0.25rem 0.5rem;
   color: hsl(0, 0%, 100%);
   background-color: var(--primary);
   box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
@@ -98,7 +90,7 @@ header {
 .themeButton {
   gap: 0.5rem;
   display: flex;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   align-items: center;
   justify-content: center;
   color: var(--text-primary);
@@ -114,7 +106,7 @@ header {
 /* Tablet responsiveness */
 @media (max-width: 768px) {
   .logoContainer img {
-    height: 50px;
+    height: 45px;
   }
 
   .navContainer {
@@ -131,21 +123,17 @@ header {
   }
 
   .seperator {
-    font-size: 1.15rem;
+    font-size: 1.25rem;
   }
 
   .themeButton {
     font-size: 1.15rem;
   }
-
-  .themeButton:not(.sidebarThemeButton) p {
-    display: none;
-  }
 }
 
-@media (max-width: 575px) {
+@media (max-width: 600px) {
   .logoContainer img {
-    height: 45px;
+    height: 40px;
   }
 
   .navContainer {
@@ -158,19 +146,19 @@ header {
   }
 
   .seperator {
-    font-size: 1rem;
+    font-size: 1.15rem;
   }
 
   .themeButton {
     font-size: 1rem;
   }
+
+  .themeButton:not(.sidebarThemeButton) p {
+    display: none;
+  }
 }
 
 @media (max-width: 500px) {
-  .logoContainer img {
-    height: 40px;
-  }
-
   .seperator {
     display: none;
   }
@@ -178,6 +166,14 @@ header {
   .themeButton:not(.sidebarThemeButton) {
     display: none;
   }
+}
+
+/* Mobile Layout */
+.mobileLayout {
+  width: 100%;
+  display: none;
+  align-items: center;
+  justify-content: space-between;
 }
 
 /* Mobile phone button */
@@ -234,7 +230,7 @@ header {
   }
 
   .mobileLogoContainer img {
-    height: 50px;
+    height: 45px;
   }
 
   .hamburger {

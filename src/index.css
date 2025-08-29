@@ -105,7 +105,7 @@ body {
 /* Header - Shared structural styling */
 header {
   width: 100%; /* Ensures full-width layout across viewport */
-  padding: 1rem 2rem; /* Provides consistent spacing inside header */
+  padding: 0.75rem 2rem; /* Provides consistent spacing inside header */
   transition: 0.3s ease-in; /* Smooth transition for header */
   background-color: var(--header-bg-color); /* Applies theme background color from CSS variables */
 }
