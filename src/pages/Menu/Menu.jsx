@@ -50,18 +50,18 @@ function Menu() {
               <div key={categoryKey} className={styles.categoryContainer}>
                 {/* Category header */}
                 <div className={styles.categoryHeader} onClick={() => toggleCategory(categoryKey)}>
-                  <h2 className={styles.categoryTitle}>{formatCategoryName(categoryKey)}</h2>
+                  <div className={styles.categoryInfo}>
+                    <h2 className={styles.categoryTitle}>{formatCategoryName(categoryKey)}</h2>
+                    <div className={styles.categoryDescription}>
+                      <p>{categoryData.categoryDescription}</p>
+                    </div>
+                  </div>
                   <span className={styles.toggleIcon}>{expandedCategories[categoryKey] ? "−" : "+"}</span>
                 </div>
 
                 {/* Category content */}
                 {expandedCategories[categoryKey] && (
                   <div className={styles.categoryContent}>
-                    {/* Category Description */}
-                    <div className={styles.categoryDescription}>
-                      <p>{categoryData.categoryDescription}</p>
-                    </div>
-
                     {/* Menu Items */}
                     <div className={styles.menuItems}>
                       {categoryData.items.map((item, index) => (

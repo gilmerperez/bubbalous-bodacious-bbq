@@ -1,6 +1,6 @@
 {
   "appetizers": {
-    "categoryDescription": "Start your meal with our Southern-style appetizers, from crispy fried favorites like corn nuggets and okra to unique offerings like gator nuggets and wings. Perfect for sharing or enjoying as a light meal.",
+    "categoryDescription": "Start your meal with our southern-style appetizers, from crispy fried favorites like corn nuggets and okra to unique offerings like gator nuggets and wings. Perfect for sharing or enjoying as a light meal.",
     "items": [
       {
         "name": "Corn Nuggets",
@@ -275,7 +275,7 @@
     ]
   },
   "dinners": {
-    "categoryDescription": "Our signature dinner platters featuring generous portions of slow-smoked BBQ meats served with a complete Southern meal including fries, baked beans, cole slaw, and garlic bread. From classic beef and pork to seafood and poultry, all sides can be substituted at no cost.",
+    "categoryDescription": "Our signature dinner platters featuring generous portions of slow-smoked BBQ meats served with a complete southern meal including fries, baked beans, cole slaw, and garlic bread. From classic beef and pork to seafood and poultry, all sides can be substituted at no cost.",
     "items": [
       {
         "name": "Sliced BBQ Beef Dinner",
@@ -350,7 +350,7 @@
     ]
   },
   "combos": {
-    "categoryDescription": "Perfect combinations of our most popular meats, allowing you to sample multiple BBQ favorites in one meal. From classic two-meat combos to our signature Bubbalou's Special featuring four different meats, all served with complete Southern sides.",
+    "categoryDescription": "Perfect combinations of our most popular meats, allowing you to sample multiple BBQ favorites in one meal. From classic two-meat combos to our signature Bubbalou's Special featuring four different meats, all served with complete southern sides.",
     "items": [
       {
         "name": "Brisket & Pulled Pork Combo",
@@ -455,7 +455,7 @@
     ]
   },
   "drinks": {
-    "categoryDescription": "Quench your thirst with our selection of beverages, from refreshing fountain drinks with free refills to bottled options including Cheerwine and domestic and imported beers. Perfect accompaniments to any BBQ meal.",
+    "categoryDescription": "Quench your thirst with our selection of beverages, from refreshing fountain drinks with free refills to bottled options including Cheerwine® and domestic and imported beers. Perfect accompaniments to any BBQ meal.",
     "items": [
       {
         "name": "Milk",
@@ -495,7 +495,7 @@
     ]
   },
   "desserts": {
-    "categoryDescription": "End your meal on a sweet note with our homemade Southern desserts, from rich chocolate brownies to classic cakes and traditional pies. Each dessert is made fresh daily using time-honored recipes.",
+    "categoryDescription": "End your meal on a sweet note with our homemade southern desserts, from rich chocolate brownies to classic cakes and traditional pies. Each dessert is made fresh daily using time-honored recipes.",
     "items": [
       {
         "name": "Brownies",
@@ -530,7 +530,7 @@
     ]
   },
   "sides": {
-    "categoryDescription": "Complete your BBQ experience with our Southern-style sides, from classic favorites like baked beans and cole slaw to hearty options like Brunswick stew and collard greens. Available in individual portions, pints, quarts, and gallons for any occasion.",
+    "categoryDescription": "Complete your BBQ experience with our southern-style sides, from classic favorites like baked beans and cole slaw to hearty options like Brunswick stew and collard greens. Available in individual portions, pints, quarts, and gallons for any occasion.",
     "items": [
       {
         "name": "Dill Pickle",
@@ -595,7 +595,7 @@
     ]
   },
   "bbqSauce": {
-    "categoryDescription": "Take home the taste of Bubbalou's with our signature BBQ sauces, available in five delicious varieties from sweet and mild to hot and killer. Perfect for dipping, topping, or cooking, available in small and large portions for any need.",
+    "categoryDescription": "Take home the taste of Bubbalou's with our signature BBQ sauces, available in five delicious varieties from sweet and mild to hot and killer and our special mustard BBQ sauce. Perfect for dipping, topping, or cooking, available in small and large portions for any need.",
     "items": [
       {
         "name": "Extra Side of BBQ Sauce - Small",
