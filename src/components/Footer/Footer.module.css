@@ -115,8 +115,17 @@
 
 /* Mobile responsiveness */
 @media (max-width: 480px) {
+  .logoContainer img {
+    width: 125px;
+  }
+
+  .legalDisclaimer {
+    font-size: 0.95rem;
+  }
+
   .copyright {
     width: 275px;
+    font-size: 0.95rem;
   }
 
   .navHeader {
