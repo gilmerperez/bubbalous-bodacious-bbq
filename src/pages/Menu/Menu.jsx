@@ -45,6 +45,18 @@ function Menu() {
 
       <main>
         <div className={styles.menuContainer}>
+          {/* Title */}
+          <h1 className={styles.pageTitle}>BUBBALOU'S BODACIOUS BBQ MENU</h1>
+
+          {/* Description */}
+          <p className={styles.pageDescription}>
+            Discover the diverse and delectable offerings of Bubbalou's Bodacious BBQ menu. From savory appetizers to
+            satisfying main courses, our menu is crafted to delight every palate. Indulge in our expertly smoked meats,
+            flavorful sides, and irresistible desserts. Whether you're in the mood for a hearty sandwich, a classic BBQ
+            dinner, or a refreshing drink, our menu promises a memorable dining experience that captures the essence of
+            authentic BBQ.
+          </p>
+
           {/* Menu content */}
           <div className={styles.menuContent}>
             {Object.entries(menuData).map(([categoryKey, categoryData]) => (
