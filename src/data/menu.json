@@ -1,589 +1,622 @@
 {
-  "appetizers": [
-    {
-      "name": "Corn Nuggets",
-      "price": 5.99,
-      "description": "Golden fried corn nuggets with a crispy exterior and sweet corn center."
-    },
-    {
-      "name": "Fried Okra",
-      "price": 5.99,
-      "description": "Southern-style fried okra with a crispy breaded coating."
-    },
-    {
-      "name": "Fried Pickles",
-      "price": 5.99,
-      "description": "Crispy fried dill pickle chips served with ranch dipping sauce."
-    },
-    {
-      "name": "Onion Petals",
-      "price": 5.99,
-      "description": "Battered and fried onion petals with a crispy golden coating."
-    },
-    {
-      "name": "Mac & Cheese Bites",
-      "price": 7.49,
-      "description": "Breaded and fried macaroni and cheese bites with melted cheese center."
-    },
-    {
-      "name": "Gator Nuggets",
-      "price": 13.99,
-      "description": "Crispy fried alligator meat nuggets served with your choice of dipping sauce."
-    },
-    {
-      "name": "10 Wings",
-      "price": 15.49,
-      "description": "Ten chicken wings tossed in your choice of mild, hot, or sweet sauce."
-    },
-    {
-      "name": "10 Wings & Fries",
-      "price": 16.49,
-      "description": "Ten chicken wings with your choice of sauce served with crispy fries."
-    },
-    {
-      "name": "House Garden Salad",
-      "price": 3.99,
-      "description": "Fresh tossed greens with tomatoes, cucumber, and red onions."
-    },
-    {
-      "name": "Bubbalou's Garden Salad",
-      "price": 11.99,
-      "description": "Fresh tossed greens topped with tomatoes, cucumber, and red onions with your choice of smoked pulled pork, pork, beef, or turkey."
-    }
-  ],
-  "kidsMeals": [
-    {
-      "name": "BBQ Chicken",
-      "price": 6.49,
-      "description": "Tender BBQ chicken served with fries and a small beverage, side can be substituted at no cost, free refills on drinks."
-    },
-    {
-      "name": "Corn Dog",
-      "price": 6.49,
-      "description": "Classic corn dog on a stick served with fries and a small beverage, side can be substituted at no cost, free refills on drinks."
-    },
-    {
-      "name": "Mac & Cheese",
-      "price": 6.49,
-      "description": "Creamy macaroni and cheese with your choice of fries or garlic bread, plus a small beverage, side can be substituted at no cost, free refills on drinks."
-    },
-    {
-      "name": "Chicken Strips",
-      "price": 6.99,
-      "description": "Crispy chicken strips served with fries and a small beverage, side can be substituted at no cost, free refills on drinks."
-    },
-    {
-      "name": "Pulled Pork Sandwich",
-      "price": 7.99,
-      "description": "Smoked pulled pork sandwich served with fries and a small beverage, side can be substituted at no cost, free refills on drinks."
-    },
-    {
-      "name": "Spare Ribs",
-      "price": 7.99,
-      "description": "Tender spare ribs served with garlic bread and a small beverage, side can be substituted at no cost, free refills on drinks."
-    },
-    {
-      "name": "Small Beef Sandwich",
-      "price": 7.99,
-      "description": "Small BBQ beef sandwich served with fries and a small beverage, side can be substituted at no cost, free refills on drinks."
-    },
-    {
-      "name": "Small Pork Sandwich",
-      "price": 7.99,
-      "description": "Small BBQ pork sandwich served with fries and a small beverage, side can be substituted at no cost, free refills on drinks."
-    },
-    {
-      "name": "Cheeseburger",
-      "price": 8.99,
-      "description": "Juicy cheeseburger served with fries and a small beverage, side can be substituted at no cost, free refills on drinks."
-    }
-  ],
-  "sandwiches": [
-    {
-      "name": "Sliced BBQ Beef or Pork Sandwich - Regular",
-      "price": 7.99,
-      "description": "Sliced BBQ beef or pork served on a buttered sandwich bun, upgrade to garlic bread available."
-    },
-    {
-      "name": "Sliced BBQ Beef or Pork Sandwich - Large",
-      "price": 8.99,
-      "description": "Large portion of sliced BBQ beef or pork served on a buttered sandwich bun, upgrade to garlic bread available."
-    },
-    {
-      "name": "1/4 Chicken on the Bone Sandwich",
-      "price": 9.49,
-      "description": "Quarter chicken on the bone served on a buttered sandwich bun, upgrade to garlic bread available."
-    },
-    {
-      "name": "Catfish Sandwich",
-      "price": 9.99,
-      "description": "Fried catfish fillet served on a buttered sandwich bun, upgrade to garlic bread available."
-    },
-    {
-      "name": "Livers Sandwich",
-      "price": 9.99,
-      "description": "Fried chicken livers served on a buttered sandwich bun, upgrade to garlic bread available."
-    },
-    {
-      "name": "Gizzards Sandwich",
-      "price": 9.99,
-      "description": "Fried chicken gizzards served on a buttered sandwich bun, upgrade to garlic bread available."
-    },
-    {
-      "name": "Pulled Pork Sandwich",
-      "price": 9.99,
-      "description": "Smoked pulled pork served on a buttered sandwich bun, upgrade to garlic bread available."
-    },
-    {
-      "name": "Pulled Chicken Sandwich",
-      "price": 9.99,
-      "description": "Smoked pulled chicken served on a buttered sandwich bun, upgrade to garlic bread available."
-    },
-    {
-      "name": "Smoked Turkey Sandwich",
-      "price": 9.99,
-      "description": "Smoked turkey served on garlic bread."
-    },
-    {
-      "name": "Sausage Sandwich",
-      "price": 10.49,
-      "description": "Smoked sausage served on a buttered sandwich bun, upgrade to garlic bread available."
-    },
-    {
-      "name": "Spare Ribs Sandwich",
-      "price": 10.99,
-      "description": "Spare ribs served on a buttered sandwich bun, upgrade to garlic bread available."
-    },
-    {
-      "name": "Brisket Sandwich",
-      "price": 11.49,
-      "description": "Smoked brisket served on a buttered sandwich bun, upgrade to garlic bread available."
-    }
-  ],
-  "sandwichBaskets": [
-    {
-      "name": "Sliced BBQ Beef or Pork Basket - Regular",
-      "price": 10.99,
-      "description": "Sliced BBQ beef or pork served on a buttered sandwich bun with fries and baked beans, upgrade to garlic bread available, sides can be substituted at no cost."
-    },
-    {
-      "name": "Sliced BBQ Beef or Pork Basket - Large",
-      "price": 11.99,
-      "description": "Large portion of sliced BBQ beef or pork served on a buttered sandwich bun with fries and baked beans, upgrade to garlic bread available, sides can be substituted at no cost."
-    },
-    {
-      "name": "Chicken Strips Basket",
-      "price": 12.99,
-      "description": "Fried chicken strips served on garlic bread with fries and baked beans, sides can be substituted at no cost."
-    },
-    {
-      "name": "Livers Basket",
-      "price": 12.99,
-      "description": "Fried chicken livers served on garlic bread with fries and baked beans, sides can be substituted at no cost."
-    },
-    {
-      "name": "Gizzards Basket",
-      "price": 12.99,
-      "description": "Fried chicken gizzards served on garlic bread with fries and baked beans, sides can be substituted at no cost."
-    },
-    {
-      "name": "The Big Big Pig Basket",
-      "price": 13.29,
-      "description": "Extra large portion of your choice of sliced beef, sliced pork, sliced turkey, or pulled pork served on a burger bun with extra fries and a larger portion of baked beans, sides can be substituted at no cost."
-    },
-    {
-      "name": "Pulled Pork Basket",
-      "price": 13.49,
-      "description": "Smoked pulled pork served on a buttered sandwich bun with fries and baked beans, upgrade to garlic bread available, sides can be substituted at no cost."
-    },
-    {
-      "name": "Sausage Basket",
-      "price": 13.49,
-      "description": "Smoked sausage served on a buttered sandwich bun with fries and baked beans, upgrade to garlic bread available, sides can be substituted at no cost."
-    },
-    {
-      "name": "Pulled Chicken Basket",
-      "price": 13.49,
-      "description": "Smoked pulled chicken served on a buttered sandwich bun with fries and baked beans, upgrade to garlic bread available, sides can be substituted at no cost."
-    },
-    {
-      "name": "1/4 Chicken on the Bone Basket",
-      "price": 13.49,
-      "description": "Quarter chicken on the bone served on garlic bread with fries and baked beans, sides can be substituted at no cost."
-    },
-    {
-      "name": "Smoked Turkey Basket",
-      "price": 13.49,
-      "description": "Smoked turkey served on garlic bread with fries and baked beans, sides can be substituted at no cost."
-    },
-    {
-      "name": "Grilled Chicken Breast Basket",
-      "price": 13.49,
-      "description": "Grilled chicken breast served on a buttered sandwich bun with fries and baked beans, upgrade to garlic bread available, sides can be substituted at no cost."
-    },
-    {
-      "name": "Catfish Basket",
-      "price": 13.99,
-      "description": "Fried catfish served on a buttered sandwich bun with cole slaw and fries, upgrade to garlic bread available, sides can be substituted at no cost."
-    },
-    {
-      "name": "Spare Ribs Basket",
-      "price": 13.99,
-      "description": "Spare ribs served on garlic bread with fries and baked beans, sides can be substituted at no cost."
-    },
-    {
-      "name": "Shrimp Basket",
-      "price": 13.99,
-      "description": "Fried shrimp served on garlic bread with fries and baked beans, sides can be substituted at no cost."
-    },
-    {
-      "name": "Double Cheese Burger",
-      "price": 14.99,
-      "description": "Double cheese burger served on a buttered sandwich bun with fries and baked beans, upgrade to garlic bread available, sides can be substituted at no cost."
-    },
-    {
-      "name": "Double Mushroom and Swiss Cheese Burger",
-      "price": 15.49,
-      "description": "Double mushroom and Swiss burger served on a buttered sandwich bun with fries and baked beans, upgrade to garlic bread available, sides can be substituted at no cost."
-    },
-    {
-      "name": "Brisket Basket",
-      "price": 15.99,
-      "description": "Smoked brisket served on a buttered sandwich bun with fries and baked beans, upgrade to garlic bread available, sides can be substituted at no cost."
-    },
-    {
-      "name": "Baby Back Ribs Basket",
-      "price": 15.99,
-      "description": "Baby back ribs served on garlic bread with fries and baked beans, sides can be substituted at no cost."
-    },
-    {
-      "name": "Gator Basket",
-      "price": 15.99,
-      "description": "Fried gator served on garlic bread with fries and baked beans, sides can be substituted at no cost."
-    }
-  ],
-  "dinners": [
-    {
-      "name": "Sliced BBQ Beef Dinner",
-      "price": 17.99,
-      "description": "Tender sliced BBQ beef served with fries, baked beans, cole slaw, and garlic bread, sides can be substituted at no cost."
-    },
-    {
-      "name": "Sliced BBQ Pork Dinner",
-      "price": 17.99,
-      "description": "Tender sliced BBQ pork served with fries, baked beans, cole slaw, and garlic bread, sides can be substituted at no cost."
-    },
-    {
-      "name": "Pulled Pork Dinner",
-      "price": 17.99,
-      "description": "Our signature pulled pork dinner served with fries, baked beans, cole slaw, and garlic bread, sides can be substituted at no cost."
-    },
-    {
-      "name": "1/2 Chicken on the Bone Dinner",
-      "price": 17.99,
-      "description": "Half chicken on the bone dinner served with fries, baked beans, cole slaw, and garlic bread, sides can be substituted at no cost."
-    },
-    {
-      "name": "Grilled Chicken Dinner",
-      "price": 17.99,
-      "description": "Two pieces of grilled chicken dinner served with fries, baked beans, cole slaw, and garlic bread, sides can be substituted at no cost."
-    },
-    {
-      "name": "Turkey Dinner",
-      "price": 17.99,
-      "description": "Smoked turkey dinner served with fries, baked beans, cole slaw, and garlic bread, sides can be substituted at no cost."
-    },
-    {
-      "name": "Shrimp Dinner",
-      "price": 17.99,
-      "description": "Fried shrimp dinner served with fries, baked beans, cole slaw, and garlic bread, sides can be substituted at no cost."
-    },
-    {
-      "name": "Sausage Dinner",
-      "price": 17.99,
-      "description": "Smoked sausage dinner served with fries, baked beans, cole slaw, and garlic bread, sides can be substituted at no cost."
-    },
-    {
-      "name": "Chicken Strip Dinner",
-      "price": 17.99,
-      "description": "Crispy chicken strips dinner served with fries, baked beans, cole slaw, and garlic bread, sides can be substituted at no cost."
-    },
-    {
-      "name": "Fried Catfish Dinner",
-      "price": 17.99,
-      "description": "Two pieces of fried catfish dinner served with fries, baked beans, cole slaw, and garlic bread, sides can be substituted at no cost."
-    },
-    {
-      "name": "Pulled Chicken Dinner",
-      "price": 17.99,
-      "description": "Tender pulled chicken dinner served with fries, baked beans, cole slaw, and garlic bread, sides can be substituted at no cost."
-    },
-    {
-      "name": "Brisket Dinner",
-      "price": 19.99,
-      "description": "Our famous smoked brisket dinner served with fries, baked beans, cole slaw, and garlic bread, sides can be substituted at no cost."
-    },
-    {
-      "name": "Spare Ribs Dinner",
-      "price": 19.99,
-      "description": "Tender spare ribs dinner served with fries, baked beans, cole slaw, and garlic bread, sides can be substituted at no cost."
-    },
-    {
-      "name": "Baby Back Ribs Dinner",
-      "price": 20.99,
-      "description": "Fall-off-the-bone baby back ribs dinner served with fries, baked beans, cole slaw, and garlic bread, sides can be substituted at no cost."
-    }
-  ],
-  "combos": [
-    {
-      "name": "Brisket & Pulled Pork Combo",
-      "price": 20.99,
-      "description": "Perfect combination of our famous brisket and signature pulled pork served with fries, baked beans, cole slaw, and garlic bread, sides can be substituted at no cost."
-    },
-    {
-      "name": "Spare Ribs & Chicken Combo",
-      "price": 20.99,
-      "description": "Tender spare ribs paired with juicy chicken served with fries, baked beans, cole slaw, and garlic bread, sides can be substituted at no cost."
-    },
-    {
-      "name": "Any 2 Meat Combo",
-      "price": 21.99,
-      "description": "Choose any two of your favorite meats served with fries, baked beans, cole slaw, and garlic bread, sides can be substituted at no cost."
-    },
-    {
-      "name": "Baby Backs & Shrimp Combo",
-      "price": 21.99,
-      "description": "Premium baby back ribs with fried shrimp served with fries, baked beans, cole slaw, and garlic bread, sides can be substituted at no cost."
-    },
-    {
-      "name": "Bubbalou's Special",
-      "price": 21.99,
-      "description": "Our signature combo featuring spare ribs, chicken, beef, and pork served with fries, baked beans, cole slaw, and garlic bread, sides can be substituted at no cost."
-    },
-    {
-      "name": "3 Pig Platter",
-      "price": 22.49,
-      "description": "The ultimate pork lover's platter with pulled pork, sliced pork, and spare ribs served with fries, baked beans, cole slaw, and garlic bread, sides can be substituted at no cost."
-    }
-  ],
-  "byThePound": [
-    {
-      "name": "Sliced Beef - 1/2 Pound",
-      "price": 8.99,
-      "description": "Half pound of tender sliced BBQ beef, perfect for a hearty meal."
-    },
-    {
-      "name": "Sliced Beef - 1 Pound",
-      "price": 16.99,
-      "description": "Full pound of tender sliced BBQ beef, great for sharing or leftovers."
-    },
-    {
-      "name": "Sliced Pork - 1/2 Pound",
-      "price": 8.99,
-      "description": "Half pound of juicy sliced BBQ pork, slow-smoked to perfection."
-    },
-    {
-      "name": "Sliced Pork - 1 Pound",
-      "price": 16.99,
-      "description": "Full pound of juicy sliced BBQ pork, enough for the whole family."
-    },
-    {
-      "name": "Pulled Pork - 1/2 Pound",
-      "price": 8.99,
-      "description": "Half pound of our signature pulled pork, hand-pulled and smothered in BBQ sauce."
-    },
-    {
-      "name": "Pulled Pork - 1 Pound",
-      "price": 16.99,
-      "description": "Full pound of our signature pulled pork, perfect for parties and gatherings."
-    },
-    {
-      "name": "Pulled Chicken - 1/2 Pound",
-      "price": 8.99,
-      "description": "Half pound of tender pulled chicken, perfectly seasoned and smoked."
-    },
-    {
-      "name": "Pulled Chicken - 1 Pound",
-      "price": 16.99,
-      "description": "Full pound of tender pulled chicken, ideal for feeding a crowd."
-    },
-    {
-      "name": "Brisket - 1/2 Pound",
-      "price": 12.99,
-      "description": "Half pound of our famous smoked brisket, tender and full of flavor."
-    },
-    {
-      "name": "Brisket - 1 Pound",
-      "price": 24.99,
-      "description": "Full pound of our famous smoked brisket, the ultimate BBQ experience."
-    },
-    {
-      "name": "1/2 Chicken",
-      "price": 12.99,
-      "description": "Half of a whole smoked chicken, juicy and flavorful with crispy skin."
-    },
-    {
-      "name": "Whole Chicken",
-      "price": 22.99,
-      "description": "Complete whole smoked chicken, perfect for family meals or special occasions."
-    },
-    {
-      "name": "Baby Back Ribs - 1 Slab",
-      "price": 24.99,
-      "description": "Full slab of tender baby back ribs, fall-off-the-bone delicious."
-    }
-  ],
-  "drinks": [
-    {
-      "name": "Milk",
-      "price": 1.89,
-      "description": "Cold, fresh whole milk."
-    },
-    {
-      "name": "Bottled Water",
-      "price": 2.69,
-      "description": "Bottled water."
-    },
-    {
-      "name": "Cheerwine",
-      "price": 2.69,
-      "description": "Bottled Cheerwine cherry cola."
-    },
-    {
-      "name": "Fountain Drinks - Regular",
-      "price": 3.09,
-      "description": "Choose from: Pepsi, Diet Pepsi, Sierra Mist, Mug Root Beer, Dr. Pepper, Mountain Dew, Lemonade, Cheerwine, Iced Tea. Free refills included."
-    },
-    {
-      "name": "Fountain Drinks - Large",
-      "price": 3.49,
-      "description": "Choose from: Pepsi, Diet Pepsi, Sierra Mist, Mug Root Beer, Dr. Pepper, Mountain Dew, Lemonade, Cheerwine, Iced Tea. Free refills included."
-    },
-    {
-      "name": "Bottled Beer - Domestic",
-      "price": 3.50,
-      "description": "Choose from popular domestic beers: Budweiser, Coors Light, Miller Lite, Bud Light, Michelob Ultra, Corona, Blue Moon, Yuengling, Sam Adams, Pabst Blue Ribbon."
-    },
-    {
-      "name": "Bottled Beer - Imported",
-      "price": 4.50,
-      "description": "Choose from popular imported beers: Heineken, Stella Artois, Guinness, Dos Equis, Modelo Especial, Peroni, Amstel Light, Beck's, Carlsberg, Kronenbourg 1664."
-    }
-  ],
-  "desserts": [
-    {
-      "name": "Brownies",
-      "price": 2.79,
-      "description": "Rich, fudgy chocolate brownie with a perfect chewy texture and chocolate chips."
-    },
-    {
-      "name": "Carrot Cake Slice",
-      "price": 6.49,
-      "description": "Moist carrot cake with cream cheese frosting, loaded with fresh carrots and warm spices."
-    },
-    {
-      "name": "Red Velvet Cake Slice",
-      "price": 6.49,
-      "description": "Classic red velvet cake with smooth cream cheese frosting and a hint of cocoa."
-    },
-    {
-      "name": "Chocolate Cake Slice",
-      "price": 6.49,
-      "description": "Decadent chocolate cake with rich chocolate frosting and a moist, tender crumb."
-    },
-    {
-      "name": "Sweet Potato Pie",
-      "price": 9.50,
-      "description": "Traditional Southern sweet potato pie with warm spices and a flaky crust."
-    },
-    {
-      "name": "Pecan Pie",
-      "price": 10.50,
-      "description": "Classic pecan pie with a golden brown filling and crunchy pecan topping."
-    }
-  ],
-  "sides": [
-    {
-      "name": "Dill Pickle",
-      "price": 1.99,
-      "description": "Crisp, tangy dill pickle spear with perfect crunch and bold flavor."
-    },
-    {
-      "name": "Garlic Bread",
-      "price": 2.59,
-      "description": "2 warm, buttery pieces of garlic bread with golden crust and aromatic garlic butter."
-    },
-    {
-      "name": "Corn Bread",
-      "price": 3.49,
-      "description": "Moist, sweet cornbread with golden crust and perfect crumb texture."
-    },
-    {
-      "name": "French Fries",
-      "price": 3.49,
-      "description": "Crispy golden fries seasoned with our signature blend of spices."
-    },
-    {
-      "name": "Fried Corn on the Cob",
-      "price": 3.49,
-      "description": "Sweet corn on the cob battered and fried to golden perfection with crispy coating."
-    },
-    {
-      "name": "Brunswick Stew with Corn Bread",
-      "price": 8.99,
-      "description": "Hearty Southern stew with tender meat and vegetables, served with warm cornbread."
-    },
-    {
-      "name": "Collard Greens with Corn Bread",
-      "price": 8.99,
-      "description": "Slow-cooked collard greens with smoky bacon, served with warm cornbread."
-    },
-    {
-      "name": "Veggie Plate - Any 4 Vegetables",
-      "price": 10.49,
-      "description": "Choose any four of our delicious Southern-style vegetables for a perfect vegetarian meal."
-    },
-    {
-      "name": "Side",
-      "price": 2.99,
-      "description": "Choose from: Baked Beans, Cole Slaw, Green Beans, Black-Eyed Peas, Texas Caviar, Mashed Potatoes, Brunswick Stew, Collard Greens, Potato Salad, Mac & Cheese"
-    },
-    {
-      "name": "Pint",
-      "price": 7.49,
-      "description": "Choose from: Baked Beans, Cole Slaw, Green Beans, Black-Eyed Peas, Texas Caviar, Mashed Potatoes, Brunswick Stew, Collard Greens, Potato Salad, Mac & Cheese"
-    },
-    {
-      "name": "Quart",
-      "price": 11.99,
-      "description": "Choose from: Baked Beans, Cole Slaw, Green Beans, Black-Eyed Peas, Texas Caviar, Mashed Potatoes, Brunswick Stew, Collard Greens, Potato Salad, Mac & Cheese"
-    },
-    {
-      "name": "Gallon",
-      "price": 34.99,
-      "description": "Choose from: Baked Beans, Cole Slaw, Green Beans, Black-Eyed Peas, Texas Caviar, Mashed Potatoes, Brunswick Stew, Collard Greens, Potato Salad, Mac & Cheese"
-    }
-  ],
-  "bbqSauce": [
-    {
-      "name": "Extra Side of BBQ Sauce - Small",
-      "price": 0.50,
-      "description": "Small portion of our signature BBQ sauce for dipping or topping. Choose from: Sweet, Mild, Hot, Killer, Mustard BBQ."
-    },
-    {
-      "name": "Extra Side of BBQ Sauce - Large",
-      "price": 1.00,
-      "description": "Large portion of our signature BBQ sauce for dipping or topping. Choose from: Sweet, Mild, Hot, Killer, Mustard BBQ."
-    },
-    {
-      "name": "Bottle of BBQ Sauce - Small",
-      "price": 6.99,
-      "description": "Take home our signature BBQ sauce in a small bottle. Choose from: Sweet, Mild, Hot, Killer, Mustard BBQ."
-    },
-    {
-      "name": "Bottle of BBQ Sauce - Large",
-      "price": 10.99,
-      "description": "Take home our signature BBQ sauce in a large bottle. Choose from: Sweet, Mild, Hot, Killer, Mustard BBQ."
-    }
-  ]
+  "appetizers": {
+    "categoryDescription": "Start your meal with our Southern-style appetizers, from crispy fried favorites like corn nuggets and okra to unique offerings like gator nuggets and wings. Perfect for sharing or enjoying as a light meal.",
+    "items": [
+      {
+        "name": "Corn Nuggets",
+        "price": 5.99,
+        "description": "Golden fried corn nuggets with a crispy exterior and sweet corn center."
+      },
+      {
+        "name": "Fried Okra",
+        "price": 5.99,
+        "description": "Southern-style fried okra with a crispy breaded coating."
+      },
+      {
+        "name": "Fried Pickles",
+        "price": 5.99,
+        "description": "Crispy fried dill pickle chips served with ranch dipping sauce."
+      },
+      {
+        "name": "Onion Petals",
+        "price": 5.99,
+        "description": "Battered and fried onion petals with a crispy golden coating."
+      },
+      {
+        "name": "Mac & Cheese Bites",
+        "price": 7.49,
+        "description": "Breaded and fried macaroni and cheese bites with melted cheese center."
+      },
+      {
+        "name": "Gator Nuggets",
+        "price": 13.99,
+        "description": "Crispy fried alligator meat nuggets served with your choice of dipping sauce."
+      },
+      {
+        "name": "10 Wings",
+        "price": 15.49,
+        "description": "Ten chicken wings tossed in your choice of mild, hot, or sweet sauce."
+      },
+      {
+        "name": "10 Wings & Fries",
+        "price": 16.49,
+        "description": "Ten chicken wings with your choice of sauce served with crispy fries."
+      },
+      {
+        "name": "House Garden Salad",
+        "price": 3.99,
+        "description": "Fresh tossed greens with tomatoes, cucumber, and red onions."
+      },
+      {
+        "name": "Bubbalou's Garden Salad",
+        "price": 11.99,
+        "description": "Fresh tossed greens topped with tomatoes, cucumber, and red onions with your choice of smoked pulled pork, pork, beef, or turkey."
+      }
+    ]
+  },
+  "kidsMeals": {
+    "categoryDescription": "Specially crafted meals for our youngest guests, featuring kid-friendly favorites from BBQ classics to comfort foods. All meals include a small beverage with free refills and the option to substitute sides at no cost.",
+    "items": [
+      {
+        "name": "BBQ Chicken",
+        "price": 6.49,
+        "description": "Tender BBQ chicken served with fries and a small beverage, side can be substituted at no cost, free refills on drinks."
+      },
+      {
+        "name": "Corn Dog",
+        "price": 6.49,
+        "description": "Classic corn dog on a stick served with fries and a small beverage, side can be substituted at no cost, free refills on drinks."
+      },
+      {
+        "name": "Mac & Cheese",
+        "price": 6.49,
+        "description": "Creamy macaroni and cheese with your choice of fries or garlic bread, plus a small beverage, side can be substituted at no cost, free refills on drinks."
+      },
+      {
+        "name": "Chicken Strips",
+        "price": 6.99,
+        "description": "Crispy chicken strips served with fries and a small beverage, side can be substituted at no cost, free refills on drinks."
+      },
+      {
+        "name": "Pulled Pork Sandwich",
+        "price": 7.99,
+        "description": "Smoked pulled pork sandwich served with fries and a small beverage, side can be substituted at no cost, free refills on drinks."
+      },
+      {
+        "name": "Spare Ribs",
+        "price": 7.99,
+        "description": "Tender spare ribs served with garlic bread and a small beverage, side can be substituted at no cost, free refills on drinks."
+      },
+      {
+        "name": "Small Beef Sandwich",
+        "price": 7.99,
+        "description": "Small BBQ beef sandwich served with fries and a small beverage, side can be substituted at no cost, free refills on drinks."
+      },
+      {
+        "name": "Small Pork Sandwich",
+        "price": 7.99,
+        "description": "Small BBQ pork sandwich served with fries and a small beverage, side can be substituted at no cost, free refills on drinks."
+      },
+      {
+        "name": "Cheeseburger",
+        "price": 8.99,
+        "description": "Juicy cheeseburger served with fries and a small beverage, side can be substituted at no cost, free refills on drinks."
+      }
+    ]
+  },
+  "sandwiches": {
+    "categoryDescription": "Our signature BBQ sandwiches featuring slow-smoked meats from tender brisket to pulled pork, served on buttered buns with the option to upgrade to garlic bread. From classic beef and pork to unique offerings like catfish and gator.",
+    "items": [
+      {
+        "name": "Sliced BBQ Beef or Pork Sandwich - Regular",
+        "price": 7.99,
+        "description": "Sliced BBQ beef or pork served on a buttered sandwich bun, upgrade to garlic bread available."
+      },
+      {
+        "name": "Sliced BBQ Beef or Pork Sandwich - Large",
+        "price": 8.99,
+        "description": "Large portion of sliced BBQ beef or pork served on a buttered sandwich bun, upgrade to garlic bread available."
+      },
+      {
+        "name": "1/4 Chicken on the Bone Sandwich",
+        "price": 9.49,
+        "description": "Quarter chicken on the bone served on a buttered sandwich bun, upgrade to garlic bread available."
+      },
+      {
+        "name": "Catfish Sandwich",
+        "price": 9.99,
+        "description": "Fried catfish fillet served on a buttered sandwich bun, upgrade to garlic bread available."
+      },
+      {
+        "name": "Livers Sandwich",
+        "price": 9.99,
+        "description": "Fried chicken livers served on a buttered sandwich bun, upgrade to garlic bread available."
+      },
+      {
+        "name": "Gizzards Sandwich",
+        "price": 9.99,
+        "description": "Fried chicken gizzards served on a buttered sandwich bun, upgrade to garlic bread available."
+      },
+      {
+        "name": "Pulled Pork Sandwich",
+        "price": 9.99,
+        "description": "Smoked pulled pork served on a buttered sandwich bun, upgrade to garlic bread available."
+      },
+      {
+        "name": "Pulled Chicken Sandwich",
+        "price": 9.99,
+        "description": "Smoked pulled chicken served on a buttered sandwich bun, upgrade to garlic bread available."
+      },
+      {
+        "name": "Smoked Turkey Sandwich",
+        "price": 9.99,
+        "description": "Smoked turkey served on garlic bread."
+      },
+      {
+        "name": "Sausage Sandwich",
+        "price": 10.49,
+        "description": "Smoked sausage served on a buttered sandwich bun, upgrade to garlic bread available."
+      },
+      {
+        "name": "Spare Ribs Sandwich",
+        "price": 10.99,
+        "description": "Spare ribs served on a buttered sandwich bun, upgrade to garlic bread available."
+      },
+      {
+        "name": "Brisket Sandwich",
+        "price": 11.49,
+        "description": "Smoked brisket served on a buttered sandwich bun, upgrade to garlic bread available."
+      }
+    ]
+  },
+  "sandwichBaskets": {
+    "categoryDescription": "Complete meal baskets featuring our signature sandwiches paired with fries and baked beans. From classic BBQ meats to unique offerings like gator and catfish, all served with your choice of sides that can be substituted at no cost.",
+    "items": [
+      {
+        "name": "Sliced BBQ Beef or Pork Basket - Regular",
+        "price": 10.99,
+        "description": "Sliced BBQ beef or pork served on a buttered sandwich bun with fries and baked beans, upgrade to garlic bread available, sides can be substituted at no cost."
+      },
+      {
+        "name": "Sliced BBQ Beef or Pork Basket - Large",
+        "price": 11.99,
+        "description": "Large portion of sliced BBQ beef or pork served on a buttered sandwich bun with fries and baked beans, upgrade to garlic bread available, sides can be substituted at no cost."
+      },
+      {
+        "name": "Chicken Strips Basket",
+        "price": 12.99,
+        "description": "Fried chicken strips served on garlic bread with fries and baked beans, sides can be substituted at no cost."
+      },
+      {
+        "name": "Livers Basket",
+        "price": 12.99,
+        "description": "Fried chicken livers served on garlic bread with fries and baked beans, sides can be substituted at no cost."
+      },
+      {
+        "name": "Gizzards Basket",
+        "price": 12.99,
+        "description": "Fried chicken gizzards served on garlic bread with fries and baked beans, sides can be substituted at no cost."
+      },
+      {
+        "name": "The Big Big Pig Basket",
+        "price": 13.29,
+        "description": "Extra large portion of your choice of sliced beef, sliced pork, sliced turkey, or pulled pork served on a burger bun with extra fries and a larger portion of baked beans, sides can be substituted at no cost."
+      },
+      {
+        "name": "Pulled Pork Basket",
+        "price": 13.49,
+        "description": "Smoked pulled pork served on a buttered sandwich bun with fries and baked beans, upgrade to garlic bread available, sides can be substituted at no cost."
+      },
+      {
+        "name": "Sausage Basket",
+        "price": 13.49,
+        "description": "Smoked sausage served on a buttered sandwich bun with fries and baked beans, upgrade to garlic bread available, sides can be substituted at no cost."
+      },
+      {
+        "name": "Pulled Chicken Basket",
+        "price": 13.49,
+        "description": "Smoked pulled chicken served on a buttered sandwich bun with fries and baked beans, upgrade to garlic bread available, sides can be substituted at no cost."
+      },
+      {
+        "name": "1/4 Chicken on the Bone Basket",
+        "price": 13.49,
+        "description": "Quarter chicken on the bone served on garlic bread with fries and baked beans, sides can be substituted at no cost."
+      },
+      {
+        "name": "Smoked Turkey Basket",
+        "price": 13.49,
+        "description": "Smoked turkey served on garlic bread with fries and baked beans, sides can be substituted at no cost."
+      },
+      {
+        "name": "Grilled Chicken Breast Basket",
+        "price": 13.49,
+        "description": "Grilled chicken breast served on a buttered sandwich bun with fries and baked beans, upgrade to garlic bread available, sides can be substituted at no cost."
+      },
+      {
+        "name": "Catfish Basket",
+        "price": 13.99,
+        "description": "Fried catfish served on a buttered sandwich bun with cole slaw and fries, upgrade to garlic bread available, sides can be substituted at no cost."
+      },
+      {
+        "name": "Spare Ribs Basket",
+        "price": 13.99,
+        "description": "Spare ribs served on garlic bread with fries and baked beans, sides can be substituted at no cost."
+      },
+      {
+        "name": "Shrimp Basket",
+        "price": 13.99,
+        "description": "Fried shrimp served on garlic bread with fries and baked beans, sides can be substituted at no cost."
+      },
+      {
+        "name": "Double Cheese Burger",
+        "price": 14.99,
+        "description": "Double cheese burger served on a buttered sandwich bun with fries and baked beans, upgrade to garlic bread available, sides can be substituted at no cost."
+      },
+      {
+        "name": "Double Mushroom and Swiss Cheese Burger",
+        "price": 15.49,
+        "description": "Double mushroom and Swiss burger served on a buttered sandwich bun with fries and baked beans, upgrade to garlic bread available, sides can be substituted at no cost."
+      },
+      {
+        "name": "Brisket Basket",
+        "price": 15.99,
+        "description": "Smoked brisket served on a buttered sandwich bun with fries and baked beans, upgrade to garlic bread available, sides can be substituted at no cost."
+      },
+      {
+        "name": "Baby Back Ribs Basket",
+        "price": 15.99,
+        "description": "Baby back ribs served on garlic bread with fries and baked beans, sides can be substituted at no cost."
+      },
+      {
+        "name": "Gator Basket",
+        "price": 15.99,
+        "description": "Fried gator served on garlic bread with fries and baked beans, sides can be substituted at no cost."
+      }
+    ]
+  },
+  "dinners": {
+    "categoryDescription": "Our signature dinner platters featuring generous portions of slow-smoked BBQ meats served with a complete Southern meal including fries, baked beans, cole slaw, and garlic bread. From classic beef and pork to seafood and poultry, all sides can be substituted at no cost.",
+    "items": [
+      {
+        "name": "Sliced BBQ Beef Dinner",
+        "price": 17.99,
+        "description": "Tender sliced BBQ beef served with fries, baked beans, cole slaw, and garlic bread, sides can be substituted at no cost."
+      },
+      {
+        "name": "Sliced BBQ Pork Dinner",
+        "price": 17.99,
+        "description": "Tender sliced BBQ pork served with fries, baked beans, cole slaw, and garlic bread, sides can be substituted at no cost."
+      },
+      {
+        "name": "Pulled Pork Dinner",
+        "price": 17.99,
+        "description": "Our signature pulled pork dinner served with fries, baked beans, cole slaw, and garlic bread, sides can be substituted at no cost."
+      },
+      {
+        "name": "1/2 Chicken on the Bone Dinner",
+        "price": 17.99,
+        "description": "Half chicken on the bone dinner served with fries, baked beans, cole slaw, and garlic bread, sides can be substituted at no cost."
+      },
+      {
+        "name": "Grilled Chicken Dinner",
+        "price": 17.99,
+        "description": "Two pieces of grilled chicken dinner served with fries, baked beans, cole slaw, and garlic bread, sides can be substituted at no cost."
+      },
+      {
+        "name": "Turkey Dinner",
+        "price": 17.99,
+        "description": "Smoked turkey dinner served with fries, baked beans, cole slaw, and garlic bread, sides can be substituted at no cost."
+      },
+      {
+        "name": "Shrimp Dinner",
+        "price": 17.99,
+        "description": "Fried shrimp dinner served with fries, baked beans, cole slaw, and garlic bread, sides can be substituted at no cost."
+      },
+      {
+        "name": "Sausage Dinner",
+        "price": 17.99,
+        "description": "Smoked sausage dinner served with fries, baked beans, cole slaw, and garlic bread, sides can be substituted at no cost."
+      },
+      {
+        "name": "Chicken Strip Dinner",
+        "price": 17.99,
+        "description": "Crispy chicken strips dinner served with fries, baked beans, cole slaw, and garlic bread, sides can be substituted at no cost."
+      },
+      {
+        "name": "Fried Catfish Dinner",
+        "price": 17.99,
+        "description": "Two pieces of fried catfish dinner served with fries, baked beans, cole slaw, and garlic bread, sides can be substituted at no cost."
+      },
+      {
+        "name": "Pulled Chicken Dinner",
+        "price": 17.99,
+        "description": "Tender pulled chicken dinner served with fries, baked beans, cole slaw, and garlic bread, sides can be substituted at no cost."
+      },
+      {
+        "name": "Brisket Dinner",
+        "price": 19.99,
+        "description": "Our famous smoked brisket dinner served with fries, baked beans, cole slaw, and garlic bread, sides can be substituted at no cost."
+      },
+      {
+        "name": "Spare Ribs Dinner",
+        "price": 19.99,
+        "description": "Tender spare ribs dinner served with fries, baked beans, cole slaw, and garlic bread, sides can be substituted at no cost."
+      },
+      {
+        "name": "Baby Back Ribs Dinner",
+        "price": 20.99,
+        "description": "Fall-off-the-bone baby back ribs dinner served with fries, baked beans, cole slaw, and garlic bread, sides can be substituted at no cost."
+      }
+    ]
+  },
+  "combos": {
+    "categoryDescription": "Perfect combinations of our most popular meats, allowing you to sample multiple BBQ favorites in one meal. From classic two-meat combos to our signature Bubbalou's Special featuring four different meats, all served with complete Southern sides.",
+    "items": [
+      {
+        "name": "Brisket & Pulled Pork Combo",
+        "price": 20.99,
+        "description": "Perfect combination of our famous brisket and signature pulled pork served with fries, baked beans, cole slaw, and garlic bread, sides can be substituted at no cost."
+      },
+      {
+        "name": "Spare Ribs & Chicken Combo",
+        "price": 20.99,
+        "description": "Tender spare ribs paired with juicy chicken served with fries, baked beans, cole slaw, and garlic bread, sides can be substituted at no cost."
+      },
+      {
+        "name": "Any 2 Meat Combo",
+        "price": 21.99,
+        "description": "Choose any two of your favorite meats served with fries, baked beans, cole slaw, and garlic bread, sides can be substituted at no cost."
+      },
+      {
+        "name": "Baby Backs & Shrimp Combo",
+        "price": 21.99,
+        "description": "Premium baby back ribs with fried shrimp served with fries, baked beans, cole slaw, and garlic bread, sides can be substituted at no cost."
+      },
+      {
+        "name": "Bubbalou's Special",
+        "price": 21.99,
+        "description": "Our signature combo featuring spare ribs, chicken, beef, and pork served with fries, baked beans, cole slaw, and garlic bread, sides can be substituted at no cost."
+      },
+      {
+        "name": "3 Pig Platter",
+        "price": 22.49,
+        "description": "The ultimate pork lover's platter with pulled pork, sliced pork, and spare ribs served with fries, baked beans, cole slaw, and garlic bread, sides can be substituted at no cost."
+      }
+    ]
+  },
+  "byThePound": {
+    "categoryDescription": "Perfect for takeout, parties, or family gatherings, our meats by the pound let you enjoy our slow-smoked BBQ at home. From tender brisket and pulled pork to whole chickens and baby back ribs, available in half-pound and full-pound portions.",
+    "items": [
+      {
+        "name": "Sliced Beef - 1/2 Pound",
+        "price": 8.99,
+        "description": "Half pound of tender sliced BBQ beef, perfect for a hearty meal."
+      },
+      {
+        "name": "Sliced Beef - 1 Pound",
+        "price": 16.99,
+        "description": "Full pound of tender sliced BBQ beef, great for sharing or leftovers."
+      },
+      {
+        "name": "Sliced Pork - 1/2 Pound",
+        "price": 8.99,
+        "description": "Half pound of juicy sliced BBQ pork, slow-smoked to perfection."
+      },
+      {
+        "name": "Sliced Pork - 1 Pound",
+        "price": 16.99,
+        "description": "Full pound of juicy sliced BBQ pork, enough for the whole family."
+      },
+      {
+        "name": "Pulled Pork - 1/2 Pound",
+        "price": 8.99,
+        "description": "Half pound of our signature pulled pork, hand-pulled and smothered in BBQ sauce."
+      },
+      {
+        "name": "Pulled Pork - 1 Pound",
+        "price": 16.99,
+        "description": "Full pound of our signature pulled pork, perfect for parties and gatherings."
+      },
+      {
+        "name": "Pulled Chicken - 1/2 Pound",
+        "price": 8.99,
+        "description": "Half pound of tender pulled chicken, perfectly seasoned and smoked."
+      },
+      {
+        "name": "Pulled Chicken - 1 Pound",
+        "price": 16.99,
+        "description": "Full pound of tender pulled chicken, ideal for feeding a crowd."
+      },
+      {
+        "name": "Brisket - 1/2 Pound",
+        "price": 12.99,
+        "description": "Half pound of our famous smoked brisket, tender and full of flavor."
+      },
+      {
+        "name": "Brisket - 1 Pound",
+        "price": 24.99,
+        "description": "Full pound of our famous smoked brisket, the ultimate BBQ experience."
+      },
+      {
+        "name": "1/2 Chicken",
+        "price": 12.99,
+        "description": "Half of a whole smoked chicken, juicy and flavorful with crispy skin."
+      },
+      {
+        "name": "Whole Chicken",
+        "price": 22.99,
+        "description": "Complete whole smoked chicken, perfect for family meals or special occasions."
+      },
+      {
+        "name": "Baby Back Ribs - 1 Slab",
+        "price": 24.99,
+        "description": "Full slab of tender baby back ribs, fall-off-the-bone delicious."
+      }
+    ]
+  },
+  "drinks": {
+    "categoryDescription": "Quench your thirst with our selection of beverages, from refreshing fountain drinks with free refills to bottled options including Cheerwine and domestic and imported beers. Perfect accompaniments to any BBQ meal.",
+    "items": [
+      {
+        "name": "Milk",
+        "price": 1.89,
+        "description": "Cold, fresh whole milk."
+      },
+      {
+        "name": "Bottled Water",
+        "price": 2.69,
+        "description": "Bottled water."
+      },
+      {
+        "name": "Cheerwine",
+        "price": 2.69,
+        "description": "Bottled Cheerwine cherry cola."
+      },
+      {
+        "name": "Fountain Drinks - Regular",
+        "price": 3.09,
+        "description": "Choose from: Pepsi, Diet Pepsi, Sierra Mist, Mug Root Beer, Dr. Pepper, Mountain Dew, Lemonade, Cheerwine, Iced Tea. Free refills included."
+      },
+      {
+        "name": "Fountain Drinks - Large",
+        "price": 3.49,
+        "description": "Choose from: Pepsi, Diet Pepsi, Sierra Mist, Mug Root Beer, Dr. Pepper, Mountain Dew, Lemonade, Cheerwine, Iced Tea. Free refills included."
+      },
+      {
+        "name": "Bottled Beer - Domestic",
+        "price": 3.50,
+        "description": "Choose from popular domestic beers: Budweiser, Coors Light, Miller Lite, Bud Light, Michelob Ultra, Corona, Blue Moon, Yuengling, Sam Adams, Pabst Blue Ribbon."
+      },
+      {
+        "name": "Bottled Beer - Imported",
+        "price": 4.50,
+        "description": "Choose from popular imported beers: Heineken, Stella Artois, Guinness, Dos Equis, Modelo Especial, Peroni, Amstel Light, Beck's, Carlsberg, Kronenbourg 1664."
+      }
+    ]
+  },
+  "desserts": {
+    "categoryDescription": "End your meal on a sweet note with our homemade Southern desserts, from rich chocolate brownies to classic cakes and traditional pies. Each dessert is made fresh daily using time-honored recipes.",
+    "items": [
+      {
+        "name": "Brownies",
+        "price": 2.79,
+        "description": "Rich, fudgy chocolate brownie with a perfect chewy texture and chocolate chips."
+      },
+      {
+        "name": "Carrot Cake Slice",
+        "price": 6.49,
+        "description": "Moist carrot cake with cream cheese frosting, loaded with fresh carrots and warm spices."
+      },
+      {
+        "name": "Red Velvet Cake Slice",
+        "price": 6.49,
+        "description": "Classic red velvet cake with smooth cream cheese frosting and a hint of cocoa."
+      },
+      {
+        "name": "Chocolate Cake Slice",
+        "price": 6.49,
+        "description": "Decadent chocolate cake with rich chocolate frosting and a moist, tender crumb."
+      },
+      {
+        "name": "Sweet Potato Pie",
+        "price": 9.50,
+        "description": "Traditional Southern sweet potato pie with warm spices and a flaky crust."
+      },
+      {
+        "name": "Pecan Pie",
+        "price": 10.50,
+        "description": "Classic pecan pie with a golden brown filling and crunchy pecan topping."
+      }
+    ]
+  },
+  "sides": {
+    "categoryDescription": "Complete your BBQ experience with our Southern-style sides, from classic favorites like baked beans and cole slaw to hearty options like Brunswick stew and collard greens. Available in individual portions, pints, quarts, and gallons for any occasion.",
+    "items": [
+      {
+        "name": "Dill Pickle",
+        "price": 1.99,
+        "description": "Crisp, tangy dill pickle spear with perfect crunch and bold flavor."
+      },
+      {
+        "name": "Garlic Bread",
+        "price": 2.59,
+        "description": "2 warm, buttery pieces of garlic bread with golden crust and aromatic garlic butter."
+      },
+      {
+        "name": "Corn Bread",
+        "price": 3.49,
+        "description": "Moist, sweet cornbread with golden crust and perfect crumb texture."
+      },
+      {
+        "name": "French Fries",
+        "price": 3.49,
+        "description": "Crispy golden fries seasoned with our signature blend of spices."
+      },
+      {
+        "name": "Fried Corn on the Cob",
+        "price": 3.49,
+        "description": "Sweet corn on the cob battered and fried to golden perfection with crispy coating."
+      },
+      {
+        "name": "Brunswick Stew with Corn Bread",
+        "price": 8.99,
+        "description": "Hearty Southern stew with tender meat and vegetables, served with warm cornbread."
+      },
+      {
+        "name": "Collard Greens with Corn Bread",
+        "price": 8.99,
+        "description": "Slow-cooked collard greens with smoky bacon, served with warm cornbread."
+      },
+      {
+        "name": "Veggie Plate - Any 4 Vegetables",
+        "price": 10.49,
+        "description": "Choose any four of our delicious Southern-style vegetables for a perfect vegetarian meal."
+      },
+      {
+        "name": "Side",
+        "price": 2.99,
+        "description": "Choose from: Baked Beans, Cole Slaw, Green Beans, Black-Eyed Peas, Texas Caviar, Mashed Potatoes, Brunswick Stew, Collard Greens, Potato Salad, Mac & Cheese"
+      },
+      {
+        "name": "Pint",
+        "price": 7.49,
+        "description": "Choose from: Baked Beans, Cole Slaw, Green Beans, Black-Eyed Peas, Texas Caviar, Mashed Potatoes, Brunswick Stew, Collard Greens, Potato Salad, Mac & Cheese"
+      },
+      {
+        "name": "Quart",
+        "price": 11.99,
+        "description": "Choose from: Baked Beans, Cole Slaw, Green Beans, Black-Eyed Peas, Texas Caviar, Mashed Potatoes, Brunswick Stew, Collard Greens, Potato Salad, Mac & Cheese"
+      },
+      {
+        "name": "Gallon",
+        "price": 34.99,
+        "description": "Choose from: Baked Beans, Cole Slaw, Green Beans, Black-Eyed Peas, Texas Caviar, Mashed Potatoes, Brunswick Stew, Collard Greens, Potato Salad, Mac & Cheese"
+      }
+    ]
+  },
+  "bbqSauce": {
+    "categoryDescription": "Take home the taste of Bubbalou's with our signature BBQ sauces, available in five delicious varieties from sweet and mild to hot and killer. Perfect for dipping, topping, or cooking, available in small and large portions for any need.",
+    "items": [
+      {
+        "name": "Extra Side of BBQ Sauce - Small",
+        "price": 0.50,
+        "description": "Small portion of our signature BBQ sauce for dipping or topping. Choose from: Sweet, Mild, Hot, Killer, Mustard BBQ."
+      },
+      {
+        "name": "Extra Side of BBQ Sauce - Large",
+        "price": 1.00,
+        "description": "Large portion of our signature BBQ sauce for dipping or topping. Choose from: Sweet, Mild, Hot, Killer, Mustard BBQ."
+      },
+      {
+        "name": "Bottle of BBQ Sauce - Small",
+        "price": 6.99,
+        "description": "Take home our signature BBQ sauce in a small bottle. Choose from: Sweet, Mild, Hot, Killer, Mustard BBQ."
+      },
+      {
+        "name": "Bottle of BBQ Sauce - Large",
+        "price": 10.99,
+        "description": "Take home our signature BBQ sauce in a large bottle. Choose from: Sweet, Mild, Hot, Killer, Mustard BBQ."
+      }
+    ]
+  }
 }
