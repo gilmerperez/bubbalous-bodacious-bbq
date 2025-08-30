@@ -48,13 +48,13 @@ function Menu() {
           <div className={styles.menuContent}>
             {Object.entries(menuData).map(([categoryKey, categoryData]) => (
               <div key={categoryKey} className={styles.categoryContainer}>
-                {/* Category Header */}
+                {/* Category header */}
                 <div className={styles.categoryHeader} onClick={() => toggleCategory(categoryKey)}>
                   <h2 className={styles.categoryTitle}>{formatCategoryName(categoryKey)}</h2>
                   <span className={styles.toggleIcon}>{expandedCategories[categoryKey] ? "−" : "+"}</span>
                 </div>
 
-                {/* Category Content */}
+                {/* Category content */}
                 {expandedCategories[categoryKey] && (
                   <div className={styles.categoryContent}>
                     {/* Category Description */}

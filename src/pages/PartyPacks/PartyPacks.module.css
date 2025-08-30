@@ -13,8 +13,8 @@
 .pageTitle {
   font-size: 2rem;
   font-style: italic;
-  padding: 0.25rem 1rem;
   margin-bottom: 1rem;
+  padding: 0.25rem 1rem;
   border-radius: 0.25rem;
   transition: 0.3s ease-in;
   color: hsl(0, 0%, 100%);
