@@ -17,7 +17,7 @@ function PartyPacks() {
       <main>
         <div className={styles.partyPacksContainer}>
           {/* Title */}
-          <h2 className={styles.pageTitle}>Bubbalou's Bodacious BBQ Party Packs</h2>
+          <h1 className={styles.pageTitle}>Bubbalou's Bodacious BBQ Party Packs</h1>
 
           {/* Description */}
           <p className={styles.pageDescription}>
@@ -70,9 +70,7 @@ function PartyPacks() {
             {/* List of additional info */}
             <ul className={styles.additionalInfoList}>
               <li>Party Packs are for pick-up & delivery only</li>
-              <br />
               <li>Delivery is available for an additional charge</li>
-              <br />
               <li>Serving utensils will be an additional charge of $1.50 each</li>
               <li>
                 Substitutions may be made with any of our other popular sides:
