@@ -38,11 +38,13 @@ function PartyPacks() {
                     <h3 className={styles.packName}>{pack.name}</h3>
                     {/* Serving size */}
                     <p className={styles.servingSize}>{pack.servingSize}</p>
-                    {/* Items */}
+                    {/* List of items */}
                     <ul className={styles.itemsList}>
                       {pack.items.map((item, index) => (
                         <li key={index} className={styles.item}>
+                          {/* Item name */}
                           <span className={styles.itemName}>{item.name}</span>
+                          {/* Item quantity */}
                           <span className={styles.itemQuantity}>{item.quantity}</span>
                         </li>
                       ))}
