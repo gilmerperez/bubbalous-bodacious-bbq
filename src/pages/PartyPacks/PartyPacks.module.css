@@ -207,7 +207,7 @@
 /* Heading */
 .additionalInfoTitle {
   font-size: 2rem;
-  padding: 1.25rem;
+  padding: 0.5rem 1rem;
   transition: 0.3s ease-in;
   color: hsl(0, 0%, 100%);
   background-color: var(--primary);
@@ -297,7 +297,6 @@
   }
 
   .additionalInfoTitle {
-    padding: 1rem;
     font-size: 1.75rem;
   }
 
@@ -346,10 +345,6 @@
 
   .additionalInfo {
     border: 2px solid var(--primary);
-  }
-
-  .additionalInfoTitle {
-    padding: 0.75rem;
   }
 
   .additionalInfoList {

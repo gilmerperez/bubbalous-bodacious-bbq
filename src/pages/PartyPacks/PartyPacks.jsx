@@ -17,7 +17,7 @@ function PartyPacks() {
       <main>
         <div className={styles.partyPacksContainer}>
           {/* Title */}
-          <h1 className={styles.pageTitle}>Bubbalou's Bodacious BBQ Party Packs</h1>
+          <h1 className={styles.pageTitle}>BUBBALOU'S BODACIOUS BBQ PARTY PACKS</h1>
 
           {/* Description */}
           <p className={styles.pageDescription}>
