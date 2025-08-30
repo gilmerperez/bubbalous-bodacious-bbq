@@ -8,6 +8,7 @@
   justify-content: center;
 }
 
+/* Menu content */
 .menuContent {
   gap: 1rem;
   display: flex;
@@ -41,6 +42,7 @@
   background-color: var(--primary);
 }
 
+/* Category title */
 .categoryTitle {
   font-weight: 700;
   font-size: 1.75rem;
@@ -50,6 +52,14 @@
   font-family: "Oswald", sans-serif;
 }
 
+/* Category description */
+.categoryDescription p {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--text-secondary);
+}
+
+/* Expand / Collapse icon */
 .toggleIcon {
   font-size: 1.5rem;
   font-weight: bold;
@@ -58,13 +68,9 @@
 }
 
 .categoryHeader:hover .categoryTitle,
-.categoryHeader:hover .toggleIcon,
-.categoryHeader:hover .categoryDescription p {
+.categoryHeader:hover .categoryDescription p,
+.categoryHeader:hover .toggleIcon {
   color: hsl(0, 0%, 100%);
-}
-
-.categoryContent {
-  animation: slideDown 0.3s ease-out;
 }
 
 @keyframes slideDown {
@@ -78,16 +84,20 @@
   }
 }
 
-.categoryDescription p {
-  font-size: 1rem;
-  line-height: 1.5;
-  color: var(--text-secondary);
+/* Category content */
+.categoryContent {
+  animation: slideDown 0.3s ease-out;
 }
 
+/* Menu items */
 .menuItem {
   padding: 1.25rem;
   transition: 0.3s ease-in;
   border-bottom: 3px solid var(--primary);
+}
+
+.menuItem:hover {
+  background-color: hsla(3, 76%, 50%, 0.25);
 }
 
 .menuItem:first-child {
@@ -98,16 +108,13 @@
   border-bottom: none;
 }
 
-.menuItem:hover {
-  background-color: hsla(3, 76%, 50%, 0.25);
-}
-
 .itemHeader {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
+/* Item name */
 .itemName {
   font-weight: 500;
   font-size: 1.25rem;
@@ -122,6 +129,7 @@
   text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.3);
 }
 
+/* Item price */
 .itemPrice {
   font-weight: 500;
   font-size: 1.25rem;
@@ -130,11 +138,13 @@
   padding: 0.25rem 0.5rem;
   text-transform: uppercase;
   color: var(--text-primary);
+  border: 2px solid var(--primary);
   font-family: "Oswald", sans-serif;
   background-color: var(--header-bg-color);
   box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
 }
 
+/* Item description */
 .itemDescription {
   font-size: 1rem;
   line-height: 1.25;
@@ -154,10 +164,6 @@
 
   .toggleIcon {
     font-size: 1.25rem;
-  }
-
-  .categoryDescription {
-    padding: 1rem;
   }
 
   .menuItem {
@@ -184,10 +190,6 @@
 
   .toggleIcon {
     font-size: 1.15rem;
-  }
-
-  .categoryDescription {
-    padding: 0.75rem;
   }
 
   .menuItem {
