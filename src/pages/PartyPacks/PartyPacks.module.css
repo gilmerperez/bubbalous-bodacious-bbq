@@ -122,19 +122,36 @@
   padding: 0.5rem 0;
   align-items: center;
   justify-content: space-between;
-  border-bottom: 2px solid hsla(0, 0%, 100%, 0.5);
 }
 
 /* Item name */
 .itemName {
   font-size: 1rem;
   font-weight: 600;
+  white-space: nowrap;
+}
+
+/* Dotted line between item name and quantity */
+.line {
+  height: 2px;
+  flex-grow: 1;
+  opacity: 0.75;
+  margin: 0 1rem;
+  transition: 0.3s ease-in;
+  background: repeating-linear-gradient(
+    to right,
+    hsla(0, 0%, 100%, 0.6) 0,
+    hsla(0, 0%, 100%, 0.6) 3px,
+    transparent 3px,
+    transparent 6px
+  );
 }
 
 /* Item quantity */
 .itemQuantity {
   font-size: 1rem;
   font-weight: 500;
+  white-space: nowrap;
   color: hsl(0, 0%, 80%);
 }
 
@@ -290,8 +307,8 @@
     border-bottom: 2px solid var(--primary);
   }
 
-  .item {
-    border-bottom: 1px solid hsla(0, 0%, 100%, 0.5);
+  .line {
+    margin: 0 0.75rem;
   }
 
   .additionalInfoContainer {

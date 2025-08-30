@@ -44,6 +44,8 @@ function PartyPacks() {
                         <li key={index} className={styles.item}>
                           {/* Item name */}
                           <span className={styles.itemName}>{item.name}</span>
+                          {/* Dotted line */}
+                          <span className={styles.line}></span>
                           {/* Item quantity */}
                           <span className={styles.itemQuantity}>{item.quantity}</span>
                         </li>
