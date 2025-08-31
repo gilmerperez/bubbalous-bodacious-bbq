@@ -66,7 +66,6 @@ header {
 /* Prevent hover effect on active link */
 .navItems a:hover:not(.activeLink) {
   transform: translateY(-3px);
-  color: var(--text-secondary);
   border-bottom: 2px solid var(--primary);
 }
 
