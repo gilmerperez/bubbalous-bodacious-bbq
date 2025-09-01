@@ -1,0 +1,290 @@
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 1rem;
+}
+
+.modal {
+  background-color: var(--header-bg-color);
+  border-radius: 0.5rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  max-width: 600px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  border: 3px solid var(--primary);
+}
+
+/* Header */
+.modalHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 1.5rem 1rem 1.5rem;
+}
+
+.itemName {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  font-family: "Oswald", sans-serif;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.closeButton {
+  background: none;
+  border: none;
+  font-size: 2.5rem;
+  color: var(--primary);
+  cursor: pointer;
+  padding: 0;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: 0.3s ease;
+}
+
+.closeButton:hover {
+  background-color: var(--primary);
+  color: white;
+}
+
+/* Separator */
+.separator {
+  border: none;
+  height: 2px;
+  background-color: var(--primary);
+  margin: 0 1.5rem;
+}
+
+/* Description Section */
+.descriptionSection {
+  padding: 1.5rem;
+}
+
+.itemDescription {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+/* Quantity Section */
+.quantitySection {
+  padding: 0 1.5rem 1.5rem 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.quantityLabel {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  min-width: 80px;
+}
+
+.quantityControls {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.quantityButton {
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 0.25rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.quantityButton:hover:not(:disabled) {
+  background-color: var(--text-primary);
+  transform: translateY(-2px);
+}
+
+.quantityButton:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.quantityDisplay {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  min-width: 40px;
+  text-align: center;
+}
+
+/* Special Instructions Section */
+.specialInstructionsSection {
+  padding: 0 1.5rem 1.5rem 1.5rem;
+}
+
+.specialInstructionsLabel {
+  display: block;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.specialInstructionsInput {
+  width: 100%;
+  padding: 0.75rem;
+  border: 2px solid var(--primary);
+  border-radius: 0.25rem;
+  font-size: 1rem;
+  font-family: inherit;
+  resize: vertical;
+  min-height: 80px;
+  background-color: var(--bg-color);
+  color: var(--text-primary);
+}
+
+.specialInstructionsInput:focus {
+  outline: none;
+  border-color: var(--text-primary);
+  box-shadow: 0 0 0 3px rgba(var(--primary-rgb), 0.1);
+}
+
+/* Legal Section */
+.legalSection {
+  padding: 0 1.5rem 1.5rem 1.5rem;
+}
+
+.legalText {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin: 0 0 1rem 0;
+  font-style: italic;
+}
+
+.allergyWarning {
+  font-size: 0.85rem;
+  color: #d32f2f;
+  line-height: 1.4;
+  margin: 0;
+  padding: 0.75rem;
+  background-color: rgba(211, 47, 47, 0.1);
+  border-radius: 0.25rem;
+  border-left: 4px solid #d32f2f;
+}
+
+/* Action Section */
+.actionSection {
+  padding: 1.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.addToOrderButton {
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1.3rem;
+  font-weight: 600;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: 0.3s ease;
+  font-family: "Oswald", sans-serif;
+  text-transform: uppercase;
+  min-width: 200px;
+}
+
+.addToOrderButton:hover {
+  background-color: var(--text-primary);
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .modal {
+    max-width: 95vw;
+    margin: 0 1rem;
+  }
+
+  .modalHeader {
+    padding: 1rem 1rem 0.75rem 1rem;
+  }
+
+  .itemName {
+    font-size: 1.5rem;
+  }
+
+  .closeButton {
+    font-size: 2rem;
+    width: 35px;
+    height: 35px;
+  }
+
+  .descriptionSection,
+  .quantitySection,
+  .specialInstructionsSection,
+  .legalSection,
+  .actionSection {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .quantityLabel {
+    min-width: 70px;
+  }
+
+  .addToOrderButton {
+    font-size: 1.1rem;
+    padding: 0.75rem 1.5rem;
+    min-width: 180px;
+  }
+}
+
+@media (max-width: 480px) {
+  .modal {
+    max-height: 95vh;
+  }
+
+  .itemName {
+    font-size: 1.25rem;
+  }
+
+  .closeButton {
+    font-size: 1.75rem;
+    width: 30px;
+    height: 30px;
+  }
+
+  .quantitySection {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .quantityLabel {
+    min-width: auto;
+  }
+
+  .addToOrderButton {
+    font-size: 1rem;
+    padding: 0.75rem 1rem;
+    min-width: 160px;
+  }
+}

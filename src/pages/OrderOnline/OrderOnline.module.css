@@ -128,10 +128,13 @@
   justify-content: space-between;
   border-right: 2px solid var(--primary);
   border-bottom: 2px solid var(--primary);
+  cursor: pointer;
 }
 
 .menuItem:hover {
   background-color: var(--bg-color);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .menuItem:nth-child(even) {

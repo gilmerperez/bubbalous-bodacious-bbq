@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import styles from "./OrderOnline.module.css";
 import OrderOnlineBanner from "../../components/OrderOnlineBanner/OrderOnlineBanner";
+import OrderModal from "../../components/OrderModal/OrderModal";
 import menuData from "../../data/menu.json";
 
 function OrderOnline() {
@@ -24,6 +25,10 @@ function OrderOnline() {
     bbqSauce: false,
   });
 
+  // Modal state
+  const [selectedItem, setSelectedItem] = useState(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   const toggleCategory = (categoryKey) => {
     setExpandedCategories((prev) => ({
       ...prev,
@@ -36,6 +41,21 @@ function OrderOnline() {
       .replace(/([A-Z])/g, " $1") // Add space before capital letters
       .replace(/^./, (str) => str.toUpperCase()) // Capitalize first letter
       .replace(/\b\w/g, (l) => l.toUpperCase()); // Capitalize first letter of each word
+  };
+
+  const handleItemClick = (item) => {
+    setSelectedItem(item);
+    setIsModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+    setSelectedItem(null);
+  };
+
+  const handleAddToOrder = (orderItem) => {
+    // TODO: Implement add to order functionality
+    console.log("Adding to order:", orderItem);
   };
 
   return (
@@ -77,7 +97,7 @@ function OrderOnline() {
                     {/* Menu items */}
                     <div className={styles.menuItems}>
                       {categoryData.items.map((item, index) => (
-                        <div key={index} className={styles.menuItem}>
+                        <div key={index} className={styles.menuItem} onClick={() => handleItemClick(item)}>
                           <div className={styles.itemHeader}>
                             {/* Item name */}
                             <h3 className={styles.itemName}>{item.name}</h3>
@@ -94,6 +114,9 @@ function OrderOnline() {
           </div>
         </div>
       </main>
+
+      {/* Order Modal */}
+      <OrderModal item={selectedItem} isOpen={isModalOpen} onClose={handleCloseModal} onAddToOrder={handleAddToOrder} />
     </>
   );
 }
