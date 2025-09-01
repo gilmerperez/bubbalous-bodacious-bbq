@@ -121,7 +121,9 @@
 }
 
 .quantityButton:disabled {
-  background-color: hsl(0, 0%, 80%);
+  color: hsl(0, 0%, 0%);
+  border: 1px solid hsl(0, 0%, 0%);
+  background-color: hsl(0, 0%, 100%);
 }
 
 .quantityDisplay {
@@ -303,6 +305,10 @@
 
   .specialInstructionsInput {
     font-size: 1rem;
+  }
+
+  .allergyWarning {
+    border-left: 2px solid var(--primary);
   }
 
   .addToOrderButton {

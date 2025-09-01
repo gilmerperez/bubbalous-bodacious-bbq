@@ -87,7 +87,7 @@ function OrderModal({ item, isOpen, onClose, onAddToOrder }) {
           {/* Legal section */}
           <div className={styles.legalSection}>
             <p className={styles.allergyWarning}>
-              <strong>FOOD ALLERGY WARNING:</strong>
+              <strong>FOOD ALLERGY WARNING</strong>
               <br />
               Our food may contain food allergens including, but not limited to: Dairy Products, Peanuts & other nuts,
               Soy, Wheat, Glutens, Coconut. If any questions, please speak to manager.
