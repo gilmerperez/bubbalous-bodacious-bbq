@@ -73,8 +73,8 @@ function OrderModal({ item, isOpen, onClose, onAddToOrder }) {
 
           {/* Special instructions */}
           <div className={styles.specialInstructionsSection}>
-            <label className={styles.specialInstructionsLabel}>Special Instructions:</label>
-            <p className={styles.legalText}>* Not all requests can be accommodated.</p>
+            <label className={styles.specialInstructionsLabel}>Special Requests:</label>
+
             <textarea
               rows={3}
               value={specialInstructions}
@@ -87,10 +87,12 @@ function OrderModal({ item, isOpen, onClose, onAddToOrder }) {
           {/* Legal section */}
           <div className={styles.legalSection}>
             <p className={styles.allergyWarning}>
-              <strong>FOOD ALLERGY WARNING:</strong> Our food may contain food allergens including, but not limited to:
-              Dairy Products, Peanuts & other nuts, Soy, Wheat, Glutens, Coconut. If any questions, please speak to
-              manager.
+              <strong>FOOD ALLERGY WARNING:</strong>
+              <br />
+              Our food may contain food allergens including, but not limited to: Dairy Products, Peanuts & other nuts,
+              Soy, Wheat, Glutens, Coconut. If any questions, please speak to manager.
             </p>
+            <p className={styles.legalText}>* Not all requests can be accommodated.</p>
           </div>
 
           {/* Separator line */}

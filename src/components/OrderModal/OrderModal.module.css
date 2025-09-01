@@ -15,6 +15,7 @@
 /* Modal */
 .modal {
   width: 100%;
+  padding: 1.5rem;
   max-width: 750px;
   max-height: 90vh;
   overflow-y: auto;
@@ -27,22 +28,29 @@
 /* Modal header */
 .modalHeader {
   display: flex;
-  padding: 1.25rem;
   align-items: center;
+  margin-bottom: 1.5rem;
   justify-content: space-between;
 }
 
 /* Item name */
 .itemName {
-  font-size: 2rem;
+  font-size: 2.25rem;
+  padding: 0.25rem 1rem;
+  border-radius: 0.25rem;
+  transition: 0.3s ease-in;
+  color: hsl(0, 0%, 100%);
+  background-color: var(--primary);
   font-family: "Oswald", sans-serif;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
+  text-shadow: 5px 5px 3px rgba(0, 0, 0, 0.3);
 }
 
 /* Close button */
 .closeButton {
   display: flex;
-  font-size: 2rem;
   background: none;
+  font-size: 2.25rem;
   align-items: center;
   color: var(--primary);
   transition: 0.3s ease;
@@ -58,17 +66,17 @@
 .separator {
   height: 3px;
   border: none;
+  margin-bottom: 1.5rem;
   background-color: var(--primary);
 }
 
 /* Description section */
 .descriptionSection {
-  padding: 1.25rem;
+  margin-bottom: 1rem;
 }
 
 .itemDescription {
-  line-height: 1.5;
-  font-size: 1.15rem;
+  font-size: 1.25rem;
   color: var(--text-secondary);
 }
 
@@ -76,33 +84,33 @@
 .quantitySection {
   gap: 0.75rem;
   display: flex;
-  padding: 1.25rem;
   align-items: center;
+  margin-bottom: 1rem;
   flex-direction: column;
   align-items: flex-start;
 }
 
 .quantityLabel {
-  padding: 0rem;
+  padding: 0;
   position: relative;
-  font-size: 1.15rem;
+  font-size: 1.25rem;
 }
 
 .quantityControls {
-  gap: 0.75rem;
+  gap: 1rem;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .quantityButton {
-  width: 25px;
-  height: 25px;
+  width: 30px;
+  height: auto;
   display: flex;
   font-size: 1.75rem;
   align-items: center;
   transition: 0.3s ease;
-  border-radius: 0.15rem;
+  border-radius: 0.25rem;
   justify-content: center;
   color: hsl(0, 0%, 100%);
   background-color: var(--primary);
@@ -117,38 +125,31 @@
 }
 
 .quantityDisplay {
-  font-weight: 500;
-  font-size: 1.5rem;
+  font-weight: 400;
+  font-size: 1.75rem;
   text-align: center;
 }
 
 /* Special instructions */
 .specialInstructionsSection {
-  padding: 1.25rem;
+  margin-bottom: 1rem;
 }
 
 .specialInstructionsLabel {
   padding: 0rem;
-  display: block;
   font-weight: 500;
   position: relative;
-  font-size: 1.15rem;
-  margin-bottom: 0.5rem;
-}
-
-.legalText {
-  font-size: 0.95rem;
-  font-style: italic;
-  margin-bottom: 0.5rem;
-  color: var(--text-secondary);
+  font-size: 1.25rem;
 }
 
 .specialInstructionsInput {
   width: 100%;
   resize: vertical;
   padding: 0.75rem;
-  font-size: 1.15rem;
+  font-size: 1.25rem;
+  margin-top: 0.75rem;
   border-radius: 0.25rem;
+  color: var(--text-secondary);
   border: 1px solid var(--primary);
   background-color: var(--bg-color);
 }
@@ -159,23 +160,29 @@
 
 /* Legal section */
 .legalSection {
-  padding: 1.25rem;
+  margin-bottom: 1.5rem;
 }
 
 .allergyWarning {
+  font-size: 1rem;
   padding: 0.75rem;
   line-height: 1.25;
-  font-size: 0.95rem;
+  margin-bottom: 0.5rem;
   border-radius: 0.25rem;
   color: hsl(3, 76%, 50%);
   border-left: 3px solid var(--primary);
   background-color: hsla(3, 76%, 50%, 0.1);
 }
 
+.legalText {
+  font-size: 1rem;
+  font-style: italic;
+  color: var(--text-secondary);
+}
+
 /* Action Section */
 .actionSection {
   display: flex;
-  padding: 1.25rem;
   align-items: center;
   justify-content: center;
 }
@@ -183,12 +190,12 @@
 /* Add to order button */
 .addToOrderButton {
   width: 100%;
+  padding: 0.5rem;
   font-weight: 600;
-  font-size: 1.5rem;
+  font-size: 1.75rem;
   align-items: center;
   transition: 0.5s ease;
   border-radius: 0.25rem;
-  padding: 0.75rem 1.25rem;
   color: hsl(0, 0%, 100%);
   border: 2px solid var(--primary);
   background-color: var(--primary);
@@ -207,56 +214,98 @@
 
 /* Tablet responsiveness */
 @media (max-width: 768px) {
+  .modal {
+    padding: 1.25rem;
+  }
+
   .modalHeader,
-  .descriptionSection,
-  .quantitySection,
-  .specialInstructionsSection,
-  .legalSection,
-  .actionSection {
-    padding: 1rem;
+  .separator,
+  .legalSection {
+    margin-bottom: 1.25rem;
   }
 
   .itemName {
-    font-size: 1.75rem;
+    font-size: 2rem;
   }
 
   .closeButton {
-    font-size: 1.75rem;
+    font-size: 2rem;
+  }
+
+  .quantityLabel {
+    font-size: 1.25rem;
   }
 
   .quantityButton {
     font-size: 1.5rem;
   }
 
+  .specialInstructionsLabel {
+    font-size: 1.25rem;
+  }
+
   .specialInstructionsInput {
-    padding: 0.75rem;
+    font-size: 1.15rem;
+  }
+
+  .allergyWarning {
+    font-size: 0.95rem;
+  }
+
+  .legalText {
+    font-size: 0.95rem;
+  }
+
+  .addToOrderButton {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .modal {
+    padding: 1rem;
+    border: 1px solid var(--primary);
+  }
+
+  .modalHeader,
+  .separator,
+  .legalSection {
+    margin-bottom: 1rem;
+  }
+
+  .itemName {
+    font-size: 1.75rem;
+  }
+
+  .closeButton {
+    font-size: 1.75rem;
+  }
+
+  .separator {
+    height: 2px;
+  }
+
+  .itemDescription {
+    font-size: 1rem;
+  }
+
+  .quantityLabel {
+    font-size: 1.15rem;
+  }
+
+  .quantityButton {
+    font-size: 1.25rem;
+  }
+
+  .specialInstructionsLabel {
+    font-size: 1.15rem;
+  }
+
+  .specialInstructionsInput {
     font-size: 1rem;
   }
 
   .addToOrderButton {
     font-size: 1.25rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .modalHeader,
-  .descriptionSection,
-  .quantitySection,
-  .specialInstructionsSection,
-  .legalSection,
-  .actionSection {
-    padding: 0.75rem;
-  }
-
-  .itemName {
-    font-size: 1.5rem;
-  }
-
-  .closeButton {
-    font-size: 1.5rem;
-  }
-
-  .itemDescription {
-    font-size: 1rem;
   }
 }
