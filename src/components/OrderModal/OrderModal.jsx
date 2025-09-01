@@ -96,7 +96,7 @@ function OrderModal({ item, isOpen, onClose, onAddToOrder }) {
           {/* Separator line */}
           <hr className={styles.separator} />
 
-          {/* Add to Order Button */}
+          {/* Add to order button */}
           <div className={styles.actionSection}>
             <button className={styles.addToOrderButton} onClick={handleAddToOrder}>
               ADD TO ORDER ${totalPrice}
