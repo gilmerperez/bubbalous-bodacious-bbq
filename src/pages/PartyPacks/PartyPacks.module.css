@@ -96,19 +96,19 @@
 /* Party pack name */
 .packName {
   font-size: 1.75rem;
-  margin-bottom: 0.25rem;
   padding-bottom: 0.25rem;
   color: hsl(0, 0%, 100%);
   font-family: "Oswald", sans-serif;
-  border-bottom: 3px solid var(--primary);
 }
 
 /* Serving size */
 .servingSize {
   font-weight: 500;
   font-size: 1.15rem;
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.5rem;
+  padding-bottom: 0.75rem;
   color: hsl(0, 0%, 80%);
+  border-bottom: 3px solid var(--primary);
 }
 
 /* List of items */
@@ -321,10 +321,6 @@
 
   .cardContent {
     padding: 1.5rem;
-  }
-
-  .packName {
-    border-bottom: 2px solid var(--primary);
   }
 
   .line {
