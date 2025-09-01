@@ -25,11 +25,12 @@ function OrderOnlineBanner() {
             {/* Button */}
             <div className={styles.buttonContainer}>
               <a
-                href="https://order.online/business/bubbalous-bodacious-barbque-61224"
                 target="_blank"
                 rel="noopener noreferrer"
                 className={styles.ctaButton}
+                href="https://order.online/business/bubbalous-bodacious-barbque-61224"
               >
+                <i className="fa-solid fa-car-side"></i>
                 ORDER ON DOORDASH
               </a>
             </div>
