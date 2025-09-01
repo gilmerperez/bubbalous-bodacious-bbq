@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
-import styles from "./OrderOnline.module.css";
-import OrderOnlineBanner from "../../components/OrderOnlineBanner/OrderOnlineBanner";
-import OrderModal from "../../components/OrderModal/OrderModal";
 import menuData from "../../data/menu.json";
+import styles from "./OrderOnline.module.css";
+import OrderModal from "../../components/OrderModal/OrderModal";
+import OrderOnlineBanner from "../../components/OrderOnlineBanner/OrderOnlineBanner";
 
 function OrderOnline() {
   // Set page title
@@ -25,10 +25,6 @@ function OrderOnline() {
     bbqSauce: false,
   });
 
-  // Modal state
-  const [selectedItem, setSelectedItem] = useState(null);
-  const [isModalOpen, setIsModalOpen] = useState(false);
-
   const toggleCategory = (categoryKey) => {
     setExpandedCategories((prev) => ({
       ...prev,
@@ -42,6 +38,10 @@ function OrderOnline() {
       .replace(/^./, (str) => str.toUpperCase()) // Capitalize first letter
       .replace(/\b\w/g, (l) => l.toUpperCase()); // Capitalize first letter of each word
   };
+
+  // Modal state
+  const [selectedItem, setSelectedItem] = useState(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const handleItemClick = (item) => {
     setSelectedItem(item);
@@ -115,7 +115,7 @@ function OrderOnline() {
         </div>
       </main>
 
-      {/* Order Modal */}
+      {/* Order modal */}
       <OrderModal item={selectedItem} isOpen={isModalOpen} onClose={handleCloseModal} onAddToOrder={handleAddToOrder} />
     </>
   );
