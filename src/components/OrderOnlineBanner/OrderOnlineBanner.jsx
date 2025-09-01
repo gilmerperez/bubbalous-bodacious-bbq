@@ -15,7 +15,7 @@ function OrderOnlineBanner() {
         {/* Content */}
         <div className={styles.contentContainer}>
           <div className={styles.textContent}>
-            <h1 className={styles.mainTitle}>BODACIOUS ONLINE ORDERING</h1>
+            <h1 className={styles.mainTitle}>SAME PRICES. MORE CONVENIENCE</h1>
             <p className={styles.subtitle}>
               Experience the convenience of ordering the best Orlando BBQ online with Bubbalous Bodacious BBQ. Enjoy our
               mouth-watering meats and homemade sides by placing your order online and picking it up at your

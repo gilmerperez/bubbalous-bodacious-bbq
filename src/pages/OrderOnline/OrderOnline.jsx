@@ -16,7 +16,7 @@ function OrderOnline() {
       <main>
         <div className={styles.orderOnlineContainer}>
           {/* Title */}
-          <h1 className={styles.pageTitle}>BUBBALOU'S BODACIOUS BBQ ORDER ONLINE</h1>
+          <h1 className={styles.pageTitle}>BUBBALOU'S BODACIOUS BBQ ONLINE ORDERING</h1>
 
           {/* Description */}
           <p className={styles.pageDescription}>
@@ -26,6 +26,10 @@ function OrderOnline() {
             needs. Enjoy the simplicity of online ordering and savor the authentic taste of Bubbalou's BBQ at your
             convenience.
           </p>
+
+          {/* Search bar */}
+
+          {/* Menu content */}
         </div>
       </main>
     </>
