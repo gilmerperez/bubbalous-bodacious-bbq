@@ -5,22 +5,22 @@
       {
         "name": "Corn Nuggets",
         "price": 5.99,
-        "description": "Golden fried corn nuggets with a crispy exterior and sweet corn center."
+        "description": "Golden fried corn nuggets with a crispy exterior and sweet corn center, served with powdered sugar."
       },
       {
         "name": "Fried Okra",
         "price": 5.99,
-        "description": "Southern-style fried okra with a crispy breaded coating."
+        "description": "Southern-style fried okra with a crispy breaded coating, served with ranch dipping sauce."
       },
       {
         "name": "Fried Pickles",
         "price": 5.99,
-        "description": "Crispy fried dill pickle chips served with ranch dipping sauce."
+        "description": "Crispy fried dill pickle chips served with horseradish dipping sauce."
       },
       {
         "name": "Onion Petals",
         "price": 5.99,
-        "description": "Battered and fried onion petals with a crispy golden coating."
+        "description": "Battered and fried onion petals with a crispy golden coating, served with pink sauce."
       },
       {
         "name": "Mac & Cheese Bites",
@@ -30,27 +30,27 @@
       {
         "name": "Gator Nuggets",
         "price": 13.99,
-        "description": "Crispy fried alligator meat nuggets served with your choice of dipping sauce."
+        "description": "Crispy fried alligator meat nuggets served with ranch dipping sauce."
       },
       {
         "name": "10 Wings",
         "price": 15.49,
-        "description": "Ten chicken wings tossed in your choice of mild, hot, or sweet sauce."
+        "description": "Ten chicken wings tossed in your choice of mild, hot, or sweet sauce, served with ranch or blue cheese dipping sauce."
       },
       {
         "name": "10 Wings & Fries",
         "price": 16.49,
-        "description": "Ten chicken wings with your choice of sauce served with crispy fries."
+        "description": "Ten chicken wings tossed in your choice of mild, hot, or sweet sauce, served with crispy fries and ranch or blue cheese dipping sauce."
       },
       {
         "name": "House Garden Salad",
         "price": 3.99,
-        "description": "Fresh tossed greens with tomatoes, cucumber, and red onions."
+        "description": "Fresh tossed greens with tomatoes, cucumber, and red onions. Choose your dressing: Ranch, Blue Cheese, Thousand Island, Italian, or Balsamic Vinaigrette."
       },
       {
         "name": "Bubbalou's Garden Salad",
         "price": 11.99,
-        "description": "Fresh tossed greens topped with tomatoes, cucumber, and red onions with your choice of smoked pulled pork, pork, beef, or turkey."
+        "description": "Fresh tossed greens topped with tomatoes, cucumber, and red onions with your choice of smoked pulled pork, pork, beef, or turkey. Choose your dressing: Ranch, Blue Cheese, Thousand Island, Italian, or Balsamic Vinaigrette."
       }
     ]
   },
@@ -105,47 +105,47 @@
     ]
   },
   "sandwiches": {
-    "categoryDescription": "Our signature BBQ sandwiches featuring slow-smoked meats from tender brisket to pulled pork, served on buttered buns with the option to upgrade to garlic bread. From classic beef and pork to unique offerings like catfish and gator.",
+    "categoryDescription": "Our signature BBQ sandwiches featuring slow-smoked meats from tender brisket and pulled pork to unique offerings like catfish and gator. Served on buttered buns with the option to upgrade to garlic bread at no cost.",
     "items": [
       {
         "name": "Sliced BBQ Beef or Pork Sandwich - Regular",
         "price": 7.99,
-        "description": "Sliced BBQ beef or pork served on a buttered sandwich bun, upgrade to garlic bread available."
+        "description": "Sliced BBQ beef or pork served on a buttered sandwich bun, upgrade to garlic bread at no cost."
       },
       {
         "name": "Sliced BBQ Beef or Pork Sandwich - Large",
         "price": 8.99,
-        "description": "Large portion of sliced BBQ beef or pork served on a buttered sandwich bun, upgrade to garlic bread available."
+        "description": "Large portion of sliced BBQ beef or pork served on a buttered sandwich bun, upgrade to garlic bread at no cost."
       },
       {
         "name": "1/4 Chicken on the Bone Sandwich",
         "price": 9.49,
-        "description": "Quarter chicken on the bone served on a buttered sandwich bun, upgrade to garlic bread available."
+        "description": "Quarter chicken on the bone served on a buttered sandwich bun, upgrade to garlic bread at no cost."
       },
       {
         "name": "Catfish Sandwich",
         "price": 9.99,
-        "description": "Fried catfish fillet served on a buttered sandwich bun, upgrade to garlic bread available."
+        "description": "Fried catfish fillet served on a buttered sandwich bun, upgrade to garlic bread at no cost."
       },
       {
         "name": "Livers Sandwich",
         "price": 9.99,
-        "description": "Fried chicken livers served on a buttered sandwich bun, upgrade to garlic bread available."
+        "description": "Fried chicken livers served on a buttered sandwich bun, upgrade to garlic bread at no cost."
       },
       {
         "name": "Gizzards Sandwich",
         "price": 9.99,
-        "description": "Fried chicken gizzards served on a buttered sandwich bun, upgrade to garlic bread available."
+        "description": "Fried chicken gizzards served on a buttered sandwich bun, upgrade to garlic bread at no cost."
       },
       {
         "name": "Pulled Pork Sandwich",
         "price": 9.99,
-        "description": "Smoked pulled pork served on a buttered sandwich bun, upgrade to garlic bread available."
+        "description": "Smoked pulled pork served on a buttered sandwich bun, upgrade to garlic bread at no cost."
       },
       {
         "name": "Pulled Chicken Sandwich",
         "price": 9.99,
-        "description": "Smoked pulled chicken served on a buttered sandwich bun, upgrade to garlic bread available."
+        "description": "Smoked pulled chicken served on a buttered sandwich bun, upgrade to garlic bread at no cost."
       },
       {
         "name": "Smoked Turkey Sandwich",
@@ -155,22 +155,22 @@
       {
         "name": "Sausage Sandwich",
         "price": 10.49,
-        "description": "Smoked sausage served on a buttered sandwich bun, upgrade to garlic bread available."
+        "description": "Smoked sausage served on a buttered sandwich bun, upgrade to garlic bread at no cost."
       },
       {
         "name": "Spare Ribs Sandwich",
         "price": 10.99,
-        "description": "Spare ribs served on a buttered sandwich bun, upgrade to garlic bread available."
+        "description": "Spare ribs served on a buttered sandwich bun, upgrade to garlic bread at no cost."
       },
       {
         "name": "Brisket Sandwich",
         "price": 11.49,
-        "description": "Smoked brisket served on a buttered sandwich bun, upgrade to garlic bread available."
+        "description": "Smoked brisket served on a buttered sandwich bun, upgrade to garlic bread at no cost."
       }
     ]
   },
   "sandwichBaskets": {
-    "categoryDescription": "Complete meal baskets featuring our signature sandwiches paired with fries and baked beans. From classic BBQ meats to unique offerings like gator and catfish, all served with your choice of sides that can be substituted at no cost.",
+    "categoryDescription": "Complete meal baskets featuring our signature sandwiches, from classic BBQ meats to unique offerings like gator and catfish paired with fries and baked beans. Sides can be substituted at no cost.",
     "items": [
       {
         "name": "Sliced BBQ Beef or Pork Basket - Regular",
@@ -275,7 +275,7 @@
     ]
   },
   "dinners": {
-    "categoryDescription": "Our signature dinner platters featuring generous portions of slow-smoked BBQ meats served with a complete southern meal including fries, baked beans, cole slaw, and garlic bread. From classic beef and pork to seafood and poultry, all sides can be substituted at no cost.",
+    "categoryDescription": "Our signature dinner platters featuring generous portions of slow-smoked BBQ meats, from classic beef and pork to seafood and poultry served with a complete southern meal including fries, baked beans, cole slaw, and garlic bread. All sides can be substituted at no cost.",
     "items": [
       {
         "name": "Sliced BBQ Beef Dinner",
