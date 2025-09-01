@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import styles from "./MenuBanner.module.css";
 
@@ -60,6 +61,13 @@ function MenuBanner() {
               pulled pork and succulent brisket to crispy fried catfish and savory BBQ sauces, we have something for
               everyone. Whether you're craving a classic sandwich or a hearty plate of BBQ, we've got you covered.
             </p>
+
+            {/* Button */}
+            <div className={styles.buttonContainer}>
+              <Link to="/order-online" className={styles.ctaButton}>
+                ORDER ONLINE
+              </Link>
+            </div>
 
             {/* Carousel indicators */}
             <div className={styles.carouselIndicators}>

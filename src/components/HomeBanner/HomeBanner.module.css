@@ -94,8 +94,11 @@
 
 .ctaButton {
   font-weight: 600;
+  position: relative;
   font-size: 1.375rem;
-  transition: 0.3s ease;
+  align-items: center;
+  display: inline-flex;
+  transition: 0.5s ease;
   border-radius: 0.25rem;
   padding: 0.75rem 1.25rem;
   font-family: "Oswald", sans-serif;
@@ -105,26 +108,30 @@
   color: hsl(0, 0%, 100%);
   border: 2px solid var(--primary);
   background-color: var(--primary);
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
+  text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
 }
 
 .ctaButton:first-child:hover {
   transform: translateY(-2px);
   border: 2px solid var(--primary-dark);
   background-color: var(--primary-dark);
-  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
+  box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.3);
+  text-shadow: 5px 5px 3px rgba(0, 0, 0, 0.3);
 }
 
 .secondaryButton {
   color: hsl(0, 0%, 0%);
   border: 2px solid hsl(0, 0%, 100%);
   background-color: hsl(0, 0%, 100%);
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
 }
 
 .secondaryButton:hover {
   color: hsl(0, 0%, 100%);
   transform: translateY(-2px);
   background-color: transparent;
-  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
+  box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.3);
 }
 
 /* Carousel indicators */

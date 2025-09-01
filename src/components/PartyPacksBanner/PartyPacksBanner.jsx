@@ -52,6 +52,14 @@ function PartyPacksBanner() {
               years. Build your own BBQ feast with our flexible, family-style dining options.
             </p>
 
+            {/* Button */}
+            <div className={styles.buttonContainer}>
+              <a href="tel:4072951212" className={styles.ctaButton}>
+                <i className="fa-solid fa-phone"></i>
+                ORDER FOR PICKUP
+              </a>
+            </div>
+
             {/* Carousel indicators */}
             <div className={styles.carouselIndicators}>
               {images.map((_, index) => (

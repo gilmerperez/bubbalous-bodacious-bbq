@@ -57,8 +57,8 @@ function HomeBanner() {
               <Link to="/menu" className={styles.ctaButton}>
                 VIEW FULL MENU
               </Link>
-              <Link to="/order-online" className={`${styles.ctaButton} ${styles.secondaryButton}`}>
-                ORDER ONLINE
+              <Link to="/party-packs" className={`${styles.ctaButton} ${styles.secondaryButton}`}>
+                VIEW PARTY PACKS
               </Link>
             </div>
 
