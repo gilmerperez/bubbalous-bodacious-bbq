@@ -55,7 +55,7 @@
     ]
   },
   "kidsMeals": {
-    "categoryDescription": "Specially crafted meals for our youngest guests, featuring kid-friendly favorites from BBQ classics to comfort foods. All meals include a small beverage with free refills and the option to substitute sides at no cost.",
+    "categoryDescription": "Specially crafted meals for our youngest guests, featuring kid-friendly favorites from BBQ classics to comfort foods. All meals include one side that can be substituted at no cost, and a small beverage with free refills on drinks.",
     "items": [
       {
         "name": "BBQ Chicken",
@@ -70,7 +70,7 @@
       {
         "name": "Mac & Cheese",
         "price": 6.49,
-        "description": "Creamy macaroni and cheese with your choice of fries or garlic bread, plus a small beverage, side can be substituted at no cost, free refills on drinks."
+        "description": "Creamy macaroni and cheese with garlic bread and a small beverage, side can be substituted at no cost, free refills on drinks."
       },
       {
         "name": "Chicken Strips",
@@ -250,12 +250,12 @@
       {
         "name": "Double Cheese Burger",
         "price": 14.99,
-        "description": "Double cheese burger served on a buttered sandwich bun with fries and baked beans, upgrade to garlic bread available, sides can be substituted at no cost."
+        "description": "Double cheese burger served on a buttered burger bun with fries and baked beans, upgrade to garlic bread available, sides can be substituted at no cost."
       },
       {
         "name": "Double Mushroom and Swiss Cheese Burger",
         "price": 15.49,
-        "description": "Double mushroom and Swiss burger served on a buttered sandwich bun with fries and baked beans, upgrade to garlic bread available, sides can be substituted at no cost."
+        "description": "Double mushroom and Swiss burger served on a buttered burger bun with fries and baked beans, upgrade to garlic bread available, sides can be substituted at no cost."
       },
       {
         "name": "Brisket Basket",
@@ -475,12 +475,12 @@
       {
         "name": "Fountain Drinks - Regular",
         "price": 3.09,
-        "description": "Choose from: Pepsi, Diet Pepsi, Sierra Mist, Mug Root Beer, Dr. Pepper, Mountain Dew, Lemonade, Cheerwine, Iced Tea. Free refills included."
+        "description": "Choose from: Pepsi, Diet Pepsi, Starry, Mug Root Beer, Dr. Pepper, Mountain Dew, Lemonade, Cheerwine, Iced Tea. Free refills included."
       },
       {
         "name": "Fountain Drinks - Large",
         "price": 3.49,
-        "description": "Choose from: Pepsi, Diet Pepsi, Sierra Mist, Mug Root Beer, Dr. Pepper, Mountain Dew, Lemonade, Cheerwine, Iced Tea. Free refills included."
+        "description": "Choose from: Pepsi, Diet Pepsi, Starry, Mug Root Beer, Dr. Pepper, Mountain Dew, Lemonade, Cheerwine, Iced Tea. Free refills included."
       },
       {
         "name": "Bottled Beer - Domestic",
@@ -535,7 +535,7 @@
       {
         "name": "Dill Pickle",
         "price": 1.99,
-        "description": "Crisp, tangy dill pickle spear with perfect crunch and bold flavor."
+        "description": "Crisp, whole tangy dill pickle with perfect crunch and bold flavor."
       },
       {
         "name": "Garlic Bread",
@@ -545,7 +545,7 @@
       {
         "name": "Corn Bread",
         "price": 3.49,
-        "description": "Moist, sweet cornbread with golden crust and perfect crumb texture."
+        "description": "2 pieces of moist, sweet cornbread with golden crust and perfect crumb texture with butter on the side."
       },
       {
         "name": "French Fries",
@@ -555,7 +555,7 @@
       {
         "name": "Fried Corn on the Cob",
         "price": 3.49,
-        "description": "Sweet corn on the cob battered and fried to golden perfection with crispy coating."
+        "description": "Sweet corn on the cob battered and fried to golden perfection with crispy coating and butter on the side."
       },
       {
         "name": "Brunswick Stew with Corn Bread",
