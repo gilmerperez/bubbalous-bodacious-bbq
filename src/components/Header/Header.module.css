@@ -25,7 +25,7 @@ header {
   justify-content: space-between;
 }
 
-/* Desktop Layout */
+/* Desktop layout */
 .desktopLayout {
   width: 100%;
   display: flex;
@@ -175,7 +175,7 @@ header {
   justify-content: space-between;
 }
 
-/* Mobile phone button */
+/* Mobile phone icon */
 .phoneButton {
   display: none;
   background: none;
@@ -188,7 +188,7 @@ header {
   color: var(--text-secondary);
 }
 
-/* Mobile hamburger menu */
+/* Mobile hamburger icon */
 .hamburger {
   display: none;
   background: none;
@@ -209,6 +209,7 @@ header {
   animation: hamburgerSpin 0.3s ease-in-out;
 }
 
+/* Hambuger spin animation */
 @keyframes hamburgerSpin {
   0% {
     transform: rotate(0deg);

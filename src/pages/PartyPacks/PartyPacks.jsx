@@ -69,7 +69,7 @@ function PartyPacks() {
             <h2 className={styles.additionalInfoTitle}>ADDITIONAL INFO</h2>
             {/* List of additional info */}
             <ul className={styles.additionalInfoList}>
-              <li>Party Packs are for pick-up & delivery only</li>
+              <li>Party packs are for pick-up & delivery only</li>
               <li>Delivery is available for an additional charge</li>
               <li>Serving utensils will be an additional charge of $1.50 each</li>
               <li>
