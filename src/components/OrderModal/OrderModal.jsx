@@ -83,7 +83,7 @@ function OrderModal({ item, isOpen, onClose, onAddToOrder }) {
           {/* Sauce Options */}
           {item.sauceOptions && (
             <div className={styles.sauceOptionsSection}>
-              <h3 className={styles.sauceOptionsTitle}>BBQ Sauce</h3>
+              <h3 className={styles.sauceOptionsTitle}>BBQ Sauce:</h3>
               <div className={styles.sauceOptionsList}>
                 {item.sauceOptions.map((sauce, index) => (
                   <label key={index} className={styles.sauceOption}>
