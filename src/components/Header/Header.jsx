@@ -5,7 +5,7 @@ import { useState, useEffect } from "react";
 
 function Header() {
   // * Theme switch
-  const [theme, setTheme] = useState("dark");
+  const [theme, setTheme] = useState("light");
 
   // Make theme be set in DOM
   useEffect(() => {
