@@ -5,6 +5,7 @@ function OrderModal({ item, isOpen, onClose, onAddToOrder }) {
   // Meal options states
   const [quantity, setQuantity] = useState(1);
   const [selectedSauce, setSelectedSauce] = useState("");
+  const [selectedMeats, setSelectedMeats] = useState([]);
   const [specialInstructions, setSpecialInstructions] = useState("");
 
   if (!isOpen || !item) return null;
@@ -17,19 +18,44 @@ function OrderModal({ item, isOpen, onClose, onAddToOrder }) {
     }
   };
 
+  // Handle meat selection (supports both single and 2 meat combo selection)
+  const handleMeatSelection = (meatName) => {
+    const isTwoMeatCombo = item.name === "Any 2 Meat Combo";
+
+    if (isTwoMeatCombo) {
+      // For 2 meat combo, allow max of 2 selections
+      setSelectedMeats((prev) => {
+        if (prev.includes(meatName)) {
+          // Remove if already selected
+          return prev.filter((meat) => meat !== meatName);
+        } else if (prev.length < 2) {
+          // Add if less than 2 selected
+          return [...prev, meatName];
+        }
+        // Don't add if already 2 selected
+        return prev;
+      });
+    } else {
+      // For single meat selection, replace the array with one item
+      setSelectedMeats([meatName]);
+    }
+  };
+
   // Handle add to order
   const handleAddToOrder = () => {
     onAddToOrder({
       ...item,
       quantity,
-      specialInstructions,
       selectedSauce,
+      selectedMeats,
+      specialInstructions,
     });
     onClose();
     // Reset form
     setQuantity(1);
-    setSpecialInstructions("");
     setSelectedSauce("");
+    setSelectedMeats([]);
+    setSpecialInstructions("");
   };
 
   // Calculate total price
@@ -80,7 +106,7 @@ function OrderModal({ item, isOpen, onClose, onAddToOrder }) {
             </div>
           </div>
 
-          {/* Sauce Options */}
+          {/* Sauce options */}
           {item.sauceOptions && (
             <div className={styles.sauceOptionsSection}>
               <h3 className={styles.sauceOptionsTitle}>BBQ Sauce:</h3>
@@ -96,6 +122,33 @@ function OrderModal({ item, isOpen, onClose, onAddToOrder }) {
                       onChange={(e) => setSelectedSauce(e.target.value)}
                     />
                     <span className={styles.sauceLabel}>{sauce.name}</span>
+                  </label>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {/* Meat options */}
+          {item.meatOptions && (
+            <div className={styles.meatOptionsSection}>
+              <h3 className={styles.meatOptionsTitle}>
+                {item.name === "Any 2 Meat Combo" ? "Choose 2 Meats:" : "Meat Choice:"}
+              </h3>
+              {item.name === "Any 2 Meat Combo" && (
+                <p className={styles.selectionHelper}>Select up to 2 meats ({selectedMeats.length}/2 selected)</p>
+              )}
+              <div className={styles.meatOptionsList}>
+                {item.meatOptions.map((meat, index) => (
+                  <label key={index} className={styles.meatOption}>
+                    <input
+                      name="meat"
+                      value={meat.name}
+                      className={styles.meatRadio}
+                      checked={selectedMeats.includes(meat.name)}
+                      onChange={() => handleMeatSelection(meat.name)}
+                      type={item.name === "Any 2 Meat Combo" ? "checkbox" : "radio"}
+                    />
+                    <span className={styles.meatLabel}>{meat.name}</span>
                   </label>
                 ))}
               </div>

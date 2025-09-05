@@ -135,7 +135,7 @@
   text-align: center;
 }
 
-/* Sauce Options */
+/* Sauce options */
 .sauceOptionsSection {
   width: 100%;
   display: block;
@@ -188,6 +188,69 @@
 }
 
 .sauceOption:hover .sauceLabel {
+  color: var(--text-primary);
+}
+
+/* Meat options */
+.meatOptionsSection {
+  width: 100%;
+  display: block;
+  position: relative;
+  margin-bottom: 0.25rem;
+}
+
+.meatOptionsTitle {
+  width: 100%;
+  font-weight: 500;
+  font-size: 1.5rem;
+  font-family: "Oswald", sans-serif;
+}
+
+.selectionHelper {
+  font-size: 1rem;
+  font-style: italic;
+  margin-bottom: 0.5rem;
+  color: var(--text-secondary);
+}
+
+.meatOptionsList {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+}
+
+.meatOption {
+  width: 100%;
+  gap: 0.75rem;
+  display: flex;
+  cursor: pointer;
+  padding: 0.25rem;
+  position: relative;
+  align-items: center;
+  transition: all 0.3s ease-in;
+}
+
+.meatOptionsSection .meatOption:hover {
+  color: var(--text-primary);
+}
+
+.meatRadio {
+  width: 1rem;
+  height: 1rem;
+  flex-shrink: 0;
+  cursor: pointer;
+  accent-color: var(--primary);
+}
+
+.meatLabel {
+  flex: 1;
+  cursor: pointer;
+  font-size: 1.25rem;
+  transition: 0.3s ease-in;
+  color: var(--text-secondary);
+}
+
+.meatOption:hover .meatLabel {
   color: var(--text-primary);
 }
 
@@ -310,6 +373,14 @@
     font-size: 1.15rem;
   }
 
+  .meatOptionsTitle {
+    font-size: 1.25rem;
+  }
+
+  .meatLabel {
+    font-size: 1.15rem;
+  }
+
   .specialInstructionsLabel {
     font-size: 1.25rem;
   }
@@ -372,6 +443,14 @@
   }
 
   .sauceLabel {
+    font-size: 1rem;
+  }
+
+  .meatOptionsTitle {
+    font-size: 1.15rem;
+  }
+
+  .meatLabel {
     font-size: 1rem;
   }
 
