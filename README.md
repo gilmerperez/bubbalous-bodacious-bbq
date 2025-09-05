@@ -48,15 +48,17 @@ npm run preview
 
 The following images show the web application's appearance and functionality:
 
-![Home Page]()
+![Home Page](./src/assets/screenshots/homePage.jpg)
 
-![Light Mode Theme]()
+![Menu Page](./src/assets/screenshots/menuPage.jpg)
 
-![Menu Page]()
+![Dark Mode Theme](./src/assets/screenshots/darkThemeMode.jpg)
 
-![Party Packs Page]()
+![Party Packs Page](./src/assets/screenshots/partyPacksPage.jpg)
 
-![Order Online Page]()
+![Order Online Page](./src/assets/screenshots/orderOnlinePage.jpg)
+
+![Footer](./src/assets/screenshots/footer.jpg)
 
 ## Instructions
 
