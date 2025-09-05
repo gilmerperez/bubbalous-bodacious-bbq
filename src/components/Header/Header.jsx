@@ -4,6 +4,24 @@ import { NavLink } from "react-router-dom";
 import { useState, useEffect } from "react";
 
 function Header() {
+  // * Sticky header logic
+  const [lastScrollY, setLastScrollY] = useState(0);
+  const [isScrollingUp, setIsScrollingUp] = useState(true);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      setIsScrollingUp(currentScrollY < lastScrollY || currentScrollY < 10);
+      setLastScrollY(currentScrollY);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [lastScrollY]);
+
+  // * Custom styles for active page
+  const navLinkClass = ({ isActive }) => (isActive ? styles.activeLink : undefined);
+
   // * Theme switch
   const [theme, setTheme] = useState("light");
 
@@ -38,38 +56,20 @@ function Header() {
     return () => mediaQuery.removeEventListener("change", handleChange);
   }, []);
 
-  // * Custom styles for active page
-  const navLinkClass = ({ isActive }) => (isActive ? styles.activeLink : undefined);
-
   // * Mobile sidebar toggle
   const [menuOpen, setMenuOpen] = useState(false);
   const [isSpinning, setIsSpinning] = useState(false);
 
   // Handle hamburger click with spin animation
   const handleHamburgerClick = () => {
-    setIsSpinning(true);
     setMenuOpen(true);
+    setIsSpinning(true);
 
     // Reset spinning state after animation completes
     setTimeout(() => {
       setIsSpinning(false);
     }, 300);
   };
-
-  // * Sticky header logic
-  const [isScrollingUp, setIsScrollingUp] = useState(true);
-  const [lastScrollY, setLastScrollY] = useState(0);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const currentScrollY = window.scrollY;
-      setIsScrollingUp(currentScrollY < lastScrollY || currentScrollY < 10);
-      setLastScrollY(currentScrollY);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, [lastScrollY]);
 
   // * Phone call handler
   const handlePhoneClick = () => {
@@ -79,14 +79,13 @@ function Header() {
   return (
     <>
       <header className={`${isScrollingUp ? styles.visible : styles.hidden}`}>
-        <section className={styles.headerContainer}>
+        <div className={styles.headerContainer}>
           {/* Desktop Layout */}
           <div className={styles.desktopLayout}>
             {/* Logo */}
             <NavLink to="/" className={styles.logoContainer}>
               <img src="/logo.jpg" alt="Bubbalous Bodacious BBQ Logo" />
             </NavLink>
-
             {/* Site navigation */}
             <div className={styles.navContainer}>
               <nav className={styles.navItems}>
@@ -103,10 +102,8 @@ function Header() {
                   ORDER ONLINE
                 </NavLink>
               </nav>
-
-              {/* Seperator */}
-              <span className={styles.seperator}>|</span>
-
+              {/* Separator */}
+              <span className={styles.separator}>|</span>
               {/* Theme button */}
               <button className={styles.themeButton} onClick={toggleTheme}>
                 <i className={`fa-solid ${theme === "dark" ? "fa-moon" : "fa-sun"}`}></i>
@@ -115,24 +112,22 @@ function Header() {
             </div>
           </div>
 
-          {/* Mobile Layout */}
+          {/* Mobile layout */}
           <div className={styles.mobileLayout}>
-            {/* Mobile phone button */}
+            {/* Phone button */}
             <button className={styles.phoneButton} onClick={handlePhoneClick}>
               <i className="fa-solid fa-phone fa-xl"></i>
             </button>
-
-            {/* Mobile Logo */}
+            {/* Logo */}
             <NavLink to="/" className={styles.mobileLogoContainer}>
               <img src="/logo.jpg" alt="Bubbalous Bodacious BBQ Logo" />
             </NavLink>
-
-            {/* Mobile hamburger menu */}
+            {/* Hamburger menu button */}
             <button className={styles.hamburger} onClick={handleHamburgerClick}>
               <i className={`fa-solid fa-bars fa-xl ${isSpinning ? styles.spin : ""}`}></i>
             </button>
           </div>
-        </section>
+        </div>
       </header>
 
       {/* Sidebar */}
@@ -144,7 +139,6 @@ function Header() {
               <button className={styles.sidebarClose} onClick={() => setMenuOpen(false)}>
                 <i className="fa-solid fa-xmark"></i>
               </button>
-
               {/* Sidebar site navigation */}
               <nav className={styles.sidebarNavItems}>
                 <NavLink to="/" className={navLinkClass} onClick={() => setMenuOpen(false)}>
@@ -164,7 +158,6 @@ function Header() {
                   ORDER ONLINE
                 </NavLink>
               </nav>
-
               {/* Sidebar footer */}
               <footer className={styles.sidebarFooter}>
                 {/* Theme button */}
