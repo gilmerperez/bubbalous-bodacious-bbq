@@ -2,17 +2,19 @@ import { useState } from "react";
 import styles from "./OrderModal.module.css";
 
 function OrderModal({ item, isOpen, onClose, onAddToOrder }) {
-  // Meal options states
+  // * Meal options states
   const [quantity, setQuantity] = useState(1);
   const [selectedSauce, setSelectedSauce] = useState("");
   const [selectedMeats, setSelectedMeats] = useState([]);
   const [selectedSides, setSelectedSides] = useState([]);
   const [selectedDrink, setSelectedDrink] = useState("");
+  const [selectedProtein, setSelectedProtein] = useState("");
   const [specialInstructions, setSpecialInstructions] = useState("");
 
+  // * Check if modal is open and item is loaded
   if (!isOpen || !item) return null;
 
-  // Handle quantity change
+  // * Handle quantity change
   const handleQuantityChange = (change) => {
     const newQuantity = quantity + change;
     if (newQuantity >= 1) {
@@ -20,7 +22,7 @@ function OrderModal({ item, isOpen, onClose, onAddToOrder }) {
     }
   };
 
-  // Handle meat selection (supports both single and 2 meat combo selection)
+  // * Handle meat selection (supports both single and 2 meat combo selection)
   const handleMeatSelection = (meatName) => {
     const isTwoMeatCombo = item.name === "Any 2 Meat Combo";
 
@@ -43,7 +45,7 @@ function OrderModal({ item, isOpen, onClose, onAddToOrder }) {
     }
   };
 
-  // Handle side selection (supports both single and veggie plate selection)
+  // * Handle side selection (supports both single and veggie plate selection)
   const handleSideSelection = (sideName) => {
     const isVeggiePlate = item.name === "Veggie Plate - Any 4 Vegetables";
 
@@ -66,12 +68,17 @@ function OrderModal({ item, isOpen, onClose, onAddToOrder }) {
     }
   };
 
-  // Handle drink selection
+  // * Handle drink selection
   const handleDrinkSelection = (drinkName) => {
     setSelectedDrink(drinkName);
   };
 
-  // Handle add to order
+  // * Handle protein selection
+  const handleProteinSelection = (proteinName) => {
+    setSelectedProtein(proteinName);
+  };
+
+  // * Handle add to order
   const handleAddToOrder = () => {
     onAddToOrder({
       ...item,
@@ -80,6 +87,7 @@ function OrderModal({ item, isOpen, onClose, onAddToOrder }) {
       selectedMeats,
       selectedSides,
       selectedDrink,
+      selectedProtein,
       specialInstructions,
     });
     onClose();
@@ -89,10 +97,11 @@ function OrderModal({ item, isOpen, onClose, onAddToOrder }) {
     setSelectedMeats([]);
     setSelectedSides([]);
     setSelectedDrink("");
+    setSelectedProtein("");
     setSpecialInstructions("");
   };
 
-  // Calculate total price
+  // * Calculate total price
   const totalPrice = (item.price * quantity).toFixed(2);
 
   return (
@@ -232,6 +241,28 @@ function OrderModal({ item, isOpen, onClose, onAddToOrder }) {
                       onChange={() => handleDrinkSelection(drink.name)}
                     />
                     <span className={styles.drinkLabel}>{drink.name}</span>
+                  </label>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {/* Protein options */}
+          {item.proteinOptions && (
+            <div className={styles.proteinOptionsSection}>
+              <h3 className={styles.proteinOptionsTitle}>Protein Choice:</h3>
+              <div className={styles.proteinOptionsList}>
+                {item.proteinOptions.map((protein, index) => (
+                  <label key={index} className={styles.proteinOption}>
+                    <input
+                      type="radio"
+                      name="protein"
+                      value={protein.name}
+                      className={styles.proteinRadio}
+                      checked={selectedProtein === protein.name}
+                      onChange={() => handleProteinSelection(protein.name)}
+                    />
+                    <span className={styles.proteinLabel}>{protein.name}</span>
                   </label>
                 ))}
               </div>

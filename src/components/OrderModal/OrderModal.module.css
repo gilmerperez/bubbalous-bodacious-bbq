@@ -366,6 +366,62 @@
   color: var(--text-primary);
 }
 
+/* Protein Options */
+.proteinOptionsSection {
+  width: 100%;
+  display: block;
+  position: relative;
+  margin-bottom: 0.25rem;
+}
+
+.proteinOptionsTitle {
+  width: 100%;
+  font-weight: 500;
+  font-size: 1.5rem;
+  font-family: "Oswald", sans-serif;
+}
+
+.proteinOptionsList {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+}
+
+.proteinOption {
+  width: 100%;
+  gap: 0.75rem;
+  display: flex;
+  cursor: pointer;
+  padding: 0.25rem;
+  position: relative;
+  align-items: center;
+  transition: all 0.3s ease-in;
+}
+
+.proteinOptionsSection .proteinOption:hover {
+  color: var(--text-primary);
+}
+
+.proteinRadio {
+  width: 1rem;
+  height: 1rem;
+  flex-shrink: 0;
+  cursor: pointer;
+  accent-color: var(--primary);
+}
+
+.proteinLabel {
+  flex: 1;
+  cursor: pointer;
+  font-size: 1.25rem;
+  transition: 0.3s ease-in;
+  color: var(--text-secondary);
+}
+
+.proteinOption:hover .proteinLabel {
+  color: var(--text-primary);
+}
+
 /* Special instructions */
 .specialInstructionsSection {
   margin-bottom: 1rem;
@@ -509,6 +565,14 @@
     font-size: 1.15rem;
   }
 
+  .proteinOptionsTitle {
+    font-size: 1.25rem;
+  }
+
+  .proteinLabel {
+    font-size: 1.15rem;
+  }
+
   .specialInstructionsLabel {
     font-size: 1.25rem;
   }
@@ -595,6 +659,14 @@
   }
 
   .drinkLabel {
+    font-size: 1rem;
+  }
+
+  .proteinOptionsTitle {
+    font-size: 1.15rem;
+  }
+
+  .proteinLabel {
     font-size: 1rem;
   }
 
