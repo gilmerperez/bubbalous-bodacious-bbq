@@ -284,7 +284,6 @@
   position: relative;
   align-items: center;
   transition: all 0.3s ease-in;
-  background-color: transparent;
 }
 
 .sideOptionsSection .sideOption:hover {
@@ -308,6 +307,62 @@
 }
 
 .sideOption:hover .sideLabel {
+  color: var(--text-primary);
+}
+
+/* Drink Options */
+.drinkOptionsSection {
+  width: 100%;
+  display: block;
+  position: relative;
+  margin-bottom: 0.25rem;
+}
+
+.drinkOptionsTitle {
+  width: 100%;
+  font-weight: 500;
+  font-size: 1.5rem;
+  font-family: "Oswald", sans-serif;
+}
+
+.drinkOptionsList {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+}
+
+.drinkOption {
+  width: 100%;
+  gap: 0.75rem;
+  display: flex;
+  cursor: pointer;
+  padding: 0.25rem;
+  position: relative;
+  align-items: center;
+  transition: all 0.3s ease-in;
+}
+
+.drinkOptionsSection .drinkOption:hover {
+  color: var(--text-primary);
+}
+
+.drinkRadio {
+  width: 1rem;
+  height: 1rem;
+  flex-shrink: 0;
+  cursor: pointer;
+  accent-color: var(--primary);
+}
+
+.drinkLabel {
+  flex: 1;
+  cursor: pointer;
+  font-size: 1.25rem;
+  transition: 0.3s ease-in;
+  color: var(--text-secondary);
+}
+
+.drinkOption:hover .drinkLabel {
   color: var(--text-primary);
 }
 
@@ -446,6 +501,14 @@
     font-size: 1.15rem;
   }
 
+  .drinkOptionsTitle {
+    font-size: 1.25rem;
+  }
+
+  .drinkLabel {
+    font-size: 1.15rem;
+  }
+
   .specialInstructionsLabel {
     font-size: 1.25rem;
   }
@@ -524,6 +587,14 @@
   }
 
   .sideLabel {
+    font-size: 1rem;
+  }
+
+  .drinkOptionsTitle {
+    font-size: 1.15rem;
+  }
+
+  .drinkLabel {
     font-size: 1rem;
   }
 
