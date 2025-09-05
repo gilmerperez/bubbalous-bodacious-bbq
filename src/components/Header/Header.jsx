@@ -84,7 +84,7 @@ function Header() {
           <div className={styles.desktopLayout}>
             {/* Logo */}
             <NavLink to="/" className={styles.logoContainer}>
-              <img src="/favicon.jpg" alt="Bubbalous Bodacious BBQ Logo" />
+              <img src="/logo.jpg" alt="Bubbalous Bodacious BBQ Logo" />
             </NavLink>
 
             {/* Site navigation */}
@@ -124,7 +124,7 @@ function Header() {
 
             {/* Mobile Logo */}
             <NavLink to="/" className={styles.mobileLogoContainer}>
-              <img src="/favicon.jpg" alt="Bubbalous Bodacious BBQ Logo" />
+              <img src="/logo.jpg" alt="Bubbalous Bodacious BBQ Logo" />
             </NavLink>
 
             {/* Mobile hamburger menu */}

@@ -9,7 +9,7 @@ function Footer() {
           <div className={styles.topContainer}>
             {/* Logo */}
             <div className={styles.logoContainer}>
-              <img src="/favicon.jpg" alt="Bubbalous Bodacious BBQ Logo" />
+              <img src="/logo.jpg" alt="Bubbalous Bodacious BBQ Logo" />
             </div>
 
             {/* Legal disclaimer */}
