@@ -2,11 +2,14 @@ import { useState } from "react";
 import styles from "./OrderModal.module.css";
 
 function OrderModal({ item, isOpen, onClose, onAddToOrder }) {
+  // Meal options states
   const [quantity, setQuantity] = useState(1);
+  const [selectedSauce, setSelectedSauce] = useState("");
   const [specialInstructions, setSpecialInstructions] = useState("");
 
   if (!isOpen || !item) return null;
 
+  // Handle quantity change
   const handleQuantityChange = (change) => {
     const newQuantity = quantity + change;
     if (newQuantity >= 1) {
@@ -14,18 +17,22 @@ function OrderModal({ item, isOpen, onClose, onAddToOrder }) {
     }
   };
 
+  // Handle add to order
   const handleAddToOrder = () => {
     onAddToOrder({
       ...item,
       quantity,
       specialInstructions,
+      selectedSauce,
     });
     onClose();
     // Reset form
     setQuantity(1);
     setSpecialInstructions("");
+    setSelectedSauce("");
   };
 
+  // Calculate total price
   const totalPrice = (item.price * quantity).toFixed(2);
 
   return (
@@ -35,7 +42,9 @@ function OrderModal({ item, isOpen, onClose, onAddToOrder }) {
         <div className={styles.modal} onClick={(e) => e.stopPropagation()}>
           {/* Modal header */}
           <div className={styles.modalHeader}>
+            {/* Item name */}
             <h2 className={styles.itemName}>{item.name}</h2>
+            {/* Close button */}
             <button className={styles.closeButton} onClick={onClose}>
               <i className="fa-solid fa-xmark"></i>
             </button>
@@ -71,14 +80,35 @@ function OrderModal({ item, isOpen, onClose, onAddToOrder }) {
             </div>
           </div>
 
+          {/* Sauce Options */}
+          {item.sauceOptions && (
+            <div className={styles.sauceOptionsSection}>
+              <h3 className={styles.sauceOptionsTitle}>BBQ Sauce</h3>
+              <div className={styles.sauceOptionsList}>
+                {item.sauceOptions.map((sauce, index) => (
+                  <label key={index} className={styles.sauceOption}>
+                    <input
+                      type="radio"
+                      name="sauce"
+                      value={sauce.name}
+                      className={styles.sauceRadio}
+                      checked={selectedSauce === sauce.name}
+                      onChange={(e) => setSelectedSauce(e.target.value)}
+                    />
+                    <span className={styles.sauceLabel}>{sauce.name}</span>
+                  </label>
+                ))}
+              </div>
+            </div>
+          )}
+
           {/* Special instructions */}
           <div className={styles.specialInstructionsSection}>
-            <label className={styles.specialInstructionsLabel}>Special Requests:</label>
-
+            <label className={styles.specialInstructionsLabel}>Special Instructions:</label>
             <textarea
               rows={3}
               value={specialInstructions}
-              placeholder="Write your request here..."
+              placeholder="Write your instruction here..."
               className={styles.specialInstructionsInput}
               onChange={(e) => setSpecialInstructions(e.target.value)}
             />
@@ -87,7 +117,7 @@ function OrderModal({ item, isOpen, onClose, onAddToOrder }) {
           {/* Legal section */}
           <div className={styles.legalSection}>
             <p className={styles.allergyWarning}>
-              <strong>FOOD ALLERGY WARNING</strong>
+              <strong>FOOD ALLERGY WARNING:</strong>
               <br />
               Our food may contain food allergens including, but not limited to: Dairy Products, Peanuts & other nuts,
               Soy, Wheat, Glutens, Coconut. If any questions, please speak to manager.
