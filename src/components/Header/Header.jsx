@@ -78,35 +78,41 @@ function Header() {
 
   return (
     <>
-      <header className={`${isScrollingUp ? styles.visible : styles.hidden}`}>
+      <header className={`${isScrollingUp ? styles.visible : styles.hidden}`} role="banner" aria-label="Site header">
         <div className={styles.headerContainer}>
           {/* Desktop Layout */}
           <div className={styles.desktopLayout}>
             {/* Logo */}
-            <NavLink to="/" className={styles.logoContainer}>
+            <NavLink to="/" className={styles.logoContainer} aria-label="Go to home page">
               <img src="/logo.jpg" alt="Bubbalous Bodacious BBQ Logo" />
             </NavLink>
             {/* Site navigation */}
             <div className={styles.navContainer}>
-              <nav className={styles.navItems}>
-                <NavLink to="/" className={navLinkClass}>
+              <nav className={styles.navItems} aria-label="Main site navigation">
+                <NavLink to="/" className={navLinkClass} aria-label="Go to home page">
                   HOME
                 </NavLink>
-                <NavLink to="/menu" className={navLinkClass}>
+                <NavLink to="/menu" className={navLinkClass} aria-label="View our menu">
                   MENU
                 </NavLink>
-                <NavLink to="/party-packs" className={navLinkClass}>
+                <NavLink to="/party-packs" className={navLinkClass} aria-label="Browse party packs">
                   PARTY PACKS
                 </NavLink>
-                <NavLink to="/order-online" className={navLinkClass}>
+                <NavLink to="/order-online" className={navLinkClass} aria-label="Order online">
                   ORDER ONLINE
                 </NavLink>
               </nav>
               {/* Separator */}
-              <span className={styles.separator}>|</span>
+              <span className={styles.separator} aria-hidden="true">
+                |
+              </span>
               {/* Theme button */}
-              <button className={styles.themeButton} onClick={toggleTheme}>
-                <i className={`fa-solid ${theme === "dark" ? "fa-moon" : "fa-sun"}`}></i>
+              <button
+                onClick={toggleTheme}
+                className={styles.themeButton}
+                aria-label={`Switch to ${theme === "dark" ? "light" : "dark"} mode`}
+              >
+                <i className={`fa-solid ${theme === "dark" ? "fa-moon" : "fa-sun"}`} aria-hidden="true"></i>
                 <p>{theme === "dark" ? "DARK" : "LIGHT"}</p>
               </button>
             </div>
@@ -115,16 +121,26 @@ function Header() {
           {/* Mobile layout */}
           <div className={styles.mobileLayout}>
             {/* Phone button */}
-            <button className={styles.phoneButton} onClick={handlePhoneClick}>
-              <i className="fa-solid fa-phone fa-xl"></i>
+            <button
+              className={styles.phoneButton}
+              onClick={handlePhoneClick}
+              aria-label="Call us at (407) 295-1212"
+              type="button"
+            >
+              <i className="fa-solid fa-phone fa-xl" aria-hidden="true"></i>
             </button>
             {/* Logo */}
-            <NavLink to="/" className={styles.mobileLogoContainer}>
+            <NavLink to="/" className={styles.mobileLogoContainer} aria-label="Go to home page">
               <img src="/logo.jpg" alt="Bubbalous Bodacious BBQ Logo" />
             </NavLink>
             {/* Hamburger menu button */}
-            <button className={styles.hamburger} onClick={handleHamburgerClick}>
-              <i className={`fa-solid fa-bars fa-xl ${isSpinning ? styles.spin : ""}`}></i>
+            <button
+              aria-expanded={menuOpen}
+              className={styles.hamburger}
+              onClick={handleHamburgerClick}
+              aria-label="Open navigation menu"
+            >
+              <i className={`fa-solid fa-bars fa-xl ${isSpinning ? styles.spin : ""}`} aria-hidden="true"></i>
             </button>
           </div>
         </div>
@@ -133,49 +149,98 @@ function Header() {
       {/* Sidebar */}
       {menuOpen &&
         createPortal(
-          <div className={styles.sidebarOverlay} onClick={() => setMenuOpen(false)}>
+          <div
+            role="dialog"
+            aria-modal="true"
+            aria-label="Navigation menu"
+            className={styles.sidebarOverlay}
+            onClick={() => setMenuOpen(false)}
+          >
             <div className={styles.sidebar} onClick={(e) => e.stopPropagation()}>
               {/* Sidebar close button */}
-              <button className={styles.sidebarClose} onClick={() => setMenuOpen(false)}>
-                <i className="fa-solid fa-xmark"></i>
+              <button
+                className={styles.sidebarClose}
+                onClick={() => setMenuOpen(false)}
+                aria-label="Close navigation menu"
+              >
+                <i className="fa-solid fa-xmark" aria-hidden="true"></i>
               </button>
               {/* Sidebar site navigation */}
-              <nav className={styles.sidebarNavItems}>
-                <NavLink to="/" className={navLinkClass} onClick={() => setMenuOpen(false)}>
-                  <i className="fa-solid fa-house"></i>
+              <nav className={styles.sidebarNavItems} aria-label="Mobile site navigation">
+                <NavLink
+                  to="/"
+                  className={navLinkClass}
+                  aria-label="Go to home page"
+                  onClick={() => setMenuOpen(false)}
+                >
+                  <i className="fa-solid fa-house" aria-hidden="true"></i>
                   HOME
                 </NavLink>
-                <NavLink to="/menu" className={navLinkClass} onClick={() => setMenuOpen(false)}>
-                  <i className="fa-solid fa-burger"></i>
+                <NavLink
+                  to="/menu"
+                  className={navLinkClass}
+                  aria-label="View our menu"
+                  onClick={() => setMenuOpen(false)}
+                >
+                  <i className="fa-solid fa-burger" aria-hidden="true"></i>
                   MENU
                 </NavLink>
-                <NavLink to="/party-packs" className={navLinkClass} onClick={() => setMenuOpen(false)}>
-                  <i className="fa-solid fa-box"></i>
+                <NavLink
+                  to="/party-packs"
+                  className={navLinkClass}
+                  aria-label="Browse party packs"
+                  onClick={() => setMenuOpen(false)}
+                >
+                  <i className="fa-solid fa-box" aria-hidden="true"></i>
                   PARTY PACKS
                 </NavLink>
-                <NavLink to="/order-online" className={navLinkClass} onClick={() => setMenuOpen(false)}>
-                  <i className="fa-solid fa-mobile-screen-button"></i>
+                <NavLink
+                  to="/order-online"
+                  className={navLinkClass}
+                  aria-label="Order online"
+                  onClick={() => setMenuOpen(false)}
+                >
+                  <i className="fa-solid fa-mobile-screen-button" aria-hidden="true"></i>
                   ORDER ONLINE
                 </NavLink>
               </nav>
               {/* Sidebar footer */}
               <footer className={styles.sidebarFooter}>
                 {/* Theme button */}
-                <button className={`${styles.themeButton} ${styles.sidebarThemeButton}`} onClick={toggleTheme}>
-                  <i className={`fa-solid ${theme === "dark" ? "fa-moon" : "fa-sun"}`}></i>
+                <button
+                  onClick={toggleTheme}
+                  className={`${styles.themeButton} ${styles.sidebarThemeButton}`}
+                  aria-label={`Switch to ${theme === "dark" ? "light" : "dark"} mode`}
+                >
+                  <i className={`fa-solid ${theme === "dark" ? "fa-moon" : "fa-sun"}`} aria-hidden="true"></i>
                   <p>{theme === "dark" ? "DARK" : "LIGHT"}</p>
                 </button>
                 {/* Legal pages */}
-                <NavLink to="/contact" className={navLinkClass} onClick={() => setMenuOpen(false)}>
-                  <i className="fa-solid fa-paper-plane"></i>
+                <NavLink
+                  to="/contact"
+                  aria-label="Contact us"
+                  className={navLinkClass}
+                  onClick={() => setMenuOpen(false)}
+                >
+                  <i className="fa-solid fa-paper-plane" aria-hidden="true"></i>
                   CONTACT
                 </NavLink>
-                <NavLink to="/privacy-policy" className={navLinkClass} onClick={() => setMenuOpen(false)}>
-                  <i className="fa-solid fa-shield-halved"></i>
+                <NavLink
+                  to="/privacy-policy"
+                  className={navLinkClass}
+                  onClick={() => setMenuOpen(false)}
+                  aria-label="Read our privacy policy"
+                >
+                  <i className="fa-solid fa-shield-halved" aria-hidden="true"></i>
                   PRIVACY POLICY
                 </NavLink>
-                <NavLink to="/terms-of-service" className={navLinkClass} onClick={() => setMenuOpen(false)}>
-                  <i className="fa-solid fa-asterisk"></i>
+                <NavLink
+                  to="/terms-of-service"
+                  className={navLinkClass}
+                  onClick={() => setMenuOpen(false)}
+                  aria-label="Read our terms of service"
+                >
+                  <i className="fa-solid fa-asterisk" aria-hidden="true"></i>
                   TERMS OF SERVICE
                 </NavLink>
               </footer>

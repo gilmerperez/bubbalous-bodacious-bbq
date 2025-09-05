@@ -235,11 +235,8 @@ header {
     display: flex;
   }
 
+  .phoneButton,
   .hamburger {
-    display: block;
-  }
-
-  .phoneButton {
     display: block;
   }
 }
