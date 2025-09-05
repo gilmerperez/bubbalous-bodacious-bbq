@@ -10,6 +10,7 @@ function OrderModal({ item, isOpen, onClose, onAddToOrder }) {
   const [selectedDrink, setSelectedDrink] = useState("");
   const [selectedProtein, setSelectedProtein] = useState("");
   const [selectedDressing, setSelectedDressing] = useState("");
+  const [selectedWingSauce, setSelectedWingSauce] = useState("");
   const [specialInstructions, setSpecialInstructions] = useState("");
 
   // * Check if modal is open and item is loaded
@@ -84,6 +85,11 @@ function OrderModal({ item, isOpen, onClose, onAddToOrder }) {
     setSelectedDressing(dressingName);
   };
 
+  // * Handle wing sauce selection
+  const handleWingSauceSelection = (wingSauceName) => {
+    setSelectedWingSauce(wingSauceName);
+  };
+
   // * Handle add to order
   const handleAddToOrder = () => {
     onAddToOrder({
@@ -95,6 +101,7 @@ function OrderModal({ item, isOpen, onClose, onAddToOrder }) {
       selectedDrink,
       selectedProtein,
       selectedDressing,
+      selectedWingSauce,
       specialInstructions,
     });
     onClose();
@@ -106,6 +113,7 @@ function OrderModal({ item, isOpen, onClose, onAddToOrder }) {
     setSelectedDrink("");
     setSelectedProtein("");
     setSelectedDressing("");
+    setSelectedWingSauce("");
     setSpecialInstructions("");
   };
 
@@ -293,6 +301,28 @@ function OrderModal({ item, isOpen, onClose, onAddToOrder }) {
                       onChange={() => handleDressingSelection(dressing.name)}
                     />
                     <span className={styles.dressingLabel}>{dressing.name}</span>
+                  </label>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {/* Wing sauce options */}
+          {item.wingSauceOptions && (
+            <div className={styles.wingSauceOptionsSection}>
+              <h3 className={styles.wingSauceOptionsTitle}>Wing Sauce Choice:</h3>
+              <div className={styles.wingSauceOptionsList}>
+                {item.wingSauceOptions.map((wingSauce, index) => (
+                  <label key={index} className={styles.wingSauceOption}>
+                    <input
+                      type="radio"
+                      name="wingSauce"
+                      value={wingSauce.name}
+                      className={styles.wingSauceRadio}
+                      checked={selectedWingSauce === wingSauce.name}
+                      onChange={() => handleWingSauceSelection(wingSauce.name)}
+                    />
+                    <span className={styles.wingSauceLabel}>{wingSauce.name}</span>
                   </label>
                 ))}
               </div>
