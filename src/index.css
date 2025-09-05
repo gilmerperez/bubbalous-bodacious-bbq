@@ -26,12 +26,6 @@ html[data-theme="dark"] {
   --footer-bg-color: hsl(0, 0%, 5%);
 }
 
-/* Highlighted text */
-::selection {
-  color: var(--text-primary);
-  background: var(--primary);
-}
-
 /* Buttons - Ensures buttons appear clickable */
 button {
   cursor: pointer; /* Shows pointer on hover to indicate clickability */
