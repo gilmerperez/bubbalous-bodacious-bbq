@@ -9,6 +9,7 @@ function OrderModal({ item, isOpen, onClose, onAddToOrder }) {
   const [selectedSides, setSelectedSides] = useState([]);
   const [selectedDrink, setSelectedDrink] = useState("");
   const [selectedProtein, setSelectedProtein] = useState("");
+  const [selectedDressing, setSelectedDressing] = useState("");
   const [specialInstructions, setSpecialInstructions] = useState("");
 
   // * Check if modal is open and item is loaded
@@ -78,6 +79,11 @@ function OrderModal({ item, isOpen, onClose, onAddToOrder }) {
     setSelectedProtein(proteinName);
   };
 
+  // * Handle dressing selection
+  const handleDressingSelection = (dressingName) => {
+    setSelectedDressing(dressingName);
+  };
+
   // * Handle add to order
   const handleAddToOrder = () => {
     onAddToOrder({
@@ -88,6 +94,7 @@ function OrderModal({ item, isOpen, onClose, onAddToOrder }) {
       selectedSides,
       selectedDrink,
       selectedProtein,
+      selectedDressing,
       specialInstructions,
     });
     onClose();
@@ -98,6 +105,7 @@ function OrderModal({ item, isOpen, onClose, onAddToOrder }) {
     setSelectedSides([]);
     setSelectedDrink("");
     setSelectedProtein("");
+    setSelectedDressing("");
     setSpecialInstructions("");
   };
 
@@ -263,6 +271,28 @@ function OrderModal({ item, isOpen, onClose, onAddToOrder }) {
                       onChange={() => handleProteinSelection(protein.name)}
                     />
                     <span className={styles.proteinLabel}>{protein.name}</span>
+                  </label>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {/* Dressing options */}
+          {item.dressingOptions && (
+            <div className={styles.dressingOptionsSection}>
+              <h3 className={styles.dressingOptionsTitle}>Dressing Choice:</h3>
+              <div className={styles.dressingOptionsList}>
+                {item.dressingOptions.map((dressing, index) => (
+                  <label key={index} className={styles.dressingOption}>
+                    <input
+                      type="radio"
+                      name="dressing"
+                      value={dressing.name}
+                      className={styles.dressingRadio}
+                      checked={selectedDressing === dressing.name}
+                      onChange={() => handleDressingSelection(dressing.name)}
+                    />
+                    <span className={styles.dressingLabel}>{dressing.name}</span>
                   </label>
                 ))}
               </div>
