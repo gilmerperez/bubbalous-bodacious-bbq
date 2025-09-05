@@ -254,6 +254,63 @@
   color: var(--text-primary);
 }
 
+/* Side Options */
+.sideOptionsSection {
+  width: 100%;
+  display: block;
+  position: relative;
+  margin-bottom: 0.25rem;
+}
+
+.sideOptionsTitle {
+  width: 100%;
+  font-weight: 500;
+  font-size: 1.5rem;
+  font-family: "Oswald", sans-serif;
+}
+
+.sideOptionsList {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+}
+
+.sideOption {
+  width: 100%;
+  gap: 0.75rem;
+  display: flex;
+  cursor: pointer;
+  padding: 0.25rem;
+  position: relative;
+  align-items: center;
+  transition: all 0.3s ease-in;
+  background-color: transparent;
+}
+
+.sideOptionsSection .sideOption:hover {
+  color: var(--text-primary);
+}
+
+.sideRadio {
+  width: 1rem;
+  height: 1rem;
+  flex-shrink: 0;
+  cursor: pointer;
+  accent-color: var(--primary);
+}
+
+.sideLabel {
+  flex: 1;
+  cursor: pointer;
+  font-size: 1.25rem;
+  transition: 0.3s ease-in;
+  color: var(--text-secondary);
+}
+
+.sideOption:hover .sideLabel {
+  color: var(--text-primary);
+}
+
 /* Special instructions */
 .specialInstructionsSection {
   margin-bottom: 1rem;
@@ -381,6 +438,14 @@
     font-size: 1.15rem;
   }
 
+  .sideOptionsTitle {
+    font-size: 1.25rem;
+  }
+
+  .sideLabel {
+    font-size: 1.15rem;
+  }
+
   .specialInstructionsLabel {
     font-size: 1.25rem;
   }
@@ -451,6 +516,14 @@
   }
 
   .meatLabel {
+    font-size: 1rem;
+  }
+
+  .sideOptionsTitle {
+    font-size: 1.15rem;
+  }
+
+  .sideLabel {
     font-size: 1rem;
   }
 

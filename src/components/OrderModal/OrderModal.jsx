@@ -6,6 +6,7 @@ function OrderModal({ item, isOpen, onClose, onAddToOrder }) {
   const [quantity, setQuantity] = useState(1);
   const [selectedSauce, setSelectedSauce] = useState("");
   const [selectedMeats, setSelectedMeats] = useState([]);
+  const [selectedSides, setSelectedSides] = useState([]);
   const [specialInstructions, setSpecialInstructions] = useState("");
 
   if (!isOpen || !item) return null;
@@ -41,6 +42,29 @@ function OrderModal({ item, isOpen, onClose, onAddToOrder }) {
     }
   };
 
+  // Handle side selection (supports both single and veggie plate selection)
+  const handleSideSelection = (sideName) => {
+    const isVeggiePlate = item.name === "Veggie Plate - Any 4 Vegetables";
+
+    if (isVeggiePlate) {
+      // For veggie plate, allow max of 4 selections
+      setSelectedSides((prev) => {
+        if (prev.includes(sideName)) {
+          // Remove if already selected
+          return prev.filter((side) => side !== sideName);
+        } else if (prev.length < 4) {
+          // Add if less than 4 selected
+          return [...prev, sideName];
+        }
+        // Don't add if already 4 selected
+        return prev;
+      });
+    } else {
+      // For single side selection, replace the array with one item
+      setSelectedSides([sideName]);
+    }
+  };
+
   // Handle add to order
   const handleAddToOrder = () => {
     onAddToOrder({
@@ -48,6 +72,7 @@ function OrderModal({ item, isOpen, onClose, onAddToOrder }) {
       quantity,
       selectedSauce,
       selectedMeats,
+      selectedSides,
       specialInstructions,
     });
     onClose();
@@ -55,6 +80,7 @@ function OrderModal({ item, isOpen, onClose, onAddToOrder }) {
     setQuantity(1);
     setSelectedSauce("");
     setSelectedMeats([]);
+    setSelectedSides([]);
     setSpecialInstructions("");
   };
 
@@ -149,6 +175,33 @@ function OrderModal({ item, isOpen, onClose, onAddToOrder }) {
                       type={item.name === "Any 2 Meat Combo" ? "checkbox" : "radio"}
                     />
                     <span className={styles.meatLabel}>{meat.name}</span>
+                  </label>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {/* Side options */}
+          {item.sideOptions && (
+            <div className={styles.sideOptionsSection}>
+              <h3 className={styles.sideOptionsTitle}>
+                {item.name === "Veggie Plate - Any 4 Vegetables" ? "Choose 4 Vegetables:" : "Side Choice:"}
+              </h3>
+              {item.name === "Veggie Plate - Any 4 Vegetables" && (
+                <p className={styles.selectionHelper}>Select up to 4 vegetables ({selectedSides.length}/4 selected)</p>
+              )}
+              <div className={styles.sideOptionsList}>
+                {item.sideOptions.map((side, index) => (
+                  <label key={index} className={styles.sideOption}>
+                    <input
+                      name="side"
+                      value={side.name}
+                      className={styles.sideRadio}
+                      checked={selectedSides.includes(side.name)}
+                      onChange={() => handleSideSelection(side.name)}
+                      type={item.name === "Veggie Plate - Any 4 Vegetables" ? "checkbox" : "radio"}
+                    />
+                    <span className={styles.sideLabel}>{side.name}</span>
                   </label>
                 ))}
               </div>
