@@ -1,6 +1,6 @@
 import styles from "./CheckoutBanner.module.css";
 
-function CheckoutBanner() {
+function CheckoutBanner({ cartCount = 0 }) {
   return (
     <>
       <section className={styles.checkoutBanner}>
@@ -10,6 +10,8 @@ function CheckoutBanner() {
           {/* Shopping cart button */}
           <button className={styles.cartIcon}>
             <i className="fa-solid fa-cart-shopping"></i>
+            {/* Shopping cart item bubble count */}
+            {cartCount > 0 && <span className={styles.cartBubble}>{cartCount}</span>}
           </button>
         </div>
       </section>

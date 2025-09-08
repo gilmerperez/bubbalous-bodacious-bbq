@@ -58,9 +58,16 @@ function OrderOnline() {
     setSelectedItem(null);
   };
 
+  // * Cart state
+  const [cartItems, setCartItems] = useState([]);
+
+  // * Calculate total cart count
+  const cartCount = cartItems.length;
+
   // * When an item is added to the order
   const handleAddToOrder = (orderItem) => {
-    // TODO: Implement add to order functionality
+    // Update cart items
+    setCartItems((prevItems) => [...prevItems, orderItem]);
     console.log("Adding to order:", orderItem);
   };
 
@@ -70,7 +77,7 @@ function OrderOnline() {
       <OrderOnlineBanner />
 
       {/* Checkout banner */}
-      <CheckoutBanner />
+      <CheckoutBanner cartCount={cartCount} />
 
       <main>
         <div className={styles.orderOnlineContainer}>
