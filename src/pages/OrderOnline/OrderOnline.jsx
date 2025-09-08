@@ -2,7 +2,7 @@ import menuData from "../../data/menu.json";
 import { useEffect, useState } from "react";
 import styles from "./OrderOnline.module.css";
 import OrderModal from "../../components/OrderModal/OrderModal";
-import OrderOnlineBanner from "../../components/OrderOnlineBanner/OrderOnlineBanner";
+import OrderOnlineBanner from "../../components/Banners/OrderOnlineBanner/OrderOnlineBanner";
 
 function OrderOnline() {
   // * Set page title

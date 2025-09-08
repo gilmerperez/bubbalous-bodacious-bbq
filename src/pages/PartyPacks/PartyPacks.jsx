@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import styles from "./PartyPacks.module.css";
 import partyPacksData from "../../data/party-packs.json";
-import PartyPacksBanner from "../../components/PartyPacksBanner/PartyPacksBanner";
+import PartyPacksBanner from "../../components/Banners/PartyPacksBanner/PartyPacksBanner";
 
 function PartyPacks() {
   // * Set page title

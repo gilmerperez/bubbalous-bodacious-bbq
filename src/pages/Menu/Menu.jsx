@@ -1,7 +1,7 @@
 import styles from "./Menu.module.css";
 import menuData from "../../data/menu.json";
 import { useEffect, useState } from "react";
-import MenuBanner from "../../components/MenuBanner/MenuBanner";
+import MenuBanner from "../../components/Banners/MenuBanner/MenuBanner";
 
 function Menu() {
   // * Set page title

@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import styles from "./Home.module.css";
-import HomeBanner from "../../components/HomeBanner/HomeBanner";
+import HomeBanner from "../../components/Banners/HomeBanner/HomeBanner";
 
 function Home() {
   // * Set page title
