@@ -1,10 +1,10 @@
 import { useEffect } from "react";
 import styles from "./PartyPacks.module.css";
-import PartyPacksBanner from "../../components/PartyPacksBanner/PartyPacksBanner";
 import partyPacksData from "../../data/party-packs.json";
+import PartyPacksBanner from "../../components/PartyPacksBanner/PartyPacksBanner";
 
 function PartyPacks() {
-  // Set page title
+  // * Set page title
   useEffect(() => {
     document.title = "Bubbalous Bodacious BBQ | Party Packs";
   }, []);
@@ -32,6 +32,7 @@ function PartyPacks() {
           <section className={styles.partyPacksSection}>
             <div className={styles.partyPacksGrid}>
               {partyPacksData.map((pack) => (
+                // Party pack card
                 <div key={pack.id} className={styles.partyPackCard}>
                   <div className={styles.cardContent}>
                     {/* Name */}

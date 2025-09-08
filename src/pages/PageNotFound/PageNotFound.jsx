@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import styles from "./PageNotFound.module.css";
 
 function PageNotFound() {
-  // Set page title
+  // * Set page title
   useEffect(() => {
     document.title = "Bubbalous Bodacious BBQ | Page Not Found";
   }, []);
@@ -11,7 +11,7 @@ function PageNotFound() {
   return (
     <>
       <main>
-        <section className={styles.pageNotFoundContainer}>
+        <div className={styles.pageNotFoundContainer}>
           {/* Heading */}
           <h1 className={styles.heading}>PAGE NOT FOUND</h1>
 
@@ -22,7 +22,7 @@ function PageNotFound() {
           <Link to="/" className={styles.homeLink}>
             BACK TO HOME PAGE
           </Link>
-        </section>
+        </div>
       </main>
     </>
   );

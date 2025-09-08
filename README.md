@@ -52,13 +52,13 @@ The following images show the web application's appearance and functionality:
 
 ![Menu Page](./src/assets/screenshots/menuPage.jpg)
 
-![Dark Mode Theme](./src/assets/screenshots/darkThemeMode.jpg)
-
 ![Party Packs Page](./src/assets/screenshots/partyPacksPage.jpg)
 
 ![Order Online Page](./src/assets/screenshots/orderOnlinePage.jpg)
 
 ![Footer](./src/assets/screenshots/footer.jpg)
+
+![Dark Mode Theme](./src/assets/screenshots/darkThemeMode.jpg)
 
 ## Instructions
 

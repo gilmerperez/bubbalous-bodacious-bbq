@@ -1,15 +1,15 @@
-import { useEffect, useState } from "react";
 import styles from "./Menu.module.css";
-import MenuBanner from "../../components/MenuBanner/MenuBanner";
 import menuData from "../../data/menu.json";
+import { useEffect, useState } from "react";
+import MenuBanner from "../../components/MenuBanner/MenuBanner";
 
 function Menu() {
-  // Set page title
+  // * Set page title
   useEffect(() => {
     document.title = "Bubbalous Bodacious BBQ | Menu";
   }, []);
 
-  // First category is always open
+  // * First category is always open
   const [expandedCategories, setExpandedCategories] = useState({
     appetizers: true,
     kidsMeals: false,
@@ -24,6 +24,7 @@ function Menu() {
     bbqSauce: false,
   });
 
+  // * Toggle category open/closed
   const toggleCategory = (categoryKey) => {
     setExpandedCategories((prev) => ({
       ...prev,
@@ -31,6 +32,7 @@ function Menu() {
     }));
   };
 
+  // * Format category name
   const formatCategoryName = (key) => {
     return key
       .replace(/([A-Z])/g, " $1") // Add space before capital letters
@@ -74,7 +76,6 @@ function Menu() {
                   {/* Expand / Collapse icon */}
                   <span className={styles.toggleIcon}>{expandedCategories[categoryKey] ? "−" : "+"}</span>
                 </div>
-
                 {/* Category content */}
                 {expandedCategories[categoryKey] && (
                   <div className={styles.categoryContent}>

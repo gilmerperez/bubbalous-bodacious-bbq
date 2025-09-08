@@ -22,10 +22,6 @@
   text-shadow: 5px 5px 3px rgba(0, 0, 0, 0.3);
 }
 
-.policy {
-  text-align: left;
-}
-
 /* Introduction */
 .introduction {
   font-size: 1.25rem;
@@ -34,6 +30,12 @@
   transition: 0.3s ease-in;
 }
 
+/* Privacy policy */
+.policy {
+  text-align: left;
+}
+
+/* Policy heading */
 .policyHeading {
   font-weight: 500;
   font-size: 1.5rem;
@@ -48,6 +50,7 @@
   text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
 }
 
+/* Policy text */
 .policyText {
   font-size: 1.25rem;
 }

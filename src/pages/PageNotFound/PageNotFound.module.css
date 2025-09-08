@@ -27,6 +27,7 @@
   font-size: 1.5rem;
   text-align: center;
   margin-bottom: 0.75rem;
+  transition: 0.3s ease-in;
 }
 
 /* Home link */
@@ -40,6 +41,7 @@
   font-family: "Oswald", sans-serif;
   background-color: var(--header-bg-color);
   box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
+  text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
 }
 
 .homeLink:hover {
@@ -47,6 +49,7 @@
   color: hsl(0, 0%, 100%);
   background-color: var(--primary);
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+  text-shadow: 5px 5px 3px rgba(0, 0, 0, 0.3);
 }
 
 /* Tablet responsiveness */

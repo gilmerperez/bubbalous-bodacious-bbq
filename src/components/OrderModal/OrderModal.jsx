@@ -28,8 +28,8 @@ function OrderModal({ item, isOpen, onClose, onAddToOrder }) {
   const handleMeatSelection = (meatName) => {
     const isTwoMeatCombo = item.name === "Any 2 Meat Combo";
 
+    // If item is a 2 meat combo
     if (isTwoMeatCombo) {
-      // For 2 meat combo, allow max of 2 selections
       setSelectedMeats((prev) => {
         if (prev.includes(meatName)) {
           // Remove if already selected
@@ -122,7 +122,7 @@ function OrderModal({ item, isOpen, onClose, onAddToOrder }) {
 
   return (
     <>
-      <div className={styles.modalOverlay} onClick={onClose}>
+      <section className={styles.modalOverlay} onClick={onClose}>
         {/* Modal */}
         <div className={styles.modal} onClick={(e) => e.stopPropagation()}>
           {/* Modal header */}
@@ -135,10 +135,10 @@ function OrderModal({ item, isOpen, onClose, onAddToOrder }) {
             </button>
           </div>
 
-          {/* Separator line */}
+          {/* Separator */}
           <hr className={styles.separator} />
 
-          {/* Item Description */}
+          {/* Item description */}
           <div className={styles.descriptionSection}>
             <p className={styles.itemDescription}>{item.description}</p>
           </div>
@@ -362,7 +362,7 @@ function OrderModal({ item, isOpen, onClose, onAddToOrder }) {
             </button>
           </div>
         </div>
-      </div>
+      </section>
     </>
   );
 }

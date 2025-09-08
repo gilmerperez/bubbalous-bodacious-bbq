@@ -106,9 +106,9 @@ header {
 
 /* Main - Base layout for page content */
 main {
-  width: 100%; /* Ensures content stretches to full container width */
-  padding: 2rem; /* Adds breathing room around main content */
-  transition: 0.3s ease-in; /* Smooth transition for main */
+  width: 100%;
+  padding: 2rem;
+  transition: 0.3s ease-in;
   background-color: var(--bg-color);
 }
 

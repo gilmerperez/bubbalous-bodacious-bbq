@@ -3,7 +3,7 @@ import styles from "./Home.module.css";
 import HomeBanner from "../../components/HomeBanner/HomeBanner";
 
 function Home() {
-  // Set page title
+  // * Set page title
   useEffect(() => {
     document.title = "Bubbalous Bodacious BBQ | Home";
   }, []);
@@ -17,9 +17,10 @@ function Home() {
         <div className={styles.homeContainer}>
           {/* Information section */}
           <section className={styles.infoSection}>
-            {/* Text */}
             <div className={styles.textContent}>
+              {/* Title */}
               <h2 className={styles.contentTitle}>SERVING ORLANDO'S FAVORITE BBQ SINCE 1986</h2>
+              {/* Text */}
               <div className={styles.contentText}>
                 <p>For nearly 40 years, Bubbalou's Bodacious BBQ has been serving up Orlando's Favorite BBQ.</p>
                 <p>
@@ -46,7 +47,7 @@ function Home() {
               {/* Telephone */}
               <div className={styles.infoItem}>
                 <i className="fas fa-phone"></i>
-                <h3>TELEPHONE</h3>
+                <h3>PHONE</h3>
                 <a href="tel:(407) 295-1212">(407) 295 - 1212</a>
               </div>
               {/* Location */}

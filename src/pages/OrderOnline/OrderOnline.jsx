@@ -1,16 +1,16 @@
-import { useEffect, useState } from "react";
 import menuData from "../../data/menu.json";
+import { useEffect, useState } from "react";
 import styles from "./OrderOnline.module.css";
 import OrderModal from "../../components/OrderModal/OrderModal";
 import OrderOnlineBanner from "../../components/OrderOnlineBanner/OrderOnlineBanner";
 
 function OrderOnline() {
-  // Set page title
+  // * Set page title
   useEffect(() => {
     document.title = "Bubbalous Bodacious BBQ | Order Online";
   }, []);
 
-  // All categories are collapsed by default
+  // * All categories are collapsed by default
   const [expandedCategories, setExpandedCategories] = useState({
     appetizers: false,
     kidsMeals: false,
@@ -25,6 +25,7 @@ function OrderOnline() {
     bbqSauce: false,
   });
 
+  // * Toggle category open/closed
   const toggleCategory = (categoryKey) => {
     setExpandedCategories((prev) => ({
       ...prev,
@@ -32,6 +33,7 @@ function OrderOnline() {
     }));
   };
 
+  // * Format category name
   const formatCategoryName = (key) => {
     return key
       .replace(/([A-Z])/g, " $1") // Add space before capital letters
@@ -39,20 +41,23 @@ function OrderOnline() {
       .replace(/\b\w/g, (l) => l.toUpperCase()); // Capitalize first letter of each word
   };
 
-  // Modal state
+  // * Modal state
   const [selectedItem, setSelectedItem] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
+  // * When an item is clicked
   const handleItemClick = (item) => {
     setSelectedItem(item);
     setIsModalOpen(true);
   };
 
+  // * When the modal is closed
   const handleCloseModal = () => {
     setIsModalOpen(false);
     setSelectedItem(null);
   };
 
+  // * When an item is added to the order
   const handleAddToOrder = (orderItem) => {
     // TODO: Implement add to order functionality
     console.log("Adding to order:", orderItem);
@@ -90,7 +95,6 @@ function OrderOnline() {
                   {/* Expand / Collapse icon */}
                   <span className={styles.toggleIcon}>{expandedCategories[categoryKey] ? "−" : "+"}</span>
                 </div>
-
                 {/* Category content */}
                 {expandedCategories[categoryKey] && (
                   <div className={styles.categoryContent}>
