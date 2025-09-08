@@ -155,28 +155,16 @@
 .itemName {
   font-weight: 500;
   font-size: 1.5rem;
-  transition: 0.3s ease;
-  border-radius: 0.25rem;
-  padding: 0.25rem 0.75rem;
-  color: hsl(0, 0%, 100%);
-  background-color: var(--primary);
+  transition: 0.3s ease-in;
   font-family: "Oswald", sans-serif;
-  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
-  text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.3);
 }
 
 /* Item price */
 .itemPrice {
   font-weight: 500;
   font-size: 1.5rem;
-  transition: 0.3s ease;
-  border-radius: 0.25rem;
-  padding: 0.25rem 0.5rem;
-  color: var(--text-primary);
-  border: 2px solid var(--primary);
+  transition: 0.3s ease-in;
   font-family: "Oswald", sans-serif;
-  background-color: var(--header-bg-color);
-  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
 }
 
 /* Tablet responsiveness */
