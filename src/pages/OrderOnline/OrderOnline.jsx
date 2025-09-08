@@ -61,8 +61,8 @@ function OrderOnline() {
   // * Cart state
   const [cartItems, setCartItems] = useState([]);
 
-  // * Calculate total cart count
-  const cartCount = cartItems.length;
+  // * Calculate total cart count (sum of all quantities)
+  const cartCount = cartItems.reduce((total, item) => total + (item.quantity || 1), 0);
 
   // * When an item is added to the order
   const handleAddToOrder = (orderItem) => {
