@@ -164,6 +164,7 @@
   padding: 0.25rem;
   position: relative;
   align-items: center;
+  pointer-events: auto;
   transition: all 0.3s ease-in;
 }
 
@@ -172,10 +173,13 @@
 }
 
 .sauceRadio {
+  z-index: 10;
   width: 1rem;
   height: 1rem;
   flex-shrink: 0;
   cursor: pointer;
+  position: relative;
+  pointer-events: auto;
   accent-color: var(--primary);
 }
 
@@ -227,6 +231,7 @@
   padding: 0.25rem;
   position: relative;
   align-items: center;
+  pointer-events: auto;
   transition: all 0.3s ease-in;
 }
 
@@ -235,10 +240,13 @@
 }
 
 .meatRadio {
+  z-index: 10;
   width: 1rem;
   height: 1rem;
   flex-shrink: 0;
   cursor: pointer;
+  position: relative;
+  pointer-events: auto;
   accent-color: var(--primary);
 }
 
@@ -283,6 +291,7 @@
   padding: 0.25rem;
   position: relative;
   align-items: center;
+  pointer-events: auto;
   transition: all 0.3s ease-in;
 }
 
@@ -291,10 +300,13 @@
 }
 
 .sideRadio {
+  z-index: 10;
   width: 1rem;
   height: 1rem;
   flex-shrink: 0;
   cursor: pointer;
+  position: relative;
+  pointer-events: auto;
   accent-color: var(--primary);
 }
 
@@ -339,6 +351,7 @@
   padding: 0.25rem;
   position: relative;
   align-items: center;
+  pointer-events: auto;
   transition: all 0.3s ease-in;
 }
 
@@ -347,10 +360,13 @@
 }
 
 .drinkRadio {
+  z-index: 10;
   width: 1rem;
   height: 1rem;
   flex-shrink: 0;
   cursor: pointer;
+  position: relative;
+  pointer-events: auto;
   accent-color: var(--primary);
 }
 
@@ -395,6 +411,7 @@
   padding: 0.25rem;
   position: relative;
   align-items: center;
+  pointer-events: auto;
   transition: all 0.3s ease-in;
 }
 
@@ -403,10 +420,13 @@
 }
 
 .proteinRadio {
+  z-index: 10;
   width: 1rem;
   height: 1rem;
   flex-shrink: 0;
   cursor: pointer;
+  position: relative;
+  pointer-events: auto;
   accent-color: var(--primary);
 }
 
@@ -451,6 +471,7 @@
   padding: 0.25rem;
   position: relative;
   align-items: center;
+  pointer-events: auto;
   transition: all 0.3s ease-in;
 }
 
@@ -459,10 +480,13 @@
 }
 
 .dressingRadio {
+  z-index: 10;
   width: 1rem;
   height: 1rem;
   flex-shrink: 0;
   cursor: pointer;
+  position: relative;
+  pointer-events: auto;
   accent-color: var(--primary);
 }
 
@@ -507,6 +531,7 @@
   padding: 0.25rem;
   position: relative;
   align-items: center;
+  pointer-events: auto;
   transition: all 0.3s ease-in;
 }
 
@@ -515,10 +540,13 @@
 }
 
 .wingSauceRadio {
+  z-index: 10;
   width: 1rem;
   height: 1rem;
   flex-shrink: 0;
   cursor: pointer;
+  position: relative;
+  pointer-events: auto;
   accent-color: var(--primary);
 }
 
