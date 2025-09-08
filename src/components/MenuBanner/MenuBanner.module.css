@@ -1,9 +1,8 @@
 .partyPacksBannerContainer {
   width: 100vw;
   display: flex;
-  padding: 2rem;
+  padding: 3.5rem;
   overflow: hidden;
-  min-height: 50vh;
   position: relative;
   align-items: center;
   justify-content: center;
@@ -85,7 +84,7 @@
 .buttonContainer {
   display: flex;
   align-items: center;
-  margin-bottom: 1.25rem;
+  margin-bottom: 1.75rem;
   justify-content: center;
   transition: 0.3s ease-in;
 }
@@ -114,6 +113,23 @@
   background-color: var(--primary-dark);
   box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.3);
   text-shadow: 5px 5px 3px rgba(0, 0, 0, 0.3);
+}
+
+.ctaButton i {
+  width: 0;
+  opacity: 0;
+  overflow: hidden;
+  box-shadow: none;
+  text-shadow: none;
+  font-size: 1.25rem;
+  transition: 0.5s ease;
+  transform: translateX(-20px);
+}
+
+.ctaButton:hover i {
+  opacity: 1;
+  width: auto;
+  transform: translateX(0);
 }
 
 /* Carousel indicators */

@@ -1,9 +1,8 @@
 .homeBannerContainer {
   width: 100vw;
   display: flex;
-  padding: 2rem;
+  padding: 3.5rem;
   overflow: hidden;
-  min-height: 50vh;
   position: relative;
   align-items: center;
   justify-content: center;
@@ -87,7 +86,7 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  margin-bottom: 1.25rem;
+  margin-bottom: 1.75rem;
   justify-content: center;
   transition: 0.3s ease-in;
 }

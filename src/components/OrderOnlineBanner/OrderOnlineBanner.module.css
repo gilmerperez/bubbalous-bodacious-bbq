@@ -1,9 +1,8 @@
 .homeBannerContainer {
   width: 100vw;
   display: flex;
-  padding: 2rem;
+  padding: 3.5rem;
   overflow: hidden;
-  min-height: 50vh;
   position: relative;
   align-items: center;
   justify-content: center;
@@ -80,7 +79,6 @@
 .buttonContainer {
   display: flex;
   align-items: center;
-  margin-bottom: 1.25rem;
   justify-content: center;
   transition: 0.3s ease-in;
 }
@@ -104,6 +102,7 @@
 
 .ctaButton:hover {
   gap: 1rem;
+  transform: translateY(-2px);
   border: 2px solid var(--primary-dark);
   background-color: var(--primary-dark);
   box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.3);

@@ -65,6 +65,7 @@ function MenuBanner() {
             {/* Button */}
             <div className={styles.buttonContainer}>
               <Link to="/order-online" className={styles.ctaButton}>
+                <i className="fa-solid fa-laptop"></i>
                 ORDER ONLINE
               </Link>
             </div>
