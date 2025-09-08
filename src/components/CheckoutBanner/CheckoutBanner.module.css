@@ -1,0 +1,69 @@
+.checkoutBanner {
+  width: 100vw;
+  padding: 1rem 2rem;
+  background-color: var(--primary);
+}
+
+.bannerContent {
+  gap: 1rem;
+  display: flex;
+  margin: 0 auto;
+  max-width: 1200px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.locationText {
+  font-size: 1.25rem;
+  transition: 0.3s ease-in;
+  color: hsl(0, 0%, 100%);
+  font-family: "Oswald", sans-serif;
+  text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
+}
+
+.cartIcon {
+  font-size: 1.25rem;
+  transition: 0.3s ease-in;
+  color: hsl(0, 0%, 100%);
+  background-color: transparent;
+  text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
+}
+
+.cartIcon:hover {
+  transform: scale(1.15);
+  text-shadow: 5px 5px 3px rgba(0, 0, 0, 0.3);
+}
+
+/* Tablet responsiveness */
+@media (max-width: 768px) {
+  .checkoutBanner {
+    padding: 0.75rem 1.75rem;
+  }
+
+  .locationText {
+    font-size: 1.15rem;
+  }
+
+  .cartIcon {
+    font-size: 1.15rem;
+  }
+}
+
+/* Mobile responsiveness */
+@media (max-width: 480px) {
+  .checkoutBanner {
+    padding: 0.75rem 1.5rem;
+  }
+
+  .bannerContent {
+    text-align: center;
+  }
+
+  .locationText {
+    font-size: 0.95rem;
+  }
+
+  .cartIcon {
+    font-size: 0.95rem;
+  }
+}

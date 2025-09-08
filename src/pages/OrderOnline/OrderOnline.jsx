@@ -2,6 +2,7 @@ import menuData from "../../data/menu.json";
 import { useEffect, useState } from "react";
 import styles from "./OrderOnline.module.css";
 import OrderModal from "../../components/OrderModal/OrderModal";
+import CheckoutBanner from "../../components/CheckoutBanner/CheckoutBanner";
 import OrderOnlineBanner from "../../components/Banners/OrderOnlineBanner/OrderOnlineBanner";
 
 function OrderOnline() {
@@ -67,6 +68,9 @@ function OrderOnline() {
     <>
       {/* Order online banner */}
       <OrderOnlineBanner />
+
+      {/* Checkout banner */}
+      <CheckoutBanner />
 
       <main>
         <div className={styles.orderOnlineContainer}>
