@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import styles from "./CheckoutOverlay.module.css";
 
-function CheckoutOverlay({ isOpen, onClose, cartItems, onRemoveItem, onUpdateCart }) {
+function CheckoutOverlay({ isOpen, onClose, cartItems, onRemoveItem }) {
   // * Handle remove item
   const handleRemoveItem = (itemIndex) => {
     onRemoveItem(itemIndex);
@@ -59,7 +59,7 @@ function CheckoutOverlay({ isOpen, onClose, cartItems, onRemoveItem, onUpdateCar
   // * Handle checkout
   const handleCheckout = () => {
     const orderDetails = {
-      items: cartItems.map((item, index) => ({
+      items: cartItems.map((item) => ({
         quantity: item.quantity || 1,
         name: item.name,
         price: item.price,
