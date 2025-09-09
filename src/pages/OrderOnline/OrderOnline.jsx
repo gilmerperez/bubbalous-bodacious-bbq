@@ -61,6 +61,10 @@ function OrderOnline() {
   // * Cart state
   const [cartItems, setCartItems] = useState([]);
 
+  // * Cart alert state
+  const [alertMessage, setAlertMessage] = useState("");
+  const [showAlert, setShowAlert] = useState(false);
+
   // * Calculate total cart count (sum of all quantities)
   const cartCount = cartItems.reduce((total, item) => total + (item.quantity || 1), 0);
 
@@ -68,6 +72,15 @@ function OrderOnline() {
   const handleAddToOrder = (orderItem) => {
     // Update cart items
     setCartItems((prevItems) => [...prevItems, orderItem]);
+    // Show cart alert
+    const quantity = orderItem.quantity || 1;
+    const itemName = orderItem.name || "Item";
+    setAlertMessage(`${quantity} ${itemName} added to cart!`);
+    setShowAlert(true);
+    // Hide alert after 3 seconds
+    setTimeout(() => {
+      setShowAlert(false);
+    }, 3000);
     console.log("Adding to order:", orderItem);
   };
 
@@ -77,7 +90,7 @@ function OrderOnline() {
       <OrderOnlineBanner />
 
       {/* Checkout banner */}
-      <CheckoutBanner cartCount={cartCount} />
+      <CheckoutBanner cartCount={cartCount} alertMessage={alertMessage} showAlert={showAlert} />
 
       <main>
         <div className={styles.orderOnlineContainer}>

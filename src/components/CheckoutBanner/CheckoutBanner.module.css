@@ -21,6 +21,13 @@
   text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
 }
 
+.cartContainer {
+  display: flex;
+  position: relative;
+  align-items: center;
+  flex-direction: column;
+}
+
 .cartIcon {
   position: relative;
   font-size: 1.25rem;
@@ -54,6 +61,64 @@
   box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
 }
 
+.dropdownAlert {
+  right: 0;
+  top: 100%;
+  z-index: 1000;
+  position: absolute;
+  margin-top: 0.5rem;
+  animation: slideDown 0.3s ease-out;
+}
+
+.alertContent {
+  font-size: 1rem;
+  font-weight: 500;
+  position: relative;
+  white-space: nowrap;
+  border-radius: 0.25rem;
+  padding: 0.5rem 0.75rem;
+  color: hsl(0, 0%, 0%);
+  text-transform: uppercase;
+  font-family: "Oswald", sans-serif;
+  background-color: hsl(0, 0%, 100%);
+  border: 2px solid var(--primary-dark);
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
+}
+
+.alertArrow {
+  width: 0;
+  height: 0;
+  top: -6px;
+  right: 2px;
+  position: absolute;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 8px solid var(--primary-dark);
+}
+
+.alertArrow::after {
+  top: 2px;
+  width: 0;
+  height: 0;
+  left: -6px;
+  content: "";
+  position: absolute;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-bottom: 6px solid hsl(0, 0%, 100%);
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 /* Tablet responsiveness */
 @media (max-width: 768px) {
   .checkoutBanner {
@@ -74,6 +139,10 @@
     right: -8px;
     height: 18px;
     font-size: 0.75rem;
+  }
+
+  .alertContent {
+    font-size: 0.95rem;
   }
 }
 
@@ -98,5 +167,9 @@
   .cartBubble {
     width: 15px;
     height: 15px;
+  }
+
+  .alertContent {
+    font-size: 0.85rem;
   }
 }
