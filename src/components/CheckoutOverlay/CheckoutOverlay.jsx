@@ -2,9 +2,44 @@ import { useState, useEffect } from "react";
 import styles from "./CheckoutOverlay.module.css";
 
 function CheckoutOverlay({ isOpen, onClose, cartItems, onRemoveItem, onUpdateCart }) {
+  // * Handle remove item
+  const handleRemoveItem = (itemIndex) => {
+    onRemoveItem(itemIndex);
+  };
+
   // * Tip state
   const [selectedTip, setSelectedTip] = useState(0);
-  const [customTip, setCustomTip] = useState("");
+
+  // * Handle tip selection
+  const handleTipSelection = (tipPercentage) => {
+    setSelectedTip(tipPercentage);
+  };
+
+  // * Calculate subtotal
+  const calculateSubtotal = () => {
+    return cartItems.reduce((total, item) => {
+      return total + item.price * (item.quantity || 1);
+    }, 0);
+  };
+
+  // * Calculate tax
+  const calculateTax = () => {
+    return calculateSubtotal() * 0.06;
+  };
+
+  // * Calculate tip
+  const calculateTipAmount = () => {
+    const subtotal = calculateSubtotal();
+    if (selectedTip > 0) {
+      return subtotal * (selectedTip / 100);
+    }
+    return 0;
+  };
+
+  // * Calculate total
+  const calculateTotal = () => {
+    return calculateSubtotal() + calculateTax() + calculateTipAmount();
+  };
 
   // * Customer information state
   const [customerName, setCustomerName] = useState("");
@@ -19,54 +54,6 @@ function CheckoutOverlay({ isOpen, onClose, cartItems, onRemoveItem, onUpdateCar
     const timePerItem = 5;
     const totalItems = cartItems.reduce((total, item) => total + (item.quantity || 1), 0);
     return baseTime + totalItems * timePerItem;
-  };
-
-  // * Calculate subtotal
-  const calculateSubtotal = () => {
-    return cartItems.reduce((total, item) => {
-      return total + item.price * (item.quantity || 1);
-    }, 0);
-  };
-
-  // * Calculate tip amount
-  const calculateTipAmount = () => {
-    const subtotal = calculateSubtotal();
-    if (selectedTip > 0) {
-      return subtotal * (selectedTip / 100);
-    }
-    if (customTip && !isNaN(parseFloat(customTip))) {
-      return parseFloat(customTip);
-    }
-    return 0;
-  };
-
-  // * Calculate tax (6% in Florida)
-  const calculateTax = () => {
-    return calculateSubtotal() * 0.06;
-  };
-
-  // * Calculate total
-  const calculateTotal = () => {
-    return calculateSubtotal() + calculateTax() + calculateTipAmount();
-  };
-
-  // * Handle tip selection
-  const handleTipSelection = (tipPercentage) => {
-    setSelectedTip(tipPercentage);
-    setCustomTip("");
-  };
-
-  // * Handle custom tip input
-  const handleCustomTipChange = (value) => {
-    setCustomTip(value);
-    if (value && !isNaN(parseFloat(value))) {
-      setSelectedTip(0);
-    }
-  };
-
-  // * Handle remove item
-  const handleRemoveItem = (itemIndex) => {
-    onRemoveItem(itemIndex);
   };
 
   // * Handle checkout
@@ -87,7 +74,6 @@ function CheckoutOverlay({ isOpen, onClose, cartItems, onRemoveItem, onUpdateCar
       })),
       subtotal: calculateSubtotal().toFixed(2),
       tipAmount: calculateTipAmount().toFixed(2),
-      tipPercentage: selectedTip > 0 ? selectedTip : customTip ? "Custom" : "None",
       taxRate: "6%",
       taxAmount: calculateTax().toFixed(2),
       total: calculateTotal().toFixed(2),
@@ -187,7 +173,6 @@ function CheckoutOverlay({ isOpen, onClose, cartItems, onRemoveItem, onUpdateCar
                       {/* Item price */}
                       <span className={styles.itemPrice}>${(item.price * (item.quantity || 1)).toFixed(2)}</span>
                     </div>
-
                     {/* Special options display */}
                     <div className={styles.specialOptions}>
                       {item.selectedSauce && <span className={styles.option}>Sauce: {item.selectedSauce}</span>}
@@ -210,7 +195,6 @@ function CheckoutOverlay({ isOpen, onClose, cartItems, onRemoveItem, onUpdateCar
                       )}
                     </div>
                   </div>
-
                   {/* Remove item button */}
                   <button className={styles.removeButton} onClick={() => handleRemoveItem(index)}>
                     REMOVE
@@ -243,18 +227,6 @@ function CheckoutOverlay({ isOpen, onClose, cartItems, onRemoveItem, onUpdateCar
                 20%
               </button>
             </div>
-            <div className={styles.customTipContainer}>
-              <span className={styles.customTipLabel}>or $</span>
-              <input
-                min="0"
-                step="0.01"
-                type="number"
-                value={customTip}
-                placeholder="0.00"
-                className={styles.customTipInput}
-                onChange={(e) => handleCustomTipChange(e.target.value)}
-              />
-            </div>
           </div>
 
           {/* Cost section */}
@@ -271,7 +243,6 @@ function CheckoutOverlay({ isOpen, onClose, cartItems, onRemoveItem, onUpdateCar
               <span>Tip:</span>
               <span>${calculateTipAmount().toFixed(2)}</span>
             </div>
-            <div className={styles.separator}></div>
             <div className={`${styles.costLine} ${styles.totalLine}`}>
               <span>Total:</span>
               <span>${calculateTotal().toFixed(2)}</span>
@@ -282,34 +253,34 @@ function CheckoutOverlay({ isOpen, onClose, cartItems, onRemoveItem, onUpdateCar
           <div className={styles.customerSection}>
             <h3 className={styles.sectionTitle}>Customer Information</h3>
             <div className={styles.inputGroup}>
-              <label className={styles.inputLabel}>Order Name *</label>
+              <label className={styles.inputLabel}>Order Name*</label>
               <input
                 required
                 type="text"
                 value={customerName}
                 className={styles.input}
-                placeholder="Nickname / Initials"
+                placeholder="Enter here"
                 onChange={(e) => setCustomerName(e.target.value)}
               />
             </div>
             <div className={styles.inputGroup}>
-              <label className={styles.inputLabel}>Phone Number *</label>
+              <label className={styles.inputLabel}>Phone Number*</label>
               <input
                 required
                 type="tel"
                 value={phoneNumber}
                 className={styles.input}
-                placeholder="+1 (407) 123-4567"
+                placeholder="Enter here"
                 onChange={(e) => setPhoneNumber(e.target.value)}
               />
             </div>
             <div className={styles.inputGroup}>
-              <label className={styles.inputLabel}>Order Instructions</label>
+              <label className={styles.inputLabel}>Special Requests</label>
               <textarea
                 rows={3}
+                placeholder="Enter here"
                 value={orderInstructions}
                 className={styles.textarea}
-                placeholder="Special requests..."
                 onChange={(e) => setOrderInstructions(e.target.value)}
               />
             </div>
@@ -318,8 +289,7 @@ function CheckoutOverlay({ isOpen, onClose, cartItems, onRemoveItem, onUpdateCar
           {/* Wait time section */}
           <div className={styles.waitTimeSection}>
             <div className={styles.waitTimeBox}>
-              <span className={styles.waitTimeLabel}>Estimated Wait Time:</span>
-              <span className={styles.waitTimeValue}>{calculateWaitTime()} minutes</span>
+              <span className={styles.waitTimeLabel}>Your order will be ready in {calculateWaitTime()} minutes</span>
             </div>
           </div>
 
