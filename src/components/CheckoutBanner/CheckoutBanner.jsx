@@ -1,6 +1,6 @@
 import styles from "./CheckoutBanner.module.css";
 
-function CheckoutBanner({ cartCount = 0, alertMessage = "", showAlert = false }) {
+function CheckoutBanner({ cartCount = 0, alertMessage = "", showAlert = false, onCartClick }) {
   return (
     <>
       <section className={styles.checkoutBanner}>
@@ -9,7 +9,7 @@ function CheckoutBanner({ cartCount = 0, alertMessage = "", showAlert = false })
           <span className={styles.locationText}>BUBBALOU'S BODACIOUS BBQ - 5818 Conroy Road, Orlando FL 32835</span>
           {/* Shopping cart button */}
           <div className={styles.cartContainer}>
-            <button className={styles.cartIcon}>
+            <button className={styles.cartIcon} onClick={onCartClick}>
               <i className="fa-solid fa-cart-shopping"></i>
               {/* Shopping cart item bubble count */}
               {cartCount > 0 && <span className={styles.cartBubble}>{cartCount}</span>}

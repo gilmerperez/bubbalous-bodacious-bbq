@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import styles from "./OrderOnline.module.css";
 import OrderModal from "../../components/OrderModal/OrderModal";
 import CheckoutBanner from "../../components/CheckoutBanner/CheckoutBanner";
+import CheckoutOverlay from "../../components/CheckoutOverlay/CheckoutOverlay";
 import OrderOnlineBanner from "../../components/Banners/OrderOnlineBanner/OrderOnlineBanner";
 
 function OrderOnline() {
@@ -86,16 +87,6 @@ function OrderOnline() {
     }
   }, [cartItems]);
 
-  // * Clear cart function
-  // const clearCart = () => {
-  //   setCartItems([]);
-  //   try {
-  //     localStorage.removeItem("bubbalousCartItems");
-  //   } catch (error) {
-  //     console.error("Error clearing cart from localStorage:", error);
-  //   }
-  // };
-
   // * When an item is added to the order
   const handleAddToOrder = (orderItem) => {
     // Update cart items
@@ -112,13 +103,38 @@ function OrderOnline() {
     console.log("Adding to order:", orderItem);
   };
 
+  // * Checkout overlay state
+  const [isCheckoutOpen, setIsCheckoutOpen] = useState(false);
+
+  // * Handle opening checkout overlay
+  const handleOpenCheckout = () => {
+    if (cartItems.length > 0) {
+      setIsCheckoutOpen(true);
+    }
+  };
+
+  // * Handle closing checkout overlay
+  const handleCloseCheckout = () => {
+    setIsCheckoutOpen(false);
+  };
+
+  // * Handle removing item from cart
+  const handleRemoveItem = (itemIndex) => {
+    setCartItems((prevItems) => prevItems.filter((_, index) => index !== itemIndex));
+  };
+
   return (
     <>
       {/* Order online banner */}
       <OrderOnlineBanner />
 
       {/* Checkout banner */}
-      <CheckoutBanner cartCount={cartCount} alertMessage={alertMessage} showAlert={showAlert} />
+      <CheckoutBanner
+        cartCount={cartCount}
+        showAlert={showAlert}
+        alertMessage={alertMessage}
+        onCartClick={handleOpenCheckout}
+      />
 
       <main>
         <div className={styles.orderOnlineContainer}>
@@ -173,6 +189,15 @@ function OrderOnline() {
 
       {/* Order modal */}
       <OrderModal item={selectedItem} isOpen={isModalOpen} onClose={handleCloseModal} onAddToOrder={handleAddToOrder} />
+
+      {/* Checkout overlay */}
+      <CheckoutOverlay
+        cartItems={cartItems}
+        isOpen={isCheckoutOpen}
+        onUpdateCart={setCartItems}
+        onClose={handleCloseCheckout}
+        onRemoveItem={handleRemoveItem}
+      />
     </>
   );
 }
