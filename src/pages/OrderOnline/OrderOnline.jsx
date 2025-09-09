@@ -59,7 +59,16 @@ function OrderOnline() {
   };
 
   // * Cart state
-  const [cartItems, setCartItems] = useState([]);
+  const [cartItems, setCartItems] = useState(() => {
+    // Load cart items from localStorage on component mount
+    try {
+      const savedCartItems = localStorage.getItem("bubbalousCartItems");
+      return savedCartItems ? JSON.parse(savedCartItems) : [];
+    } catch (error) {
+      console.error("Error loading cart items from localStorage:", error);
+      return [];
+    }
+  });
 
   // * Cart alert state
   const [alertMessage, setAlertMessage] = useState("");
@@ -67,6 +76,25 @@ function OrderOnline() {
 
   // * Calculate total cart count (sum of all quantities)
   const cartCount = cartItems.reduce((total, item) => total + (item.quantity || 1), 0);
+
+  // * Save cart items to localStorage whenever cart changes
+  useEffect(() => {
+    try {
+      localStorage.setItem("bubbalousCartItems", JSON.stringify(cartItems));
+    } catch (error) {
+      console.error("Error saving cart items to localStorage:", error);
+    }
+  }, [cartItems]);
+
+  // * Clear cart function (for future checkout functionality)
+  const clearCart = () => {
+    setCartItems([]);
+    try {
+      localStorage.removeItem("bubbalousCartItems");
+    } catch (error) {
+      console.error("Error clearing cart from localStorage:", error);
+    }
+  };
 
   // * When an item is added to the order
   const handleAddToOrder = (orderItem) => {
