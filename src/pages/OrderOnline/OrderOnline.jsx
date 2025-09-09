@@ -86,15 +86,15 @@ function OrderOnline() {
     }
   }, [cartItems]);
 
-  // * Clear cart function (for future checkout functionality)
-  const clearCart = () => {
-    setCartItems([]);
-    try {
-      localStorage.removeItem("bubbalousCartItems");
-    } catch (error) {
-      console.error("Error clearing cart from localStorage:", error);
-    }
-  };
+  // * Clear cart function
+  // const clearCart = () => {
+  //   setCartItems([]);
+  //   try {
+  //     localStorage.removeItem("bubbalousCartItems");
+  //   } catch (error) {
+  //     console.error("Error clearing cart from localStorage:", error);
+  //   }
+  // };
 
   // * When an item is added to the order
   const handleAddToOrder = (orderItem) => {
