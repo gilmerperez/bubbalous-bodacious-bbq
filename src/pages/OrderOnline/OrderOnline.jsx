@@ -1,9 +1,9 @@
 import menuData from "../../data/menu.json";
 import { useEffect, useState } from "react";
 import styles from "./OrderOnline.module.css";
+import Checkout from "../../components/Checkout/Checkout";
 import OrderModal from "../../components/OrderModal/OrderModal";
 import CheckoutBanner from "../../components/CheckoutBanner/CheckoutBanner";
-import Checkout from "../../components/Checkout/Checkout";
 import OrderOnlineBanner from "../../components/Banners/OrderOnlineBanner/OrderOnlineBanner";
 
 function OrderOnline() {
@@ -200,8 +200,8 @@ function OrderOnline() {
         isOpen={isCheckoutOpen}
         onUpdateCart={setCartItems}
         onClose={handleCloseCheckout}
-        onRemoveItem={handleRemoveItem}
         onClearCart={handleClearCart}
+        onRemoveItem={handleRemoveItem}
       />
     </>
   );
