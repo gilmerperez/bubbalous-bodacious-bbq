@@ -123,6 +123,11 @@ function OrderOnline() {
     setCartItems((prevItems) => prevItems.filter((_, index) => index !== itemIndex));
   };
 
+  // * Handle clearing entire cart
+  const handleClearCart = () => {
+    setCartItems([]);
+  };
+
   return (
     <>
       {/* Order online banner */}
@@ -197,6 +202,7 @@ function OrderOnline() {
         onUpdateCart={setCartItems}
         onClose={handleCloseCheckout}
         onRemoveItem={handleRemoveItem}
+        onClearCart={handleClearCart}
       />
     </>
   );

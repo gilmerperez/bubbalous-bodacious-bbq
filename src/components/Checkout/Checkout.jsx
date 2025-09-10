@@ -1,7 +1,7 @@
-import { useState, useEffect } from "react";
 import styles from "./Checkout.module.css";
+import { useState, useEffect } from "react";
 
-function Checkout({ isOpen, onClose, cartItems, onRemoveItem }) {
+function Checkout({ onRemoveItem, cartItems, onClose, isOpen, onClearCart }) {
   // * Handle remove item
   const handleRemoveItem = (itemIndex) => {
     onRemoveItem(itemIndex);
@@ -70,7 +70,6 @@ function Checkout({ isOpen, onClose, cartItems, onRemoveItem }) {
     } else {
       document.body.style.overflow = "unset";
     }
-
     return () => {
       document.body.style.overflow = "unset";
     };
@@ -104,7 +103,6 @@ function Checkout({ isOpen, onClose, cartItems, onRemoveItem }) {
       orderInstructions: orderInstructions || "None",
       estimatedWaitTime: calculateWaitTime(),
     };
-
     console.log("=== CHECKOUT ORDER DETAILS ===");
     console.log("ITEMS:");
     orderDetails.items.forEach((item, index) => {
@@ -135,6 +133,8 @@ function Checkout({ isOpen, onClose, cartItems, onRemoveItem }) {
     console.log(`ORDER INSTRUCTIONS: ${orderDetails.orderInstructions}`);
     console.log(`ESTIMATED WAIT TIME: ${orderDetails.estimatedWaitTime} minutes`);
     console.log("================================");
+    // Clear the cart
+    onClearCart();
     // Close the overlay
     onClose();
   };
