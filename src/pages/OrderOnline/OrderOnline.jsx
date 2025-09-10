@@ -100,7 +100,6 @@ function OrderOnline() {
     setTimeout(() => {
       setShowAlert(false);
     }, 3000);
-    console.log("Adding to order:", orderItem);
   };
 
   // * Checkout overlay state

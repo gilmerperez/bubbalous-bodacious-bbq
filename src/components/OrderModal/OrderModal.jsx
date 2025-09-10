@@ -1,7 +1,7 @@
 import { useState } from "react";
 import styles from "./OrderModal.module.css";
 
-function OrderModal({ item, isOpen, onClose, onAddToOrder }) {
+function OrderModal({ isOpen, item, onAddToOrder, onClose }) {
   // * Meal options states
   const [quantity, setQuantity] = useState(1);
   const [selectedSauce, setSelectedSauce] = useState("");
