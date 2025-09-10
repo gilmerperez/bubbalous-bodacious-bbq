@@ -1,6 +1,6 @@
 import styles from "./CheckoutBanner.module.css";
 
-function CheckoutBanner({ cartCount = 0, alertMessage = "", showAlert = false, onCartClick }) {
+function CheckoutBanner({ onCartClick, cartCount = 0, showAlert = false, alertMessage = "" }) {
   return (
     <>
       <section className={styles.checkoutBanner}>
