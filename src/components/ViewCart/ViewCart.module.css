@@ -1,4 +1,4 @@
-.checkoutBanner {
+.viewCartContainer {
   width: 100vw;
   padding: 1rem 2rem;
   background-color: var(--primary);
@@ -125,7 +125,7 @@
 
 /* Tablet responsiveness */
 @media (max-width: 768px) {
-  .checkoutBanner {
+  .viewCartContainer {
     padding: 0.75rem 1.75rem;
   }
 
@@ -152,7 +152,7 @@
 
 /* Mobile responsiveness */
 @media (max-width: 480px) {
-  .checkoutBanner {
+  .viewCartContainer {
     padding: 0.75rem 1.5rem;
   }
 

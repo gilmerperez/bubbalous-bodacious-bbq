@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import styles from "./OrderOnline.module.css";
 import Checkout from "../../components/Checkout/Checkout";
 import OrderModal from "../../components/OrderModal/OrderModal";
-import CheckoutBanner from "../../components/CheckoutBanner/CheckoutBanner";
+import ViewCart from "../../components/ViewCart/ViewCart";
 import OrderOnlineBanner from "../../components/Banners/OrderOnlineBanner/OrderOnlineBanner";
 
 function OrderOnline() {
@@ -133,7 +133,7 @@ function OrderOnline() {
       <OrderOnlineBanner />
 
       {/* Checkout banner */}
-      <CheckoutBanner
+      <ViewCart
         cartCount={cartCount}
         showAlert={showAlert}
         alertMessage={alertMessage}

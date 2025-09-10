@@ -1,9 +1,9 @@
-import styles from "./CheckoutBanner.module.css";
+import styles from "./ViewCart.module.css";
 
-function CheckoutBanner({ onCartClick, cartCount = 0, showAlert = false, alertMessage = "" }) {
+function ViewCart({ onCartClick, cartCount = 0, showAlert = false, alertMessage = "" }) {
   return (
     <>
-      <section className={styles.checkoutBanner}>
+      <section className={styles.viewCartContainer}>
         <div className={styles.bannerContent}>
           {/* Restraurant location */}
           <span className={styles.locationText}>BUBBALOU'S BODACIOUS BBQ - 5818 Conroy Road, Orlando FL 32835</span>
@@ -28,4 +28,4 @@ function CheckoutBanner({ onCartClick, cartCount = 0, showAlert = false, alertMe
   );
 }
 
-export default CheckoutBanner;
+export default ViewCart;
