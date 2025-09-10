@@ -1,9 +1,9 @@
 import menuData from "../../data/menu.json";
 import { useEffect, useState } from "react";
 import styles from "./OrderOnline.module.css";
+import ViewCart from "../../components/ViewCart/ViewCart";
 import Checkout from "../../components/Checkout/Checkout";
 import OrderModal from "../../components/OrderModal/OrderModal";
-import ViewCart from "../../components/ViewCart/ViewCart";
 import OrderOnlineBanner from "../../components/Banners/OrderOnlineBanner/OrderOnlineBanner";
 
 function OrderOnline() {
