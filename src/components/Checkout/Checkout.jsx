@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
-import styles from "./CheckoutOverlay.module.css";
+import styles from "./Checkout.module.css";
 
-function CheckoutOverlay({ isOpen, onClose, cartItems, onRemoveItem }) {
+function Checkout({ isOpen, onClose, cartItems, onRemoveItem }) {
   // * Handle remove item
   const handleRemoveItem = (itemIndex) => {
     onRemoveItem(itemIndex);
@@ -309,4 +309,4 @@ function CheckoutOverlay({ isOpen, onClose, cartItems, onRemoveItem }) {
   );
 }
 
-export default CheckoutOverlay;
+export default Checkout;

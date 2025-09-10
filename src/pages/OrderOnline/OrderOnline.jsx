@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import styles from "./OrderOnline.module.css";
 import OrderModal from "../../components/OrderModal/OrderModal";
 import CheckoutBanner from "../../components/CheckoutBanner/CheckoutBanner";
-import CheckoutOverlay from "../../components/CheckoutOverlay/CheckoutOverlay";
+import Checkout from "../../components/Checkout/Checkout";
 import OrderOnlineBanner from "../../components/Banners/OrderOnlineBanner/OrderOnlineBanner";
 
 function OrderOnline() {
@@ -191,7 +191,7 @@ function OrderOnline() {
       <OrderModal item={selectedItem} isOpen={isModalOpen} onClose={handleCloseModal} onAddToOrder={handleAddToOrder} />
 
       {/* Checkout overlay */}
-      <CheckoutOverlay
+      <Checkout
         cartItems={cartItems}
         isOpen={isCheckoutOpen}
         onUpdateCart={setCartItems}
