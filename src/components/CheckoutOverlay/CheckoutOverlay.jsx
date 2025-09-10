@@ -56,6 +56,28 @@ function CheckoutOverlay({ isOpen, onClose, cartItems, onRemoveItem }) {
     return baseTime + totalItems * timePerItem;
   };
 
+  // * Close overlay when clicking outside
+  const handleOverlayClick = (e) => {
+    if (e.target === e.currentTarget) {
+      onClose();
+    }
+  };
+
+  // * Prevent body scroll when overlay is open
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "unset";
+    }
+
+    return () => {
+      document.body.style.overflow = "unset";
+    };
+  }, [isOpen]);
+
+  if (!isOpen) return null;
+
   // * Handle checkout
   const handleCheckout = () => {
     const orderDetails = {
@@ -116,28 +138,6 @@ function CheckoutOverlay({ isOpen, onClose, cartItems, onRemoveItem }) {
     // Close the overlay
     onClose();
   };
-
-  // * Close overlay when clicking outside
-  const handleOverlayClick = (e) => {
-    if (e.target === e.currentTarget) {
-      onClose();
-    }
-  };
-
-  // * Prevent body scroll when overlay is open
-  useEffect(() => {
-    if (isOpen) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "unset";
-    }
-
-    return () => {
-      document.body.style.overflow = "unset";
-    };
-  }, [isOpen]);
-
-  if (!isOpen) return null;
 
   return (
     <>

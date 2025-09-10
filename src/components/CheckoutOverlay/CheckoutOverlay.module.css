@@ -184,6 +184,7 @@
   font-size: 1.25rem;
   border-radius: 0.25rem;
   transition: 0.3s ease-in;
+  color: var(--text-primary);
   border: 2px solid var(--primary);
   background-color: var(--bg-color);
   font-family: "Oswald", sans-serif;
@@ -255,6 +256,7 @@
   border-radius: 0.25rem;
   padding: 0.5rem 0.75rem;
   transition: 0.3s ease-in;
+  color: var(--text-primary);
   border: 2px solid var(--primary);
   background-color: var(--bg-color);
   font-family: "Oswald", sans-serif;
