@@ -48,7 +48,7 @@ function Menu() {
       <main>
         <div className={styles.menuContainer}>
           {/* Title */}
-          <h1 className={styles.menuTitle}>BUBBALOU'S BODACIOUS BBQ MENU</h1>
+          <h1 className={styles.menuTitle}>BUBBALOU'S BODACIOUS MENU</h1>
           {/* Description */}
           <p className={styles.menuDescription}>
             Discover the diverse and delectable offerings of Bubbalou's Bodacious BBQ menu. From savory appetizers to
@@ -59,7 +59,7 @@ function Menu() {
           </p>
 
           {/* Menu content */}
-          <div className={styles.menuContent}>
+          <section className={styles.menuContent}>
             {Object.entries(menuData).map(([categoryKey, categoryData]) => (
               <div key={categoryKey} className={styles.categoryContainer}>
                 {/* Category header */}
@@ -97,7 +97,7 @@ function Menu() {
                 )}
               </div>
             ))}
-          </div>
+          </section>
         </div>
       </main>
     </>
