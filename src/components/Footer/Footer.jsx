@@ -8,9 +8,7 @@ function Footer() {
         <div className={styles.footerContainer}>
           <div className={styles.topContainer}>
             {/* Logo */}
-            <div className={styles.logoContainer}>
-              <img loading="lazy" src="/logo.jpg" alt="Bubbalous Bodacious BBQ Logo" />
-            </div>
+            <img className={styles.logo} loading="lazy" src="/logo.jpg" alt="Bubbalous Bodacious BBQ Logo" />
             {/* Legal disclaimer */}
             <p className={styles.legalDisclaimer}>
               Bubbalous Bodacious BBQ provides delicious barbecue meals and catering services for enjoyment and

@@ -10,27 +10,22 @@
 
 .topContainer {
   text-align: center;
-  margin-bottom: 1rem;
 }
 
 /* Logo */
-.logoContainer {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.logoContainer img {
-  width: 175px;
-  transition: 0.3s ease-in;
+.logo {
+  width: 165px;
+  margin: 0 auto;
+  transition: 0.3s ease;
+  margin-bottom: 0.25rem;
 }
 
 /* Legal disclaimer */
 .legalDisclaimer {
   font-size: 1rem;
   max-width: 1000px;
+  transition: 0.3s ease;
   margin-bottom: 0.5rem;
-  transition: 0.3s ease-in;
   color: var(--text-secondary);
 }
 
@@ -39,7 +34,7 @@
   margin: 0 auto;
   font-size: 1rem;
   font-weight: 500;
-  transition: 0.3s ease-in;
+  transition: 0.3s ease;
 }
 
 /* Separator */
@@ -47,16 +42,16 @@
   width: 100%;
   height: 2px;
   border: none;
-  margin-bottom: 0.75rem;
-  background-color: var(--text-secondary);
+  margin: 0.75rem 0rem;
+  background-color: var(--primary);
 }
 
 .bottomContainer {
   gap: 1rem;
   width: 100%;
   display: flex;
+  transition: 0.3s ease;
   align-items: flex-start;
-  transition: 0.3s ease-in;
   justify-content: space-between;
 }
 
@@ -65,15 +60,15 @@
 .legalPages,
 .contactInfo {
   display: flex;
+  transition: 0.3s ease;
   flex-direction: column;
-  transition: 0.3s ease-in;
 }
 
 /* Nav headers */
 .navHeader {
   font-weight: 500;
   font-size: 1.25rem;
-  transition: 0.3s ease-in;
+  transition: 0.3s ease;
   font-family: "Oswald", sans-serif;
 }
 
@@ -81,45 +76,36 @@
 .navItems {
   gap: 0.25rem;
   display: flex;
-  font-weight: 400;
   flex-direction: column;
 }
 
 .navItems a {
   position: relative;
   font-size: 1.15rem;
-  transition: 0.3s ease-in;
+  transition: 0.3s ease;
   color: var(--text-secondary);
 }
 
 .navItems a:hover {
-  transition: 0.3s ease-in;
   color: var(--text-primary);
   transform: translateX(5px);
 }
 
 /* Tablet responsiveness */
 @media (max-width: 768px) {
-  .logoContainer img {
+  .logo {
     width: 150px;
   }
 
   .bottomContainer {
-    gap: 0rem;
+    gap: 0.75rem;
     flex-direction: column;
-  }
-
-  .siteNavigation:not(:last-child),
-  .socialLinks:not(:last-child),
-  .legalPages:not(:last-child),
-  .contactInfo:not(:last-child) {
-    margin-bottom: 1rem;
   }
 }
 
 /* Mobile responsiveness */
 @media (max-width: 480px) {
-  .logoContainer img {
+  .logo {
     width: 125px;
   }
 
@@ -128,7 +114,6 @@
   }
 
   .copyright {
-    width: 275px;
     font-size: 0.95rem;
   }
 
