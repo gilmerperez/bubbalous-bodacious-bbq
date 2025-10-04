@@ -143,10 +143,9 @@ function OrderOnline() {
       <main>
         <div className={styles.orderOnlineContainer}>
           {/* Title */}
-          <h1 className={styles.pageTitle}>BUBBALOU'S BODACIOUS BBQ ONLINE ORDERING</h1>
-
+          <h1 className={styles.orderOnlineTitle}>BUBBALOU'S BODACIOUS ONLINE ORDERING</h1>
           {/* Description */}
-          <p className={styles.pageDescription}>
+          <p className={styles.orderOnlineDescription}>
             Experience the ease and convenience of Bubbalou's Bodacious BBQ online ordering system. With just a few
             clicks, you can enjoy our mouth-watering BBQ from the comfort of your home. Whether you're planning a family
             dinner or a large gathering, our user-friendly platform allows you to customize your order to suit your
@@ -155,7 +154,7 @@ function OrderOnline() {
           </p>
 
           {/* Menu content */}
-          <div className={styles.menuContent}>
+          <section className={styles.menuContent}>
             {Object.entries(menuData).map(([categoryKey, categoryData]) => (
               <div key={categoryKey} className={styles.categoryContainer}>
                 {/* Category header */}
@@ -187,7 +186,7 @@ function OrderOnline() {
                 )}
               </div>
             ))}
-          </div>
+          </section>
         </div>
       </main>
 
