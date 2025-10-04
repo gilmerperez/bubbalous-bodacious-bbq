@@ -56,7 +56,7 @@ function Header() {
     return () => mediaQuery.removeEventListener("change", handleChange);
   }, []);
 
-  // * Mobile sidebar toggle
+  // * Mobile sidebar logic
   const [menuOpen, setMenuOpen] = useState(false);
   const [isSpinning, setIsSpinning] = useState(false);
 
@@ -83,8 +83,8 @@ function Header() {
           {/* Desktop Layout */}
           <div className={styles.desktopLayout}>
             {/* Logo */}
-            <NavLink to="/" className={styles.logoContainer} aria-label="Go to home page">
-              <img src="/logo.jpg" alt="Bubbalous Bodacious BBQ Logo" />
+            <NavLink to="/" aria-label="Go to home page">
+              <img className={styles.logo} src="/logo.jpg" alt="Bubbalous Bodacious BBQ Logo" />
             </NavLink>
             {/* Site navigation */}
             <div className={styles.navContainer}>
@@ -113,7 +113,6 @@ function Header() {
                 aria-label={`Switch to ${theme === "dark" ? "light" : "dark"} mode`}
               >
                 <i className={`fa-solid ${theme === "dark" ? "fa-moon" : "fa-sun"}`} aria-hidden="true"></i>
-                <p>{theme === "dark" ? "DARK" : "LIGHT"}</p>
               </button>
             </div>
           </div>
@@ -127,20 +126,20 @@ function Header() {
               aria-label="Call us at (407) 295-1212"
               type="button"
             >
-              <i className="fa-solid fa-phone fa-xl" aria-hidden="true"></i>
+              <i className="fa-solid fa-phone" aria-hidden="true"></i>
             </button>
-            {/* Logo */}
+            {/* Mobile logo */}
             <NavLink to="/" className={styles.mobileLogoContainer} aria-label="Go to home page">
               <img src="/logo.jpg" alt="Bubbalous Bodacious BBQ Logo" />
             </NavLink>
-            {/* Hamburger menu button */}
+            {/* Hamburger menu */}
             <button
               aria-expanded={menuOpen}
               className={styles.hamburger}
               onClick={handleHamburgerClick}
               aria-label="Open navigation menu"
             >
-              <i className={`fa-solid fa-bars fa-xl ${isSpinning ? styles.spin : ""}`} aria-hidden="true"></i>
+              <i className={`fa-solid fa-bars ${isSpinning ? styles.spin : ""}`} aria-hidden="true"></i>
             </button>
           </div>
         </div>
@@ -206,7 +205,7 @@ function Header() {
               </nav>
               {/* Sidebar footer */}
               <footer className={styles.sidebarFooter}>
-                {/* Theme button */}
+                {/* Sidebar theme button */}
                 <button
                   onClick={toggleTheme}
                   className={`${styles.themeButton} ${styles.sidebarThemeButton}`}
@@ -215,7 +214,7 @@ function Header() {
                   <i className={`fa-solid ${theme === "dark" ? "fa-moon" : "fa-sun"}`} aria-hidden="true"></i>
                   <p>{theme === "dark" ? "DARK" : "LIGHT"}</p>
                 </button>
-                {/* Legal pages */}
+                {/* Sidebar legal pages */}
                 <NavLink
                   to="/contact"
                   aria-label="Contact us"

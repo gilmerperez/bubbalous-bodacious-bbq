@@ -6,24 +6,28 @@
 
 /* Light theme */
 html[data-theme="light"] {
+  --bg-color: hsl(0, 0%, 95%);
   --primary: hsl(3, 76%, 50%);
   --primary-dark: hsl(3, 76%, 40%);
-  --bg-color: hsl(0, 0%, 95%);
-  --text-primary: hsl(0, 0%, 0%);
-  --text-secondary: hsl(0, 0%, 20%);
+  --text-primary: hsl(0, 0%, 5%);
+  --text-secondary: hsl(0, 0%, 15%);
   --header-bg-color: hsl(0, 0%, 100%);
   --footer-bg-color: hsl(0, 0%, 100%);
+  --shadow-small: 3px 3px 3px hsla(0, 0%, 0%, 0.5);
+  --shadow-large: 3px 3px 3px hsla(0, 0%, 0%, 0.25);
 }
 
 /* Dark theme */
 html[data-theme="dark"] {
+  --bg-color: hsl(0, 0%, 10%);
   --primary: hsl(3, 76%, 50%);
   --primary-dark: hsl(3, 76%, 40%);
-  --bg-color: hsl(0, 0%, 8%);
-  --text-primary: hsl(0, 0%, 100%);
+  --text-primary: hsl(0, 0%, 90%);
   --text-secondary: hsl(0, 0%, 80%);
   --header-bg-color: hsl(0, 0%, 5%);
   --footer-bg-color: hsl(0, 0%, 5%);
+  --shadow-small: 3px 3px 3px hsla(0, 0%, 0%, 0.5);
+  --shadow-large: 3px 3px 3px hsla(0, 0%, 0%, 0.25);
 }
 
 /* Buttons */
@@ -96,14 +100,6 @@ body {
   font-family: "Inter", Arial, sans-serif;
 }
 
-/* Header */
-header {
-  width: 100%;
-  padding: 0.75rem 2rem;
-  transition: 0.3s ease-in;
-  background-color: var(--header-bg-color);
-}
-
 /* Main */
 main {
   width: 100%;
@@ -122,10 +118,6 @@ footer {
 
 /* Tablet responsiveness */
 @media (max-width: 768px) {
-  header {
-    padding: 0.75rem 1.75rem;
-  }
-
   main {
     padding: 1.75rem;
   }
@@ -137,10 +129,6 @@ footer {
 
 /* Mobile responsiveness */
 @media (max-width: 480px) {
-  header {
-    padding: 0.75rem 1.5rem;
-  }
-
   main {
     padding: 1.5rem;
   }
