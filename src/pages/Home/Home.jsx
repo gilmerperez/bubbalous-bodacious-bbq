@@ -16,12 +16,12 @@ function Home() {
       <main>
         <div className={styles.homeContainer}>
           {/* Information section */}
-          <section className={styles.infoSection}>
-            <div className={styles.textContent}>
+          <section className={styles.informationSection}>
+            <div className={styles.informationContent}>
               {/* Title */}
-              <h2 className={styles.contentTitle}>SERVING ORLANDO'S FAVORITE BBQ SINCE 1986</h2>
+              <h1 className={styles.informationTitle}>SERVING ORLANDO'S FAVORITE BBQ SINCE 1986</h1>
               {/* Text */}
-              <div className={styles.contentText}>
+              <div className={styles.informationText}>
                 <p>For nearly 40 years, Bubbalou's Bodacious BBQ has been serving up Orlando's Favorite BBQ.</p>
                 <p>
                   We use only the finest ingredients, cooking our meats low and slow over a hardwood fire and seasoning
@@ -47,13 +47,13 @@ function Home() {
               {/* Telephone */}
               <div className={styles.infoItem}>
                 <i className="fas fa-phone"></i>
-                <h3>PHONE</h3>
+                <h2>PHONE</h2>
                 <a href="tel:(407) 295-1212">(407) 295 - 1212</a>
               </div>
               {/* Location */}
               <div className={styles.infoItem}>
                 <i className="fas fa-map-marker-alt"></i>
-                <h3>LOCATION</h3>
+                <h2>LOCATION</h2>
                 <a
                   target="_blank"
                   rel="noopener noreferrer"
@@ -65,7 +65,7 @@ function Home() {
               {/* Hours */}
               <div className={styles.infoItem}>
                 <i className="fas fa-clock"></i>
-                <h3>HOURS</h3>
+                <h2>HOURS</h2>
                 <a
                   target="_blank"
                   rel="noopener noreferrer"

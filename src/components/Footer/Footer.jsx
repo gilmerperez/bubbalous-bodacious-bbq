@@ -109,7 +109,7 @@ function Footer() {
               <nav className={styles.navItems} aria-label="Contact information">
                 {/* Phone number */}
                 <a href="tel:+14072951212" aria-label="Call us at (407) 295-1212" className={styles.contactLink}>
-                  (407) 295-1212
+                  (407) 295 - 1212
                 </a>
                 {/* Email */}
                 <a
