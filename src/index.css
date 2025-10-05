@@ -104,16 +104,8 @@ body {
 main {
   width: 100%;
   padding: 2rem;
-  transition: 0.3s ease-in;
+  transition: 0.3s ease;
   background-color: var(--bg-color);
-}
-
-/* Footer */
-footer {
-  width: 100%;
-  padding: 2rem;
-  transition: 0.3s ease-in;
-  background-color: var(--footer-bg-color);
 }
 
 /* Tablet responsiveness */
@@ -121,19 +113,11 @@ footer {
   main {
     padding: 1.75rem;
   }
-
-  footer {
-    padding: 1.75rem;
-  }
 }
 
 /* Mobile responsiveness */
 @media (max-width: 480px) {
   main {
-    padding: 1.5rem;
-  }
-
-  footer {
     padding: 1.5rem;
   }
 }
