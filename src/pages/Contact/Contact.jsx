@@ -27,7 +27,7 @@ function Contact() {
   const handleCaptchaSubmit = (e) => {
     e.preventDefault();
     const userAnswer = parseInt(captchaAnswer);
-
+    // Check if the answer is correct
     if (userAnswer === captchaQuestion.answer) {
       setCaptchaPassed(true);
       setCaptchaError("");
@@ -49,11 +49,10 @@ function Contact() {
     <>
       <main>
         <div className={styles.contactContainer}>
-          {/* Heading */}
-          <h1 className={styles.heading}>LET'S CONNECT</h1>
-
-          {/* Introduction */}
-          <p className={styles.introduction}>
+          {/* Title */}
+          <h1 className={styles.contactTitle}>LET'S CONNECT</h1>
+          {/* Description */}
+          <p className={styles.contactDescription}>
             Whether you're exploring business opportunities, potential sponsorships, community partnerships, or simply
             have questions about our menu, catering, or party packs — we'd love to connect with you. Reach out below and
             a member of our team will follow up shortly.
@@ -71,6 +70,7 @@ function Contact() {
                   <p>
                     What is {captchaQuestion.num1} + {captchaQuestion.num2}?
                   </p>
+                  {captchaError && <p className={styles.errorMessage}>{captchaError}</p>}
                   <div className={`${styles.formGroup} ${styles.formFloating}`}>
                     <input
                       required
@@ -83,7 +83,6 @@ function Contact() {
                     />
                     <label htmlFor="captcha">ANSWER</label>
                   </div>
-                  {captchaError && <p className={styles.errorMessage}>{captchaError}</p>}
                 </div>
                 <button type="submit" className={styles.submitBtn}>
                   VERIFY <i className="fa-solid fa-shield-check"></i>
@@ -92,7 +91,7 @@ function Contact() {
             </section>
           )}
 
-          {/* Email form - only show after CAPTCHA is passed */}
+          {/* Email form */}
           {captchaPassed && (
             <section className={styles.formContainer}>
               <form onSubmit={handleSubmit}>
@@ -123,7 +122,8 @@ function Contact() {
                 </div>
                 {/* Submit button */}
                 <button type="submit" className={styles.submitBtn}>
-                  SEND MESSAGE <i className="fa-solid fa-paper-plane"></i>
+                  SEND MESSAGE
+                  <i className="fa-solid fa-paper-plane"></i>
                 </button>
               </form>
             </section>
