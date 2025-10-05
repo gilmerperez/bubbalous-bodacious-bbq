@@ -6,7 +6,7 @@ function ViewCart({ onCartClick, cartCount = 0, showAlert = false, alertMessage 
       <section className={styles.viewCartContainer}>
         <div className={styles.bannerContent}>
           {/* Restraurant location */}
-          <span className={styles.locationText}>BUBBALOU'S BODACIOUS BBQ - 5818 Conroy Road, Orlando FL 32835</span>
+          <span className={styles.locationText}>Bubbalous Bodacious BBQ - 5818 Conroy Road, Orlando FL 32835</span>
           {/* Shopping cart button */}
           <div className={styles.cartContainer}>
             <button className={styles.cartIcon} onClick={onCartClick}>

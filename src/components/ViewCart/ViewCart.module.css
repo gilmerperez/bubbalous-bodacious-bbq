@@ -15,11 +15,11 @@
 
 /* Restaurant location */
 .locationText {
-  font-size: 1.25rem;
-  transition: 0.3s ease-in;
+  font-size: 1.15rem;
+  transition: 0.3s ease;
   color: hsl(0, 0%, 100%);
+  text-shadow: var(--shadow-small);
   font-family: "Oswald", sans-serif;
-  text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
 }
 
 /* Shopping cart button */
@@ -27,41 +27,40 @@
   display: flex;
   position: relative;
   align-items: center;
-  flex-direction: column;
+  justify-content: center;
 }
 
 .cartIcon {
   position: relative;
-  font-size: 1.25rem;
-  transition: 0.3s ease-in;
+  font-size: 1.15rem;
+  transition: 0.3s ease;
   color: hsl(0, 0%, 100%);
   background-color: transparent;
-  text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
+  text-shadow: var(--shadow-small);
 }
 
 .cartIcon:hover {
-  transform: scale(1.15);
-  text-shadow: 5px 5px 3px rgba(0, 0, 0, 0.3);
+  transform: scale(1.1);
+  text-shadow: var(--shadow-large);
 }
 
 /* Shopping cart item bubble count */
 .cartBubble {
   top: -10px;
   width: 20px;
-  right: -10px;
   height: 20px;
+  right: -10px;
   display: flex;
   font-weight: 700;
-  font-size: 0.85rem;
   position: absolute;
+  font-size: 0.85rem;
   border-radius: 50%;
   align-items: center;
+  transition: 0.3s ease;
   justify-content: center;
   color: hsl(0, 0%, 0%);
-  transition: 0.3s ease-in;
-  border: 1px solid var(--primary-dark);
+  border: 1px solid hsl(0, 0%, 0%);
   background-color: hsl(0, 0%, 100%);
-  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
 }
 
 /* Dropdown cart alert */
@@ -71,7 +70,7 @@
   z-index: 1000;
   position: absolute;
   margin-top: 0.5rem;
-  animation: slideDown 0.3s ease-out;
+  animation: slideDown 0.3s ease;
 }
 
 .alertContent {
@@ -83,10 +82,10 @@
   padding: 0.5rem 0.75rem;
   color: hsl(0, 0%, 0%);
   text-transform: uppercase;
+  box-shadow: var(--shadow-small);
+  border: 2px solid var(--primary);
   font-family: "Oswald", sans-serif;
   background-color: hsl(0, 0%, 100%);
-  border: 2px solid var(--primary-dark);
-  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
 }
 
 .alertArrow {
@@ -97,7 +96,7 @@
   position: absolute;
   border-left: 8px solid transparent;
   border-right: 8px solid transparent;
-  border-bottom: 8px solid var(--primary-dark);
+  border-bottom: 8px solid var(--primary);
 }
 
 .alertArrow::after {
@@ -130,7 +129,7 @@
   }
 
   .locationText {
-    font-size: 1.15rem;
+    font-size: 1rem;
   }
 
   .cartIcon {
@@ -154,10 +153,6 @@
 @media (max-width: 480px) {
   .viewCartContainer {
     padding: 0.75rem 1.5rem;
-  }
-
-  .bannerContent {
-    text-align: center;
   }
 
   .locationText {
