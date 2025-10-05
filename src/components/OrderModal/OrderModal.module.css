@@ -15,7 +15,7 @@
 /* Modal */
 .modal {
   width: 100%;
-  padding: 1.5rem;
+  padding: 1.25rem;
   max-width: 750px;
   max-height: 90vh;
   overflow-y: auto;
@@ -23,35 +23,32 @@
   border-radius: 0.25rem;
   border: 2px solid var(--primary);
   background-color: var(--header-bg-color);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
-/* Modal header */
 .modalHeader {
   display: flex;
   align-items: center;
-  margin-bottom: 1.5rem;
   justify-content: space-between;
 }
 
 /* Item name */
 .itemName {
-  font-size: 2.25rem;
-  padding: 0.25rem 1rem;
+  font-size: 2rem;
+  transition: 0.3s ease;
   border-radius: 0.25rem;
-  transition: 0.3s ease-in;
+  padding: 0.25rem 0.75rem;
   color: hsl(0, 0%, 100%);
+  box-shadow: var(--shadow-small);
+  text-shadow: var(--shadow-small);
   background-color: var(--primary);
   font-family: "Oswald", sans-serif;
-  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
-  text-shadow: 5px 5px 3px rgba(0, 0, 0, 0.3);
 }
 
 /* Close button */
 .closeButton {
   display: flex;
+  font-size: 2rem;
   background: none;
-  font-size: 2.25rem;
   align-items: center;
   color: var(--primary);
   transition: 0.3s ease;
@@ -59,15 +56,14 @@
 }
 
 .closeButton:hover {
-  scale: 1.25;
-  color: var(--primary-dark);
+  transform: scale(1.1);
 }
 
 /* Separator */
 .separator {
   height: 3px;
   border: none;
-  margin-bottom: 1.5rem;
+  margin: 1rem 0rem;
   background-color: var(--primary);
 }
 
@@ -77,30 +73,30 @@
 }
 
 .itemDescription {
-  font-size: 1.25rem;
+  font-size: 1.15rem;
   color: var(--text-secondary);
 }
 
 /* Quantity selector */
 .quantitySection {
-  gap: 0.75rem;
+  gap: 0.5rem;
   display: flex;
-  align-items: center;
   margin-bottom: 1rem;
   flex-direction: column;
   align-items: flex-start;
+  justify-content: center;
 }
 
-.quantityLabel {
-  padding: 0;
+.quantityTitle {
+  width: 100%;
+  padding: 0rem;
   font-weight: 500;
   font-size: 1.5rem;
-  position: relative;
   font-family: "Oswald", sans-serif;
 }
 
 .quantityControls {
-  gap: 1rem;
+  gap: 0.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -108,9 +104,8 @@
 
 .quantityButton {
   width: 30px;
-  height: auto;
   display: flex;
-  font-size: 1.75rem;
+  font-size: 1.5rem;
   align-items: center;
   transition: 0.3s ease;
   border-radius: 0.25rem;
@@ -119,20 +114,15 @@
   background-color: var(--primary);
 }
 
-.quantityButton:hover:not(:disabled) {
-  transform: translateY(-2px);
-}
-
 .quantityButton:disabled {
+  cursor: not-allowed;
   color: hsl(0, 0%, 0%);
   border: 1px solid hsl(0, 0%, 0%);
   background-color: hsl(0, 0%, 100%);
 }
 
 .quantityDisplay {
-  font-weight: 400;
-  font-size: 1.75rem;
-  text-align: center;
+  font-size: 1.25rem;
 }
 
 /* Sauce options */
@@ -140,41 +130,38 @@
   width: 100%;
   display: block;
   position: relative;
-  margin-bottom: 0.25rem;
+  margin-bottom: 1rem;
 }
 
 .sauceOptionsTitle {
   width: 100%;
+  padding: 0rem;
   font-weight: 500;
   font-size: 1.5rem;
   font-family: "Oswald", sans-serif;
 }
 
 .sauceOptionsList {
+  gap: 0.25rem;
   display: flex;
   position: relative;
   flex-direction: column;
 }
 
 .sauceOption {
-  width: 100%;
-  gap: 0.75rem;
+  gap: 0.7rem;
   display: flex;
+  padding: 0rem;
   cursor: pointer;
-  padding: 0.25rem;
   position: relative;
   align-items: center;
   pointer-events: auto;
-  transition: all 0.3s ease-in;
-}
-
-.sauceOption:hover {
-  background-color: hsla(0, 0%, 0%, 0.05);
+  transition: 0.3s ease;
 }
 
 .sauceRadio {
-  z-index: 10;
   width: 1rem;
+  z-index: 10;
   height: 1rem;
   flex-shrink: 0;
   cursor: pointer;
@@ -187,12 +174,7 @@
   flex: 1;
   cursor: pointer;
   font-size: 1.25rem;
-  transition: 0.3s ease-in;
-  color: var(--text-secondary);
-}
-
-.sauceOption:hover .sauceLabel {
-  color: var(--text-primary);
+  transition: 0.3s ease;
 }
 
 /* Meat options */
@@ -200,48 +182,44 @@
   width: 100%;
   display: block;
   position: relative;
-  margin-bottom: 0.25rem;
+  margin-bottom: 1rem;
 }
 
 .meatOptionsTitle {
   width: 100%;
+  padding: 0rem;
   font-weight: 500;
   font-size: 1.5rem;
   font-family: "Oswald", sans-serif;
 }
 
 .selectionHelper {
-  font-size: 1rem;
-  font-style: italic;
+  font-size: 1.15rem;
   margin-bottom: 0.5rem;
   color: var(--text-secondary);
 }
 
 .meatOptionsList {
+  gap: 0.25rem;
   display: flex;
   position: relative;
   flex-direction: column;
 }
 
 .meatOption {
-  width: 100%;
-  gap: 0.75rem;
+  gap: 0.5rem;
   display: flex;
+  padding: 0rem;
   cursor: pointer;
-  padding: 0.25rem;
   position: relative;
   align-items: center;
   pointer-events: auto;
-  transition: all 0.3s ease-in;
-}
-
-.meatOptionsSection .meatOption:hover {
-  color: var(--text-primary);
+  transition: 0.3s ease;
 }
 
 .meatRadio {
-  z-index: 10;
   width: 1rem;
+  z-index: 10;
   height: 1rem;
   flex-shrink: 0;
   cursor: pointer;
@@ -254,12 +232,7 @@
   flex: 1;
   cursor: pointer;
   font-size: 1.25rem;
-  transition: 0.3s ease-in;
-  color: var(--text-secondary);
-}
-
-.meatOption:hover .meatLabel {
-  color: var(--text-primary);
+  transition: 0.3s ease;
 }
 
 /* Side Options */
@@ -267,41 +240,38 @@
   width: 100%;
   display: block;
   position: relative;
-  margin-bottom: 0.25rem;
+  margin-bottom: 1rem;
 }
 
 .sideOptionsTitle {
   width: 100%;
+  padding: 0rem;
   font-weight: 500;
   font-size: 1.5rem;
   font-family: "Oswald", sans-serif;
 }
 
 .sideOptionsList {
+  gap: 0.25rem;
   display: flex;
   position: relative;
   flex-direction: column;
 }
 
 .sideOption {
-  width: 100%;
-  gap: 0.75rem;
+  gap: 0.5rem;
   display: flex;
+  padding: 0rem;
   cursor: pointer;
-  padding: 0.25rem;
   position: relative;
   align-items: center;
   pointer-events: auto;
-  transition: all 0.3s ease-in;
-}
-
-.sideOptionsSection .sideOption:hover {
-  color: var(--text-primary);
+  transition: 0.3s ease;
 }
 
 .sideRadio {
-  z-index: 10;
   width: 1rem;
+  z-index: 10;
   height: 1rem;
   flex-shrink: 0;
   cursor: pointer;
@@ -314,12 +284,7 @@
   flex: 1;
   cursor: pointer;
   font-size: 1.25rem;
-  transition: 0.3s ease-in;
-  color: var(--text-secondary);
-}
-
-.sideOption:hover .sideLabel {
-  color: var(--text-primary);
+  transition: 0.3s ease;
 }
 
 /* Drink Options */
@@ -327,41 +292,38 @@
   width: 100%;
   display: block;
   position: relative;
-  margin-bottom: 0.25rem;
+  margin-bottom: 1rem;
 }
 
 .drinkOptionsTitle {
   width: 100%;
+  padding: 0rem;
   font-weight: 500;
   font-size: 1.5rem;
   font-family: "Oswald", sans-serif;
 }
 
 .drinkOptionsList {
+  gap: 0.25rem;
   display: flex;
   position: relative;
   flex-direction: column;
 }
 
 .drinkOption {
-  width: 100%;
-  gap: 0.75rem;
+  gap: 0.5rem;
   display: flex;
+  padding: 0rem;
   cursor: pointer;
-  padding: 0.25rem;
   position: relative;
   align-items: center;
   pointer-events: auto;
-  transition: all 0.3s ease-in;
-}
-
-.drinkOptionsSection .drinkOption:hover {
-  color: var(--text-primary);
+  transition: 0.3s ease;
 }
 
 .drinkRadio {
-  z-index: 10;
   width: 1rem;
+  z-index: 10;
   height: 1rem;
   flex-shrink: 0;
   cursor: pointer;
@@ -374,54 +336,46 @@
   flex: 1;
   cursor: pointer;
   font-size: 1.25rem;
-  transition: 0.3s ease-in;
-  color: var(--text-secondary);
+  transition: 0.3s ease;
 }
 
-.drinkOption:hover .drinkLabel {
-  color: var(--text-primary);
-}
-
-/* Protein Options */
+/* Protein options */
 .proteinOptionsSection {
   width: 100%;
   display: block;
   position: relative;
-  margin-bottom: 0.25rem;
+  margin-bottom: 1rem;
 }
 
 .proteinOptionsTitle {
   width: 100%;
+  padding: 0rem;
   font-weight: 500;
   font-size: 1.5rem;
   font-family: "Oswald", sans-serif;
 }
 
 .proteinOptionsList {
+  gap: 0.25rem;
   display: flex;
   position: relative;
   flex-direction: column;
 }
 
 .proteinOption {
-  width: 100%;
-  gap: 0.75rem;
+  gap: 0.5rem;
   display: flex;
+  padding: 0rem;
   cursor: pointer;
-  padding: 0.25rem;
   position: relative;
   align-items: center;
   pointer-events: auto;
-  transition: all 0.3s ease-in;
-}
-
-.proteinOptionsSection .proteinOption:hover {
-  color: var(--text-primary);
+  transition: 0.3s ease;
 }
 
 .proteinRadio {
-  z-index: 10;
   width: 1rem;
+  z-index: 10;
   height: 1rem;
   flex-shrink: 0;
   cursor: pointer;
@@ -434,54 +388,46 @@
   flex: 1;
   cursor: pointer;
   font-size: 1.25rem;
-  transition: 0.3s ease-in;
-  color: var(--text-secondary);
+  transition: 0.3s ease;
 }
 
-.proteinOption:hover .proteinLabel {
-  color: var(--text-primary);
-}
-
-/* Dressing Options */
+/* Dressing options */
 .dressingOptionsSection {
   width: 100%;
   display: block;
   position: relative;
-  margin-bottom: 0.25rem;
+  margin-bottom: 1rem;
 }
 
 .dressingOptionsTitle {
   width: 100%;
+  padding: 0rem;
   font-weight: 500;
   font-size: 1.5rem;
   font-family: "Oswald", sans-serif;
 }
 
 .dressingOptionsList {
+  gap: 0.25rem;
   display: flex;
   position: relative;
   flex-direction: column;
 }
 
 .dressingOption {
-  width: 100%;
-  gap: 0.75rem;
+  gap: 0.5rem;
   display: flex;
+  padding: 0rem;
   cursor: pointer;
-  padding: 0.25rem;
   position: relative;
   align-items: center;
   pointer-events: auto;
-  transition: all 0.3s ease-in;
-}
-
-.dressingOptionsSection .dressingOption:hover {
-  color: var(--text-primary);
+  transition: 0.3s ease;
 }
 
 .dressingRadio {
-  z-index: 10;
   width: 1rem;
+  z-index: 10;
   height: 1rem;
   flex-shrink: 0;
   cursor: pointer;
@@ -494,54 +440,46 @@
   flex: 1;
   cursor: pointer;
   font-size: 1.25rem;
-  transition: 0.3s ease-in;
-  color: var(--text-secondary);
+  transition: 0.3s ease;
 }
 
-.dressingOption:hover .dressingLabel {
-  color: var(--text-primary);
-}
-
-/* Wing Sauce Options */
+/* Wing sauce options */
 .wingSauceOptionsSection {
   width: 100%;
   display: block;
   position: relative;
-  margin-bottom: 0.25rem;
+  margin-bottom: 1rem;
 }
 
 .wingSauceOptionsTitle {
   width: 100%;
+  padding: 0rem;
   font-weight: 500;
   font-size: 1.5rem;
   font-family: "Oswald", sans-serif;
 }
 
 .wingSauceOptionsList {
+  gap: 0.25rem;
   display: flex;
   position: relative;
   flex-direction: column;
 }
 
 .wingSauceOption {
-  width: 100%;
-  gap: 0.75rem;
+  gap: 0.5rem;
   display: flex;
+  padding: 0rem;
   cursor: pointer;
-  padding: 0.25rem;
   position: relative;
   align-items: center;
   pointer-events: auto;
-  transition: all 0.3s ease-in;
-}
-
-.wingSauceOptionsSection .wingSauceOption:hover {
-  color: var(--text-primary);
+  transition: 0.3s ease;
 }
 
 .wingSauceRadio {
-  z-index: 10;
   width: 1rem;
+  z-index: 10;
   height: 1rem;
   flex-shrink: 0;
   cursor: pointer;
@@ -554,23 +492,21 @@
   flex: 1;
   cursor: pointer;
   font-size: 1.25rem;
-  transition: 0.3s ease-in;
-  color: var(--text-secondary);
-}
-
-.wingSauceOption:hover .wingSauceLabel {
-  color: var(--text-primary);
+  transition: 0.3s ease;
 }
 
 /* Special instructions */
 .specialInstructionsSection {
+  width: 100%;
+  display: block;
+  position: relative;
   margin-bottom: 1rem;
 }
 
-.specialInstructionsLabel {
+.specialInstructionsTitle {
+  width: 100%;
   padding: 0rem;
   font-weight: 500;
-  position: relative;
   font-size: 1.5rem;
   font-family: "Oswald", sans-serif;
 }
@@ -579,193 +515,72 @@
   width: 100%;
   resize: vertical;
   padding: 0.75rem;
-  font-size: 1.25rem;
-  margin-top: 0.75rem;
+  font-size: 1.15rem;
+  margin-top: 0.5rem;
   border-radius: 0.25rem;
   color: var(--text-secondary);
   background-color: var(--bg-color);
   border: 1px solid var(--text-primary);
 }
 
-.specialInstructionsInput:focus {
-  border-color: var(--primary);
-}
-
 /* Legal section */
 .legalSection {
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 .allergyWarning {
   font-size: 1rem;
   padding: 0.75rem;
-  line-height: 1.25;
-  margin-bottom: 0.5rem;
+  line-height: 1.35;
+  margin-bottom: 1rem;
+  color: var(--primary);
   border-radius: 0.25rem;
-  color: hsl(3, 76%, 50%);
   border-left: 3px solid var(--primary);
-  background-color: hsla(3, 76%, 50%, 0.1);
+  background-color: hsla(3, 76%, 50%, 0.15);
 }
 
 .legalText {
   font-size: 1rem;
-  font-style: italic;
   color: var(--text-secondary);
 }
 
-/* Action Section */
+/* Add to order section */
 .actionSection {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-/* Add to order button */
 .addToOrderButton {
   width: 100%;
-  padding: 0.5rem;
-  font-weight: 600;
+  font-weight: 500;
   font-size: 1.75rem;
-  align-items: center;
-  transition: 0.5s ease;
+  transition: 0.3s ease;
   border-radius: 0.25rem;
+  padding: 0.5rem 0.75rem;
   color: hsl(0, 0%, 100%);
-  border: 2px solid var(--primary);
+  box-shadow: var(--shadow-small);
+  text-shadow: var(--shadow-small);
   background-color: var(--primary);
   font-family: "Oswald", sans-serif;
-  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
-  text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
 }
 
 .addToOrderButton:hover {
-  transform: translateY(-2px);
-  border: 2px solid var(--primary-dark);
-  background-color: var(--primary-dark);
-  box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.3);
-  text-shadow: 5px 5px 3px rgba(0, 0, 0, 0.3);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-large);
+  text-shadow: var(--shadow-large);
 }
 
 /* Tablet responsiveness */
 @media (max-width: 768px) {
   .modal {
-    padding: 1.25rem;
-  }
-
-  .modalHeader,
-  .separator,
-  .legalSection {
-    margin-bottom: 1.25rem;
-  }
-
-  .itemName {
-    font-size: 2rem;
-  }
-
-  .closeButton {
-    font-size: 2rem;
-  }
-
-  .quantityLabel {
-    font-size: 1.25rem;
-  }
-
-  .quantityButton {
-    font-size: 1.5rem;
-  }
-
-  .sauceOptionsTitle {
-    font-size: 1.25rem;
-  }
-
-  .sauceLabel {
-    font-size: 1.15rem;
-  }
-
-  .meatOptionsTitle {
-    font-size: 1.25rem;
-  }
-
-  .meatLabel {
-    font-size: 1.15rem;
-  }
-
-  .sideOptionsTitle {
-    font-size: 1.25rem;
-  }
-
-  .sideLabel {
-    font-size: 1.15rem;
-  }
-
-  .drinkOptionsTitle {
-    font-size: 1.25rem;
-  }
-
-  .drinkLabel {
-    font-size: 1.15rem;
-  }
-
-  .proteinOptionsTitle {
-    font-size: 1.25rem;
-  }
-
-  .proteinLabel {
-    font-size: 1.15rem;
-  }
-
-  .dressingOptionsTitle {
-    font-size: 1.25rem;
-  }
-
-  .dressingLabel {
-    font-size: 1.15rem;
-  }
-
-  .wingSauceOptionsTitle {
-    font-size: 1.25rem;
-  }
-
-  .wingSauceLabel {
-    font-size: 1.15rem;
-  }
-
-  .specialInstructionsLabel {
-    font-size: 1.25rem;
-  }
-
-  .specialInstructionsInput {
-    font-size: 1.15rem;
-  }
-
-  .allergyWarning {
-    font-size: 0.95rem;
-  }
-
-  .legalText {
-    font-size: 0.95rem;
-  }
-
-  .addToOrderButton {
-    font-size: 1.5rem;
+    padding: 1rem;
   }
 }
 
+/* Mobile responsiveness */
 @media (max-width: 480px) {
-  .modal {
-    padding: 1rem;
-    border: 1px solid var(--primary);
-  }
-
-  .modalHeader,
-  .separator,
-  .legalSection {
-    margin-bottom: 1rem;
-  }
-
-  .itemName {
-    font-size: 1.75rem;
-  }
-
+  .itemName,
   .closeButton {
     font-size: 1.75rem;
   }
@@ -778,72 +593,30 @@
     font-size: 1rem;
   }
 
-  .quantityLabel {
-    font-size: 1.15rem;
+  .quantityTitle,
+  .sauceOptionsTitle,
+  .meatOptionsTitle,
+  .sideOptionsTitle,
+  .drinkOptionsTitle,
+  .proteinOptionsTitle,
+  .dressingOptionsTitle,
+  .wingSauceOptionsTitle,
+  .specialInstructionsTitle {
+    font-size: 1.25rem;
   }
 
   .quantityButton {
     font-size: 1.25rem;
   }
 
-  .sauceOptionsTitle {
-    font-size: 1.15rem;
-  }
-
-  .sauceLabel {
-    font-size: 1rem;
-  }
-
-  .meatOptionsTitle {
-    font-size: 1.15rem;
-  }
-
-  .meatLabel {
-    font-size: 1rem;
-  }
-
-  .sideOptionsTitle {
-    font-size: 1.15rem;
-  }
-
-  .sideLabel {
-    font-size: 1rem;
-  }
-
-  .drinkOptionsTitle {
-    font-size: 1.15rem;
-  }
-
-  .drinkLabel {
-    font-size: 1rem;
-  }
-
-  .proteinOptionsTitle {
-    font-size: 1.15rem;
-  }
-
-  .proteinLabel {
-    font-size: 1rem;
-  }
-
-  .dressingOptionsTitle {
-    font-size: 1.15rem;
-  }
-
-  .dressingLabel {
-    font-size: 1rem;
-  }
-
-  .wingSauceOptionsTitle {
-    font-size: 1.15rem;
-  }
-
+  .sauceLabel,
+  .meatLabel,
+  .sideLabel,
+  .drinkLabel,
+  .proteinLabel,
+  .dressingLabel,
   .wingSauceLabel {
     font-size: 1rem;
-  }
-
-  .specialInstructionsLabel {
-    font-size: 1.15rem;
   }
 
   .specialInstructionsInput {
@@ -851,7 +624,11 @@
   }
 
   .allergyWarning {
-    border-left: 2px solid var(--primary);
+    font-size: 0.85rem;
+  }
+
+  .legalText {
+    font-size: 0.85rem;
   }
 
   .addToOrderButton {

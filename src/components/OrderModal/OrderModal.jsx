@@ -26,9 +26,9 @@ function OrderModal({ isOpen, item, onAddToOrder, onClose }) {
 
   // * Handle meat selection (supports both single and 2 meat combo selection)
   const handleMeatSelection = (meatName) => {
+    // Check if item is a 2 meat combo
     const isTwoMeatCombo = item.name === "Any 2 Meat Combo";
-
-    // If item is a 2 meat combo
+    // If item is a 2 meat combo, allow up to 2 meats to be selected
     if (isTwoMeatCombo) {
       setSelectedMeats((prev) => {
         if (prev.includes(meatName)) {
@@ -49,10 +49,10 @@ function OrderModal({ isOpen, item, onAddToOrder, onClose }) {
 
   // * Handle side selection (supports both single and veggie plate selection)
   const handleSideSelection = (sideName) => {
+    // Check if item is a veggie plate
     const isVeggiePlate = item.name === "Veggie Plate - Any 4 Vegetables";
-
+    // If item is a veggie plate, allow up to 4 sides to be selected
     if (isVeggiePlate) {
-      // For veggie plate, allow max of 4 selections
       setSelectedSides((prev) => {
         if (prev.includes(sideName)) {
           // Remove if already selected
@@ -125,7 +125,6 @@ function OrderModal({ isOpen, item, onAddToOrder, onClose }) {
       <section className={styles.modalOverlay} onClick={onClose}>
         {/* Modal */}
         <div className={styles.modal} onClick={(e) => e.stopPropagation()}>
-          {/* Modal header */}
           <div className={styles.modalHeader}>
             {/* Item name */}
             <h2 className={styles.itemName}>{item.name}</h2>
@@ -145,7 +144,7 @@ function OrderModal({ isOpen, item, onAddToOrder, onClose }) {
 
           {/* Quantity selector */}
           <div className={styles.quantitySection}>
-            <label className={styles.quantityLabel}>Quantity:</label>
+            <h3 className={styles.quantityTitle}>Quantity:</h3>
             <div className={styles.quantityControls}>
               <button
                 disabled={quantity <= 1}
@@ -331,7 +330,7 @@ function OrderModal({ isOpen, item, onAddToOrder, onClose }) {
 
           {/* Special instructions */}
           <div className={styles.specialInstructionsSection}>
-            <label className={styles.specialInstructionsLabel}>Special Instructions:</label>
+            <h3 className={styles.specialInstructionsTitle}>Special Instructions:</h3>
             <textarea
               rows={3}
               value={specialInstructions}
@@ -355,7 +354,7 @@ function OrderModal({ isOpen, item, onAddToOrder, onClose }) {
           {/* Separator line */}
           <hr className={styles.separator} />
 
-          {/* Add to order button */}
+          {/* Add to order section */}
           <div className={styles.actionSection}>
             <button className={styles.addToOrderButton} onClick={handleAddToOrder}>
               ADD TO ORDER ${totalPrice}
