@@ -10,80 +10,27 @@ Built with React, Vite, and modern web technologies, the application features a 
 
 ## Table of Contents
 
-- [Usage](#usage)
 - [Mock-Up](#mock-up)
-- [Instructions](#instructions)
 - [Key Features](#key-features)
 - [Technology Stack](#technology-stack)
-
-## Usage
-
-To start the application, run the following commands:
-
-#### 1. Install Dependencies
-
-```bash
-npm install
-```
-
-#### 2. Run The Development Server
-
-```bash
-npm run dev
-```
-
-#### 3. Build For Production
-
-```bash
-npm run build
-```
-
-#### 4. Preview Production Build
-
-```bash
-npm run preview
-```
 
 ## Mock-Up
 
 The following images show the web application's appearance and functionality:
 
-![Home Page](./src/assets/screenshots/homePage.jpg)
+![Home Page](./src/assets/screenshots/homePage.png)
 
-![Menu Page](./src/assets/screenshots/menuPage.jpg)
+![Menu Page](./src/assets/screenshots/menuPage.png)
 
-![Party Packs Page](./src/assets/screenshots/partyPacksPage.jpg)
+![Party Packs Page](./src/assets/screenshots/partyPacksPage.png)
 
-![Order Online Page](./src/assets/screenshots/orderOnlinePage.jpg)
+![Order Online Page](./src/assets/screenshots/orderOnlinePage.png)
 
-![Checkout Page](./src/assets/screenshots/checkoutPage.png)
+![Checkout Page](./src/assets/screenshots/checkout.png)
 
-![Footer](./src/assets/screenshots/footer.jpg)
+![Footer](./src/assets/screenshots/footer.png)
 
-![Dark Mode Theme](./src/assets/screenshots/darkThemeMode.jpg)
-
-## Instructions
-
-To use this application, follow these simple steps:
-
-### 1. Clone The Repository
-
-- Download or clone the project to your local machine.
-
-### 2. Install Dependencies
-
-- Run `npm install` in the project root to install all required packages.
-
-### 3. Start The Development Server
-
-- Run `npm run dev` and open the provided local URL in your browser to view the application.
-
-### 4. Build and Deploy
-
-This project can be deployed to platforms like Vercel, Netlify, or any static hosting service:
-
-- Run `npm run build` to generate a production build.
-- Deploy the contents of the dist folder to your preferred static hosting service.
+![Dark Mode Theme](./src/assets/screenshots/darkTheme.png)
 
 ## Key Features
 
@@ -95,9 +42,9 @@ This project can be deployed to platforms like Vercel, Netlify, or any static ho
 
 - **Theme Toggle System:** Seamless dark/light mode switching with persistent user preferences stored in localStorage and automatic system preference detection.
 
-- **Party Pack Ordering:** Specialized section for catering and large group orders with detailed package information, serving sizes, and pricing for events of various scales.
-
 - **Performance Optimized:** Fast loading times through Vite bundling, efficient image formats (AVIF), and optimized component rendering for superior user experience.
+
+- **Party Pack Ordering:** Specialized section for catering and large group orders with detailed package information, serving sizes, and pricing for events of various scales.
 
 - **Mobile-First Responsive Design:** Optimized layouts for all screen sizes with a collapsible mobile navigation menu featuring smooth animations and intuitive touch interactions.
 
@@ -111,16 +58,16 @@ This project can be deployed to platforms like Vercel, Netlify, or any static ho
 
 - **CSS Modules:** Scoped styling system preventing style conflicts while maintaining modular, maintainable CSS architecture.
 
-- **React 19:** Modern component-based UI library for building interactive user interfaces with hooks and functional components.
-
 - **CSS Custom Properties:** Dynamic theming system enabling real-time theme switching and consistent design token management.
+
+- **React 19:** Modern component-based UI library for building interactive user interfaces with hooks and functional components.
 
 - **Vite:** Lightning-fast build tool and development server providing instant hot module replacement and optimized production builds.
 
 - **JavaScript ES6+:** Modern JavaScript features including destructuring, arrow functions, and template literals for clean, readable code.
 
-- **Responsive Design:** Mobile-first approach using CSS Grid, Flexbox, and media queries for optimal viewing across all devices and screen sizes.
-
 - **React Router DOM:** Client-side routing solution enabling single-page application navigation with dynamic page titles and URL management.
+
+- **Responsive Design:** Mobile-first approach using CSS Grid, Flexbox, and media queries for optimal viewing across all devices and screen sizes.
 
 - **JSON Data Management:** Structured data storage for menu items, party packs, and restaurant information enabling easy content updates and maintenance.
