@@ -1,18 +1,17 @@
 import styles from "./Checkout.module.css";
 import { useState, useEffect } from "react";
 
-function Checkout({ onRemoveItem, cartItems, onClose, isOpen, onClearCart }) {
+function Checkout({ onClose, onRemoveItem, cartItems, isOpen, onClearCart }) {
+  // * Close overlay when clicking outside
+  const handleOverlayClick = (e) => {
+    if (e.target === e.currentTarget) {
+      onClose();
+    }
+  };
+
   // * Handle remove item
   const handleRemoveItem = (itemIndex) => {
     onRemoveItem(itemIndex);
-  };
-
-  // * Tip state
-  const [selectedTip, setSelectedTip] = useState(0);
-
-  // * Handle tip selection
-  const handleTipSelection = (tipPercentage) => {
-    setSelectedTip(tipPercentage);
   };
 
   // * Calculate subtotal
@@ -27,6 +26,9 @@ function Checkout({ onRemoveItem, cartItems, onClose, isOpen, onClearCart }) {
     return calculateSubtotal() * 0.06;
   };
 
+  // * Tip state
+  const [selectedTip, setSelectedTip] = useState(0);
+
   // * Calculate tip
   const calculateTipAmount = () => {
     const subtotal = calculateSubtotal();
@@ -34,6 +36,11 @@ function Checkout({ onRemoveItem, cartItems, onClose, isOpen, onClearCart }) {
       return subtotal * (selectedTip / 100);
     }
     return 0;
+  };
+
+  // * Handle tip selection
+  const handleTipSelection = (tipPercentage) => {
+    setSelectedTip(tipPercentage);
   };
 
   // * Calculate total
@@ -54,13 +61,6 @@ function Checkout({ onRemoveItem, cartItems, onClose, isOpen, onClearCart }) {
     const timePerItem = 5;
     const totalItems = cartItems.reduce((total, item) => total + (item.quantity || 1), 0);
     return baseTime + totalItems * timePerItem;
-  };
-
-  // * Close overlay when clicking outside
-  const handleOverlayClick = (e) => {
-    if (e.target === e.currentTarget) {
-      onClose();
-    }
   };
 
   // * Prevent body scroll when overlay is open
@@ -142,10 +142,9 @@ function Checkout({ onRemoveItem, cartItems, onClose, isOpen, onClearCart }) {
   return (
     <>
       {/* Overlay */}
-      <section className={styles.overlay} onClick={handleOverlayClick}>
+      <div className={styles.overlay} onClick={handleOverlayClick}>
         {/* Checkout container */}
-        <div className={styles.checkoutContainer}>
-          {/* Header */}
+        <section className={styles.checkoutContainer}>
           <div className={styles.header}>
             {/* Title */}
             <h2 className={styles.title}>Order Summary</h2>
@@ -253,7 +252,7 @@ function Checkout({ onRemoveItem, cartItems, onClose, isOpen, onClearCart }) {
           <div className={styles.customerSection}>
             <h3 className={styles.sectionTitle}>Customer Information</h3>
             <div className={styles.inputGroup}>
-              <label className={styles.inputLabel}>Order Name*</label>
+              <label className={styles.inputLabel}>Order Name *</label>
               <input
                 required
                 type="text"
@@ -264,7 +263,7 @@ function Checkout({ onRemoveItem, cartItems, onClose, isOpen, onClearCart }) {
               />
             </div>
             <div className={styles.inputGroup}>
-              <label className={styles.inputLabel}>Phone Number*</label>
+              <label className={styles.inputLabel}>Phone Number *</label>
               <input
                 required
                 type="tel"
@@ -289,7 +288,7 @@ function Checkout({ onRemoveItem, cartItems, onClose, isOpen, onClearCart }) {
           {/* Wait time section */}
           <div className={styles.waitTimeSection}>
             <div className={styles.waitTimeBox}>
-              <span className={styles.waitTimeLabel}>Your order will be ready in {calculateWaitTime()} minutes</span>
+              <span>Your order will be ready in {calculateWaitTime()} minutes</span>
             </div>
           </div>
 
@@ -303,8 +302,8 @@ function Checkout({ onRemoveItem, cartItems, onClose, isOpen, onClearCart }) {
               CHECKOUT
             </button>
           </div>
-        </div>
-      </section>
+        </section>
+      </div>
     </>
   );
 }
