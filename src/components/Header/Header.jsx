@@ -28,9 +28,9 @@ function Header() {
   // Make theme be set in DOM
   useEffect(() => {
     const storedTheme = localStorage.getItem("theme");
-    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    const prefersLight = window.matchMedia("(prefers-color-scheme: light)").matches;
 
-    const initialTheme = storedTheme || (prefersDark ? "dark" : "light");
+    const initialTheme = storedTheme || (prefersLight ? "light" : "dark");
     setTheme(initialTheme);
     document.documentElement.setAttribute("data-theme", initialTheme);
   }, []);
@@ -43,15 +43,16 @@ function Header() {
 
   // Toggle handler
   const toggleTheme = () => {
-    setTheme((prev) => (prev === "dark" ? "light" : "dark"));
+    setTheme((prev) => (prev === "light" ? "dark" : "light"));
   };
 
   // Make media theme switch on phone's user settings
   useEffect(() => {
-    const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
+    const mediaQuery = window.matchMedia("(prefers-color-scheme: light)");
     const handleChange = (e) => {
-      setTheme(e.matches ? "dark" : "light");
+      setTheme(e.matches ? "light" : "dark");
     };
+
     mediaQuery.addEventListener("change", handleChange);
     return () => mediaQuery.removeEventListener("change", handleChange);
   }, []);
@@ -204,7 +205,7 @@ function Header() {
                 </NavLink>
               </nav>
               {/* Sidebar footer */}
-              <footer className={styles.sidebarFooter}>
+              <div className={styles.sidebarFooter}>
                 {/* Sidebar theme button */}
                 <button
                   onClick={toggleTheme}
@@ -242,7 +243,7 @@ function Header() {
                   <i className="fa-solid fa-asterisk" aria-hidden="true"></i>
                   TERMS OF SERVICE
                 </NavLink>
-              </footer>
+              </div>
             </div>
           </div>,
           document.body

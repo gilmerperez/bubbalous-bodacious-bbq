@@ -324,7 +324,6 @@ header {
 
 /* Sidebar footer */
 .sidebarFooter {
-  padding: 0;
   gap: 0.75rem;
   display: flex;
   margin-top: auto;
