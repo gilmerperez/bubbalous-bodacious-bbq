@@ -271,7 +271,7 @@ header {
 /* Sidebar close button */
 .sidebarClose {
   top: 0.75rem;
-  right: 1.25rem;
+  left: 1.25rem;
   background: none;
   position: absolute;
   font-size: 1.15rem;
