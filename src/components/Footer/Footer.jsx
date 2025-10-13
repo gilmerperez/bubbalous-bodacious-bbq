@@ -1,5 +1,5 @@
 import styles from "./Footer.module.css";
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 
 function Footer() {
   return (
@@ -28,9 +28,9 @@ function Footer() {
           <div className={styles.bottomContainer}>
             {/* Site navigation */}
             <section className={styles.siteNavigation} aria-labelledby="pages-heading">
-              <h5 id="pages-heading" className={styles.navHeader}>
+              <h6 id="pages-heading" className={styles.navHeader}>
                 PAGES
-              </h5>
+              </h6>
               <nav className={styles.navItems} aria-label="Main site navigation">
                 <NavLink to="/" aria-label="Go to home page">
                   Home
@@ -48,47 +48,47 @@ function Footer() {
             </section>
             {/* Social links */}
             <section className={styles.socialLinks} aria-labelledby="connect-heading">
-              <h5 id="connect-heading" className={styles.navHeader}>
+              <h6 id="connect-heading" className={styles.navHeader}>
                 CONNECT
-              </h5>
+              </h6>
               <nav className={styles.navItems} aria-label="Social media links">
                 {/* Facebook */}
-                <a
+                <Link
                   target="_blank"
                   rel="noopener noreferrer"
                   className={styles.socialLink}
                   aria-label="Follow us on Facebook"
-                  href="https://www.facebook.com/BubbalousConroy/"
+                  to="https://www.facebook.com/BubbalousConroy/"
                 >
                   Facebook
-                </a>
+                </Link>
                 {/* Instagram */}
-                <a
+                <Link
                   target="_blank"
                   rel="noopener noreferrer"
                   className={styles.socialLink}
                   aria-label="Follow us on Instagram"
-                  href="https://www.instagram.com/bubbalousonconroy/"
+                  to="https://www.instagram.com/bubbalousonconroy/"
                 >
                   Instagram
-                </a>
+                </Link>
                 {/* Google page */}
-                <a
+                <Link
                   target="_blank"
                   rel="noopener noreferrer"
                   className={styles.socialLink}
                   aria-label="View our Google page"
-                  href="https://www.google.com/search?sa=X&sca_esv=19a04cb715b89171&rlz=1C1RXQR_enUS1087US1087&q=Bubbalou%27s+Bodacious+Bar-B-Que&ludocid=15616216618251093981&lsig=AB86z5V2Tiz1kh1SIkGwpkt0_9tm&ved=2ahUKEwiZloWK1ZePAxUvTDABHcBzFCwQoAJ6BAgcEBw&biw=1745&bih=828&dpr=1.1"
+                  to="https://www.google.com/search?sca_esv=0683e8ae5cdf4a07&rlz=1C1RXQR_enUS1087US1087&si=AMgyJEuzsz2NflaaWzrzdpjxXXRaJ2hfdMsbe_mSWso6src8s34WnzVthE3GbcLciAEjUQUYUqE_SrVCus3YtmY4GEJIahcP2Vl5otO8QtxszA113kkHURCO9gJvLjZe4SmqwVbZ057Dx--UABgG2IawYo454kpkVw%3D%3D&q=Bubbalou%27s+Bodacious+Bar-B-Que+Reviews&sa=X&ved=2ahUKEwiT-LCsnaCQAxXbRjABHTnPCbQQ0bkNegQIORAE&biw=1745&bih=828&dpr=1.1"
                 >
                   Google Page
-                </a>
+                </Link>
               </nav>
             </section>
             {/* Legal pages */}
             <section className={styles.legalPages} aria-labelledby="legal-heading">
-              <h5 id="legal-heading" className={styles.navHeader}>
+              <h6 id="legal-heading" className={styles.navHeader}>
                 LEGAL
-              </h5>
+              </h6>
               <nav className={styles.navItems} aria-label="Legal pages">
                 <NavLink to="/contact" aria-label="Contact us">
                   Contact
@@ -103,13 +103,13 @@ function Footer() {
             </section>
             {/* Contact info */}
             <section className={styles.contactInfo} aria-labelledby="contact-heading">
-              <h5 id="contact-heading" className={styles.navHeader}>
+              <h6 id="contact-heading" className={styles.navHeader}>
                 CONTACT
-              </h5>
+              </h6>
               <nav className={styles.navItems} aria-label="Contact information">
                 {/* Phone number */}
                 <a href="tel:+14072951212" aria-label="Call us at (407) 295-1212" className={styles.contactLink}>
-                  (407) 295 - 1212
+                  (407) 295-1212
                 </a>
                 {/* Email */}
                 <a
@@ -120,15 +120,15 @@ function Footer() {
                   bubbalousbbq@aol.com
                 </a>
                 {/* Address */}
-                <a
+                <Link
                   target="_blank"
                   rel="noopener noreferrer"
                   className={styles.contactLink}
-                  href="https://www.google.com/maps?sca_esv=19a04cb715b89171&rlz=1C1RXQR_enUS1087US1087&lsig=AB86z5V2Tiz1kh1SIkGwpkt0_9tm&biw=1745&bih=828&dpr=1.1&um=1&ie=UTF-8&fb=1&gl=us&sa=X&geocode=KQekdArSfueIMd2HaKpG8rfY&daddr=5818+Conroy+Rd,+Orlando,+FL+32835"
                   aria-label="Get directions to 5818 Conroy Road, Orlando FL 32835"
+                  to="https://www.google.com/maps/place/5818+Conroy+Rd,+Orlando,+FL+32835/@28.4932644,-81.4634049,868m/data=!3m2!1e3!4b1!4m6!3m5!1s0x88e77ecdf6ef68b5:0x7db71923947402f4!8m2!3d28.4932644!4d-81.4608246!16s%2Fg%2F11bw3yh66m?entry=ttu&g_ep=EgoyMDI1MTAwOC4wIKXMDSoASAFQAw%3D%3D"
                 >
                   5818 Conroy Road, Orlando FL 32835
-                </a>
+                </Link>
               </nav>
             </section>
           </div>
