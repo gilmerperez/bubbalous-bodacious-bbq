@@ -28,9 +28,7 @@ The following images show the web application's appearance and functionality:
 
 ![Checkout Page](./src/assets/screenshots/checkout.png)
 
-![Footer](./src/assets/screenshots/footer.png)
-
-![Dark Mode Theme](./src/assets/screenshots/darkTheme.png)
+![Dark Theme](./src/assets/screenshots/darkTheme.png)
 
 ## Key Features
 
