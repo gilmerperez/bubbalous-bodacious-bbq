@@ -26,7 +26,7 @@ The following images show the web application's appearance and functionality:
 
 ![Order Online Page](./src/assets/screenshots/orderOnlinePage.png)
 
-![Checkout Page](./src/assets/screenshots/checkout.png)
+![Checkout](./src/assets/screenshots/checkout.png)
 
 ![Dark Theme](./src/assets/screenshots/darkTheme.png)
 
