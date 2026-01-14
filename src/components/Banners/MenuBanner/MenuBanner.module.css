@@ -64,7 +64,7 @@
   font-size: 3rem;
   transition: 0.3s ease;
   text-shadow: var(--shadow-small);
-  font-family: "Oswald", sans-serif;
+  font-family: var(--font-oswald), sans-serif;
 }
 
 /* Title */
@@ -101,7 +101,7 @@
   border: 2px solid var(--primary);
   text-shadow: var(--shadow-small);
   background-color: var(--primary);
-  font-family: "Oswald", sans-serif;
+  font-family: var(--font-oswald), sans-serif;
 }
 
 .ctaButton:hover {

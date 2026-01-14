@@ -26,7 +26,7 @@ function OrderOnlineBanner() {
               className={styles.ctaButton}
               href="https://order.online/business/bubbalous-bodacious-barbque-61224"
             >
-              <i className="fa-solid fa-car-side"></i>
+              <i className="fa-solid fa-car-side" aria-hidden="true"></i>
               ORDER ON DOORDASH
             </a>
           </div>

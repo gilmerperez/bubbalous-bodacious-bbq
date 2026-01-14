@@ -1,9 +1,15 @@
+"use client";
+
 import styles from "./Header.module.css";
 import { createPortal } from "react-dom";
-import { NavLink } from "react-router-dom";
+import Link from "next/link";
+import Image from "next/image";
+import { usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
 
 function Header() {
+  const pathname = usePathname();
+
   // * Sticky header logic
   const [lastScrollY, setLastScrollY] = useState(0);
   const [isScrollingUp, setIsScrollingUp] = useState(true);
@@ -18,9 +24,6 @@ function Header() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, [lastScrollY]);
-
-  // * Custom styles for active page
-  const navLinkClass = ({ isActive }) => (isActive ? styles.activeLink : undefined);
 
   // * Theme switch
   const [theme, setTheme] = useState("light");
@@ -46,7 +49,7 @@ function Header() {
     setTheme((prev) => (prev === "light" ? "dark" : "light"));
   };
 
-  // Make media theme switch on phone's user settings
+  // Make media theme switch on phone&apos;s user settings
   useEffect(() => {
     const mediaQuery = window.matchMedia("(prefers-color-scheme: light)");
     const handleChange = (e) => {
@@ -84,24 +87,36 @@ function Header() {
           {/* Desktop Layout */}
           <div className={styles.desktopLayout}>
             {/* Logo */}
-            <NavLink to="/" aria-label="Go to home page">
-              <img className={styles.logo} src="/logo.jpg" alt="Bubbalous Bodacious BBQ Logo" />
-            </NavLink>
+            <Link href="/" aria-label="Go to home page">
+              <Image className={styles.logo} src="/logo.jpg" alt="Bubbalous Bodacious BBQ Logo" width={200} height={50} />
+            </Link>
             {/* Site navigation */}
             <div className={styles.navContainer}>
               <nav className={styles.navItems} aria-label="Main site navigation">
-                <NavLink to="/" className={navLinkClass} aria-label="Go to home page">
+                <Link href="/" className={pathname === "/" ? styles.activeLink : undefined} aria-label="Go to home page">
                   HOME
-                </NavLink>
-                <NavLink to="/menu" className={navLinkClass} aria-label="View our menu">
+                </Link>
+                <Link
+                  href="/menu"
+                  className={pathname === "/menu" ? styles.activeLink : undefined}
+                  aria-label="View our menu"
+                >
                   MENU
-                </NavLink>
-                <NavLink to="/party-packs" className={navLinkClass} aria-label="Browse party packs">
+                </Link>
+                <Link
+                  href="/party-packs"
+                  className={pathname === "/party-packs" ? styles.activeLink : undefined}
+                  aria-label="Browse party packs"
+                >
                   PARTY PACKS
-                </NavLink>
-                <NavLink to="/order-online" className={navLinkClass} aria-label="Order online">
+                </Link>
+                <Link
+                  href="/order-online"
+                  className={pathname === "/order-online" ? styles.activeLink : undefined}
+                  aria-label="Order online"
+                >
                   ORDER ONLINE
-                </NavLink>
+                </Link>
               </nav>
               {/* Separator */}
               <span className={styles.separator} aria-hidden="true">
@@ -130,9 +145,9 @@ function Header() {
               <i className="fa-solid fa-phone" aria-hidden="true"></i>
             </button>
             {/* Mobile logo */}
-            <NavLink to="/" className={styles.mobileLogoContainer} aria-label="Go to home page">
-              <img src="/logo.jpg" alt="Bubbalous Bodacious BBQ Logo" />
-            </NavLink>
+            <Link href="/" className={styles.mobileLogoContainer} aria-label="Go to home page">
+              <Image src="/logo.jpg" alt="Bubbalous Bodacious BBQ Logo" width={200} height={45} />
+            </Link>
             {/* Hamburger menu */}
             <button
               aria-expanded={menuOpen}
@@ -167,42 +182,42 @@ function Header() {
               </button>
               {/* Sidebar site navigation */}
               <nav className={styles.sidebarNavItems} aria-label="Mobile site navigation">
-                <NavLink
-                  to="/"
-                  className={navLinkClass}
+                <Link
+                  href="/"
+                  className={pathname === "/" ? styles.activeLink : undefined}
                   aria-label="Go to home page"
                   onClick={() => setMenuOpen(false)}
                 >
                   <i className="fa-solid fa-house" aria-hidden="true"></i>
                   HOME
-                </NavLink>
-                <NavLink
-                  to="/menu"
-                  className={navLinkClass}
+                </Link>
+                <Link
+                  href="/menu"
+                  className={pathname === "/menu" ? styles.activeLink : undefined}
                   aria-label="View our menu"
                   onClick={() => setMenuOpen(false)}
                 >
                   <i className="fa-solid fa-burger" aria-hidden="true"></i>
                   MENU
-                </NavLink>
-                <NavLink
-                  to="/party-packs"
-                  className={navLinkClass}
+                </Link>
+                <Link
+                  href="/party-packs"
+                  className={pathname === "/party-packs" ? styles.activeLink : undefined}
                   aria-label="Browse party packs"
                   onClick={() => setMenuOpen(false)}
                 >
                   <i className="fa-solid fa-box" aria-hidden="true"></i>
                   PARTY PACKS
-                </NavLink>
-                <NavLink
-                  to="/order-online"
-                  className={navLinkClass}
+                </Link>
+                <Link
+                  href="/order-online"
+                  className={pathname === "/order-online" ? styles.activeLink : undefined}
                   aria-label="Order online"
                   onClick={() => setMenuOpen(false)}
                 >
                   <i className="fa-solid fa-mobile-screen-button" aria-hidden="true"></i>
                   ORDER ONLINE
-                </NavLink>
+                </Link>
               </nav>
               {/* Sidebar footer */}
               <div className={styles.sidebarFooter}>
@@ -216,33 +231,33 @@ function Header() {
                   <p>{theme === "dark" ? "DARK" : "LIGHT"}</p>
                 </button>
                 {/* Sidebar legal pages */}
-                <NavLink
-                  to="/contact"
+                <Link
+                  href="/contact"
                   aria-label="Contact us"
-                  className={navLinkClass}
+                  className={pathname === "/contact" ? styles.activeLink : undefined}
                   onClick={() => setMenuOpen(false)}
                 >
                   <i className="fa-solid fa-paper-plane" aria-hidden="true"></i>
                   CONTACT
-                </NavLink>
-                <NavLink
-                  to="/privacy-policy"
-                  className={navLinkClass}
+                </Link>
+                <Link
+                  href="/privacy-policy"
+                  className={pathname === "/privacy-policy" ? styles.activeLink : undefined}
                   onClick={() => setMenuOpen(false)}
                   aria-label="Read our privacy policy"
                 >
                   <i className="fa-solid fa-shield-halved" aria-hidden="true"></i>
                   PRIVACY POLICY
-                </NavLink>
-                <NavLink
-                  to="/terms-of-service"
-                  className={navLinkClass}
+                </Link>
+                <Link
+                  href="/terms-of-service"
+                  className={pathname === "/terms-of-service" ? styles.activeLink : undefined}
                   onClick={() => setMenuOpen(false)}
                   aria-label="Read our terms of service"
                 >
                   <i className="fa-solid fa-asterisk" aria-hidden="true"></i>
                   TERMS OF SERVICE
-                </NavLink>
+                </Link>
               </div>
             </div>
           </div>,

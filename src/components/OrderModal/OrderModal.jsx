@@ -1,3 +1,5 @@
+"use client";
+
 import { useState } from "react";
 import styles from "./OrderModal.module.css";
 
@@ -38,7 +40,7 @@ function OrderModal({ isOpen, item, onAddToOrder, onClose }) {
           // Add if less than 2 selected
           return [...prev, meatName];
         }
-        // Don't add if already 2 selected
+        // Don&apos;t add if already 2 selected
         return prev;
       });
     } else {
@@ -61,7 +63,7 @@ function OrderModal({ isOpen, item, onAddToOrder, onClose }) {
           // Add if less than 4 selected
           return [...prev, sideName];
         }
-        // Don't add if already 4 selected
+        // Don&apos;t add if already 4 selected
         return prev;
       });
     } else {
@@ -130,7 +132,7 @@ function OrderModal({ isOpen, item, onAddToOrder, onClose }) {
             <h2 className={styles.itemName}>{item.name}</h2>
             {/* Close button */}
             <button className={styles.closeButton} onClick={onClose}>
-              <i className="fa-solid fa-xmark"></i>
+              <i className="fa-solid fa-xmark" aria-hidden="true"></i>
             </button>
           </div>
 
@@ -220,7 +222,9 @@ function OrderModal({ isOpen, item, onAddToOrder, onClose }) {
                 {item.name === "Veggie Plate - Any 4 Vegetables" ? "Choose 4 Vegetables:" : "Side Choice:"}
               </h3>
               {item.name === "Veggie Plate - Any 4 Vegetables" && (
-                <p className={styles.selectionHelper}>Select up to 4 vegetables ({selectedSides.length}/4 selected)</p>
+                <p className={styles.selectionHelper}>
+                  Select up to 4 vegetables ({selectedSides.length}/4 selected)
+                </p>
               )}
               <div className={styles.sideOptionsList}>
                 {item.sideOptions.map((side, index) => (
@@ -345,7 +349,7 @@ function OrderModal({ isOpen, item, onAddToOrder, onClose }) {
             <p className={styles.allergyWarning}>
               <strong>FOOD ALLERGY WARNING:</strong>
               <br />
-              Our food may contain food allergens including, but not limited to: Dairy Products, Peanuts & other nuts,
+              Our food may contain food allergens including, but not limited to: Dairy Products, Peanuts &amp; other nuts,
               Soy, Wheat, Glutens, Coconut. If any questions, please speak to manager.
             </p>
             <p className={styles.legalText}>* Not all requests can be accommodated.</p>

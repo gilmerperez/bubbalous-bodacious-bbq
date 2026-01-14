@@ -1,3 +1,5 @@
+"use client";
+
 import styles from "./Checkout.module.css";
 import { useState, useEffect } from "react";
 
@@ -117,15 +119,7 @@ function Checkout({ onClose, onRemoveItem, cartItems, isOpen, onClearCart }) {
       if (item.specialInstructions !== "None") console.log(`   Special Instructions: ${item.specialInstructions}`);
     });
     console.log(`SUBTOTAL: $${orderDetails.subtotal}`);
-    console.log(
-      `TIP: ${orderDetails.tipPercentage}${
-        orderDetails.tipPercentage === "Custom"
-          ? ` ($${orderDetails.tipAmount})`
-          : orderDetails.tipPercentage !== "None"
-          ? `% ($${orderDetails.tipAmount})`
-          : " (None)"
-      }`
-    );
+    console.log(`TIP: ${selectedTip}% ($${orderDetails.tipAmount})`);
     console.log(`TAX (${orderDetails.taxRate}): $${orderDetails.taxAmount}`);
     console.log(`TOTAL: $${orderDetails.total}`);
     console.log(`CUSTOMER NAME: ${orderDetails.customerName}`);
@@ -150,7 +144,7 @@ function Checkout({ onClose, onRemoveItem, cartItems, isOpen, onClearCart }) {
             <h2 className={styles.title}>Order Summary</h2>
             {/* Close button */}
             <button className={styles.closeButton} onClick={onClose}>
-              <i className="fa-solid fa-xmark"></i>
+              <i className="fa-solid fa-xmark" aria-hidden="true"></i>
             </button>
           </div>
 

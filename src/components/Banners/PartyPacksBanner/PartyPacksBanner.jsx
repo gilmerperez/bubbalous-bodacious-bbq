@@ -1,3 +1,5 @@
+"use client";
+
 import { useState, useEffect } from "react";
 import styles from "./PartyPacksBanner.module.css";
 
@@ -52,7 +54,7 @@ function PartyPacksBanner() {
           {/* Button */}
           <div className={styles.buttonContainer}>
             <a href="tel:4072951212" className={styles.ctaButton}>
-              <i className="fa-solid fa-phone"></i>
+              <i className="fa-solid fa-phone" aria-hidden="true"></i>
               ORDER FOR PICKUP
             </a>
           </div>

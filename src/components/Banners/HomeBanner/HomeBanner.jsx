@@ -1,4 +1,6 @@
-import { Link } from "react-router-dom";
+"use client";
+
+import Link from "next/link";
 import { useState, useEffect } from "react";
 import styles from "./HomeBanner.module.css";
 
@@ -43,7 +45,7 @@ function HomeBanner() {
         <div className={styles.overlay}></div>
         <div className={styles.contentContainer}>
           {/* Title */}
-          <h1 className={styles.mainTitle}>BUBBALOU'S BODACIOUS BBQ</h1>
+          <h1 className={styles.mainTitle}>BUBBALOU&apos;S BODACIOUS BBQ</h1>
           {/* Subtitle */}
           <p className={styles.subtitle}>
             Looking for the best Orlando BBQ? Look no further than Bubbalous Bodacious BBQ! Our mouth-watering meats and
@@ -51,10 +53,10 @@ function HomeBanner() {
           </p>
           {/* Buttons */}
           <div className={styles.buttonContainer}>
-            <Link to="/menu" className={styles.ctaButton}>
+            <Link href="/menu" className={styles.ctaButton}>
               VIEW FULL MENU
             </Link>
-            <Link to="/party-packs" className={`${styles.ctaButton} ${styles.secondaryButton}`}>
+            <Link href="/party-packs" className={`${styles.ctaButton} ${styles.secondaryButton}`}>
               VIEW PARTY PACKS
             </Link>
           </div>

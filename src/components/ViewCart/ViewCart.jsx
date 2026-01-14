@@ -5,12 +5,12 @@ function ViewCart({ onCartClick, cartCount = 0, showAlert = false, alertMessage 
     <>
       <section className={styles.viewCartContainer}>
         <div className={styles.bannerContent}>
-          {/* Restraurant location */}
+          {/* Restaurant location */}
           <span className={styles.locationText}>Bubbalous Bodacious BBQ - 5818 Conroy Road, Orlando FL 32835</span>
           {/* Shopping cart button */}
           <div className={styles.cartContainer}>
             <button className={styles.cartIcon} onClick={onCartClick}>
-              <i className="fa-solid fa-cart-shopping"></i>
+              <i className="fa-solid fa-cart-shopping" aria-hidden="true"></i>
               {/* Shopping cart item bubble count */}
               {cartCount > 0 && <span className={styles.cartBubble}>{cartCount}</span>}
             </button>

@@ -62,7 +62,7 @@ header {
   position: relative;
   font-size: 1.25rem;
   transition: 0.3s ease;
-  font-family: "Oswald", sans-serif;
+  font-family: var(--font-oswald), sans-serif;
   transition: transform 0.2s ease, border-bottom 0.1s ease;
 }
 
@@ -266,7 +266,7 @@ header {
   max-width: 250px;
   position: relative;
   flex-direction: column;
-  font-family: "Oswald", sans-serif;
+  font-family: var(--font-oswald), sans-serif;
   background-color: var(--footer-bg-color);
 }
 

@@ -1,4 +1,6 @@
-import { Link } from "react-router-dom";
+"use client";
+
+import Link from "next/link";
 import { useState, useEffect } from "react";
 import styles from "./MenuBanner.module.css";
 
@@ -52,17 +54,17 @@ function MenuBanner() {
         <div className={styles.overlay}></div>
         <div className={styles.contentContainer}>
           {/* Title */}
-          <h1 className={styles.mainTitle}>ORLANDO'S FAVORITE BBQ MENU</h1>
+          <h1 className={styles.mainTitle}>ORLANDO&apos;S FAVORITE BBQ MENU</h1>
           {/* Subtitle */}
           <p className={styles.subtitle}>
             Our menu is a delicious mix of classic BBQ favorites and unique, mouth-watering creations. From tender
             pulled pork and succulent brisket to crispy fried catfish and savory BBQ sauces, we have something for
-            everyone. Whether you're craving a classic sandwich or a hearty plate of BBQ, we've got you covered.
+            everyone. Whether you&apos;re craving a classic sandwich or a hearty plate of BBQ, we&apos;ve got you covered.
           </p>
           {/* Button */}
           <div className={styles.buttonContainer}>
-            <Link to="/order-online" className={styles.ctaButton}>
-              <i className="fa-solid fa-laptop"></i>
+            <Link href="/order-online" className={styles.ctaButton}>
+              <i className="fa-solid fa-laptop" aria-hidden="true"></i>
               ORDER ONLINE
             </Link>
           </div>

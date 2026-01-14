@@ -1,0 +1,93 @@
+.termsOfServiceContainer {
+  width: 100%;
+  display: flex;
+  margin: 0 auto;
+  min-height: 75vh;
+  max-width: 1000px;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Heading */
+.termsOfServiceTitle {
+  font-size: 2.5rem;
+  text-align: center;
+  transition: 0.3s ease;
+  border-radius: 0.25rem;
+  margin-bottom: 0.75rem;
+  padding: 0.25rem 0.75rem;
+  color: hsl(0, 0%, 100%);
+  box-shadow: var(--shadow-small);
+  text-shadow: var(--shadow-small);
+  background-color: var(--primary);
+  font-family: var(--font-oswald), sans-serif;
+}
+
+/* Description */
+.termsOfServiceDescription {
+  line-height: 1.35;
+  max-width: 1000px;
+  font-size: 1.15rem;
+  text-align: center;
+  margin-bottom: 1rem;
+  color: var(--text-secondary);
+}
+
+/* Terms of service */
+.terms {
+  text-align: left;
+}
+
+/* Terms heading */
+.termsHeading {
+  font-weight: 500;
+  font-size: 1.25rem;
+  display: inline-block;
+  transition: 0.3s ease;
+  margin-bottom: 0.25rem;
+  border-radius: 0.25rem;
+  padding: 0.25rem 0.75rem;
+  color: hsl(0, 0%, 100%);
+  box-shadow: var(--shadow-small);
+  text-shadow: var(--shadow-small);
+  background-color: var(--primary);
+  font-family: var(--font-oswald), sans-serif;
+}
+
+/* Terms text */
+.termsText {
+  line-height: 1.35;
+  font-size: 1.15rem;
+  color: var(--text-secondary);
+}
+
+.termsText:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+/* Tablet responsiveness */
+@media (max-width: 768px) {
+  .termsOfServiceTitle {
+    font-size: 2.25rem;
+  }
+
+  .termsOfServiceDescription {
+    font-size: 1rem;
+  }
+
+  .termsHeading {
+    font-size: 1.15rem;
+  }
+
+  .termsText {
+    font-size: 1rem;
+  }
+}
+
+/* Mobile responsiveness */
+@media (max-width: 480px) {
+  .termsOfServiceTitle {
+    font-size: 1.75rem;
+  }
+}
