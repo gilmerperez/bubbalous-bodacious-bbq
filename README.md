@@ -10,7 +10,7 @@ Bubbalous Bodacious BBQ is a modern, SEO-optimized restaurant website showcasing
 
 - **Methodology:** Built using a component-based architecture with Next.js App Router, the application follows modern React patterns with functional components and hooks. The design emphasizes server-side rendering for improved SEO, static generation where appropriate, and client-side interactivity for dynamic features. CSS Modules provide scoped styling, and the application uses Next.js Image optimization for all images.
 
-**Live Demo:** [Link to Deployed Application]([Link])
+**Live Demo:** [Link to Deployed Application](https://bubbalous-bodacious.vercel.app/)
 
 ## Table of Contents
 
