@@ -1,5 +1,4 @@
 "use client";
-
 import { useState } from "react";
 import styles from "./OrderModal.module.css";
 
@@ -222,9 +221,7 @@ function OrderModal({ isOpen, item, onAddToOrder, onClose }) {
                 {item.name === "Veggie Plate - Any 4 Vegetables" ? "Choose 4 Vegetables:" : "Side Choice:"}
               </h3>
               {item.name === "Veggie Plate - Any 4 Vegetables" && (
-                <p className={styles.selectionHelper}>
-                  Select up to 4 vegetables ({selectedSides.length}/4 selected)
-                </p>
+                <p className={styles.selectionHelper}>Select up to 4 vegetables ({selectedSides.length}/4 selected)</p>
               )}
               <div className={styles.sideOptionsList}>
                 {item.sideOptions.map((side, index) => (
@@ -338,8 +335,8 @@ function OrderModal({ isOpen, item, onAddToOrder, onClose }) {
             <textarea
               rows={3}
               value={specialInstructions}
-              placeholder="Write your instruction here..."
               className={styles.specialInstructionsInput}
+              placeholder="Write your instruction here..."
               onChange={(e) => setSpecialInstructions(e.target.value)}
             />
           </div>
@@ -349,8 +346,8 @@ function OrderModal({ isOpen, item, onAddToOrder, onClose }) {
             <p className={styles.allergyWarning}>
               <strong>FOOD ALLERGY WARNING:</strong>
               <br />
-              Our food may contain food allergens including, but not limited to: Dairy Products, Peanuts &amp; other nuts,
-              Soy, Wheat, Glutens, Coconut. If any questions, please speak to manager.
+              Our food may contain food allergens including, but not limited to: Dairy Products, Peanuts &amp; other
+              nuts, Soy, Wheat, Glutens, Coconut. If any questions, please speak to manager.
             </p>
             <p className={styles.legalText}>* Not all requests can be accommodated.</p>
           </div>

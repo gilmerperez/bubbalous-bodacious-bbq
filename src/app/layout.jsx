@@ -21,7 +21,7 @@ export const metadata = {
     template: "%s | Bubbalous Bodacious BBQ",
   },
   description:
-    "Serving Orlando&apos;s favorite BBQ since 1986. Authentic barbecue, homemade sides, party packs, and catering services. Located at 5818 Conroy Road, Orlando FL 32835.",
+    "Serving Orlando's favorite BBQ since 1986. Authentic barbecue, homemade sides, party packs, and catering services. Located at 5818 Conroy Road, Orlando FL 32835.",
   keywords: [
     "BBQ",
     "barbecue",
@@ -43,9 +43,9 @@ export const metadata = {
     locale: "en_US",
     url: "https://bubbalousbbq.com",
     siteName: "Bubbalous Bodacious BBQ",
-    title: "Bubbalous Bodacious BBQ | Orlando&apos;s Favorite BBQ Since 1986",
+    title: "Bubbalous Bodacious BBQ | Orlando's Favorite BBQ Since 1986",
     description:
-      "Serving Orlando&apos;s favorite BBQ since 1986. Authentic barbecue, homemade sides, party packs, and catering services.",
+      "Serving Orlando's favorite BBQ since 1986. Authentic barbecue, homemade sides, party packs, and catering services.",
   },
   icons: {
     icon: "/logo.jpg",

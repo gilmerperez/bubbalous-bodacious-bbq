@@ -1,5 +1,4 @@
 "use client";
-
 import { useState, useEffect } from "react";
 import styles from "./PartyPacksBanner.module.css";
 
@@ -7,7 +6,7 @@ function PartyPacksBanner() {
   // * State for current image
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
-  // * Array of images
+  // Array of images
   const images = [
     "/images/table-of-food-1.avif",
     "/images/table-of-food-2.avif",
@@ -18,7 +17,7 @@ function PartyPacksBanner() {
     "/images/table-of-food-7.avif",
   ];
 
-  // * Switch image every 3 seconds
+  // Switch image every 3 seconds
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentImageIndex((prevIndex) => (prevIndex === images.length - 1 ? 0 : prevIndex + 1));

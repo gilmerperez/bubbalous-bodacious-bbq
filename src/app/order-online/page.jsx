@@ -1,8 +1,7 @@
 "use client";
-
+import styles from "./page.module.css";
 import menuData from "../../data/menu.json";
 import { useState, useEffect } from "react";
-import styles from "./page.module.css";
 import ViewCart from "../../components/ViewCart/ViewCart";
 import Checkout from "../../components/Checkout/Checkout";
 import OrderModal from "../../components/OrderModal/OrderModal";
@@ -149,10 +148,10 @@ export default function OrderOnline() {
           {/* Description */}
           <p className={styles.orderOnlineDescription}>
             Experience the ease and convenience of Bubbalou&apos;s Bodacious BBQ online ordering system. With just a few
-            clicks, you can enjoy our mouth-watering BBQ from the comfort of your home. Whether you&apos;re planning a family
-            dinner or a large gathering, our user-friendly platform allows you to customize your order to suit your
-            needs. Enjoy the simplicity of online ordering and savor the authentic taste of Bubbalou&apos;s BBQ at your
-            convenience.
+            clicks, you can enjoy our mouth-watering BBQ from the comfort of your home. Whether you&apos;re planning a
+            family dinner or a large gathering, our user-friendly platform allows you to customize your order to suit
+            your needs. Enjoy the simplicity of online ordering and savor the authentic taste of Bubbalou&apos;s BBQ at
+            your convenience.
           </p>
 
           {/* Menu content */}

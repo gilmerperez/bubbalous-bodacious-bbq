@@ -1,5 +1,4 @@
 "use client";
-
 import Link from "next/link";
 import { useState, useEffect } from "react";
 import styles from "./HomeBanner.module.css";
@@ -19,7 +18,7 @@ function HomeBanner() {
     "/images/table-of-food-7.avif",
   ];
 
-  // * Switch image every 3 seconds
+  // Switch image every 3 seconds
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentImageIndex((prevIndex) => (prevIndex === images.length - 1 ? 0 : prevIndex + 1));

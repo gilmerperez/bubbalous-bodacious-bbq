@@ -1,5 +1,4 @@
 "use client";
-
 import Link from "next/link";
 import { useState, useEffect } from "react";
 import styles from "./MenuBanner.module.css";
@@ -8,7 +7,7 @@ function MenuBanner() {
   // * State for current image
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
-  // * Array of images
+  // Array of images
   const images = [
     "/images/2-meat-combo.avif",
     "/images/catfish-basket.avif",
@@ -28,7 +27,7 @@ function MenuBanner() {
     "/images/side-of-okra.avif",
   ];
 
-  // * Switch image every 3 seconds
+  // Switch image every 3 seconds
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentImageIndex((prevIndex) => (prevIndex === images.length - 1 ? 0 : prevIndex + 1));

@@ -1,11 +1,10 @@
 "use client";
-
-import styles from "./Header.module.css";
-import { createPortal } from "react-dom";
 import Link from "next/link";
 import Image from "next/image";
-import { usePathname } from "next/navigation";
+import styles from "./Header.module.css";
+import { createPortal } from "react-dom";
 import { useState, useEffect } from "react";
+import { usePathname } from "next/navigation";
 
 function Header() {
   const pathname = usePathname();
@@ -88,32 +87,43 @@ function Header() {
           <div className={styles.desktopLayout}>
             {/* Logo */}
             <Link href="/" aria-label="Go to home page">
-              <Image className={styles.logo} src="/logo.jpg" alt="Bubbalous Bodacious BBQ Logo" width={200} height={50} />
+              <Image
+                width={200}
+                height={50}
+                loading="lazy"
+                src="/logo.jpg"
+                className={styles.logo}
+                alt="Bubbalous Bodacious BBQ Logo"
+              />
             </Link>
             {/* Site navigation */}
             <div className={styles.navContainer}>
               <nav className={styles.navItems} aria-label="Main site navigation">
-                <Link href="/" className={pathname === "/" ? styles.activeLink : undefined} aria-label="Go to home page">
+                <Link
+                  href="/"
+                  aria-label="Go to home page"
+                  className={pathname === "/" ? styles.activeLink : undefined}
+                >
                   HOME
                 </Link>
                 <Link
                   href="/menu"
-                  className={pathname === "/menu" ? styles.activeLink : undefined}
                   aria-label="View our menu"
+                  className={pathname === "/menu" ? styles.activeLink : undefined}
                 >
                   MENU
                 </Link>
                 <Link
                   href="/party-packs"
-                  className={pathname === "/party-packs" ? styles.activeLink : undefined}
                   aria-label="Browse party packs"
+                  className={pathname === "/party-packs" ? styles.activeLink : undefined}
                 >
                   PARTY PACKS
                 </Link>
                 <Link
                   href="/order-online"
-                  className={pathname === "/order-online" ? styles.activeLink : undefined}
                   aria-label="Order online"
+                  className={pathname === "/order-online" ? styles.activeLink : undefined}
                 >
                   ORDER ONLINE
                 </Link>
@@ -137,10 +147,10 @@ function Header() {
           <div className={styles.mobileLayout}>
             {/* Phone button */}
             <button
-              className={styles.phoneButton}
-              onClick={handlePhoneClick}
-              aria-label="Call us at (407) 295-1212"
               type="button"
+              onClick={handlePhoneClick}
+              className={styles.phoneButton}
+              aria-label="Call us at (407) 295-1212"
             >
               <i className="fa-solid fa-phone" aria-hidden="true"></i>
             </button>
@@ -184,36 +194,36 @@ function Header() {
               <nav className={styles.sidebarNavItems} aria-label="Mobile site navigation">
                 <Link
                   href="/"
-                  className={pathname === "/" ? styles.activeLink : undefined}
                   aria-label="Go to home page"
                   onClick={() => setMenuOpen(false)}
+                  className={pathname === "/" ? styles.activeLink : undefined}
                 >
                   <i className="fa-solid fa-house" aria-hidden="true"></i>
                   HOME
                 </Link>
                 <Link
                   href="/menu"
-                  className={pathname === "/menu" ? styles.activeLink : undefined}
                   aria-label="View our menu"
                   onClick={() => setMenuOpen(false)}
+                  className={pathname === "/menu" ? styles.activeLink : undefined}
                 >
                   <i className="fa-solid fa-burger" aria-hidden="true"></i>
                   MENU
                 </Link>
                 <Link
                   href="/party-packs"
-                  className={pathname === "/party-packs" ? styles.activeLink : undefined}
                   aria-label="Browse party packs"
                   onClick={() => setMenuOpen(false)}
+                  className={pathname === "/party-packs" ? styles.activeLink : undefined}
                 >
                   <i className="fa-solid fa-box" aria-hidden="true"></i>
                   PARTY PACKS
                 </Link>
                 <Link
                   href="/order-online"
-                  className={pathname === "/order-online" ? styles.activeLink : undefined}
                   aria-label="Order online"
                   onClick={() => setMenuOpen(false)}
+                  className={pathname === "/order-online" ? styles.activeLink : undefined}
                 >
                   <i className="fa-solid fa-mobile-screen-button" aria-hidden="true"></i>
                   ORDER ONLINE
@@ -234,26 +244,26 @@ function Header() {
                 <Link
                   href="/contact"
                   aria-label="Contact us"
-                  className={pathname === "/contact" ? styles.activeLink : undefined}
                   onClick={() => setMenuOpen(false)}
+                  className={pathname === "/contact" ? styles.activeLink : undefined}
                 >
                   <i className="fa-solid fa-paper-plane" aria-hidden="true"></i>
                   CONTACT
                 </Link>
                 <Link
                   href="/privacy-policy"
-                  className={pathname === "/privacy-policy" ? styles.activeLink : undefined}
                   onClick={() => setMenuOpen(false)}
                   aria-label="Read our privacy policy"
+                  className={pathname === "/privacy-policy" ? styles.activeLink : undefined}
                 >
                   <i className="fa-solid fa-shield-halved" aria-hidden="true"></i>
                   PRIVACY POLICY
                 </Link>
                 <Link
                   href="/terms-of-service"
-                  className={pathname === "/terms-of-service" ? styles.activeLink : undefined}
                   onClick={() => setMenuOpen(false)}
                   aria-label="Read our terms of service"
+                  className={pathname === "/terms-of-service" ? styles.activeLink : undefined}
                 >
                   <i className="fa-solid fa-asterisk" aria-hidden="true"></i>
                   TERMS OF SERVICE

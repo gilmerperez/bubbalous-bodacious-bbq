@@ -29,11 +29,11 @@ export default function PartyPacks() {
           <h1 className={styles.partyPacksTitle}>BUBBALOU&apos;S BODACIOUS PARTY PACKS</h1>
           {/* Description */}
           <p className={styles.partyPacksDescription}>
-            Perfect for any gathering! Our party packs are designed to bring the authentic taste of Bubbalou&apos;s Bodacious
-            BBQ to your special events. Whether you&apos;re hosting a small family gathering or feeding the entire
-            neighborhood, our party packs offer generous portions of our mouth-watering BBQ meats, homemade sides, and
-            fresh bread. Each pack is carefully crafted to ensure everyone leaves satisfied and talking about your
-            amazing BBQ feast for years to come.
+            Perfect for any gathering! Our party packs are designed to bring the authentic taste of Bubbalou&apos;s
+            Bodacious BBQ to your special events. Whether you&apos;re hosting a small family gathering or feeding the
+            entire neighborhood, our party packs offer generous portions of our mouth-watering BBQ meats, homemade
+            sides, and fresh bread. Each pack is carefully crafted to ensure everyone leaves satisfied and talking about
+            your amazing BBQ feast for years to come.
           </p>
 
           {/* Party packs */}

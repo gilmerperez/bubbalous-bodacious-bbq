@@ -10,12 +10,12 @@ function Footer() {
           <div className={styles.topContainer}>
             {/* Logo */}
             <Image
-              className={styles.logo}
-              src="/logo.jpg"
-              alt="Bubbalous Bodacious BBQ Logo"
               width={200}
               height={100}
               loading="lazy"
+              src="/logo.jpg"
+              className={styles.logo}
+              alt="Bubbalous Bodacious BBQ Logo"
             />
             {/* Legal disclaimer */}
             <p className={styles.legalDisclaimer}>
@@ -36,7 +36,9 @@ function Footer() {
           <div className={styles.bottomContainer}>
             {/* Site navigation */}
             <section className={styles.siteNavigation} aria-labelledby="pages-heading">
-              <h6 id="pages-heading" className={styles.navHeader}>PAGES</h6>
+              <h6 id="pages-heading" className={styles.navHeader}>
+                PAGES
+              </h6>
               <nav className={styles.navItems} aria-label="Main site navigation">
                 <Link href="/" aria-label="Go to home page">
                   Home

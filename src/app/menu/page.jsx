@@ -1,8 +1,7 @@
 "use client";
-
+import { useState } from "react";
 import styles from "./page.module.css";
 import menuData from "../../data/menu.json";
-import { useState } from "react";
 import MenuBanner from "../../components/Banners/MenuBanner/MenuBanner";
 
 export default function Menu() {
@@ -48,11 +47,11 @@ export default function Menu() {
           <h1 className={styles.menuTitle}>BUBBALOU&apos;S BODACIOUS MENU</h1>
           {/* Description */}
           <p className={styles.menuDescription}>
-            Discover the diverse and delectable offerings of Bubbalou&apos;s Bodacious BBQ menu. From savory appetizers to
-            satisfying main courses, our menu is crafted to delight every palate. Indulge in our expertly smoked meats,
-            flavorful sides, and irresistible desserts. Whether you&apos;re in the mood for a hearty sandwich, a classic BBQ
-            dinner, or a refreshing drink, our menu promises a memorable dining experience that captures the essence of
-            authentic BBQ.
+            Discover the diverse and delectable offerings of Bubbalou&apos;s Bodacious BBQ menu. From savory appetizers
+            to satisfying main courses, our menu is crafted to delight every palate. Indulge in our expertly smoked
+            meats, flavorful sides, and irresistible desserts. Whether you&apos;re in the mood for a hearty sandwich, a
+            classic BBQ dinner, or a refreshing drink, our menu promises a memorable dining experience that captures the
+            essence of authentic BBQ.
           </p>
 
           {/* Menu content */}

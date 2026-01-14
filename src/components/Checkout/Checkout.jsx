@@ -1,5 +1,4 @@
 "use client";
-
 import styles from "./Checkout.module.css";
 import { useState, useEffect } from "react";
 

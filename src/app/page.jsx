@@ -1,11 +1,11 @@
+import Image from "next/image";
 import styles from "./page.module.css";
 import HomeBanner from "../components/Banners/HomeBanner/HomeBanner";
-import Image from "next/image";
 
 export const metadata = {
   title: "Home",
   description:
-    "Serving Orlando&apos;s favorite BBQ since 1986. Authentic barbecue, homemade sides, and award-winning flavors. Visit us at 5818 Conroy Road, Orlando FL 32835.",
+    "Serving Orlando's favorite BBQ since 1986. Authentic barbecue, homemade sides, and award-winning flavors. Visit us at 5818 Conroy Road, Orlando FL 32835.",
   keywords: [
     "BBQ restaurant Orlando",
     "barbecue Orlando",
@@ -34,11 +34,13 @@ export default function Home() {
               <h1 className={styles.informationTitle}>SERVING ORLANDO&apos;S FAVORITE BBQ SINCE 1986</h1>
               {/* Text */}
               <div className={styles.informationText}>
-                <p>For nearly 40 years, Bubbalou&apos;s Bodacious BBQ has been serving up Orlando&apos;s Favorite BBQ.</p>
+                <p>
+                  For nearly 40 years, Bubbalou&apos;s Bodacious BBQ has been serving up Orlando&apos;s Favorite BBQ.
+                </p>
                 <p>
                   We use only the finest ingredients, cooking our meats low and slow over a hardwood fire and seasoning
-                  them with our secret recipe. Whether you&apos;re a BBQ aficionado or just looking for a delicious meal,
-                  Bubbalou&apos;s has something for everyone.
+                  them with our secret recipe. Whether you&apos;re a BBQ aficionado or just looking for a delicious
+                  meal, Bubbalou&apos;s has something for everyone.
                 </p>
                 <p>
                   Our commitment to traditional, old-fashioned cooking means we serve BBQ straight from the pit, with
@@ -50,11 +52,11 @@ export default function Home() {
             {/* Image */}
             <div className={styles.imageContent}>
               <Image
+                width={600}
+                height={400}
                 src="/pigs.webp"
                 alt="Little piggies"
                 className={styles.pigsImage}
-                width={600}
-                height={400}
                 style={{ width: "60%", height: "auto" }}
               />
             </div>

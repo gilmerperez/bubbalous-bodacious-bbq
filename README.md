@@ -20,15 +20,15 @@ Bubbalous Bodacious BBQ is a modern, SEO-optimized restaurant website showcasing
 
 ## Features
 
-- **SEO-Optimized Pages:** Each page includes comprehensive metadata with titles, descriptions, and keywords optimized for search engines. Next.js server-side rendering ensures content is crawlable and indexable.
-
-- **Dynamic Image Carousel:** Auto-rotating banner images showcasing delicious BBQ dishes with manual navigation controls and smooth transitions, optimized using Next.js Image component for performance.
-
-- **Online Ordering System:** Complete e-commerce functionality with shopping cart, item customization, checkout process, and localStorage persistence for cart items across sessions.
-
 - **Theme Toggle System:** Seamless dark/light mode switching with persistent user preferences stored in localStorage and automatic system preference detection.
 
 - **Mobile-First Responsive Design:** Optimized layouts for all screen sizes with a collapsible mobile navigation menu featuring smooth animations and intuitive touch interactions.
+
+- **Online Ordering System:** Complete e-commerce functionality with shopping cart, item customization, checkout process, and localStorage persistence for cart items across sessions.
+
+- **Dynamic Image Carousel:** Auto-rotating banner images showcasing delicious BBQ dishes with manual navigation controls and smooth transitions, optimized using Next.js Image component for performance.
+
+- **SEO-Optimized Pages:** Each page includes comprehensive metadata with titles, descriptions, and keywords optimized for search engines. Next.js server-side rendering ensures content is crawlable and indexable.
 
 ## Mock Up
 
@@ -51,8 +51,8 @@ The following images demonstrate the web application&apos;s appearance and funct
 **Frontend:**
 
 - **Styling:** CSS Modules with CSS Custom Properties for dynamic theming
-- **State Management:** React Hooks (useState, useEffect) for component-level state management
 - **Frameworks/Libraries:** Next.js 16 (App Router), React 19, Next.js Image optimization
+- **State Management:** React Hooks (useState, useEffect) for component-level state management
 
 **Backend:**
 
@@ -61,13 +61,11 @@ The following images demonstrate the web application&apos;s appearance and funct
 
 **Other Technologies:**
 
-- **Font Loading:** Next.js Google Fonts integration (Oswald, Inter)
 - **Icons:** Font Awesome
 - **Data Management:** JSON files for menu and party pack data
+- **Font Loading:** Next.js Google Fonts integration (Oswald, Inter)
+- **SEO:** Next.js Metadata API for comprehensive page metadata and Open Graph tags
 - **Local Storage:** Browser localStorage API for cart persistence and theme preferences
 - **Responsive Design:** Mobile-first approach using CSS Grid, Flexbox, and media queries
-- **SEO:** Next.js Metadata API for comprehensive page metadata and Open Graph tags
 
 ---
-
-**GitHub Description:** Modern, SEO-optimized Next.js restaurant website for Bubbalous Bodacious BBQ featuring online ordering, responsive design, dark/light theme, and comprehensive menu system. Built with Next.js 16, React 19, and optimized for performance and search engine visibility.

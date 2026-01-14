@@ -1,7 +1,6 @@
 "use client";
-
-import styles from "./page.module.css";
 import { useState } from "react";
+import styles from "./page.module.css";
 
 export default function Contact() {
   // * Email form state
@@ -50,9 +49,9 @@ export default function Contact() {
           <h1 className={styles.contactTitle}>LET&apos;S CONNECT</h1>
           {/* Description */}
           <p className={styles.contactDescription}>
-            Whether you&apos;re exploring business opportunities, potential sponsorships, community partnerships, or simply
-            have questions about our menu, catering, or party packs — we&apos;d love to connect with you. Reach out below and
-            a member of our team will follow up shortly.
+            Whether you&apos;re exploring business opportunities, potential sponsorships, community partnerships, or
+            simply have questions about our menu, catering, or party packs — we&apos;d love to connect with you. Reach
+            out below and a member of our team will follow up shortly.
           </p>
 
           {/* CAPTCHA form */}
