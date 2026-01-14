@@ -74,7 +74,7 @@
   background-color: var(--header-bg-color);
 }
 
-form {
+.form {
   gap: 1.25rem;
   display: flex;
   flex-direction: column;
@@ -115,7 +115,7 @@ textarea.formControl {
   resize: vertical;
 }
 
-label {
+.label {
   top: 0;
   left: 0;
   padding: 1rem;
@@ -127,8 +127,8 @@ label {
   color: var(--text-primary);
 }
 
-.formControl:focus ~ label,
-.formControl:not(:placeholder-shown) ~ label {
+.formControl:focus ~ .label,
+.formControl:not(:placeholder-shown) ~ .label {
   opacity: 0.95;
   color: var(--text-secondary);
   transform: scale(0.85) translateX(-0.5rem) translateY(-0.5rem);
@@ -196,7 +196,7 @@ textarea:-webkit-autofill {
     padding: 1rem;
   }
 
-  form {
+  .form {
     gap: 1rem;
   }
 
@@ -208,7 +208,7 @@ textarea:-webkit-autofill {
     height: 175px;
   }
 
-  label {
+  .label {
     font-size: 1.15rem;
   }
 
@@ -239,7 +239,7 @@ textarea:-webkit-autofill {
     padding: 0.75rem;
   }
 
-  form {
+  .form {
     gap: 0.75rem;
   }
 
@@ -252,7 +252,7 @@ textarea:-webkit-autofill {
     height: 150px;
   }
 
-  label {
+  .label {
     font-size: 1rem;
   }
 

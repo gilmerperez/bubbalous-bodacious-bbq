@@ -61,7 +61,7 @@ export default function Contact() {
               <p className={styles.captchaDescription}>
                 Please complete this simple verification to access our contact form.
               </p>
-              <form onSubmit={handleCaptchaSubmit}>
+              <form className={styles.form} onSubmit={handleCaptchaSubmit}>
                 <div className={styles.captchaQuestion}>
                   <p>
                     What is {captchaQuestion.num1} + {captchaQuestion.num2}?
@@ -77,7 +77,7 @@ export default function Contact() {
                       className={styles.formControl}
                       onChange={(e) => setCaptchaAnswer(e.target.value)}
                     />
-                    <label htmlFor="captcha">ANSWER</label>
+                    <label className={styles.label} htmlFor="captcha">ANSWER</label>
                   </div>
                 </div>
                 <button type="submit" className={styles.submitBtn}>
@@ -90,7 +90,7 @@ export default function Contact() {
           {/* Email form */}
           {captchaPassed && (
             <section className={styles.formContainer}>
-              <form onSubmit={handleSubmit}>
+              <form className={styles.form} onSubmit={handleSubmit}>
                 {/* Subject field */}
                 <div className={`${styles.formGroup} ${styles.formFloating}`}>
                   <input
@@ -102,7 +102,7 @@ export default function Contact() {
                     className={styles.formControl}
                     onChange={(e) => setSubject(e.target.value)}
                   />
-                  <label htmlFor="subject">SUBJECT</label>
+                  <label className={styles.label} htmlFor="subject">SUBJECT</label>
                 </div>
                 {/* Message field */}
                 <div className={`${styles.formGroup} ${styles.formFloating}`}>
@@ -114,7 +114,7 @@ export default function Contact() {
                     className={styles.formControl}
                     onChange={(e) => setMessage(e.target.value)}
                   ></textarea>
-                  <label htmlFor="message">MESSAGE</label>
+                  <label className={styles.label} htmlFor="message">MESSAGE</label>
                 </div>
                 {/* Submit button */}
                 <button type="submit" className={styles.submitBtn}>
