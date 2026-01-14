@@ -1,0 +1,174 @@
+.viewCartContainer {
+  width: 100vw;
+  padding: 1rem 2rem;
+  background-color: var(--primary);
+}
+
+.bannerContent {
+  gap: 1rem;
+  display: flex;
+  margin: 0 auto;
+  max-width: 1200px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Restaurant location */
+.locationText {
+  font-size: 1.15rem;
+  transition: 0.3s ease;
+  color: hsl(0, 0%, 100%);
+  text-shadow: var(--shadow-small);
+  font-family: "Oswald", sans-serif;
+}
+
+/* Shopping cart button */
+.cartContainer {
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+}
+
+.cartIcon {
+  position: relative;
+  font-size: 1.15rem;
+  transition: 0.3s ease;
+  color: hsl(0, 0%, 100%);
+  background-color: transparent;
+  text-shadow: var(--shadow-small);
+}
+
+.cartIcon:hover {
+  transform: scale(1.1);
+  text-shadow: var(--shadow-large);
+}
+
+/* Shopping cart item bubble count */
+.cartBubble {
+  top: -10px;
+  width: 20px;
+  height: 20px;
+  right: -10px;
+  display: flex;
+  font-weight: 700;
+  position: absolute;
+  font-size: 0.85rem;
+  border-radius: 50%;
+  align-items: center;
+  transition: 0.3s ease;
+  justify-content: center;
+  color: hsl(0, 0%, 0%);
+  border: 1px solid hsl(0, 0%, 0%);
+  background-color: hsl(0, 0%, 100%);
+}
+
+/* Dropdown cart alert */
+.dropdownAlert {
+  right: 0;
+  top: 100%;
+  z-index: 1000;
+  position: absolute;
+  margin-top: 0.5rem;
+  animation: slideDown 0.3s ease;
+}
+
+.alertContent {
+  font-size: 1rem;
+  font-weight: 500;
+  position: relative;
+  white-space: nowrap;
+  border-radius: 0.25rem;
+  padding: 0.5rem 0.75rem;
+  color: hsl(0, 0%, 0%);
+  text-transform: uppercase;
+  box-shadow: var(--shadow-small);
+  border: 2px solid var(--primary);
+  font-family: "Oswald", sans-serif;
+  background-color: hsl(0, 0%, 100%);
+}
+
+.alertArrow {
+  width: 0;
+  height: 0;
+  top: -6px;
+  right: 2px;
+  position: absolute;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 8px solid var(--primary);
+}
+
+.alertArrow::after {
+  top: 2px;
+  width: 0;
+  height: 0;
+  left: -6px;
+  content: "";
+  position: absolute;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-bottom: 6px solid hsl(0, 0%, 100%);
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Tablet responsiveness */
+@media (max-width: 768px) {
+  .viewCartContainer {
+    padding: 0.75rem 1.75rem;
+  }
+
+  .locationText {
+    font-size: 1rem;
+  }
+
+  .cartIcon {
+    font-size: 1.15rem;
+  }
+
+  .cartBubble {
+    top: -8px;
+    width: 18px;
+    right: -8px;
+    height: 18px;
+    font-size: 0.75rem;
+  }
+
+  .alertContent {
+    font-size: 0.95rem;
+  }
+}
+
+/* Mobile responsiveness */
+@media (max-width: 480px) {
+  .viewCartContainer {
+    padding: 0.75rem 1.5rem;
+  }
+
+  .locationText {
+    font-size: 0.95rem;
+  }
+
+  .cartIcon {
+    font-size: 0.95rem;
+  }
+
+  .cartBubble {
+    width: 15px;
+    height: 15px;
+  }
+
+  .alertContent {
+    font-size: 0.85rem;
+  }
+}

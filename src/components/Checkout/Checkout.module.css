@@ -1,0 +1,413 @@
+/* Overlay */
+.overlay {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1000;
+  display: flex;
+  position: fixed;
+  align-items: center;
+  justify-content: flex-end;
+  animation: fadeIn 0.3s ease;
+  background-color: hsla(0, 0%, 0%, 0.75);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Checkout container */
+.checkoutContainer {
+  height: 100vh;
+  display: flex;
+  padding: 1.25rem;
+  max-width: 750px;
+  overflow-y: auto;
+  position: relative;
+  flex-direction: column;
+  animation: slideInFromRight 0.3s ease;
+  background-color: var(--header-bg-color);
+}
+
+@keyframes slideInFromRight {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  padding-bottom: 0.25rem;
+  justify-content: space-between;
+  border-bottom: 3px solid var(--primary);
+}
+
+/* Title */
+.title {
+  font-size: 2rem;
+  transition: 0.3s ease;
+  font-family: "Oswald", sans-serif;
+}
+
+/* Close button */
+.closeButton {
+  display: flex;
+  font-size: 2rem;
+  background: none;
+  color: var(--primary);
+  transition: 0.3s ease;
+}
+
+.closeButton:hover {
+  transform: scale(1.1);
+}
+
+/* Cart items */
+.cartItemsSection {
+  margin-bottom: 0.25rem;
+  border-bottom: 3px solid var(--primary);
+}
+
+/* All section titles */
+.sectionTitle {
+  font-size: 1.75rem;
+  transition: 0.3s ease;
+  margin-bottom: 0.25rem;
+  font-family: "Oswald", sans-serif;
+}
+
+/* Empty cart message */
+.emptyCart {
+  font-size: 1.5rem;
+  text-align: center;
+  margin-bottom: 0.25rem;
+  color: var(--text-secondary);
+}
+
+.cartItem {
+  display: flex;
+  padding: 0.75rem;
+  transition: 0.3s ease;
+  border-radius: 0.25rem;
+  margin-bottom: 0.75rem;
+  flex-direction: column;
+  border: 2px solid var(--primary);
+  background-color: var(--bg-color);
+}
+
+.itemDetails {
+  width: 100%;
+  margin-bottom: 0.75rem;
+}
+
+.itemHeader {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  justify-content: space-between;
+}
+
+/* Item quantity */
+.itemQuantity {
+  font-weight: 500;
+  font-size: 1.25rem;
+  color: var(--primary);
+  margin-right: 0.5rem;
+  font-family: "Oswald", sans-serif;
+}
+
+/* Item name */
+.itemName {
+  flex: 1;
+  font-weight: 500;
+  font-size: 1.25rem;
+  font-family: "Oswald", sans-serif;
+}
+
+/* Item price */
+.itemPrice {
+  font-weight: 500;
+  font-size: 1.25rem;
+  color: var(--primary);
+  font-family: "Oswald", sans-serif;
+}
+
+/* Special options display */
+.specialOptions {
+  gap: 0.25rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.option {
+  font-size: 0.95rem;
+  border-radius: 0.25rem;
+  padding: 0.25rem 0.5rem;
+  color: var(--text-secondary);
+  background-color: var(--header-bg-color);
+}
+
+/* Remove item button */
+.removeButton {
+  font-size: 1rem;
+  transition: 0.3s ease;
+  border-radius: 0.25rem;
+  padding: 0.25rem 0.5rem;
+  color: hsl(0, 0%, 100%);
+  box-shadow: var(--shadow-small);
+  text-shadow: var(--shadow-small);
+  background-color: var(--primary);
+  font-family: "Oswald", sans-serif;
+}
+
+.removeButton:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-large);
+  text-shadow: var(--shadow-large);
+}
+
+/* Tip section */
+.tipSection {
+  margin-bottom: 1rem;
+  border-bottom: 3px solid var(--primary);
+}
+
+.tipOptions {
+  gap: 0.5rem;
+  display: flex;
+  margin-bottom: 0.75rem;
+}
+
+.tipButton {
+  flex: 1;
+  font-weight: 500;
+  font-size: 1.25rem;
+  transition: 0.3s ease;
+  border-radius: 0.25rem;
+  padding: 0.5rem 0.75rem;
+  color: var(--text-primary);
+  border: 2px solid var(--primary);
+  background-color: var(--bg-color);
+  font-family: "Oswald", sans-serif;
+}
+
+.tipButton:hover {
+  color: hsl(0, 0%, 100%);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-large);
+  text-shadow: var(--shadow-large);
+  background-color: var(--primary);
+}
+
+.tipButton.selected {
+  color: hsl(0, 0%, 100%);
+  background-color: var(--primary);
+}
+
+/* Cost section */
+.costSection {
+  padding: 1rem;
+  border-radius: 0.25rem;
+  margin-bottom: 0.25rem;
+  border: 2px solid var(--primary);
+  background-color: var(--bg-color);
+}
+
+.costLine {
+  display: flex;
+  font-size: 1.25rem;
+  color: var(--text-secondary);
+  justify-content: space-between;
+  font-family: "Oswald", sans-serif;
+}
+
+.totalLine {
+  font-weight: 500;
+  font-size: 1.5rem;
+  margin-top: 0.5rem;
+  padding-top: 0.25rem;
+  color: var(--text-primary);
+  border-top: 2px solid var(--primary);
+}
+
+/* Customer information section */
+.customerSection {
+  margin-bottom: 1rem;
+  border-bottom: 3px solid var(--primary);
+}
+
+.inputGroup {
+  margin-bottom: 0.5rem;
+}
+
+.inputLabel {
+  padding: 0rem;
+  display: block;
+  font-weight: 500;
+  position: relative;
+  font-size: 1.35rem;
+  margin-bottom: 0.25rem;
+  font-family: "Oswald", sans-serif;
+}
+
+.input,
+.textarea {
+  width: 100%;
+  font-size: 1.25rem;
+  transition: 0.3s ease;
+  border-radius: 0.25rem;
+  padding: 0.25rem 0.5rem;
+  color: var(--text-primary);
+  border: 2px solid var(--primary);
+  font-family: "Oswald", sans-serif;
+  background-color: var(--bg-color);
+}
+
+.input:focus,
+.textarea:focus {
+  box-shadow: var(--shadow-large);
+}
+
+/* Wait time section */
+.waitTimeSection {
+  margin-bottom: 1rem;
+}
+
+.waitTimeBox {
+  font-size: 1.25rem;
+  text-align: center;
+  border-radius: 0.25rem;
+  padding: 0.5rem 0.75rem;
+  color: var(--text-primary);
+  border: 2px solid var(--primary);
+  font-family: "Oswald", sans-serif;
+  background-color: var(--header-bg-color);
+}
+
+/* Checkout section */
+.checkoutSection {
+  margin-top: auto;
+}
+
+.checkoutButton {
+  width: 100%;
+  font-weight: 700;
+  font-size: 1.75rem;
+  transition: 0.3s ease;
+  border-radius: 0.25rem;
+  padding: 0.5rem 0.75rem;
+  color: hsl(0, 0%, 100%);
+  box-shadow: var(--shadow-small);
+  text-shadow: var(--shadow-small);
+  background-color: var(--primary);
+  font-family: "Oswald", sans-serif;
+}
+
+.checkoutButton:hover:not(:disabled) {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-large);
+  text-shadow: var(--shadow-large);
+}
+
+.checkoutButton:disabled {
+  opacity: 0.75;
+  cursor: not-allowed;
+}
+
+/* Tablet responsiveness */
+@media (max-width: 768px) {
+  .checkoutContainer {
+    padding: 1rem;
+  }
+
+  .title,
+  .closeButton {
+    font-size: 1.75rem;
+  }
+
+  .sectionTitle {
+    font-size: 1.5rem;
+  }
+
+  .emptyCart {
+    font-size: 1.25rem;
+  }
+
+  .costLine {
+    font-size: 1.15rem;
+  }
+
+  .totalLine {
+    font-size: 1.35rem;
+  }
+
+  .inputLabel {
+    font-size: 1.25rem;
+  }
+
+  .checkoutButton {
+    font-size: 1.5rem;
+  }
+}
+
+/* Mobile responsiveness */
+@media (max-width: 480px) {
+  .sectionTitle {
+    font-size: 1.35rem;
+  }
+
+  .emptyCart {
+    font-size: 1.15rem;
+  }
+
+  .itemQuantity {
+    font-size: 1.15rem;
+  }
+
+  .itemName {
+    font-size: 1rem;
+  }
+
+  .itemPrice {
+    font-size: 1rem;
+  }
+
+  .option {
+    font-size: 0.85rem;
+  }
+
+  .removeButton {
+    font-size: 0.95rem;
+  }
+
+  .tipButton {
+    font-size: 1.15rem;
+  }
+
+  .inputLabel {
+    font-size: 1.15rem;
+  }
+
+  .input,
+  .textarea {
+    font-size: 1.15rem;
+  }
+
+  .waitTimeBox {
+    font-size: 1.15rem;
+  }
+
+  .checkoutButton {
+    font-size: 1.25rem;
+  }
+}

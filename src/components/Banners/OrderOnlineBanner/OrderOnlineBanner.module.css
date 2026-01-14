@@ -1,0 +1,167 @@
+.orderOnlineBannerContainer {
+  width: 100vw;
+  display: flex;
+  padding: 3.5rem;
+  overflow: hidden;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Banner image carousel */
+.carouselContainer {
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.carouselImage {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("/images/plate-of-food.jpg");
+}
+
+/* Overlay */
+.overlay {
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: linear-gradient(
+    to bottom,
+    hsla(0, 0%, 0%, 0.25) 0%,
+    hsla(0, 0%, 0%, 0.5) 50%,
+    hsla(0, 0%, 0%, 0.75) 100%
+  );
+}
+
+.contentContainer {
+  z-index: 3;
+  width: 100%;
+  position: relative;
+  text-align: center;
+  color: hsl(0, 0%, 100%);
+}
+
+/* Title */
+.mainTitle {
+  font-size: 3rem;
+  transition: 0.3s ease;
+  text-shadow: var(--shadow-small);
+  font-family: "Oswald", sans-serif;
+}
+
+/* Subtitle */
+.subtitle {
+  margin: 0 auto;
+  max-width: 800px;
+  line-height: 1.35;
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  transition: 0.3s ease;
+  text-shadow: var(--shadow-small);
+}
+
+/* Button */
+.buttonContainer {
+  display: flex;
+  align-items: center;
+  transition: 0.3s ease;
+  margin-bottom: 1.5rem;
+  justify-content: center;
+}
+
+.ctaButton {
+  font-weight: 500;
+  font-size: 1.5rem;
+  position: relative;
+  align-items: center;
+  display: inline-flex;
+  padding: 0.75rem 1rem;
+  transition: 0.3s ease;
+  border-radius: 0.25rem;
+  color: hsl(0, 0%, 100%);
+  box-shadow: var(--shadow-small);
+  border: 2px solid var(--primary);
+  text-shadow: var(--shadow-small);
+  background-color: var(--primary);
+  font-family: "Oswald", sans-serif;
+}
+
+.ctaButton:hover {
+  gap: 1rem;
+  box-shadow: var(--shadow-large);
+  border: 2px solid var(--primary);
+  text-shadow: var(--shadow-large);
+}
+
+.ctaButton i {
+  width: 0;
+  opacity: 0;
+  overflow: hidden;
+  box-shadow: none;
+  text-shadow: none;
+  font-size: 1.5rem;
+  transition: 0.3s ease;
+  transform: translateX(-20px);
+}
+
+.ctaButton:hover i {
+  opacity: 1;
+  width: auto;
+  transform: translateX(0);
+}
+
+/* Tablet responsiveness */
+@media (max-width: 768px) {
+  .orderOnlineBannerContainer {
+    padding: 3rem;
+  }
+
+  .mainTitle {
+    font-size: 2.5rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
+
+  .ctaButton {
+    font-size: 1.25rem;
+    padding: 0.5rem 0.75rem;
+  }
+
+  .ctaButton i {
+    font-size: 1.25rem;
+  }
+}
+
+/* Mobile responsiveness */
+@media (max-width: 480px) {
+  .orderOnlineBannerContainer {
+    padding: 2rem;
+  }
+
+  .mainTitle {
+    font-size: 2rem;
+  }
+
+  .ctaButton {
+    font-size: 1.15rem;
+  }
+
+  .ctaButton i {
+    font-size: 1.15rem;
+  }
+}

@@ -1,0 +1,637 @@
+.modalOverlay {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1000;
+  padding: 1rem;
+  display: flex;
+  position: fixed;
+  align-items: center;
+  justify-content: center;
+  background-color: hsla(0, 0%, 0%, 0.75);
+}
+
+/* Modal */
+.modal {
+  width: 100%;
+  padding: 1.25rem;
+  max-width: 750px;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  border-radius: 0.25rem;
+  border: 2px solid var(--primary);
+  background-color: var(--header-bg-color);
+}
+
+.modalHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Item name */
+.itemName {
+  font-size: 2rem;
+  transition: 0.3s ease;
+  border-radius: 0.25rem;
+  padding: 0.25rem 0.75rem;
+  color: hsl(0, 0%, 100%);
+  box-shadow: var(--shadow-small);
+  text-shadow: var(--shadow-small);
+  background-color: var(--primary);
+  font-family: "Oswald", sans-serif;
+}
+
+/* Close button */
+.closeButton {
+  display: flex;
+  font-size: 2rem;
+  background: none;
+  align-items: center;
+  color: var(--primary);
+  transition: 0.3s ease;
+  justify-content: center;
+}
+
+.closeButton:hover {
+  transform: scale(1.1);
+}
+
+/* Separator */
+.separator {
+  height: 3px;
+  border: none;
+  margin: 1rem 0rem;
+  background-color: var(--primary);
+}
+
+/* Description section */
+.descriptionSection {
+  margin-bottom: 1rem;
+}
+
+.itemDescription {
+  font-size: 1.15rem;
+  color: var(--text-secondary);
+}
+
+/* Quantity selector */
+.quantitySection {
+  gap: 0.5rem;
+  display: flex;
+  margin-bottom: 1rem;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.quantityTitle {
+  width: 100%;
+  padding: 0rem;
+  font-weight: 500;
+  font-size: 1.5rem;
+  font-family: "Oswald", sans-serif;
+}
+
+.quantityControls {
+  gap: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.quantityButton {
+  width: 30px;
+  display: flex;
+  font-size: 1.5rem;
+  align-items: center;
+  transition: 0.3s ease;
+  border-radius: 0.25rem;
+  justify-content: center;
+  color: hsl(0, 0%, 100%);
+  background-color: var(--primary);
+}
+
+.quantityButton:disabled {
+  cursor: not-allowed;
+  color: hsl(0, 0%, 0%);
+  border: 1px solid hsl(0, 0%, 0%);
+  background-color: hsl(0, 0%, 100%);
+}
+
+.quantityDisplay {
+  font-size: 1.25rem;
+}
+
+/* Sauce options */
+.sauceOptionsSection {
+  width: 100%;
+  display: block;
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.sauceOptionsTitle {
+  width: 100%;
+  padding: 0rem;
+  font-weight: 500;
+  font-size: 1.5rem;
+  font-family: "Oswald", sans-serif;
+}
+
+.sauceOptionsList {
+  gap: 0.25rem;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+}
+
+.sauceOption {
+  gap: 0.7rem;
+  display: flex;
+  padding: 0rem;
+  cursor: pointer;
+  position: relative;
+  align-items: center;
+  pointer-events: auto;
+  transition: 0.3s ease;
+}
+
+.sauceRadio {
+  width: 1rem;
+  z-index: 10;
+  height: 1rem;
+  flex-shrink: 0;
+  cursor: pointer;
+  position: relative;
+  pointer-events: auto;
+  accent-color: var(--primary);
+}
+
+.sauceLabel {
+  flex: 1;
+  cursor: pointer;
+  font-size: 1.25rem;
+  transition: 0.3s ease;
+}
+
+/* Meat options */
+.meatOptionsSection {
+  width: 100%;
+  display: block;
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.meatOptionsTitle {
+  width: 100%;
+  padding: 0rem;
+  font-weight: 500;
+  font-size: 1.5rem;
+  font-family: "Oswald", sans-serif;
+}
+
+.selectionHelper {
+  font-size: 1.15rem;
+  margin-bottom: 0.5rem;
+  color: var(--text-secondary);
+}
+
+.meatOptionsList {
+  gap: 0.25rem;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+}
+
+.meatOption {
+  gap: 0.5rem;
+  display: flex;
+  padding: 0rem;
+  cursor: pointer;
+  position: relative;
+  align-items: center;
+  pointer-events: auto;
+  transition: 0.3s ease;
+}
+
+.meatRadio {
+  width: 1rem;
+  z-index: 10;
+  height: 1rem;
+  flex-shrink: 0;
+  cursor: pointer;
+  position: relative;
+  pointer-events: auto;
+  accent-color: var(--primary);
+}
+
+.meatLabel {
+  flex: 1;
+  cursor: pointer;
+  font-size: 1.25rem;
+  transition: 0.3s ease;
+}
+
+/* Side Options */
+.sideOptionsSection {
+  width: 100%;
+  display: block;
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.sideOptionsTitle {
+  width: 100%;
+  padding: 0rem;
+  font-weight: 500;
+  font-size: 1.5rem;
+  font-family: "Oswald", sans-serif;
+}
+
+.sideOptionsList {
+  gap: 0.25rem;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+}
+
+.sideOption {
+  gap: 0.5rem;
+  display: flex;
+  padding: 0rem;
+  cursor: pointer;
+  position: relative;
+  align-items: center;
+  pointer-events: auto;
+  transition: 0.3s ease;
+}
+
+.sideRadio {
+  width: 1rem;
+  z-index: 10;
+  height: 1rem;
+  flex-shrink: 0;
+  cursor: pointer;
+  position: relative;
+  pointer-events: auto;
+  accent-color: var(--primary);
+}
+
+.sideLabel {
+  flex: 1;
+  cursor: pointer;
+  font-size: 1.25rem;
+  transition: 0.3s ease;
+}
+
+/* Drink Options */
+.drinkOptionsSection {
+  width: 100%;
+  display: block;
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.drinkOptionsTitle {
+  width: 100%;
+  padding: 0rem;
+  font-weight: 500;
+  font-size: 1.5rem;
+  font-family: "Oswald", sans-serif;
+}
+
+.drinkOptionsList {
+  gap: 0.25rem;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+}
+
+.drinkOption {
+  gap: 0.5rem;
+  display: flex;
+  padding: 0rem;
+  cursor: pointer;
+  position: relative;
+  align-items: center;
+  pointer-events: auto;
+  transition: 0.3s ease;
+}
+
+.drinkRadio {
+  width: 1rem;
+  z-index: 10;
+  height: 1rem;
+  flex-shrink: 0;
+  cursor: pointer;
+  position: relative;
+  pointer-events: auto;
+  accent-color: var(--primary);
+}
+
+.drinkLabel {
+  flex: 1;
+  cursor: pointer;
+  font-size: 1.25rem;
+  transition: 0.3s ease;
+}
+
+/* Protein options */
+.proteinOptionsSection {
+  width: 100%;
+  display: block;
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.proteinOptionsTitle {
+  width: 100%;
+  padding: 0rem;
+  font-weight: 500;
+  font-size: 1.5rem;
+  font-family: "Oswald", sans-serif;
+}
+
+.proteinOptionsList {
+  gap: 0.25rem;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+}
+
+.proteinOption {
+  gap: 0.5rem;
+  display: flex;
+  padding: 0rem;
+  cursor: pointer;
+  position: relative;
+  align-items: center;
+  pointer-events: auto;
+  transition: 0.3s ease;
+}
+
+.proteinRadio {
+  width: 1rem;
+  z-index: 10;
+  height: 1rem;
+  flex-shrink: 0;
+  cursor: pointer;
+  position: relative;
+  pointer-events: auto;
+  accent-color: var(--primary);
+}
+
+.proteinLabel {
+  flex: 1;
+  cursor: pointer;
+  font-size: 1.25rem;
+  transition: 0.3s ease;
+}
+
+/* Dressing options */
+.dressingOptionsSection {
+  width: 100%;
+  display: block;
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.dressingOptionsTitle {
+  width: 100%;
+  padding: 0rem;
+  font-weight: 500;
+  font-size: 1.5rem;
+  font-family: "Oswald", sans-serif;
+}
+
+.dressingOptionsList {
+  gap: 0.25rem;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+}
+
+.dressingOption {
+  gap: 0.5rem;
+  display: flex;
+  padding: 0rem;
+  cursor: pointer;
+  position: relative;
+  align-items: center;
+  pointer-events: auto;
+  transition: 0.3s ease;
+}
+
+.dressingRadio {
+  width: 1rem;
+  z-index: 10;
+  height: 1rem;
+  flex-shrink: 0;
+  cursor: pointer;
+  position: relative;
+  pointer-events: auto;
+  accent-color: var(--primary);
+}
+
+.dressingLabel {
+  flex: 1;
+  cursor: pointer;
+  font-size: 1.25rem;
+  transition: 0.3s ease;
+}
+
+/* Wing sauce options */
+.wingSauceOptionsSection {
+  width: 100%;
+  display: block;
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.wingSauceOptionsTitle {
+  width: 100%;
+  padding: 0rem;
+  font-weight: 500;
+  font-size: 1.5rem;
+  font-family: "Oswald", sans-serif;
+}
+
+.wingSauceOptionsList {
+  gap: 0.25rem;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+}
+
+.wingSauceOption {
+  gap: 0.5rem;
+  display: flex;
+  padding: 0rem;
+  cursor: pointer;
+  position: relative;
+  align-items: center;
+  pointer-events: auto;
+  transition: 0.3s ease;
+}
+
+.wingSauceRadio {
+  width: 1rem;
+  z-index: 10;
+  height: 1rem;
+  flex-shrink: 0;
+  cursor: pointer;
+  position: relative;
+  pointer-events: auto;
+  accent-color: var(--primary);
+}
+
+.wingSauceLabel {
+  flex: 1;
+  cursor: pointer;
+  font-size: 1.25rem;
+  transition: 0.3s ease;
+}
+
+/* Special instructions */
+.specialInstructionsSection {
+  width: 100%;
+  display: block;
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.specialInstructionsTitle {
+  width: 100%;
+  padding: 0rem;
+  font-weight: 500;
+  font-size: 1.5rem;
+  font-family: "Oswald", sans-serif;
+}
+
+.specialInstructionsInput {
+  width: 100%;
+  resize: vertical;
+  padding: 0.75rem;
+  font-size: 1.15rem;
+  margin-top: 0.5rem;
+  border-radius: 0.25rem;
+  color: var(--text-secondary);
+  background-color: var(--bg-color);
+  border: 1px solid var(--text-primary);
+}
+
+/* Legal section */
+.legalSection {
+  margin-bottom: 1rem;
+}
+
+.allergyWarning {
+  font-size: 1rem;
+  padding: 0.75rem;
+  line-height: 1.35;
+  margin-bottom: 1rem;
+  color: var(--primary);
+  border-radius: 0.25rem;
+  border-left: 3px solid var(--primary);
+  background-color: hsla(3, 76%, 50%, 0.15);
+}
+
+.legalText {
+  font-size: 1rem;
+  color: var(--text-secondary);
+}
+
+/* Add to order section */
+.actionSection {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.addToOrderButton {
+  width: 100%;
+  font-weight: 500;
+  font-size: 1.75rem;
+  transition: 0.3s ease;
+  border-radius: 0.25rem;
+  padding: 0.5rem 0.75rem;
+  color: hsl(0, 0%, 100%);
+  box-shadow: var(--shadow-small);
+  text-shadow: var(--shadow-small);
+  background-color: var(--primary);
+  font-family: "Oswald", sans-serif;
+}
+
+.addToOrderButton:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-large);
+  text-shadow: var(--shadow-large);
+}
+
+/* Tablet responsiveness */
+@media (max-width: 768px) {
+  .modal {
+    padding: 1rem;
+  }
+}
+
+/* Mobile responsiveness */
+@media (max-width: 480px) {
+  .itemName,
+  .closeButton {
+    font-size: 1.75rem;
+  }
+
+  .separator {
+    height: 2px;
+  }
+
+  .itemDescription {
+    font-size: 1rem;
+  }
+
+  .quantityTitle,
+  .sauceOptionsTitle,
+  .meatOptionsTitle,
+  .sideOptionsTitle,
+  .drinkOptionsTitle,
+  .proteinOptionsTitle,
+  .dressingOptionsTitle,
+  .wingSauceOptionsTitle,
+  .specialInstructionsTitle {
+    font-size: 1.25rem;
+  }
+
+  .quantityButton {
+    font-size: 1.25rem;
+  }
+
+  .sauceLabel,
+  .meatLabel,
+  .sideLabel,
+  .drinkLabel,
+  .proteinLabel,
+  .dressingLabel,
+  .wingSauceLabel {
+    font-size: 1rem;
+  }
+
+  .specialInstructionsInput {
+    font-size: 1rem;
+  }
+
+  .allergyWarning {
+    font-size: 0.85rem;
+  }
+
+  .legalText {
+    font-size: 0.85rem;
+  }
+
+  .addToOrderButton {
+    font-size: 1.25rem;
+  }
+}

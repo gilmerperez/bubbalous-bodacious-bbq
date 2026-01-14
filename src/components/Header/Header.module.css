@@ -1,0 +1,373 @@
+header {
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  position: sticky;
+  padding: 0.75rem 2rem;
+  transition: 0.3s ease;
+  background-color: var(--header-bg-color);
+  box-shadow: 0px 3px 8px hsla(0, 0%, 0%, 0.15);
+}
+
+/* Show mobile header on scroll up */
+.visible {
+  transform: translateY(0%);
+}
+
+/* Hide mobile header on scroll down */
+.hidden {
+  transform: translateY(-150%);
+}
+
+.headerContainer {
+  width: 100%;
+  display: flex;
+  margin: 0 auto;
+  max-width: 1200px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Desktop layout */
+.desktopLayout {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Logo */
+.logo {
+  height: 50px;
+  transition: 0.3s ease;
+}
+
+/* Site navigation */
+.navContainer {
+  gap: 1rem;
+  display: flex;
+  align-items: center;
+  transition: 0.3s ease;
+  justify-content: center;
+}
+
+.navItems {
+  gap: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navItems a {
+  position: relative;
+  font-size: 1.25rem;
+  transition: 0.3s ease;
+  font-family: "Oswald", sans-serif;
+  transition: transform 0.2s ease, border-bottom 0.1s ease;
+}
+
+/* On hover, prevent hover effect on active link */
+.navItems a:hover:not(.activeLink) {
+  transform: translateY(-3px);
+  border-bottom: 2px solid var(--primary);
+}
+
+/* Active link */
+.navItems a.activeLink {
+  border-radius: 0.25rem;
+  padding: 0.25rem 0.5rem;
+  color: hsl(0, 0%, 100%);
+  box-shadow: var(--shadow-small);
+  text-shadow: var(--shadow-small);
+  background-color: var(--primary);
+}
+
+/* Separator */
+.separator {
+  font-size: 1.25rem;
+  transition: 0.3s ease;
+}
+
+/* Theme button */
+.themeButton {
+  font-size: 1.25rem;
+  transition: 0.3s ease;
+  color: var(--text-primary);
+  background-color: var(--header-bg-color);
+}
+
+.themeButton:hover {
+  transform: translateY(-3px);
+  color: var(--text-secondary);
+}
+
+/* Tablet responsiveness */
+@media (max-width: 768px) {
+  header {
+    padding: 0.75rem 1.75rem;
+  }
+}
+
+@media (max-width: 650px) {
+  .logo {
+    height: 45px;
+  }
+
+  .navContainer {
+    gap: 0.75rem;
+  }
+
+  .navItems {
+    gap: 0.75rem;
+  }
+
+  .navItems a {
+    font-size: 1.15rem;
+  }
+
+  .separator {
+    font-size: 1.15rem;
+  }
+
+  .themeButton {
+    font-size: 1.15rem;
+  }
+}
+
+@media (max-width: 575px) {
+  .logo {
+    height: 40px;
+  }
+
+  .navContainer {
+    gap: 0.65rem;
+  }
+
+  .navItems {
+    gap: 0.65rem;
+  }
+
+  .navItems a {
+    font-size: 1rem;
+  }
+
+  .separator {
+    font-size: 1rem;
+  }
+
+  .themeButton {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .separator {
+    display: none;
+  }
+
+  .themeButton:not(.sidebarThemeButton) {
+    display: none;
+  }
+}
+
+/* Mobile layout */
+.mobileLayout {
+  width: 100%;
+  display: none;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Phone button */
+.phoneButton {
+  display: none;
+  background: none;
+  font-size: 1.25rem;
+  transition: 0.3s ease;
+  color: var(--text-primary);
+}
+
+.phoneButton:hover {
+  transform: scale(1.15);
+  color: var(--text-secondary);
+}
+
+/* Mobile logo */
+.mobileLogoContainer img {
+  height: 45px;
+}
+
+/* Hamburger menu */
+.hamburger {
+  display: none;
+  background: none;
+  font-size: 1.25rem;
+  transition: 0.3s ease;
+  color: var(--text-primary);
+}
+
+.hamburger:hover {
+  transform: scale(1.15);
+  color: var(--text-secondary);
+}
+
+.hamburger i {
+  transition: transform 0.3s ease-in-out;
+}
+
+.hamburger i.spin {
+  animation: hamburgerSpin 0.3s ease-in-out;
+}
+
+/* Hambuger spin animation */
+@keyframes hamburgerSpin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Mobile responsiveness */
+@media (max-width: 480px) {
+  header {
+    padding: 0.5rem 1.5rem;
+  }
+
+  .desktopLayout {
+    display: none;
+  }
+
+  .mobileLayout {
+    display: flex;
+  }
+
+  .phoneButton,
+  .hamburger {
+    display: block;
+  }
+}
+
+/* Sidebar */
+.sidebarOverlay {
+  inset: 0;
+  z-index: 999;
+  display: flex;
+  position: fixed;
+  background: hsla(0, 0%, 0%, 0.75);
+}
+
+.sidebar {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  padding: 1.25rem;
+  max-width: 250px;
+  position: relative;
+  flex-direction: column;
+  font-family: "Oswald", sans-serif;
+  background-color: var(--footer-bg-color);
+}
+
+/* Sidebar close button */
+.sidebarClose {
+  top: 0.75rem;
+  left: 1.25rem;
+  background: none;
+  position: absolute;
+  font-size: 1.15rem;
+  transition: 0.3s ease;
+  color: var(--text-primary);
+}
+
+.sidebarClose:hover {
+  transform: scale(1.15);
+  color: var(--text-secondary);
+}
+
+/* Sidebar site navigation */
+.sidebarNavItems {
+  display: flex;
+  margin-top: 2rem;
+  flex-direction: column;
+}
+
+/* Ensure all icons take up consistent width */
+.sidebarNavItems i {
+  width: 1.5rem;
+  flex-shrink: 0;
+  text-align: center;
+}
+
+.sidebarNavItems a {
+  gap: 0.75rem;
+  display: flex;
+  font-size: 1.25rem;
+  align-items: center;
+  transition: 0.3s ease;
+  padding: 0.5rem 0.75rem;
+}
+
+/* On hover, prevent hover effect on active link */
+.sidebarNavItems a:hover:not(.activeLink) {
+  transform: translateX(5px);
+  color: var(--text-secondary);
+}
+
+/* Active link */
+.sidebarNavItems a.activeLink {
+  border-radius: 0.25rem;
+  color: hsl(0, 0%, 100%);
+  box-shadow: var(--shadow-small);
+  text-shadow: var(--shadow-small);
+  background-color: var(--primary);
+}
+
+/* Sidebar footer */
+.sidebarFooter {
+  gap: 0.75rem;
+  display: flex;
+  margin-top: auto;
+  transition: 0.3s ease;
+  flex-direction: column;
+  align-items: flex-start;
+  color: var(--text-secondary);
+}
+
+/* Ensure all icons take up consistent width */
+.sidebarFooter i {
+  width: 1.25rem;
+  flex-shrink: 0;
+  text-align: center;
+}
+
+/* Sidebar theme button */
+.sidebarThemeButton {
+  gap: 0.75rem;
+  display: flex;
+  font-size: 1.15rem;
+  align-items: center;
+  transition: 0.3s ease;
+  color: var(--text-secondary);
+}
+
+.sidebarThemeButton:hover {
+  color: var(--text-primary);
+  transform: translateX(5px);
+}
+
+/* Sidebar legal pages */
+.sidebarFooter a {
+  gap: 0.75rem;
+  display: flex;
+  font-size: 1.15rem;
+  align-items: center;
+  transition: 0.3s ease;
+  color: var(--text-secondary);
+}
+
+.sidebarFooter a:hover {
+  color: var(--text-primary);
+  transform: translateX(5px);
+}
