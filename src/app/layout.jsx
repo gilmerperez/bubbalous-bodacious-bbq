@@ -42,7 +42,7 @@ export const metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://bubbalousbbq.com",
+    url: "https://bubbalous-bodacious.vercel.app/",
     siteName: "Bubbalous Bodacious BBQ",
     title: "Bubbalous Bodacious BBQ | Orlando's Favorite BBQ Since 1986",
     description:
