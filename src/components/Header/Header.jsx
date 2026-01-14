@@ -25,19 +25,16 @@ function Header() {
   }, [lastScrollY]);
 
   // * Theme switch
-  const [theme, setTheme] = useState("light");
+  const [theme, setTheme] = useState(() => {
+    // Lazy initialization: compute initial theme value only once
+    if (typeof window === "undefined") return "light"; // SSR fallback
 
-  // Make theme be set in DOM
-  useEffect(() => {
     const storedTheme = localStorage.getItem("theme");
     const prefersLight = window.matchMedia("(prefers-color-scheme: light)").matches;
+    return storedTheme || (prefersLight ? "light" : "dark");
+  });
 
-    const initialTheme = storedTheme || (prefersLight ? "light" : "dark");
-    setTheme(initialTheme);
-    document.documentElement.setAttribute("data-theme", initialTheme);
-  }, []);
-
-  // Save theme to localStorage
+  // Save theme to localStorage and update DOM
   useEffect(() => {
     document.documentElement.setAttribute("data-theme", theme);
     localStorage.setItem("theme", theme);
@@ -81,7 +78,11 @@ function Header() {
 
   return (
     <>
-      <header className={`${isScrollingUp ? styles.visible : styles.hidden}`} role="banner" aria-label="Site header">
+      <header
+        className={`${styles.header} ${isScrollingUp ? styles.visible : styles.hidden}`}
+        role="banner"
+        aria-label="Site header"
+      >
         <div className={styles.headerContainer}>
           {/* Desktop Layout */}
           <div className={styles.desktopLayout}>
@@ -93,6 +94,7 @@ function Header() {
                 loading="lazy"
                 src="/logo.jpg"
                 className={styles.logo}
+                style={{ width: "auto" }}
                 alt="Bubbalous Bodacious BBQ Logo"
               />
             </Link>
@@ -156,7 +158,14 @@ function Header() {
             </button>
             {/* Mobile logo */}
             <Link href="/" className={styles.mobileLogoContainer} aria-label="Go to home page">
-              <Image src="/logo.jpg" alt="Bubbalous Bodacious BBQ Logo" width={200} height={45} />
+              <Image
+                width={200}
+                height={45}
+                loading="lazy"
+                src="/logo.jpg"
+                style={{ width: "auto" }}
+                alt="Bubbalous Bodacious BBQ Logo"
+              />
             </Link>
             {/* Hamburger menu */}
             <button

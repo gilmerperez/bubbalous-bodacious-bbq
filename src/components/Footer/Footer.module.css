@@ -1,4 +1,4 @@
-footer {
+.footer {
   width: 100%;
   padding: 2rem;
   transition: 0.3s ease;
@@ -22,6 +22,7 @@ footer {
 /* Logo */
 .logo {
   width: 165px;
+  height: auto;
   margin: 0 auto;
   transition: 0.3s ease;
   margin-bottom: 0.25rem;
@@ -100,7 +101,7 @@ footer {
 
 /* Tablet responsiveness */
 @media (max-width: 768px) {
-  footer {
+  .footer {
     padding: 1.75rem;
   }
 
@@ -116,7 +117,7 @@ footer {
 
 /* Mobile responsiveness */
 @media (max-width: 480px) {
-  footer {
+  .footer {
     padding: 1.5rem;
   }
 

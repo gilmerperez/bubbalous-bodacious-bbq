@@ -54,6 +54,7 @@ export default function Home() {
               <Image
                 width={600}
                 height={400}
+                loading="lazy"
                 src="/pigs.webp"
                 alt="Little piggies"
                 className={styles.pigsImage}

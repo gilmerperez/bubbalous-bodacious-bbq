@@ -5,16 +5,17 @@ import Image from "next/image";
 function Footer() {
   return (
     <>
-      <footer role="contentinfo" aria-label="Site footer">
+      <footer className={styles.footer} role="contentinfo" aria-label="Site footer">
         <div className={styles.footerContainer}>
           <div className={styles.topContainer}>
             {/* Logo */}
             <Image
               width={200}
-              height={100}
+              height={165}
               loading="lazy"
               src="/logo.jpg"
               className={styles.logo}
+              style={{ height: "auto" }}
               alt="Bubbalous Bodacious BBQ Logo"
             />
             {/* Legal disclaimer */}
