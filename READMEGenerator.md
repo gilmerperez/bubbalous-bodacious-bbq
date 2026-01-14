@@ -9,7 +9,6 @@
 - **Format:** RAW Markdown (`.md`).
 - **Tone:** Professional, technical, and concise.
 - **Environment Variables:** NEVER expose actual secrets/keys (use placeholders like `YOUR_API_KEY`).
-- **GitHub Description:** At the very end, provide a single sentence (max 350 chars) suitable for the GitHub Repository "About" section.
 
 ---
 
@@ -62,3 +61,5 @@ The following images/animations demonstrate the web application's appearance and
 **Other Technologies:**
 
 ---
+
+- **GitHub Description:** At the very end, provide a single sentence (max 350 characters) suitable for the GitHub Repository "About" section.
