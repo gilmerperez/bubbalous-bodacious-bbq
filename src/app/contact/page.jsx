@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import styles from "./page.module.css";
+import StructuredData from "../../components/StructuredData/StructuredData";
 
 export default function Contact() {
   // * Email form state
@@ -41,8 +42,31 @@ export default function Contact() {
     window.location.href = mailtoLink;
   };
 
+  const organizationSchema = {
+    name: "Bubbalous Bodacious BBQ",
+    url: "https://bubbalous-bodacious.vercel.app/contact",
+    logo: "https://bubbalous-bodacious.vercel.app/logo.jpg",
+    contactPoint: {
+      "@type": "ContactPoint",
+      telephone: "+1-407-295-1212",
+      email: "bubbalousbbq@aol.com",
+      contactType: "customer service",
+      areaServed: "US",
+      availableLanguage: "English",
+    },
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "5818 Conroy Road",
+      addressLocality: "Orlando",
+      addressRegion: "FL",
+      postalCode: "32835",
+      addressCountry: "US",
+    },
+  };
+
   return (
     <>
+      <StructuredData type="organization" data={organizationSchema} />
       <main>
         <div className={styles.contactContainer}>
           {/* Title */}

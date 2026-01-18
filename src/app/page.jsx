@@ -1,6 +1,7 @@
 import Image from "next/image";
 import styles from "./page.module.css";
 import HomeBanner from "../components/Banners/HomeBanner/HomeBanner";
+import StructuredData from "../components/StructuredData/StructuredData";
 
 export const metadata = {
   title: "Home",
@@ -17,11 +18,69 @@ export const metadata = {
     "ribs",
     "Conroy Road BBQ",
   ],
+  alternates: {
+    canonical: "https://bubbalous-bodacious.vercel.app",
+  },
 };
 
 export default function Home() {
+  const restaurantSchema = {
+    name: "Bubbalous Bodacious BBQ",
+    image: "https://bubbalous-bodacious.vercel.app/logo.jpg",
+    "@id": "https://bubbalous-bodacious.vercel.app/#restaurant",
+    url: "https://bubbalous-bodacious.vercel.app",
+    telephone: "(407) 295-1212",
+    priceRange: "$$",
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "5818 Conroy Road",
+      addressLocality: "Orlando",
+      addressRegion: "FL",
+      postalCode: "32835",
+      addressCountry: "US",
+    },
+    geo: {
+      "@type": "GeoCoordinates",
+      latitude: "28.5123",
+      longitude: "-81.4702",
+    },
+    openingHoursSpecification: [
+      {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+        opens: "10:00",
+        closes: "21:00",
+      },
+    ],
+    servesCuisine: "Barbecue",
+    description:
+      "Serving Orlando's favorite BBQ since 1986. Authentic barbecue, homemade sides, and award-winning flavors.",
+    foundingDate: "1986",
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: "4.5",
+      reviewCount: "100",
+    },
+  };
+
+  const organizationSchema = {
+    name: "Bubbalous Bodacious BBQ",
+    url: "https://bubbalous-bodacious.vercel.app",
+    logo: "https://bubbalous-bodacious.vercel.app/logo.jpg",
+    contactPoint: {
+      "@type": "ContactPoint",
+      telephone: "+1-407-295-1212",
+      contactType: "customer service",
+      areaServed: "US",
+      availableLanguage: "English",
+    },
+    sameAs: [],
+  };
+
   return (
     <>
+      <StructuredData type="restaurant" data={restaurantSchema} />
+      <StructuredData type="organization" data={organizationSchema} />
       {/* Home banner */}
       <HomeBanner />
 

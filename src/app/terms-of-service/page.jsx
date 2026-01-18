@@ -5,6 +5,9 @@ export const metadata = {
   description:
     "Terms of service for Bubbalous Bodacious BBQ. Read our terms and conditions that govern your use of our website and services.",
   keywords: ["terms of service", "terms and conditions", "website terms", "BBQ restaurant terms"],
+  alternates: {
+    canonical: "https://bubbalous-bodacious.vercel.app/terms-of-service",
+  },
 };
 
 export default function TermsOfService() {

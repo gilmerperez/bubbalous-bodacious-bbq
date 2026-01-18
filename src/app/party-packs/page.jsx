@@ -1,6 +1,7 @@
 import styles from "./page.module.css";
 import partyPacksData from "../../data/party-packs.json";
 import PartyPacksBanner from "../../components/Banners/PartyPacksBanner/PartyPacksBanner";
+import StructuredData from "../../components/StructuredData/StructuredData";
 
 export const metadata = {
   title: "Party Packs",
@@ -15,11 +16,43 @@ export const metadata = {
     "event catering",
     "pick-up orders",
   ],
+  alternates: {
+    canonical: "https://bubbalous-bodacious.vercel.app/party-packs",
+  },
 };
 
 export default function PartyPacks() {
+  const localBusinessSchema = {
+    "@type": "LocalBusiness",
+    name: "Bubbalous Bodacious BBQ - Party Packs",
+    image: "https://bubbalous-bodacious.vercel.app/logo.jpg",
+    url: "https://bubbalous-bodacious.vercel.app/party-packs",
+    telephone: "(407) 295-1212",
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "5818 Conroy Road",
+      addressLocality: "Orlando",
+      addressRegion: "FL",
+      postalCode: "32835",
+      addressCountry: "US",
+    },
+    priceRange: "$$",
+    servesCuisine: "Barbecue",
+    description:
+      "Perfect for any gathering! Our party packs include generous portions of mouth-watering BBQ meats, homemade sides, and fresh bread.",
+    makesOffer: {
+      "@type": "Offer",
+      itemOffered: {
+        "@type": "Product",
+        name: "Party Packs",
+        description: "BBQ party packs for large groups and events",
+      },
+    },
+  };
+
   return (
     <>
+      <StructuredData type="localBusiness" data={localBusinessSchema} />
       {/* Party packs banner */}
       <PartyPacksBanner />
 

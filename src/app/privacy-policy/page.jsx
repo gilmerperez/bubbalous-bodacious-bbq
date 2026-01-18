@@ -5,6 +5,9 @@ export const metadata = {
   description:
     "Privacy policy for Bubbalous Bodacious BBQ. Learn how we handle your information and protect your privacy when visiting our website.",
   keywords: ["privacy policy", "data protection", "website privacy", "BBQ restaurant privacy"],
+  alternates: {
+    canonical: "https://bubbalous-bodacious.vercel.app/privacy-policy",
+  },
 };
 
 export default function PrivacyPolicy() {

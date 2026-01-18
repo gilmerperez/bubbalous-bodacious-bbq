@@ -53,6 +53,12 @@ export const metadata = {
     shortcut: "/logo.jpg",
     apple: "/logo.jpg",
   },
+  alternates: {
+    canonical: "https://bubbalous-bodacious.vercel.app",
+  },
+  verification: {
+    google: "qQnQb2-3FTfHaZrjPjKogJbOTyhOila5U11Fj2l512M51iBOH0",
+  },
 };
 
 export default function RootLayout({ children }) {

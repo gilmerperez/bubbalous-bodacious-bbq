@@ -3,6 +3,7 @@ import { useState } from "react";
 import styles from "./page.module.css";
 import menuData from "../../data/menu.json";
 import MenuBanner from "../../components/Banners/MenuBanner/MenuBanner";
+import StructuredData from "../../components/StructuredData/StructuredData";
 
 export default function Menu() {
   // * First category is always open
@@ -36,8 +37,45 @@ export default function Menu() {
       .replace(/\b\w/g, (l) => l.toUpperCase()); // Capitalize first letter of each word
   };
 
+  const restaurantSchema = {
+    name: "Bubbalous Bodacious BBQ - Menu",
+    image: "https://bubbalous-bodacious.vercel.app/logo.jpg",
+    url: "https://bubbalous-bodacious.vercel.app/menu",
+    telephone: "(407) 295-1212",
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "5818 Conroy Road",
+      addressLocality: "Orlando",
+      addressRegion: "FL",
+      postalCode: "32835",
+      addressCountry: "US",
+    },
+    servesCuisine: "Barbecue",
+    description:
+      "Discover the diverse and delectable offerings of Bubbalou's Bodacious BBQ menu. From savory appetizers to satisfying main courses, our menu is crafted to delight every palate.",
+    hasMenu: {
+      "@type": "Menu",
+      hasMenuSection: Object.keys(menuData).map((categoryKey) => ({
+        "@type": "MenuSection",
+        name: categoryKey.replace(/([A-Z])/g, " $1").replace(/^./, (str) => str.toUpperCase()),
+        description: menuData[categoryKey].categoryDescription,
+        hasMenuItem: menuData[categoryKey].items.map((item) => ({
+          "@type": "MenuItem",
+          name: item.name,
+          description: item.description,
+          offers: {
+            "@type": "Offer",
+            price: item.price.toFixed(2),
+            priceCurrency: "USD",
+          },
+        })),
+      })),
+    },
+  };
+
   return (
     <>
+      <StructuredData type="restaurant" data={restaurantSchema} />
       {/* Menu banner */}
       <MenuBanner />
 

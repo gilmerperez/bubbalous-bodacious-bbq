@@ -6,6 +6,7 @@ import ViewCart from "../../components/ViewCart/ViewCart";
 import Checkout from "../../components/Checkout/Checkout";
 import OrderModal from "../../components/OrderModal/OrderModal";
 import OrderOnlineBanner from "../../components/Banners/OrderOnlineBanner/OrderOnlineBanner";
+import StructuredData from "../../components/StructuredData/StructuredData";
 
 export default function OrderOnline() {
   // * All categories are collapsed by default
@@ -128,8 +129,41 @@ export default function OrderOnline() {
     setCartItems([]);
   };
 
+  const localBusinessSchema = {
+    "@type": "LocalBusiness",
+    name: "Bubbalous Bodacious BBQ - Online Ordering",
+    image: "https://bubbalous-bodacious.vercel.app/logo.jpg",
+    url: "https://bubbalous-bodacious.vercel.app/order-online",
+    telephone: "(407) 295-1212",
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "5818 Conroy Road",
+      addressLocality: "Orlando",
+      addressRegion: "FL",
+      postalCode: "32835",
+      addressCountry: "US",
+    },
+    priceRange: "$$",
+    servesCuisine: "Barbecue",
+    description:
+      "Experience the ease and convenience of Bubbalou's Bodacious BBQ online ordering system. Order our mouth-watering BBQ for pick-up or delivery.",
+    makesOffer: {
+      "@type": "Offer",
+      itemOffered: {
+        "@type": "Service",
+        name: "Online Food Ordering",
+        description: "Order BBQ online for pick-up or delivery",
+      },
+      availableChannel: {
+        "@type": "ServiceChannel",
+        serviceType: "Online Ordering",
+      },
+    },
+  };
+
   return (
     <>
+      <StructuredData type="localBusiness" data={localBusinessSchema} />
       {/* Order online banner */}
       <OrderOnlineBanner />
 
