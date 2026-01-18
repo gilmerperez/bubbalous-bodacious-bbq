@@ -66,6 +66,7 @@ export default function RootLayout({ children }) {
     <>
       <html lang="en" className={`${oswald.variable} ${inter.variable}`}>
         <head>
+          <meta name="google-site-verification" content="3FTfHaZrjPjKogJbOTyhOila5U11Fj2l512M51iBOH0" />
           <script src="https://kit.fontawesome.com/ffb8948ab7.js" crossOrigin="anonymous" async></script>
         </head>
         <body>
